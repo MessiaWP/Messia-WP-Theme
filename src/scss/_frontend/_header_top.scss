@@ -1,0 +1,29 @@
+.#{$m-namespace-front} {
+	.header-top {
+		background: #333;
+		color: $m-white;
+
+		.messia-widget-sitewide-search {
+			svg {
+				fill: $m-white;
+			}
+		}
+
+		.widget,
+		p {
+			margin-bottom: 0;
+		}
+
+		a {
+			color: $m-navigation_initial_color;
+
+			&:hover {
+				color: $m-navigation_interaction_color;
+			}
+		}
+
+		h4 {
+			margin-bottom: 0;
+		}
+	}
+}

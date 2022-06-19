@@ -1,0 +1,84 @@
+.#{$m-namespace-front} {
+	#wp-calendar {
+		width: 100%;
+	}
+
+	.widget {
+		ul {
+			list-style: none;
+
+			li {
+				padding: .5em 0;
+
+				&:last-of-type {
+					border: none;
+				}
+			}
+		}
+	}
+
+	.recentcomments {
+		margin-bottom: 1rem;
+	}
+
+	.widget_recent_comments,
+	.widget_pages,
+	.widget_categories,
+	.widget_archive {
+		ul {
+			padding-left: 0;
+		}
+	}
+
+	table {
+		border-collapse: collapse;
+		margin: 0 0 1.5em;
+		width: 100%;
+	}
+
+	thead {
+		th {
+			border-bottom: 2px solid #bbb;
+			padding-bottom: .5em;
+		}
+	}
+
+	th {
+		padding: .4em;
+
+		&:first-child {
+			padding-left: 0;
+		}
+
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+
+	tr {
+		border-bottom: 1px solid #eee;
+	}
+
+	.wp-calendar-table {
+		td {
+			a {
+				display: block;
+				padding: .3rem .5rem;
+				background: #eee;
+				text-align: center;
+			}
+		}
+	}
+
+	td {
+		padding: .4em;
+
+		&:first-child {
+			padding-left: 0;
+		}
+
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+}

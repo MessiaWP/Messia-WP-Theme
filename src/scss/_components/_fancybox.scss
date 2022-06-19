@@ -1,0 +1,36 @@
+@import "../init";
+@import "~@fancyapps/fancybox/src/css/core.css";
+@import "~@fancyapps/fancybox/src/css/slideshow.css";
+
+.fancybox-container {
+	z-index: 100002;
+}
+.#{$m-namespace-front} {
+	.map-modal {
+		.fancybox-content {
+			padding: 0;
+			max-width: 80vw;
+			max-height: 80vh;
+			border: 6px solid $white;
+		}
+
+		.messia-map,
+		.map {
+			height: 100%;
+			overflow: unset;
+		}
+
+		.fancybox-close-small {
+			right: -28px;
+			top: -28px;
+			opacity: 1;
+
+			svg {
+				border: 2px solid $white;
+				border-radius: 50%;
+				background: black;
+				color: $white;
+			}
+		}
+	}
+}

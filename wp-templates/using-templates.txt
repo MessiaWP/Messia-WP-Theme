@@ -1,0 +1,4 @@
+The template store strategy follows WP codex entirely with one exceptions:
+- any templates files parses on backend only inside root of /wp-templates folder (not including any subfolders)
+
+All the rest without any changes.

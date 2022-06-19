@@ -1,0 +1,587 @@
+// General rules
+@import "../init";
+.#{$m-namespace-admin} {
+	
+	@media screen and (min-width: 782px) {
+		.metabox-constructor-fields {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+
+			.field {
+				margin-bottom: 10px;
+				flex-basis: calc(50% - 10px);
+				position: relative;
+			}
+		}
+
+		.metabox-comment-fields {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+
+			.field {
+				margin-bottom: 10px;
+				flex-basis: calc(50% - 10px);
+				position: relative;
+			}
+		}
+	}
+
+	.icon-wrapper {
+		.sortable-placeholder {
+			padding: 5px;
+			border-radius: 2px;
+			margin: 0 7px 7px 0;
+			flex-shrink: 0;
+			white-space: nowrap;
+		}
+	}
+
+	.edit-post-layout__metaboxes {
+		&:not(:empty) {
+			margin-bottom: 25px;
+		}
+	}
+
+	.metabox-constructor-fields {
+		.input-link {
+			position: relative;
+			margin-bottom: 5px;
+
+			span.edit-link {
+				position: absolute;
+				left: -5px;
+				bottom: -5px;
+				cursor: pointer;
+				user-select: none;
+				line-height: 1;
+				font-family: dashicons;
+				color: #989898;
+				background: white;
+				border-radius: 50%;
+				opacity: 0;
+				transition: .1s opacity;
+			}
+
+			.edit-link.linked {
+				&:not(.on-edit) {
+					color: #00890e;
+					opacity: 1;
+				}
+			}
+
+			.edit-link.on-edit {
+				color: #ff3a12;
+				opacity: 1;
+			}
+
+			.edit-link {
+				&:before {
+					content: "\f103";
+					font-family: dashicons;
+				}
+			}
+
+			&:hover {
+				.edit-link {
+					opacity: 1;
+				}
+			}
+		}
+
+		.address-field[data-geocoded="1"] {
+			textarea {
+				&:not(:focus) {
+					border: 1px solid #19a002;
+				}
+			}
+		}
+
+		.geo-data {
+			display: flex;
+			justify-content: space-between;
+
+			.lat {
+				flex-basis: 49%;
+			}
+
+			.long {
+				flex-basis: 49%;
+			}
+		}
+
+		.field {
+			label {
+				margin-right: 10px;
+				display: block;
+				margin-bottom: 5px;
+			}
+
+			input[type="text"] {
+				width: 100%;
+			}
+
+			.messia-help-tip {
+				float: right;
+
+				&:after {
+					font-family: Dashicons;
+					speak: none;
+					font-weight: 400;
+					text-transform: none;
+					line-height: 1;
+					-webkit-font-smoothing: antialiased;
+					text-indent: 0;
+					position: relative;
+					top: 2px;
+					right: -4px;
+					content: "\f223";
+					cursor: help;
+					font-variant: normal;
+					margin: 0;
+					color: #565a5c;
+				}
+			}
+
+			.CodeMirror {
+				border: 1px solid #e6e6e6;
+			}
+		}
+
+		.link-wrapper {
+			display: flex;
+			flex-wrap: nowrap;
+			height: auto;
+
+			#commit-image-link {
+				height: auto;
+				margin-left: 3px;
+				padding: 0 5px;
+				background: #0085ba;
+				border-radius: 4px;
+				color: #fff;
+				text-decoration: none;
+				text-shadow: none;
+				cursor: pointer;
+			}
+
+			#commit-url-link {
+				height: auto;
+				margin-left: 3px;
+				padding: 0 5px;
+				background: #0085ba;
+				border-radius: 4px;
+				color: #fff;
+				text-decoration: none;
+				text-shadow: none;
+				cursor: pointer;
+			}
+
+			.dashicons-editor-break {
+				&:before {
+					vertical-align: middle;
+					font-size: 13px;
+				}
+			}
+		}
+
+		.icon-wrapper {
+			position: relative;
+			display: flex;
+			align-items: center;
+			flex-direction: row;
+			flex-wrap: wrap;
+			align-self: self-end;
+
+			.icon {
+				width: 50px;
+				height: 50px;
+				border-radius: 4px;
+				margin: 0 7px 7px 0;
+				padding: 3px;
+				border: 2px solid #8c8f94;
+				background: #ffffff;
+				display: flex;
+				align-items: center;
+				flex-direction: row;
+				position: relative;
+
+				&:hover {
+					span.remove-image {
+						position: absolute;
+						user-select: none;
+						line-height: 1;
+						font-family: dashicons;
+						border-radius: 2px;
+						background: #353535;
+						color: #ffffff;
+						cursor: pointer;
+						border: 2px solid white;
+
+						&:before {
+							content: "\f158";
+						}
+					}
+
+					span.edit-image {
+						position: absolute;
+						user-select: none;
+						line-height: 1;
+						font-family: dashicons;
+						border-radius: 2px;
+						background: #353535;
+						color: #ffffff;
+						cursor: pointer;
+						border: 2px solid white;
+
+						&:before {
+							content: "\f464";
+						}
+					}
+
+					.edit-link {
+						opacity: 1;
+					}
+				}
+
+				.edit-link.linked {
+					&:not(.on-edit) {
+						color: #00890e;
+						opacity: 1;
+					}
+				}
+
+				.edit-link.on-edit {
+					color: #ff3a12;
+					opacity: 1;
+				}
+
+				.image {
+					box-sizing: content-box;
+					display: block;
+					margin: auto;
+					max-width: 100%;
+					max-height: 100%;
+				}
+			}
+
+			&:not(.ui-sortable-disabled) {
+				.icon {
+					&:not(.template) {
+						cursor: move;
+					}
+				}
+			}
+
+			span.placeholder-image {
+				border-radius: 50%;
+				user-select: none;
+				content: "\f128";
+				line-height: 1;
+				font-family: dashicons;
+				color: #0085ba;
+				display: block;
+				margin: 0 auto;
+
+				&:before {
+					content: "\f128";
+					font-family: dashicons;
+				}
+			}
+
+			span.edit-image {
+				left: -5px;
+				top: -5px;
+			}
+
+			span.remove-image {
+				left: 11px;
+				top: -5px;
+			}
+
+			span.edit-link {
+				position: absolute;
+				left: -5px;
+				bottom: -5px;
+				cursor: pointer;
+				user-select: none;
+				line-height: 1;
+				font-family: dashicons;
+				color: #989898;
+				background: white;
+				border-radius: 50%;
+				opacity: 0;
+				transition: .1s opacity;
+			}
+
+			.edit-link {
+				&:before {
+					content: "\f103";
+					font-family: dashicons;
+				}
+			}
+		}
+	}
+
+	.edit-post-meta-boxes-area {
+		#poststuff {
+			h2.hndle {
+				border-bottom-width: 0;
+			}
+		}
+	}
+
+	.metabox-stuff-fields {
+		.field {
+			label {
+				margin-right: 10px;
+			}
+
+			.messia-help-tip {
+				&:after {
+					font-family: Dashicons;
+					speak: none;
+					font-weight: 400;
+					text-transform: none;
+					line-height: 1;
+					-webkit-font-smoothing: antialiased;
+					text-indent: 0;
+					position: relative;
+					top: 2px;
+					right: -4px;
+					content: "\f223";
+					cursor: help;
+					font-variant: normal;
+					margin: 0;
+					color: #565a5c;
+				}
+			}
+		}
+	}
+
+	.metabox-comment-fields {
+		.field {
+			label {
+				display: block;
+				margin-bottom: 5px;
+			}
+
+			input[type="text"] {
+				width: 100%;
+			}
+
+			.messia-help-tip {
+				float: right;
+
+				&:after {
+					font-family: Dashicons;
+					speak: none;
+					font-weight: 400;
+					text-transform: none;
+					line-height: 1;
+					-webkit-font-smoothing: antialiased;
+					text-indent: 0;
+					position: relative;
+					top: 2px;
+					right: -4px;
+					content: "\f223";
+					cursor: help;
+					font-variant: normal;
+					margin: 0;
+					color: #565a5c;
+				}
+			}
+
+			.CodeMirror {
+				border: 1px solid #e6e6e6;
+			}
+		}
+
+		.link-wrapper {
+			display: flex;
+			flex-wrap: nowrap;
+			height: auto;
+
+			#commit-image-link {
+				height: auto;
+				margin-left: 3px;
+				padding: 0 5px;
+				background: #0085ba;
+				border-radius: 4px;
+				color: #fff;
+				text-decoration: none;
+				text-shadow: none;
+				cursor: pointer;
+			}
+
+			#commit-url-link {
+				height: auto;
+				margin-left: 3px;
+				padding: 0 5px;
+				background: #0085ba;
+				border-radius: 4px;
+				color: #fff;
+				text-decoration: none;
+				text-shadow: none;
+				cursor: pointer;
+			}
+
+			.dashicons-editor-break {
+				&:before {
+					vertical-align: middle;
+					font-size: 13px;
+				}
+			}
+		}
+
+		.icon-wrapper {
+			position: relative;
+			display: flex;
+			align-items: center;
+			flex-direction: row;
+			flex-wrap: wrap;
+			align-self: self-end;
+
+			.icon {
+				width: 50px;
+				height: 50px;
+				border-radius: 4px;
+				margin: 0 7px 7px 0;
+				padding: 3px;
+				border: 2px solid #8c8f94;
+				background: #ffffff;
+				display: flex;
+				align-items: center;
+				flex-direction: row;
+				position: relative;
+
+				&:hover {
+					span.remove-image {
+						position: absolute;
+						user-select: none;
+						line-height: 1;
+						font-family: dashicons;
+						border-radius: 2px;
+						background: #353535;
+						color: #ffffff;
+						cursor: pointer;
+						border: 2px solid white;
+
+						&:before {
+							content: "\f158";
+						}
+					}
+
+					span.edit-image {
+						position: absolute;
+						user-select: none;
+						line-height: 1;
+						font-family: dashicons;
+						border-radius: 2px;
+						background: #353535;
+						color: #ffffff;
+						cursor: pointer;
+						border: 2px solid white;
+
+						&:before {
+							content: "\f464";
+						}
+					}
+
+					.edit-link {
+						opacity: 1;
+					}
+				}
+
+				.edit-link.linked {
+					&:not(.on-edit) {
+						color: #00890e;
+						opacity: 1;
+					}
+				}
+
+				.edit-link.on-edit {
+					color: #ff3a12;
+					opacity: 1;
+				}
+
+				.image {
+					box-sizing: content-box;
+					display: block;
+					margin: auto;
+					max-width: 100%;
+					max-height: 100%;
+				}
+			}
+
+			&:not(.ui-sortable-disabled) {
+				.icon {
+					&:not(.template) {
+						cursor: move;
+					}
+				}
+			}
+
+			span.placeholder-image {
+				border-radius: 50%;
+				user-select: none;
+				content: "\f128";
+				line-height: 1;
+				font-family: dashicons;
+				color: #0085ba;
+				display: block;
+				margin: 0 auto;
+
+				&:before {
+					content: "\f128";
+					font-family: dashicons;
+				}
+			}
+
+			span.edit-image {
+				left: -5px;
+				top: -5px;
+			}
+
+			span.remove-image {
+				left: 11px;
+				top: -5px;
+			}
+
+			span.edit-link {
+				position: absolute;
+				left: -5px;
+				bottom: -5px;
+				cursor: pointer;
+				user-select: none;
+				line-height: 1;
+				font-family: dashicons;
+				color: #989898;
+				background: white;
+				border-radius: 50%;
+				opacity: 0;
+				transition: .1s opacity;
+			}
+
+			.edit-link {
+				&:before {
+					content: "\f103";
+					font-family: dashicons;
+				}
+			}
+		}
+	}
+
+	input[type="url"] {
+		width: 100%;
+	}
+
+	select {
+		width: 100%;
+	}
+
+	textarea {
+		width: 100%;
+	}
+}

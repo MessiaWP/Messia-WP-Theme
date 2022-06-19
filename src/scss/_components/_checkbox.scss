@@ -1,0 +1,189 @@
+.#{$m-namespace-front} {
+	$m-radius-checkbox: 2px;
+
+	@keyframes circle {
+		0% {
+			transform: scale(.2) ;
+			opacity: 0;
+		}
+
+		30% {
+			opacity: .1;
+		}
+
+		60% {
+			opacity: .2;
+		}
+
+		80% {
+			opacity: .1;
+		}
+
+		100% {
+			transform: scale(1) ;
+			opacity: .1;
+		}
+	}
+
+	.messia-checkbox {
+		user-select: none;
+		cursor: pointer;
+		display: inline-flex;
+		align-items: center;
+		margin-bottom: 0;
+		min-height: 38px;
+
+		[disabled] + .messia-checkbox-label-container {
+			opacity: .5;
+
+			.hover {
+				&:after,
+				&:before {
+					content: none;
+				}
+			}
+
+			.messia-checkbox-svg {
+				border-color: $m-control-border-color;
+			}
+		}
+
+		input:checked + .messia-checkbox-label-container {
+			.messia-checkbox-svg {
+				&:before {
+					background: $m-controls_color_initial;
+				}
+
+				&:hover {
+					&:after {
+						transform: scale(1) ;
+					}
+				}
+
+				&:after {
+					animation: circle ease-in-out .4s;
+				}
+
+				svg {
+					fill: $m-controls_color_initial;
+					stroke-dashoffset: 0;
+
+					polyline {
+						stroke-dashoffset: 0;
+					}
+				}
+			}
+		}
+
+		&:hover {
+			.messia-checkbox-label-container {
+				.hover {
+					&:after {
+						opacity: .07;
+					}
+				}
+			}
+		}
+
+		&.is-clicked {
+			.messia-checkbox-label-container {
+				.hover {
+					&:before {
+						transform: scale(1) translate(-50%, -50%);
+					}
+				}
+			}
+		}
+
+		.messia-checkbox-label-container {
+			display: flex;
+			width: 100%;
+			position: relative;
+			padding-top: 4px;
+			padding-bottom: 4px;
+			align-items: flex-start;
+
+			.hover {
+				&:after,
+				&:before {
+					content: "";
+					position: absolute;
+					width: 38px;
+					height: 38px;
+					border-radius: 50%;
+					top: 50%;
+					transform: translate(-50%, -50%);
+					left: 50%;
+					background: $m-controls_color_initial;
+				}
+
+				&:after {
+					opacity: 0;
+				}
+
+				&:before {
+					opacity: .07;
+					transform: scale(0) translateY(-50%);
+				}
+			}
+		}
+
+		.messia-checkbox-label {
+			margin-top: 0;
+			display: flex;
+			align-items: flex-start;
+		}
+
+		.messia-checkbox-svg {
+			flex-shrink: 0;
+			position: relative;
+			margin-right: 15px;
+			width: 18px;
+			height: 18px;
+			border: 2px solid $m-control-border-color;
+			border-radius: $m-radius-checkbox;
+			display: block;
+			margin-top: 4px;
+
+			&:before {
+				content: "";
+				position: absolute;
+				top: -2px;
+				bottom: -2px;
+				right: -2px;
+				left: -2px;
+				border-radius: $m-radius-checkbox;
+				transition: background-color 90ms cubic-bezier(0, 0, .2, .1), opacity 40ms cubic-bezier(0, 0, .2, .1);
+			}
+
+			&:after {
+				content: "";
+				position: absolute;
+				width: 38px;
+				height: 38px;
+				top: 50%;
+				transform: scale(0);
+				margin-top: -20px;
+				left: -12px;
+				border-radius: 50%;
+				opacity: 0;
+				background: $m-active-color;
+				z-index: 1;
+			}
+
+			svg {
+				position: absolute;
+				top: -3px;
+				left: -3px;
+				width: 18px;
+				height: 18px;
+				z-index: 8;
+				stroke-dasharray: 18px;
+				stroke-dashoffset: 18px;
+				stroke: #000;
+				stroke-width: 2px;
+				transition: $m-transition-fill;
+			}
+		}
+	}
+}

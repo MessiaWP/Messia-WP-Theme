@@ -1,0 +1,30 @@
+/* WIDGET */
+@import "../init";
+
+.#{$m-namespace-front} {
+	.messia-widget-object-categories {
+		.cross-categories {
+			.messia-icon {
+				max-width: 25px;
+			}
+
+			.bullet {
+				&:before {
+					content: "\2911";
+				}
+			}
+
+			&.hierarchical .bullet {
+				&:before {
+					content: "\21B5";
+					transform: scale(-1, 1);
+					display: inline-block;
+				}
+			}
+
+			.root {
+				margin-right: -10px;
+			}
+		}
+	}
+}

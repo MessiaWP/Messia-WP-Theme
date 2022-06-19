@@ -1,0 +1,85 @@
+/* BLOCK */
+@import "../init";
+
+.#{$m-namespace-admin} {
+	.block-editor,
+	.blocks-widgets-container {
+		.wp-block-messia-block-search-snippet {
+
+			@media (min-width: 782px) {
+				.category .settings:not(:empty) .settings-inner {
+					display: grid;
+					grid-gap: 2%;
+					grid-template-columns: repeat(2, 49%);
+					align-items: end;
+				}
+			}
+
+			.filters-templates {
+				display: flex;
+				flex-wrap: wrap;
+				column-gap: .7em;
+			}
+
+			.messia-filter {
+				line-height: initial;
+				user-select: none;
+
+				.heading {
+					flex-grow: 1;
+				}
+
+				&.dropped .remove {
+					display: initial;
+				}
+
+				.remove {
+					display: none;
+				}
+			}
+
+			.settings:not(:empty) {
+				margin: 10px 0 5px;
+				max-height: 200px;
+				overflow: auto;
+				border-top: 1px solid #d5d5d5;
+				padding: 10px 0 0;
+			}
+
+			.settings:not(:empty) .properties {
+				column-count: 2;
+			}
+
+			.settings .select-all-alias {
+				max-width: calc(100% - 2px);
+			}
+
+			.settings select {
+				max-width: 100%;
+			}
+
+			.messia-filter:not(.saved) .settings {
+				display: none;
+			}
+
+			.settings::-webkit-scrollbar {
+				width: 7px;
+				height: 5px;
+				background-color: #d1d1d1;
+				border-radius: 0;
+			}
+
+			.settings::-webkit-scrollbar-thumb {
+				background-color: #007cba;
+			}
+
+			.settings::-webkit-scrollbar-track-piece {
+				background-color: #e2e2e2;
+			}
+
+			.settings::-webkit-scrollbar-thumb {
+				border-radius: 2px;
+			}
+		}
+	}
+}

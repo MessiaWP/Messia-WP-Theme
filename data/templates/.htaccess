@@ -1,0 +1,15 @@
+
+# BEGIN Messia
+# The directives (lines) between "BEGIN Messia" and "END Messia" are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
+deny from all
+
+# END Messia
+# BEGIN Messia User Rules
+# The directives (lines) between "BEGIN Messia User Rules" and "END Messia User Rules" are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
+deny from all
+
+# END Messia User Rules

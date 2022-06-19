@@ -1,0 +1,1 @@
+import 'nodeModules/ion-rangeslider/js/ion.rangeSlider.js';

@@ -1,0 +1,6 @@
+@import "../init";
+.#{$m-namespace-front} {
+	.editable {
+		cursor: pointer;
+	}
+}

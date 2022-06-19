@@ -1,0 +1,19 @@
+@import "../init";
+
+.#{$m-namespace-front} {
+	.stars {
+		svg {
+			stroke: #000;
+		}
+	}
+
+	.rating {
+		> * + *:not(.stars) {
+			margin-left: .5rem;
+		}
+	}
+
+	.not-rated .text {
+		@include unrated();
+	}
+}

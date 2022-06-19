@@ -1,0 +1,52 @@
+/* BLOCK */
+@import "../init";
+
+.block-editor,
+.blocks-widgets-container {
+	.wp-block-messia-block-testimonials {
+		.criteria,
+		.depth-non-rated {
+			.ratingRange {
+				flex-basis: 50%;
+			}
+		}
+
+		.depth-non-rated {
+			align-items: flex-end;
+		}
+
+		.conditions {
+			flex-direction: column;
+
+			.components-base-control__field {
+				display: flex;
+				flex-direction: column;
+			}
+
+			select {
+				max-width: none;
+			}
+
+			.rating-min {
+				.components-range-control__wrapper {
+					order: 1;
+				}
+
+				.components-range-control__number {
+					margin-left: 0 !important; // stylelint-disable-line declaration-no-important
+					margin-right: 6px;
+				}
+			}
+
+			.rating-max {
+				.components-base-control__label {
+					text-align: right;
+				}
+			}
+		}
+
+		.components-button {
+			margin: 0;
+		}
+	}
+}

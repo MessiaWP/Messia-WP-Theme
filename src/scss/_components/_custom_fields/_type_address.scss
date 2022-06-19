@@ -1,0 +1,31 @@
+.#{$m-namespace-front} {
+	.messia-map {
+		width: 100%;
+		position: relative;
+		display: block;
+
+		&.popup {
+			display: none;
+		}
+
+		.map {
+			position: relative;
+
+			&:after {
+				content: "";
+				display: block;
+				padding-top: 50%;
+			}
+		}
+	}
+
+	.sidebar {
+		.messia-map {
+			.map {
+				&:after {
+					padding-top: 100%;
+				}
+			}
+		}
+	}
+}

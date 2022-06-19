@@ -1,0 +1,19 @@
+/* WIDGET */
+@import "../init";
+
+.#{$m-namespace-front} {
+	[data-bs-toggle="modal"] {
+		cursor: pointer;
+	}
+
+	.modal {
+		&.fade .modal-dialog {
+			transition: transform .3s ease-out;
+			transform: translate(0,-50px);
+		}
+
+		&.show .modal-dialog {
+			transform: none;
+		}
+	}
+}

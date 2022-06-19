@@ -1,0 +1,204 @@
+@import "../init";
+
+.#{$m-namespace-admin} {
+	&.overflow-y-hidden {
+		overflow: hidden;
+	}
+
+	&.touch-action-none {
+		touch-action: none;
+	}
+
+	#messia-dialog-overlay {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: #0000008a;
+		z-index: 99999;
+	}
+
+	.messia-dialog {
+		display: flex;
+		flex-direction: column;
+		background-color: white;
+		border: 1px solid #d3d3d3;
+		text-align: center;
+		min-height: calc(100vh / 2);
+		min-width: calc(100vw / 2);
+		max-height: 98vh;
+		max-width: 98vw;
+		position: absolute;
+		border-radius: 3px;
+		//resize: both;
+		overflow: hidden;
+		user-select: none;
+		z-index: 9;
+		touch-action: none;
+
+		@media (max-width: 782px) {
+			min-width: calc(100vw - 50px);
+		}
+
+		.titlebar {
+			z-index: 10;
+			background-color: #e6933f;
+			color: #fff;
+			display: flex;
+			justify-content: space-between;
+			margin: 1px;
+			border-radius: inherit;
+
+			.title,
+			.close-dialog {
+				padding: 8px 10px;
+			}
+
+			.title {
+				cursor: move;
+				flex-grow: 1;
+				text-align: left;
+			}
+
+			.close-dialog {
+				cursor: pointer;
+			}
+		}
+
+		.content {
+			flex-grow: 1;
+			overflow: auto;
+			position: relative;
+		}
+
+		.buttonpane {
+			border-top: 1px solid #e9e9e9;
+			text-align: right;
+			background: whitesmoke;
+
+			.buttonset {
+				display: grid;
+				gap: .5em;
+				grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+				direction: rtl;
+				padding: 10px;
+
+				button {
+					padding: .4em 1em;
+					cursor: pointer;
+					text-align: center;
+					border: 1px solid #c5c5c5;
+					background: #f6f6f6;
+					border-radius: 3px;
+
+					&.ui-state-disabled {
+						opacity: .7;
+					}
+				}
+			}
+		}
+
+		.resizer-top,
+		.resizer-right,
+		.resizer-bottom,
+		.resizer-left,
+		.resizer-both {
+			background: transparent;
+			position: absolute;
+			z-index: 10;
+		}
+
+		.resizer-top:before,
+		.resizer-right:before,
+		.resizer-bottom:before,
+		.resizer-left:before {
+			content: "";
+			position: absolute;
+			border-radius: 0;
+			border: 1px solid #dedede;
+		}
+
+		.resizer-top:before {
+			left: calc(50% - 10px);
+			bottom: -1px;
+			width: 20px;
+			height: 0;
+		}
+
+		.resizer-right:before {
+			top: calc(50% - 10px);
+			left: -1px;
+			width: 0;
+			height: 20px;
+		}
+
+		.resizer-bottom:before {
+			left: calc(50% - 10px);
+			top: -1px;
+			width: 20px;
+			height: 0;
+		}
+
+		.resizer-left:before {
+			top: calc(50% - 10px);
+			right: -1px;
+			width: 0;
+			height: 20px;
+		}
+
+		.resizer-both:before {
+			content: "";
+			position: absolute;
+			left: -2px;
+			top: -2px;
+			width: 100%;
+			height: 100%;
+			background: #e6933f;
+			border-radius: 50%;
+		}
+
+		.resizer-top {
+			width: 100%;
+			height: 5px;
+			top: 0;
+			left: 0;
+			cursor: n-resize;
+		}
+
+		.resizer-right {
+			width: 5px;
+			height: 100%;
+			right: 0;
+			bottom: 0;
+			cursor: e-resize;
+		}
+
+		.resizer-bottom {
+			width: 100%;
+			height: 5px;
+			right: 0;
+			bottom: 0;
+			cursor: n-resize;
+		}
+
+		.resizer-left {
+			width: 5px;
+			height: 100%;
+			left: 0;
+			top: 0;
+			cursor: e-resize;
+		}
+
+		.resizer-both {
+			width: 5px;
+			height: 5px;
+			right: 0;
+			bottom: 0;
+			cursor: nw-resize;
+		}
+	}
+}

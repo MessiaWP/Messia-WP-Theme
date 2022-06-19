@@ -1,0 +1,90 @@
+// General rules
+@import "../init";
+.#{$m-namespace-admin} {
+	
+	@keyframes set-rating {
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+
+	.post-type-messia_object {
+		.column-messia_site_rating {
+			min-width: 90px;
+
+			.dashicons {
+				animation: set-rating 2s linear infinite;
+			}
+
+			.set_site_rating {
+				cursor: pointer;
+			}
+
+			.set_site_rating.set {
+				display: none;
+			}
+		}
+
+		.column-title {
+			width: 19%;
+		}
+	}
+
+	#site-rating-setting {
+		border-collapse: collapse;
+		width: 100%;
+		margin-top: 10px;
+
+		tr.criteria {
+			&:first-child {
+				background: #fbfbfb;
+				font-weight: 600;
+			}
+
+			&:last-child {
+				background: #fbfbfb;
+				font-weight: 600;
+			}
+
+			td {
+				border: 1px solid #dddddd;
+				text-align: left;
+				padding: 8px;
+
+				&:first-child {
+					width: 90%;
+					height: 2.5em;
+				}
+			}
+
+			th {
+				border: 1px solid #dddddd;
+				text-align: left;
+				padding: 8px;
+
+				&:first-child {
+					width: 90%;
+					height: 2.5em;
+				}
+			}
+
+			input {
+				width: 5em;
+
+				&:placeholder-shown {
+					opacity: .5;
+				}
+			}
+		}
+
+		tr.average-values {
+			td[data-term-id] {
+				text-align: center;
+			}
+		}
+	}
+
+	#messia_modal_warning.calculating {
+		opacity: .5;
+	}
+}
