@@ -1313,8 +1313,8 @@ import './_components/_loader.js';
 
 				for (let i = 0; i < Messia.all_range_filters.length; i++) {
 					const
-						range = $(Messia.all_range_filters[i])
-					rangeObject = Messia.getIonRangeSliderInstance(range),
+						range = $(Messia.all_range_filters[i]),
+						rangeObject = Messia.getIonRangeSliderInstance(range),
 						from = rangeObject.options.min,
 						to = rangeObject.options.max;
 
