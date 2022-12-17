@@ -10,8 +10,10 @@
 	<!-- FILES -->
 	<exclude-pattern>phpcs.xml</exclude-pattern>
 	<exclude-pattern>*\.js$</exclude-pattern> <!-- WP Inspector does not handle ES6 very well -->
+	<exclude-pattern>*\.css$</exclude-pattern> <!-- WP Inspector does not handle CSS very well -->
 	<exclude-pattern>./vendor</exclude-pattern>
 	<exclude-pattern>./includes/phpwee</exclude-pattern>
+	<exclude-pattern>./includes/assets</exclude-pattern>
 	<exclude-pattern>./node_modules</exclude-pattern>
 
 	<!--

@@ -114,9 +114,9 @@ abstract class Messia_Social {
 	/**
 	 * Universal cURL method to retrieve data from authorization servers.
 	 *
-	 * @param string $url Requested URL.
+	 * @param string $url    Requested URL.
 	 * @param array  $params URL query data.
-	 * @param string $type json|str.
+	 * @param string $type   json|str.
 	 *
 	 * @return string
 	 *

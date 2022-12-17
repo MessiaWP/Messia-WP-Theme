@@ -1073,7 +1073,7 @@ class Messia_Cpt_Config {
 	 * Return unified structure for taxonomy label values.
 	 *
 	 * @param string $singular Singular form value for label.
-	 * @param string $plural Plural form value for label.
+	 * @param string $plural   Plural form value for label.
 	 *
 	 * @return array
 	 */

@@ -102,7 +102,7 @@ abstract class Messia_Object_Tmpl_Base extends Messia_Module_Base {
 	/**
 	 * Get all terms in taxonomy that object belongs to.
 	 *
-	 * @param array $objects WP posts IDs.
+	 * @param array $objects    WP posts IDs.
 	 * @param array $taxonomies Registered taxonomy names.
 	 *
 	 * @return array

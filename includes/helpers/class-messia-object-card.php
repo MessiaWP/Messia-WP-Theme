@@ -51,7 +51,7 @@ class Messia_Object_Card {
 	/**
 	 * Filters the maximum image width to be included in a 'srcset' attribute.
 	 *
-	 * @param int   $max_width The maximum image width to be included in the 'srcset'. Default '2048'.
+	 * @param int   $max_width  The maximum image width to be included in the 'srcset'. Default '2048'.
 	 * @param array $size_array An array of requested width and height values for image.
 	 *
 	 * @return int
@@ -64,8 +64,8 @@ class Messia_Object_Card {
 	 * Build crad object HTML.
 	 *
 	 * @param int   $segment_term_id Segment of object.
-	 * @param int   $object_id ID of object.
-	 * @param array $args Extra arguments.
+	 * @param int   $object_id       ID of object.
+	 * @param array $args            Extra arguments.
 	 *
 	 * @return string
 	 */
@@ -420,7 +420,7 @@ class Messia_Object_Card {
 	 * Get current meta data of constructor field
 	 * from term constructor and validate it against it's value and card zone.
 	 *
-	 * @param array $term_meta Term meta constructor.
+	 * @param array $term_meta   Term meta constructor.
 	 * @param array $object_meta Object meta data constructor.
 	 *
 	 * @return mixed

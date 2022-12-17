@@ -189,7 +189,7 @@ class Messia_Block_Blocks {
 	 * Register messia block category.
 	 *
 	 * @param array $categories Array of block categories.
-	 * @param mixed $context Post being loaded.
+	 * @param mixed $context    Post being loaded.
 	 *
 	 * @return array
 	 */
@@ -210,7 +210,7 @@ class Messia_Block_Blocks {
 	 * Filter blocks to let certain blocks be available at certain pages.
 	 *
 	 * @param bool|array $allowed_block_types Array of block type slugs.
-	 * @param mixed      $context The post resource data.
+	 * @param mixed      $context             The post resource data.
 	 *
 	 * @throws Exception On invalid scope value.
 	 *

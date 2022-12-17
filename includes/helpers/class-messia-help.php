@@ -78,7 +78,7 @@ class Messia_Help extends Messia_Help_Queries {
 	 * Parse string and replace seo nominants with real data.
 	 *
 	 * @param array  $seo_placeholders Valid theme placeholders.
-	 * @param string $seo_template User string containing some placeholders.
+	 * @param string $seo_template     User string containing some placeholders.
 	 *
 	 * @return string
 	 */
@@ -100,8 +100,8 @@ class Messia_Help extends Messia_Help_Queries {
 	/**
 	 * Get media file or font icon html for frontend.
 	 *
-	 * @param array $icons Json encoded icons data.
-	 * @param mixed $size Args for wp_get_attachment_image() size.
+	 * @param array $icons       Json encoded icons data.
+	 * @param mixed $size        Args for wp_get_attachment_image() size.
 	 * @param bool  $flush_cache Whether to bypass cache.
 	 *
 	 * @throws Exception On incorrect icon set id or image type.
@@ -158,7 +158,7 @@ class Messia_Help extends Messia_Help_Queries {
 	/**
 	 * Get media file or font icon html for backend.
 	 *
-	 * @param array $icons Array of icons with data.
+	 * @param array $icons    Array of icons with data.
 	 * @param bool  $multiple Allow multiple selection.
 	 * @param array $handlers Render Edit, Remove, Link HTML elments.
 	 *
@@ -283,9 +283,9 @@ class Messia_Help extends Messia_Help_Queries {
 	/**
 	 * Get non-empty taxonomy terms (reffering to 1 and more objects) for other taxonomy.
 	 *
-	 * @param string $taxonomy Registered taxonomy name.
+	 * @param string $taxonomy          Registered taxonomy name.
 	 * @param string $segment_term_slug Slug of segment taxonomy term.
-	 * @param array  $meta_keys Meta key which value should be included in result.
+	 * @param array  $meta_keys         Meta key which value should be included in result.
 	 *
 	 * @return array
 	 */
@@ -458,7 +458,7 @@ class Messia_Help extends Messia_Help_Queries {
 	 * The result is a tree of taxonomy terms, taking into account their hierarchy, where each element
 	 * at any level [term_id => term data]
 	 *
-	 * @param array  $elements WP Term.
+	 * @param array  $elements  WP Term.
 	 * @param string $parent_id ID of parent term.
 	 *
 	 * @return array
@@ -490,8 +490,8 @@ class Messia_Help extends Messia_Help_Queries {
 	 * Has NO cache.
 	 *
 	 * @param array    $taxonomy_terms_tree Hierarchical by term ID array of terms.
-	 * @param stdClass $parent_term ID of parent term.
-	 * @param array    $level Stuff data, do not pass here anything.
+	 * @param stdClass $parent_term         ID of parent term.
+	 * @param array    $level               Stuff data, do not pass here anything.
 	 *
 	 * @return array
 	 * @nonused
@@ -546,9 +546,9 @@ class Messia_Help extends Messia_Help_Queries {
 	 * is in the first place in each index followed by descendants.
 	 *
 	 * @param array $taxonomy_terms_tree Hierarchical by term ID array of terms.
-	 * @param array $global_terms_order Order of terms as they stored in DB.
-	 * @param array $parent_term ID of parent term.
-	 * @param array $level Stuff data, do not pass here anything.
+	 * @param array $global_terms_order  Order of terms as they stored in DB.
+	 * @param array $parent_term         ID of parent term.
+	 * @param array $level               Stuff data, do not pass here anything.
 	 *
 	 * @return array
 	 */
@@ -845,10 +845,10 @@ class Messia_Help extends Messia_Help_Queries {
 	/**
 	 * Reorder terms as htem shows in WP Admin.
 	 *
-	 * @param array $terms      All DB terms ordered by name.
-	 * @param array $children   Storred in DB terms hierarchy.
-	 * @param array $hierarchy  Reordering result.
-	 * @param int   $parent     Parent terms.
+	 * @param array $terms     All DB terms ordered by name.
+	 * @param array $children  Storred in DB terms hierarchy.
+	 * @param array $hierarchy Reordering result.
+	 * @param int   $parent    Parent terms.
 	 *
 	 * @return array
 	 */
@@ -1058,9 +1058,9 @@ class Messia_Help extends Messia_Help_Queries {
 	 * Comment snippet in comment list. Wrapper for self::get_rating_snippet().
 	 *
 	 * @param int|object $comment Comment data.
-	 * @param array      $args wp_list_comments() args.
-	 * @param bool       $new For new comment or existing one.
-	 * @param mixed      $echo Return or output result.
+	 * @param array      $args    wp_list_comments() args.
+	 * @param bool       $new     For new comment or existing one.
+	 * @param mixed      $echo    Return or output result.
 	 *
 	 * @return string HTML code.
 	 */
@@ -1146,10 +1146,10 @@ class Messia_Help extends Messia_Help_Queries {
 	/**
 	 * Comment snippet in object card. Wrapper for self::get_rating_snippet().
 	 *
-	 * @param int|WP_Post $object Object.
+	 * @param int|WP_Post $object  Object.
 	 * @param array       $modules What to include: stars, date etc..
-	 * @param bool        $new For new comment or existing one.
-	 * @param mixed       $echo Return or output result.
+	 * @param bool        $new     For new comment or existing one.
+	 * @param mixed       $echo    Return or output result.
 	 *
 	 * @return string HTML code.
 	 */
@@ -1172,9 +1172,9 @@ class Messia_Help extends Messia_Help_Queries {
 	 * Generate HTML content of comment.
 	 *
 	 * @param int        $object_id ID of post.
-	 * @param float|bool $rating Value of rating.
-	 * @param array      $modules What to include: stars, date etc..
-	 * @param bool       $new For new comment or existing one.
+	 * @param float|bool $rating    Value of rating.
+	 * @param array      $modules   What to include: stars, date etc..
+	 * @param bool       $new       For new comment or existing one.
 	 *
 	 * @return string
 	 */
@@ -1272,8 +1272,8 @@ class Messia_Help extends Messia_Help_Queries {
 	 * Callback for WP wp_list_comments().
 	 *
 	 * @param WP_Comment|stdClass $comment Comment itself.
-	 * @param array               $args wp_list_comments() args.
-	 * @param int                 $depth Comment depth.
+	 * @param array               $args    wp_list_comments() args.
+	 * @param int                 $depth   Comment depth.
 	 *
 	 * @return void
 	 */
@@ -1346,9 +1346,9 @@ class Messia_Help extends Messia_Help_Queries {
 	 * Filters the CSS classes applied to a menu item's list item element.
 	 *
 	 * @param string[] $classes Array of the CSS classes that are applied to the menu item's `<li>` element.
-	 * @param WP_Post  $item The current menu item.
-	 * @param stdClass $args An object of wp_nav_menu() arguments.
-	 * @param int      $depth Depth of menu item. Used for padding.
+	 * @param WP_Post  $item    The current menu item.
+	 * @param stdClass $args    An object of wp_nav_menu() arguments.
+	 * @param int      $depth   Depth of menu item. Used for padding.
 	 *
 	 * @return array
 	 */
@@ -1385,7 +1385,6 @@ class Messia_Help extends Messia_Help_Queries {
 		$items .= ob_get_clean();
 
 		return $items;
-
 	}
 
 	/**
@@ -1396,9 +1395,9 @@ class Messia_Help extends Messia_Help_Queries {
 	 * no filter for modifying the opening and closing `<li>` for a menu item.
 	 *
 	 * @param string   $item_output The menu item's starting HTML output.
-	 * @param WP_Post  $item Menu item data object.
-	 * @param int      $depth Depth of menu item. Used for padding.
-	 * @param stdClass $args An object of wp_nav_menu() arguments.
+	 * @param WP_Post  $item        Menu item data object.
+	 * @param int      $depth       Depth of menu item. Used for padding.
+	 * @param stdClass $args        An object of wp_nav_menu() arguments.
 	 *
 	 * @return string
 	 */
@@ -1411,10 +1410,10 @@ class Messia_Help extends Messia_Help_Queries {
 	/**
 	 * Create structured HTML content of errors.
 	 *
-	 * @param string $title Error block title.
-	 * @param array  $errors Messages to show.
-	 * @param string $comments Text to show below messages.
-	 * @param bool   $echo Return or output result.
+	 * @param string $title       Error block title.
+	 * @param array  $errors      Messages to show.
+	 * @param string $comments    Text to show below messages.
+	 * @param bool   $echo        Return or output result.
 	 * @param array  $css_classes List of values.
 	 *
 	 * @return string
@@ -1461,9 +1460,9 @@ class Messia_Help extends Messia_Help_Queries {
 	/**
 	 * Find blocks in blocks array
 	 *
-	 * @param array $blocks_scope Gutenberg blocks.
+	 * @param array $blocks_scope   Gutenberg blocks.
 	 * @param array $blocks_to_find What block to search.
-	 * @param array $found Stuff data, do not pass anything here.
+	 * @param array $found          Stuff data, do not pass anything here.
 	 *
 	 * @return array
 	 */
@@ -1519,8 +1518,8 @@ class Messia_Help extends Messia_Help_Queries {
 	 * Make tree of terms flat.
 	 *
 	 * @param array   $terms Array of terms.
-	 * @param string  $key Array of terms.
-	 * @param array   $flat Flatten terms.
+	 * @param string  $key   Array of terms.
+	 * @param array   $flat  Flatten terms.
 	 * @param integer $level How deep term are, stuff data, do not pass anything here.
 	 *
 	 * @return array Same terms but flat.
@@ -1539,9 +1538,9 @@ class Messia_Help extends Messia_Help_Queries {
 			];
 
 			if ( isset( $term['children'] ) ) {
-				$level++;
+				++$level;
 				$flat = self::build_terms_flat( $term['children'], $key, $flat, $level );
-				$level--;
+				--$level;
 			}
 		}
 		return $flat;
@@ -1649,7 +1648,7 @@ class Messia_Help extends Messia_Help_Queries {
 
 			$cf = [];
 
-			foreach ( $parts['query']['cf'] as $field_name => $field_value) {
+			foreach ( $parts['query']['cf'] as $field_name => $field_value ) {
 				$cf[] = [ $field_name => $field_value ];
 			}
 

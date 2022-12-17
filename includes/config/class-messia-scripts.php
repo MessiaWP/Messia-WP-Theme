@@ -724,7 +724,7 @@ class Messia_Scripts {
 	 * Minify JS and CSS file content and save minified file to disk.
 	 *
 	 * @param string $handle Script or style registered in WP name.
-	 * @param string $src Absolute path to source file registered in WP script or style.
+	 * @param string $src    Absolute path to source file registered in WP script or style.
 	 *
 	 * @return string|bool Path to min file or false.
 	 * @throws Exception If PHPWee can not be loaded.

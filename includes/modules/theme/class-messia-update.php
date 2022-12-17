@@ -58,7 +58,7 @@ final class Messia_Update {
 		$this->settings = MIA()->get_module( 'settings' );
 		$settings       = $this->settings->get_shared_settings( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME, MESSIA_THEME_SITE_SETTINGS_PRESET_NAME );
 
-		if ( ! array_key_exists( 'theme_licence_data', $settings ) ) { 
+		if ( ! array_key_exists( 'theme_licence_data', $settings ) ) {
 			return;
 		}
 
@@ -192,9 +192,9 @@ final class Messia_Update {
 	/**
 	 * Render interface for licence operations in admin.
 	 *
-	 * @param array  $args Injected args from config.
+	 * @param array  $args        Injected args from config.
 	 * @param string $option_name As it storred in DB.
-	 * @param string $value Current option value.
+	 * @param string $value       Current option value.
 	 *
 	 * @return void
 	 */
@@ -261,7 +261,7 @@ final class Messia_Update {
 				}
 
 				$this->credentials->theme_licence['licence_key'] = $payload->licence_key;
-				$current_licence_status = $this->credentials->theme_licence['licence_status'];
+				$current_licence_status                          = $this->credentials->theme_licence['licence_status'];
 
 				switch ( $payload->licence_action ) {
 					case 'toggleStatus':

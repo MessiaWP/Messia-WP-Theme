@@ -312,8 +312,8 @@ class Messia_Cpt {
 	 * Fill custom columns for property terms list with data.
 	 *
 	 * @param string $columns Blank string.
-	 * @param string $column Name of the column.
-	 * @param int    $id Term ID.
+	 * @param string $column  Name of the column.
+	 * @param int    $id      Term ID.
 	 *
 	 * @return string
 	 */
@@ -369,8 +369,8 @@ class Messia_Cpt {
 	 * Fill custom columns for property terms list with data.
 	 *
 	 * @param string $columns Blank string.
-	 * @param string $column Name of the column.
-	 * @param int    $id Term ID.
+	 * @param string $column  Name of the column.
+	 * @param int    $id      Term ID.
 	 *
 	 * @return string
 	 */
@@ -766,7 +766,7 @@ class Messia_Cpt {
 	/**
 	 * Output custom fields on taxonomy term edit page.
 	 *
-	 * @param WP_Term $wp_term Current taxonomy term object.
+	 * @param WP_Term $wp_term  Current taxonomy term object.
 	 * @param string  $taxonomy Registered taxonomy name.
 	 * @throws Exception If custom filed type was not found in config.
 	 *
@@ -910,7 +910,7 @@ class Messia_Cpt {
 	/**
 	 * Output custom fields on taxonomy term edit page.
 	 *
-	 * @param WP_Term $wp_term Current taxonomy term object.
+	 * @param WP_Term $wp_term  Current taxonomy term object.
 	 * @param string  $taxonomy Registered taxonomy name.
 	 * @throws Exception If custom filed type was not found in config.
 	 *
@@ -1020,8 +1020,8 @@ class Messia_Cpt {
 	/**
 	 * Get term meta value and set default if no meta exist.
 	 *
-	 * @param int    $term_id Taxonomy term id data retrieving for.
-	 * @param string $meta_key Key DB name.
+	 * @param int    $term_id       Taxonomy term id data retrieving for.
+	 * @param string $meta_key      Key DB name.
 	 * @param mixed  $default_value Value to set if no meta exist yet.
 	 *
 	 * @return mixed
@@ -1042,7 +1042,7 @@ class Messia_Cpt {
 	 *
 	 * @param string $field_type Internal type of custom field.
 	 * @param array  $field_data Custom field configuration.
-	 * @param mixed  $value Current constructed value of field.
+	 * @param mixed  $value      Current constructed value of field.
 	 *
 	 * @return string HTML code for filed card.
 	 * @throws Exception If custom filed scope was not found in config.
@@ -1357,7 +1357,7 @@ class Messia_Cpt {
 	 * In 2 and 3 there no meta data from client, so it will be setted to default
 	 *
 	 * @param int $term_id Currently saving term.
-	 * @param int $tt_id Currently saving term.
+	 * @param int $tt_id   Currently saving term.
 	 * @throws Exception If default data for custom filed type was not found in config.
 	 *
 	 * @return void
@@ -1521,9 +1521,9 @@ class Messia_Cpt {
 	/**
 	 * Unset segments in existing blocks attrs.
 	 *
-	 * @param array  $blocks Parsed blocks.
-	 * @param array  $blocks_messia Messia registered block names.
-	 * @param string $segment_slug Segment being removed.
+	 * @param array  $blocks             Parsed blocks.
+	 * @param array  $blocks_messia      Messia registered block names.
+	 * @param string $segment_slug       Segment being removed.
 	 * @param array  $term_custom_fields Current set of custom fields in segment.
 	 *
 	 * @return void
@@ -1560,7 +1560,7 @@ class Messia_Cpt {
 								'fieldSlug'   => $add,
 								'fieldOpts'   => [
 									'active' => false,
-								]
+								],
 							];
 						}
 					}
@@ -1592,7 +1592,7 @@ class Messia_Cpt {
 	 * In 2 and 3 there no meta data from client, so it will be setted to default
 	 *
 	 * @param int $term_id currently saving term.
-	 * @param int $tt_id currently saving term.
+	 * @param int $tt_id   currently saving term.
 	 *
 	 * @return void
 	 */
@@ -1635,11 +1635,9 @@ class Messia_Cpt {
 				} else {
 					$updated = update_term_meta( $term_id, $extra_field['id'], $value, $current_value );
 				}
-			} else {
+			} elseif ( ! metadata_exists( 'term', $term_id, $extra_field['id'] ) ) {
 
-				if ( ! metadata_exists( 'term', $term_id, $extra_field['id'] ) ) {
 					$updated = update_term_meta( $term_id, $extra_field['id'], $extra_field['default_value'] );
-				}
 			}
 		}
 
@@ -1657,8 +1655,8 @@ class Messia_Cpt {
 	 * Output some of constructor fields to the quick edit panel of term.
 	 *
 	 * @param string $column_name Name of the column to edit.
-	 * @param string $post_type The post type slug, or current screen name if this is a taxonomy list table.
-	 * @param string $taxonomy The taxonomy name, if any.
+	 * @param string $post_type   The post type slug, or current screen name if this is a taxonomy list table.
+	 * @param string $taxonomy    The taxonomy name, if any.
 	 *
 	 * @return void
 	 */
@@ -1718,8 +1716,10 @@ class Messia_Cpt {
 					<div id="messia-inline-content" class="inline-edit-col"><?php echo $html; ?></div>
 				</fieldset>
 				<?php
-				if( 1 === $i ) wp_nonce_field( 'messia_taxonomy_term', 'messia_nonce', false );
-				$i++;
+				if ( 1 === $i ) {
+					wp_nonce_field( 'messia_taxonomy_term', 'messia_nonce', false );
+				}
+				++$i;
 			}
 		}
 	}
@@ -1729,8 +1729,8 @@ class Messia_Cpt {
 	 * Output some of constructor fields to the quick edit panel of term.
 	 *
 	 * @param string $column_name Name of the column to edit.
-	 * @param string $post_type The post type slug, or current screen name if this is a taxonomy list table.
-	 * @param string $taxonomy The taxonomy name, if any.
+	 * @param string $post_type   The post type slug, or current screen name if this is a taxonomy list table.
+	 * @param string $taxonomy    The taxonomy name, if any.
 	 *
 	 * @return void
 	 */
@@ -1815,8 +1815,10 @@ class Messia_Cpt {
 					<div id="messia-inline-content" class="inline-edit-col"><?php echo $html; ?></div>
 				</fieldset>
 				<?php
-				if( 1 === $i ) wp_nonce_field( 'messia_taxonomy_term', 'messia_nonce', false );
-				$i++;
+				if ( 1 === $i ) {
+					wp_nonce_field( 'messia_taxonomy_term', 'messia_nonce', false );
+				}
+				++$i;
 			}
 		}
 	}
@@ -1826,9 +1828,9 @@ class Messia_Cpt {
 	 * Cleanup non-used site rating keys and property groups keys.
 	 *
 	 * @param string $setting_preset Saved preset name.
-	 * @param array  $to_save Incoming settings.
-	 * @param array  $old_settings Old settings.
-	 * @param array  $new_settings New settings.
+	 * @param array  $to_save        Incoming settings.
+	 * @param array  $old_settings   Old settings.
+	 * @param array  $new_settings   New settings.
 	 *
 	 * @return void
 	 */

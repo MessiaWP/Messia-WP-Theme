@@ -269,7 +269,7 @@ class Messia_Settings {
 	/**
 	 * Blog settings getter.
 	 *
-	 * @param string $preset  One of predefined presets name.
+	 * @param string $preset One of predefined presets name.
 	 *
 	 * @return array
 	 * @throws Exception If preset name unrecognized.
@@ -332,7 +332,7 @@ class Messia_Settings {
 	/**
 	 * Blog settings setter.
 	 *
-	 * @param string $preset One of predefined presets name.
+	 * @param string $preset      One of predefined presets name.
 	 * @param array  $new_setting Data to update.
 	 *
 	 * @return array|false New settings or false on fail to update.
@@ -391,7 +391,7 @@ class Messia_Settings {
 	/**
 	 * Site settings setter.
 	 *
-	 * @param string $preset One of predefined presets name.
+	 * @param string $preset      One of predefined presets name.
 	 * @param array  $new_setting Data to update.
 	 *
 	 * @return array|false New settings or false on fail to update.
@@ -557,7 +557,7 @@ class Messia_Settings {
 	 * Validate modules dependences and set init values.
 	 *
 	 * @param array  $current_settings Existing data.
-	 * @param string $scope Data type for (standalone, multisite).
+	 * @param string $scope            Data type for (standalone, multisite).
 	 *
 	 * @return array
 	 * @throws Exception If provided unrecognized scope.
@@ -614,7 +614,7 @@ class Messia_Settings {
 	 * Check if setting option is module (module depends on theme or(and) pluging).
 	 *
 	 * @param array $current_settings Existing data.
-	 * @param array $option_item Single option of data.
+	 * @param array $option_item      Single option of data.
 	 *
 	 * @return bool
 	 */
@@ -636,7 +636,7 @@ class Messia_Settings {
 	/**
 	 * Validate single option dependences.
 	 *
-	 * @param string $by Keyword - 'plugins' or 'theme'.
+	 * @param string $by     Keyword - 'plugins' or 'theme'.
 	 * @param array  $option Single option data.
 	 *
 	 * @return bool
@@ -693,7 +693,7 @@ class Messia_Settings {
 	/**
 	 * Post message to slack webhook.
 	 *
-	 * @param string $url Full valid URL for request.
+	 * @param string $url                 Full valid URL for request.
 	 * @param array  $deactivated_modules Module names will be inserted into body.
 	 *
 	 * @return void
@@ -782,7 +782,7 @@ class Messia_Settings {
 						if ( $flag && isset( $control['class'] ) && in_array( 'messia-codemirror-sticky', $control['class'], true ) ) {
 							$codemirror = true;
 							$flag       = false;
-						};
+						}
 					}
 				}
 			}

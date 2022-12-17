@@ -293,7 +293,7 @@ class Messia_Listing_Tmpl_Default extends Messia_Listing_Tmpl_Base {
 	 * that called by get_content() and produces
 	 * hole HTML code with listing.
 	 *
-	 * @param array $args All widget data it was registered with.
+	 * @param array $args     All widget data it was registered with.
 	 * @param array $instance Current saved widget value.
 	 *
 	 * @return string
@@ -358,7 +358,7 @@ class Messia_Listing_Tmpl_Default extends Messia_Listing_Tmpl_Base {
 	 * that called by get_sidebar() and produces
 	 * hole HTML code with filters.
 	 *
-	 * @param array $args All widget data it was registered with.
+	 * @param array $args     All widget data it was registered with.
 	 * @param array $instance Current saved widget value.
 	 *
 	 * @return string
@@ -525,8 +525,8 @@ class Messia_Listing_Tmpl_Default extends Messia_Listing_Tmpl_Base {
 	 * Component for $this->get_filters(),
 	 * output reset filter.
 	 *
-	 * @param string $title Content heading.
-	 * @param array  $args All widget data it was registered with.
+	 * @param string $title    Content heading.
+	 * @param array  $args     All widget data it was registered with.
 	 * @param array  $instance Current saved widget value.
 	 *
 	 * @return string
@@ -544,8 +544,8 @@ class Messia_Listing_Tmpl_Default extends Messia_Listing_Tmpl_Base {
 	 * Component for $this->get_filters(),
 	 * output text filter.
 	 *
-	 * @param string $title Content heading.
-	 * @param array  $args All widget data it was registered with.
+	 * @param string $title    Content heading.
+	 * @param array  $args     All widget data it was registered with.
 	 * @param array  $instance Current saved widget value.
 	 *
 	 * @return string
@@ -584,8 +584,8 @@ class Messia_Listing_Tmpl_Default extends Messia_Listing_Tmpl_Base {
 	 * Component for $this->get_filters(),
 	 * output taxonomy category filters.
 	 *
-	 * @param string $title Content heading.
-	 * @param array  $args All widget data it was registered with.
+	 * @param string $title    Content heading.
+	 * @param array  $args     All widget data it was registered with.
 	 * @param array  $instance Current saved widget value.
 	 *
 	 * @throws Exception On getting undefined filter type.
@@ -737,9 +737,9 @@ class Messia_Listing_Tmpl_Default extends Messia_Listing_Tmpl_Base {
 	 * Component for $this->get_filters(),
 	 * output taxonomy property filters.
 	 *
-	 * @param string $title Content heading.
-	 * @param array  $args All widget data it was registered with.
-	 * @param array  $instance Current saved widget value.
+	 * @param string $title                 Content heading.
+	 * @param array  $args                  All widget data it was registered with.
+	 * @param array  $instance              Current saved widget value.
 	 * @param array  $active_category_terms Terms of taxonomy category that are now active on search.
 	 *
 	 * @throws Exception On getting undefined filter type.
@@ -794,7 +794,7 @@ class Messia_Listing_Tmpl_Default extends Messia_Listing_Tmpl_Base {
 
 				if ( in_array( (int) $group_term['term_id'], $this->listing_terms['property_term_id'], true ) ) {
 					$checked = 'checked="checked"';
-					$checked_num++;
+					++$checked_num;
 				}
 				if ( ! in_array( $group_term['slug'], $available_properties, true ) ) {
 					$disabled = 'disabled';
@@ -807,13 +807,13 @@ class Messia_Listing_Tmpl_Default extends Messia_Listing_Tmpl_Base {
 					if ( count( $category_parent_terms ) === 0 ) {
 
 						$category_parent_terms = 0;
-						$visible ++;
+						++$visible;
 					} else {
 
 						$r = array_intersect( $category_parent_terms, $active_category_terms );
 
 						if ( count( $r ) > 0 ) {
-							$visible ++;
+							++$visible;
 						} else {
 							$filter_class[] = 'off';
 							$filter_class[] = 'hidden';
@@ -906,8 +906,8 @@ class Messia_Listing_Tmpl_Default extends Messia_Listing_Tmpl_Base {
 	 * Component for $this->get_filters(),
 	 * output constructor filters.
 	 *
-	 * @param string $title Content heading.
-	 * @param array  $args All widget data it was registered with.
+	 * @param string $title    Content heading.
+	 * @param array  $args     All widget data it was registered with.
 	 * @param array  $instance Current saved widget value.
 	 *
 	 * @return array
@@ -955,9 +955,9 @@ class Messia_Listing_Tmpl_Default extends Messia_Listing_Tmpl_Base {
 	 * Component for $this->get_filters(),
 	 * output numbers range filters.
 	 *
-	 * @param array $term Constructor saved term.
+	 * @param array $term  Constructor saved term.
 	 * @param int   $order Order of term in constructor.
-	 * @param array $data User search conditions.
+	 * @param array $data  User search conditions.
 	 *
 	 * @return string
 	 */
@@ -1017,12 +1017,12 @@ class Messia_Listing_Tmpl_Default extends Messia_Listing_Tmpl_Base {
 	/**
 	 * Creates html for range filter.
 	 *
-	 * @param array  $term Constructed term.
+	 * @param array  $term  Constructed term.
 	 * @param int    $order Term order.
-	 * @param array  $data User search conditions.
+	 * @param array  $data  User search conditions.
 	 * @param string $title Filter title.
-	 * @param string $name Filter slug.
-	 * @param string $id Field ID.
+	 * @param string $name  Filter slug.
+	 * @param string $id    Field ID.
 	 * @param object $range DB min and max values.
 	 *
 	 * @return string
@@ -1086,12 +1086,12 @@ class Messia_Listing_Tmpl_Default extends Messia_Listing_Tmpl_Base {
 	/**
 	 * Creates html for range filter.
 	 *
-	 * @param array  $term Constructed term.
+	 * @param array  $term  Constructed term.
 	 * @param int    $order Term order.
-	 * @param array  $data User search conditions.
+	 * @param array  $data  User search conditions.
 	 * @param string $title Filter title.
-	 * @param string $name Filter slug.
-	 * @param string $id Field ID.
+	 * @param string $name  Filter slug.
+	 * @param string $id    Field ID.
 	 * @param object $range DB min and max values.
 	 *
 	 * @return string

@@ -293,7 +293,7 @@ class Messia_Demo {
 					throw new Exception( __( 'Error writing into temporary dump file.', 'messia' ) );
 				}
 
-				$i++;
+				++$i;
 			}
 
 			$written = fwrite( $sql_dump_handle, $dump_append );
@@ -567,7 +567,7 @@ class Messia_Demo {
 					$content .= ',';
 				}
 
-				$st_counter++;
+				++$st_counter;
 				array_shift( $result );
 			}
 		}
@@ -722,7 +722,7 @@ class Messia_Demo {
 	 * Update some private sensitive infomation.
 	 *
 	 * @param wpdb  $db_connection DB connection provider instance class.
-	 * @param array $data User data grabbed with $this->get_site_data() before DB restorred.
+	 * @param array $data          User data grabbed with $this->get_site_data() before DB restorred.
 	 *
 	 * @return void
 	 */
@@ -911,8 +911,8 @@ class Messia_Demo {
 	/**
 	 * Restore uploads from zip to file system
 	 *
-	 * @param WP_Filesystem_Direct $wp_filesystem  instance of WP filesystem.
-	 * @param string               $source where to search for files to restore.
+	 * @param WP_Filesystem_Direct $wp_filesystem instance of WP filesystem.
+	 * @param string               $source        where to search for files to restore.
 	 *
 	 * @throws Exception On source folder not found or does not exist.
 	 *

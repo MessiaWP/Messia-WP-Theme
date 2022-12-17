@@ -262,9 +262,9 @@ class Messia_Hooks {
 	 * while loading it in backend.
 	 *
 	 * @param array    $post_templates Currently found templates in /messia/templates.
-	 * @param WP_Theme $theme Current theme instance.
-	 * @param WP_Post  $post Current viewed post object.
-	 * @param string   $post_type Current viewed post type.
+	 * @param WP_Theme $theme          Current theme instance.
+	 * @param WP_Post  $post           Current viewed post object.
+	 * @param string   $post_type      Current viewed post type.
 	 *
 	 * @return array
 	 */
@@ -463,7 +463,7 @@ class Messia_Hooks {
 	 *
 	 * @return void
 	 */
-	public function option_header():void {
+	public function option_header(): void {
 
 		if ( ! empty( $this->blog_settings['add_in_header'] ) ) {
 			echo $this->blog_settings['add_in_header'];
@@ -675,9 +675,9 @@ class Messia_Hooks {
 	 * Filters the attachment data prepared for JavaScript to make visible SVG images
 	 * in media library.
 	 *
-	 * @param array       $response Array of prepared attachment data.
+	 * @param array       $response   Array of prepared attachment data.
 	 * @param WP_Post     $attachment Attachment object.
-	 * @param array|false $meta Array of attachment meta data, or false if there is none.
+	 * @param array|false $meta       Array of attachment meta data, or false if there is none.
 	 */
 	public function get_attachment_svg_media_library( array $response, WP_Post $attachment, $meta ): array {
 
@@ -711,7 +711,7 @@ class Messia_Hooks {
 	 */
 	public function on_tiny_mce_plugins( array $plugins ): array {
 		if ( is_array( $plugins ) ) {
-			return array_diff( $plugins, array( 'wpemoji' ) );
+			return array_diff( $plugins, [ 'wpemoji' ] );
 		} else {
 			return [];
 		}
@@ -734,9 +734,9 @@ class Messia_Hooks {
 	 * Callback for WP wp_check_filetype_and_ext filter.
 	 *
 	 * @param array        $file_info Full path to the file.
-	 * @param string       $file Full path to the file.
-	 * @param string       $filename The name of the file (may differ from $file due to $file being in a tmp directory).
-	 * @param string[]     $mimes Array of mime types keyed by their file extension regex.
+	 * @param string       $file      Full path to the file.
+	 * @param string       $filename  The name of the file (may differ from $file due to $file being in a tmp directory).
+	 * @param string[]     $mimes     Array of mime types keyed by their file extension regex.
 	 * @param string|false $real_mime The actual mime type or false if the type cannot be determined.
 	 *
 	 * @return array
@@ -795,9 +795,9 @@ class Messia_Hooks {
 	 * Callback for WP script_loader_tag action.
 	 * Removes attr "type='text/javascript'" from source tag vale.
 	 *
-	 * @param string $tag HTML tag "script".
+	 * @param string $tag    HTML tag "script".
 	 * @param string $handle WP registered script name.
-	 * @param string $src Script source path.
+	 * @param string $src    Script source path.
 	 *
 	 * @return string
 	 */
@@ -816,10 +816,10 @@ class Messia_Hooks {
 	/**
 	 * Callback for WP style_loader_tag action.
 	 *
-	 * @param string $tag HTML tag "style".
+	 * @param string $tag    HTML tag "style".
 	 * @param string $handle WP registered style name.
-	 * @param string $src Style source path.
-	 * @param string $media The stylesheet's media attribute.
+	 * @param string $src    Style source path.
+	 * @param string $media  The stylesheet's media attribute.
 	 *
 	 * @return string
 	 */
@@ -838,9 +838,9 @@ class Messia_Hooks {
 	 * Replace post type fragment with segment alias if setted.
 	 *
 	 * @param string  $post_link The post's permalink.
-	 * @param WP_Post $post The post in question.
+	 * @param WP_Post $post      The post in question.
 	 * @param bool    $leavename Whether to keep the post name.
-	 * @param bool    $sample Is it a sample permalink.
+	 * @param bool    $sample    Is it a sample permalink.
 	 *
 	 * @return string
 	 */
@@ -918,9 +918,9 @@ class Messia_Hooks {
 	 * Install ajax dispatcher if user switched it on.
 	 *
 	 * @param string $setting_preset messia_blog_settings_preset or messia_site_settings_preset.
-	 * @param array  $to_save Incoming settings.
-	 * @param array  $old_settings Previous settings.
-	 * @param array  $new_settings New settings.
+	 * @param array  $to_save        Incoming settings.
+	 * @param array  $old_settings   Previous settings.
+	 * @param array  $new_settings   New settings.
 	 *
 	 * @return void
 	 */
@@ -933,7 +933,7 @@ class Messia_Hooks {
 	 * as md5 of source key in resulting JSON. Ex: "search-snippet/search-snippet-editor.js"
 	 * but wp_set_script_translations search file by $handle.
 	 *
-	 * @param string $file .../wp-content/themes/messia/includes/assets/langs/blocks/messia-ru_RU-search-snippet.json.
+	 * @param string $file   .../wp-content/themes/messia/includes/assets/langs/blocks/messia-ru_RU-search-snippet.json.
 	 * @param string $handle Block registration name, ex: search-snippet.
 	 * @param string $domain messia.
 	 */
@@ -1066,10 +1066,10 @@ class Messia_Hooks {
 	/**
 	 * Filters the list of attachment image attributes.
 	 *
-	 * @param string[]     $attr Array of attribute values for the image markup, keyed by attribute name.
+	 * @param string[]     $attr       Array of attribute values for the image markup, keyed by attribute name.
 	 * @param WP_Post      $attachment Image attachment post.
-	 * @param string|int[] $size Requested image size. Can be any registered image size name, or
-	 *                                 an array of width and height values in pixels (in that order).
+	 * @param string|int[] $size       Requested image size. Can be any registered image size name, or
+	 *                                       an array of width and height values in pixels (in that order).
 	 *
 	 * @return int
 	 */

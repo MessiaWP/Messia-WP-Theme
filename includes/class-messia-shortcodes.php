@@ -329,7 +329,7 @@ class Messia_Shortcodes {
 	/**
 	 * Get all segment terms id that object belongs to.
 	 *
-	 * @param int $postid Target object id.
+	 * @param int $postid               Target object id.
 	 * @param int $atts_segment_term_id If setted to 0 will return all post segemnt terms, otherwise only this one or [].
 	 *
 	 * @return array
@@ -362,7 +362,7 @@ class Messia_Shortcodes {
 	/**
 	 * Get custom fields metadata of post in segment terms.
 	 *
-	 * @param int   $postid Messia object id.
+	 * @param int   $postid                 Messia object id.
 	 * @param array $post_segment_terms_ids Taxonomy segment terms id that object belongs to.
 	 *
 	 * @return array
@@ -390,7 +390,7 @@ class Messia_Shortcodes {
 	/**
 	 * Get constructor term metadata of post in segment terms.
 	 *
-	 * @param int   $postid Messia object id.
+	 * @param int   $postid                 Messia object id.
 	 * @param array $post_segment_terms_ids Taxonomy segment terms id that object belongs to.
 	 *
 	 * @return array
@@ -417,11 +417,11 @@ class Messia_Shortcodes {
 	/**
 	 * Wrapper for get_custom_field().
 	 *
-	 * @param string $field_type Inner type of custom field.
+	 * @param string $field_type             Inner type of custom field.
 	 * @param array  $constructor_field_meta Metadata of segment term constructor field.
-	 * @param int    $segment_id Segment taxonomy term id.
-	 * @param mixid  $post_field_meta Metadata of object constructed field.
-	 * @param array  $args Extra data.
+	 * @param int    $segment_id             Segment taxonomy term id.
+	 * @param mixid  $post_field_meta        Metadata of object constructed field.
+	 * @param array  $args                   Extra data.
 	 *
 	 * @return string
 	 */

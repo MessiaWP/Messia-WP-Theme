@@ -150,7 +150,7 @@ class Messia_Block_Category_Terms extends Messia_Block_Abstract_Dynamic {
 	 * It is top level category term and their direct children.
 	 *
 	 * @param array  $attributes Current attributes.
-	 * @param string $content Block content (always null due to block is dynamic).
+	 * @param string $content    Block content (always null due to block is dynamic).
 	 *
 	 * @throws Exception On unexpected $this->refer_widget value.
 	 *
@@ -333,7 +333,7 @@ class Messia_Block_Category_Terms extends Messia_Block_Abstract_Dynamic {
 								<div class='{$wrapper_classes}'>{$inner}</div>
 							</div>";
 
-				$i ++;
+				++$i;
 			}
 
 			$render = "<nav class='nav nav-pills mb-3' role='tablist'>{$tabs}</nav>
@@ -468,7 +468,7 @@ class Messia_Block_Category_Terms extends Messia_Block_Abstract_Dynamic {
 	 * Some terms could be deleted after creating block -
 	 * they should be removed from saved attrs.
 	 *
-	 * @param array $db_terms Segment terms to validate.
+	 * @param array $db_terms   Segment terms to validate.
 	 * @param array $attributes Current block attributes.
 	 *
 	 * @return array
@@ -529,7 +529,7 @@ class Messia_Block_Category_Terms extends Messia_Block_Abstract_Dynamic {
 	/**
 	 * Rebuild flat array of terms to hierarchical.
 	 *
-	 * @param array $terms Flat array of terms.
+	 * @param array $terms     Flat array of terms.
 	 * @param int   $parent_id Stuff data, do not pass here anything.
 	 *
 	 * @return array
@@ -559,7 +559,7 @@ class Messia_Block_Category_Terms extends Messia_Block_Abstract_Dynamic {
 	 * formatting to use later as source for select tag options.
 	 *
 	 * @param array $terms Hierarchical array of terms.
-	 * @param array $flat Stuff data, do not pass here anything.
+	 * @param array $flat  Stuff data, do not pass here anything.
 	 * @param int   $level Stuff data, do not pass here anything.
 	 *
 	 * @return array
@@ -578,9 +578,9 @@ class Messia_Block_Category_Terms extends Messia_Block_Abstract_Dynamic {
 			];
 
 			if ( isset( $term->children ) ) {
-				$level ++;
+				++$level;
 				$flat = $this->build_category_flat( $term->children, $flat, $level );
-				$level --;
+				--$level;
 			}
 		}
 
@@ -590,7 +590,7 @@ class Messia_Block_Category_Terms extends Messia_Block_Abstract_Dynamic {
 	/**
 	 * Get dummy thumbnail for term.
 	 *
-	 * @param int $width Any width.
+	 * @param int $width  Any width.
 	 * @param int $height Any height.
 	 *
 	 * @return string

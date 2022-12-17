@@ -77,8 +77,8 @@ class Messia_Widget_Sitewide_Search extends WP_Widget {
 	/**
 	 * Render widget content in frontend.
 	 *
-	 * @param array $args All widget data it was registered with.
-	 * @param array $instance Current saved value.
+	 * @param array $args       All widget data it was registered with.
+	 * @param array $instance   Current saved value.
 	 * @param bool  $block_mode Whether called as block (turn off then scripts and styles).
 	 *
 	 * @return void

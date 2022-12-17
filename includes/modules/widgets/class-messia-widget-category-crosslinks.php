@@ -94,8 +94,8 @@ class Messia_Widget_Category_Crosslinks extends WP_Widget {
 	/**
 	 * Render widget content in frontend.
 	 *
-	 * @param array $args All widget data it was registered with.
-	 * @param array $instance Current saved value.
+	 * @param array $args       All widget data it was registered with.
+	 * @param array $instance   Current saved value.
 	 * @param bool  $block_mode Whether called as block (turn off then scripts and styles).
 	 *
 	 * @return void
@@ -285,7 +285,7 @@ class Messia_Widget_Category_Crosslinks extends WP_Widget {
 												<span>{$child['name']}{$count}</span>
 											</a>
 										</li>";
-					$i++;
+					++$i;
 				}
 
 				( $with_count ) ? $count = " [{$parent['count']}]" : $count = null;

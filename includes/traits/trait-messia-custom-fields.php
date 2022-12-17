@@ -138,9 +138,9 @@ trait Messia_Custom_Fields {
 	 * Get render for input_text type field
 	 *
 	 * @param array   $constructor Meta value of constructed term.
-	 * @param integer $segment_id Segment term id that object belongs to.
+	 * @param integer $segment_id  Segment term id that object belongs to.
 	 * @param array   $field_value Current constructed value of field.
-	 * @param array   $args Additional attributes.
+	 * @param array   $args        Additional attributes.
 	 *
 	 * @return string HTML
 	 */
@@ -158,9 +158,9 @@ trait Messia_Custom_Fields {
 	 * Get render for input_textarea type field
 	 *
 	 * @param array   $constructor Meta value of constructed term.
-	 * @param integer $segment_id Segment term id that object belongs to.
+	 * @param integer $segment_id  Segment term id that object belongs to.
 	 * @param array   $field_value Current constructed value of field.
-	 * @param array   $args Additional attributes.
+	 * @param array   $args        Additional attributes.
 	 *
 	 * @return string HTML
 	 */
@@ -178,9 +178,9 @@ trait Messia_Custom_Fields {
 	 * Get render for input_link type field
 	 *
 	 * @param array   $constructor Meta value of constructed term.
-	 * @param integer $segment_id Segment term id that object belongs to.
+	 * @param integer $segment_id  Segment term id that object belongs to.
 	 * @param array   $field_value Current constructed value of field.
-	 * @param array   $args Additional attributes.
+	 * @param array   $args        Additional attributes.
 	 *
 	 * @return string HTML
 	 */
@@ -203,16 +203,15 @@ trait Messia_Custom_Fields {
 			{$title}
 			<a class='custom-field-value messia-btn messia-btn-outline messia-ripple-click mr-2' {$target} href='{$link_url[0]}'>{$link_title[0]}</a>
 		</div>";
-
 	}
 
 	/**
 	 * Get render for input_address type field
 	 *
 	 * @param array   $constructor Meta value of constructed term.
-	 * @param integer $segment_id Segment term id that object belongs to.
+	 * @param integer $segment_id  Segment term id that object belongs to.
 	 * @param array   $field_value Current constructed value of field.
-	 * @param array   $args Additional attributes.
+	 * @param array   $args        Additional attributes.
 	 *
 	 * @return string HTML
 	 */
@@ -225,9 +224,7 @@ trait Messia_Custom_Fields {
 		if ( empty( $blog_settings['google_maps_api_key'] ) || empty( $field_value['latitude'] ) || empty( $field_value['longitude'] ) ) {
 			return "<div class='custom_type-container input_address'>{$title}{$address}</div>";
 
-		} else {
-
-			if ( true === $args['with_map'] ) {
+		} elseif ( true === $args['with_map'] ) {
 
 				return "<div class='custom_type-container input_address'>
 							{$title}
@@ -235,26 +232,25 @@ trait Messia_Custom_Fields {
 								<div class='map' data-lat='{$field_value['latitude']}' data-lng='{$field_value['longitude']}' data-address='{$address}'></div>
 							</div>
 						</div>";
-			} else {
+		} else {
 
-				/* STYLES */
-				wp_enqueue_style( 'messia-fancybox' );
+			/* STYLES */
+			wp_enqueue_style( 'messia-fancybox' );
 
-				/* SCRIPTS */
-				wp_enqueue_script( 'messia-fancybox' );
+			/* SCRIPTS */
+			wp_enqueue_script( 'messia-fancybox' );
 
-				$rnd   = bin2hex( random_bytes( 5 ) );
-				$attrs = [
-					'data-src' => "#field-{$rnd}",
-				];
-				$title = self::get_custom_field_title( $constructor, $address, [ 'map-popup-trigger cursor-pointer' ], $attrs );
-				return "<div class='custom_type-container input_address'>
+			$rnd   = bin2hex( random_bytes( 5 ) );
+			$attrs = [
+				'data-src' => "#field-{$rnd}",
+			];
+			$title = self::get_custom_field_title( $constructor, $address, [ 'map-popup-trigger cursor-pointer' ], $attrs );
+			return "<div class='custom_type-container input_address'>
 							{$title}
 							<div class='custom-field-value messia-map popup' id='field-{$rnd}'>
 								<div class='map' data-lat='{$field_value['latitude']}' data-lng='{$field_value['longitude']}' data-address='{$address}'></div>
 							</div>
 						</div>";
-			}
 		}
 	}
 
@@ -262,9 +258,9 @@ trait Messia_Custom_Fields {
 	 * Get render for input_checkbox type field
 	 *
 	 * @param array   $constructor Meta value of constructed term.
-	 * @param integer $segment_id Segment term id that object belongs to.
+	 * @param integer $segment_id  Segment term id that object belongs to.
 	 * @param array   $field_value Current constructed value of field.
-	 * @param array   $args Additional attributes.
+	 * @param array   $args        Additional attributes.
 	 *
 	 * @return string HTML
 	 */
@@ -285,9 +281,9 @@ trait Messia_Custom_Fields {
 	 * Get render for input_number type field
 	 *
 	 * @param array   $constructor Meta value of constructed term.
-	 * @param integer $segment_id Segment term id that object belongs to.
+	 * @param integer $segment_id  Segment term id that object belongs to.
 	 * @param array   $field_value Current constructed value of field.
-	 * @param array   $args Additional attributes.
+	 * @param array   $args        Additional attributes.
 	 *
 	 * @return string HTML
 	 */
@@ -308,9 +304,9 @@ trait Messia_Custom_Fields {
 	 * Get render for input_images type field
 	 *
 	 * @param array   $constructor Meta value of constructed term.
-	 * @param integer $segment_id Segment term id that object belongs to.
+	 * @param integer $segment_id  Segment term id that object belongs to.
 	 * @param array   $field_value Current constructed value of field.
-	 * @param array   $args Additional attributes.
+	 * @param array   $args        Additional attributes.
 	 *
 	 * @return string HTML
 	 */
@@ -347,18 +343,16 @@ trait Messia_Custom_Fields {
 				$img_thumb .= "<div class='gallery-item'>
 								<a href='{$image['url']}' target='_blank'>{$img_tag}</a>
 							</div>";
-			} else {
-				if ( $i > 1 ) {
+			} elseif ( $i > 1 ) {
 					$img_thumb .= "<div class='gallery-item'>
 										<a href='{$img_url}' data-fancybox='gallery-{$rnd}'>{$img_tag}</a>
 									</div>";
-				} else {
-					$img_full = "<div class='gallery-item'>
+			} else {
+				$img_full = "<div class='gallery-item'>
 									<a href='{$img_url}' data-fancybox='gallery-{$rnd}'>{$img_tag}</a>
 								</div>";
-				}
 			}
-			$i++;
+			++$i;
 		}
 
 		return "<div class='custom_type-container gallery mb-4'>
@@ -374,9 +368,9 @@ trait Messia_Custom_Fields {
 	 * Get render for input_external_media type field
 	 *
 	 * @param array   $constructor Meta value of constructed term.
-	 * @param integer $segment_id Segment term id that object belongs to.
+	 * @param integer $segment_id  Segment term id that object belongs to.
 	 * @param array   $field_value Current constructed value of field.
-	 * @param array   $args Additional attributes.
+	 * @param array   $args        Additional attributes.
 	 *
 	 * @return string HTML
 	 */
@@ -393,9 +387,9 @@ trait Messia_Custom_Fields {
 	 * Get render for input_html type field
 	 *
 	 * @param array   $constructor Meta value of constructed term.
-	 * @param integer $segment_id Segment term id that object belongs to.
+	 * @param integer $segment_id  Segment term id that object belongs to.
 	 * @param array   $field_value Current constructed value of field.
-	 * @param array   $args Additional attributes.
+	 * @param array   $args        Additional attributes.
 	 *
 	 * @return string HTML
 	 */
@@ -413,9 +407,9 @@ trait Messia_Custom_Fields {
 	 * Get render for select_post_single type field
 	 *
 	 * @param array   $constructor Meta value of constructed term.
-	 * @param integer $segment_id Segment term id that object belongs to.
+	 * @param integer $segment_id  Segment term id that object belongs to.
 	 * @param array   $field_value Current constructed value of field.
-	 * @param array   $args Additional attributes.
+	 * @param array   $args        Additional attributes.
 	 *
 	 * @return string HTML
 	 */
@@ -448,9 +442,9 @@ trait Messia_Custom_Fields {
 	 * Get render for select_post_multi type field
 	 *
 	 * @param array   $constructor Meta value of constructed term.
-	 * @param integer $segment_id Segment term id that object belongs to.
+	 * @param integer $segment_id  Segment term id that object belongs to.
 	 * @param array   $field_value Current constructed value of field.
-	 * @param array   $args Additional attributes.
+	 * @param array   $args        Additional attributes.
 	 *
 	 * @return string HTML
 	 */
@@ -510,9 +504,9 @@ trait Messia_Custom_Fields {
 	 * Get title for custom field.
 	 *
 	 * @param string      $constructor Meta value of constructed term.
-	 * @param string|null $include Extra data to add to title.
-	 * @param array       $classes CSS classes to add to title.
-	 * @param array       $attributes CSS attributes to add to title.
+	 * @param string|null $include     Extra data to add to title.
+	 * @param array       $classes     CSS classes to add to title.
+	 * @param array       $attributes  CSS attributes to add to title.
 	 *
 	 * @return string|null
 	 */

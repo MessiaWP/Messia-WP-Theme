@@ -78,7 +78,7 @@ class Messia_Single_Tmpl_Default extends Messia_Single_Tmpl_Base {
 							$i = 0;
 
 							while ( have_posts() ) {
-								$i++;
+								++$i;
 								if ( $i > 1 ) {
 									echo '<hr/>';
 								}
@@ -126,7 +126,6 @@ class Messia_Single_Tmpl_Default extends Messia_Single_Tmpl_Base {
 		<?php
 		$this->get_post_meta();
 		$this->get_content();
-
 	}
 
 	/**

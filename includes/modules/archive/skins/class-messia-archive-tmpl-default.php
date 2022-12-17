@@ -75,7 +75,7 @@ class Messia_Archive_Tmpl_Default extends Messia_Archive_Tmpl_Base {
 						if ( have_posts() ) {
 							$i = 0;
 							while ( have_posts() ) {
-								$i++;
+								++$i;
 								if ( $i > 1 ) {
 									echo '<hr class="mb-5"/>';
 								}

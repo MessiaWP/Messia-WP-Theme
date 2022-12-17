@@ -133,7 +133,7 @@ class Messia_Block_Tabs_Panel extends Messia_Block_Abstract_Dynamic {
 	 * It is top level category term and their direct children.
 	 *
 	 * @param array  $attributes Current attributes.
-	 * @param string $content Block content (always null due to block is dynamic).
+	 * @param string $content    Block content (always null due to block is dynamic).
 	 *
 	 * @throws Exception On unexpected $this->refer_widget value.
 	 *
@@ -226,7 +226,7 @@ class Messia_Block_Tabs_Panel extends Messia_Block_Abstract_Dynamic {
 	 * Some terms could be deleted after creating block -
 	 * they should be removed from saved attrs.
 	 *
-	 * @param array $db_terms Segment terms to validate.
+	 * @param array $db_terms   Segment terms to validate.
 	 * @param array $attributes Current block attributes.
 	 *
 	 * @return array

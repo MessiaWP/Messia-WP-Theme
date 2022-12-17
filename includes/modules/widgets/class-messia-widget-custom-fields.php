@@ -90,8 +90,8 @@ class Messia_Widget_Custom_Fields extends WP_Widget {
 	/**
 	 * Render widget content in frontend.
 	 *
-	 * @param array $args All widget data it was registered with.
-	 * @param array $instance Current saved value.
+	 * @param array $args       All widget data it was registered with.
+	 * @param array $instance   Current saved value.
 	 * @param bool  $block_mode Whether called as block (turn off then scripts and styles).
 	 *
 	 * @return void
@@ -351,9 +351,9 @@ class Messia_Widget_Custom_Fields extends WP_Widget {
 	 * Sorts the fields in the term meta constructor
 	 * according to their stored order in the widget.
 	 *
-	 * @param array  $instance Saved value.
+	 * @param array  $instance           Saved value.
 	 * @param array  $term_custom_fields Custom fields constructed for term.
-	 * @param string $segment_slug Term id of taxonomy segment.
+	 * @param string $segment_slug       Term id of taxonomy segment.
 	 *
 	 * @return void
 	 */

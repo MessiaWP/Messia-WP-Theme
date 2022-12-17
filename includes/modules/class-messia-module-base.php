@@ -58,7 +58,7 @@ class Messia_Module_Base {
 	 * publish status.
 	 *
 	 * @param string  $title Current title.
-	 * @param WP_Post $post Post in progress.
+	 * @param WP_Post $post  Post in progress.
 	 *
 	 * @return string
 	 */

@@ -119,9 +119,9 @@ final class Messia_Access {
 	/**
 	 * Render interface for licence operations in admin.
 	 *
-	 * @param array  $args Injected args from config.
+	 * @param array  $args        Injected args from config.
 	 * @param string $option_name As it storred in DB.
-	 * @param string $value Current option value.
+	 * @param string $value       Current option value.
 	 *
 	 * @return void
 	 */
@@ -283,7 +283,7 @@ final class Messia_Access {
 	 *
 	 * @return object
 	 */
-	private static function access_grant( string $valid_until ):object {
+	private static function access_grant( string $valid_until ): object {
 
 		$user_response = (object) [
 			'id'      => false,
@@ -560,7 +560,7 @@ final class Messia_Access {
 	 *
 	 * @return array
 	 */
-	private static function get_range_map():array {
+	private static function get_range_map(): array {
 
 		return [
 			'days'  => [
@@ -587,8 +587,8 @@ final class Messia_Access {
 	 *         string $message The body of the email.
 	 *         string $headers The headers of the email.
 	 *
-	 * @param WP_User $user     User object for new user.
-	 * @param string  $blogname The site title.
+	 * @param WP_User $user               User object for new user.
+	 * @param string  $blogname           The site title.
 	 */
 	public static function user_notification( array $notification_email, WP_User $user, string $blogname ): array {
 
@@ -616,7 +616,7 @@ final class Messia_Access {
 	public static function user_notice(): void {
 		?>
 		<div id="message" class="notice notice-info is-dismissible">
-			<p><?php esc_html_e( 'Messia support account was deleted from site, due to time came.' , 'messia' ); ?></p>
+			<p><?php esc_html_e( 'Messia support account was deleted from site, due to time came.', 'messia' ); ?></p>
 		</div>
 		<?php
 	}

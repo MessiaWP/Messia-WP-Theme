@@ -85,11 +85,9 @@ class Messia_Help_Queries extends Messia_Help_Database {
 			if ( wp_doing_ajax() && isset( $_POST['data']['AJAX_Marker'] ) && 'MessiaAjax' === $_POST['data']['AJAX_Marker'] ) {
 				return true;
 			}
-		} else {
-			if ( wp_doing_ajax() && isset( $_POST['data']['AJAX_Marker'] ) && 'MessiaAjax' === $_POST['data']['AJAX_Marker'] ) {
-				if ( isset( $_POST['action'] ) && $action === $_POST['action'] ) {
-					return true;
-				}
+		} elseif ( wp_doing_ajax() && isset( $_POST['data']['AJAX_Marker'] ) && 'MessiaAjax' === $_POST['data']['AJAX_Marker'] ) {
+			if ( isset( $_POST['action'] ) && $action === $_POST['action'] ) {
+				return true;
 			}
 		}
 		return false;
@@ -494,7 +492,7 @@ class Messia_Help_Queries extends Messia_Help_Database {
 			echo $wrap_before;
 
 			if ( $show_home_link ) {
-				$position++;
+				++$position;
 				echo $home_link;
 			}
 
@@ -504,7 +502,7 @@ class Messia_Help_Queries extends Messia_Help_Database {
 
 				foreach ( array_reverse( $parents ) as $cat ) {
 
-					$position++;
+					++$position;
 					if ( $position > 1 ) {
 						echo $sep;
 					}
@@ -513,42 +511,38 @@ class Messia_Help_Queries extends Messia_Help_Database {
 
 				if ( get_query_var( 'paged' ) ) {
 
-					$position++;
+					++$position;
 					$cat = get_query_var( 'cat' );
 					echo $sep . sprintf( $link, get_category_link( $cat ), get_cat_name( $cat ), $position );
 					echo $sep . $before . sprintf( $text['page'], get_query_var( 'paged' ) ) . $after;
-				} else {
+				} elseif ( $show_current ) {
 
-					if ( $show_current ) {
-						if ( $position >= 1 ) {
-							echo $sep;
-						}
-						echo $before . sprintf( $text['category'], single_cat_title( '', false ) ) . $after;
-					} elseif ( $show_last_sep ) {
+					if ( $position >= 1 ) {
 						echo $sep;
 					}
+						echo $before . sprintf( $text['category'], single_cat_title( '', false ) ) . $after;
+				} elseif ( $show_last_sep ) {
+					echo $sep;
 				}
 			} elseif ( is_search() ) {
 
 				if ( get_query_var( 'paged' ) ) {
 
-					$position++;
+					++$position;
 
 					if ( $show_home_link ) {
 						echo $sep;
 					}
 					echo sprintf( $link, $home_url . '?s=' . get_search_query(), sprintf( $text['search'], get_search_query() ), $position );
 					echo $sep . $before . sprintf( $text['page'], get_query_var( 'paged' ) ) . $after;
-				} else {
+				} elseif ( $show_current ) {
 
-					if ( $show_current ) {
-						if ( $position >= 1 ) {
-							echo $sep;
-						}
-						echo $before . sprintf( $text['search'], get_search_query() ) . $after;
-					} elseif ( $show_last_sep ) {
+					if ( $position >= 1 ) {
 						echo $sep;
 					}
+						echo $before . sprintf( $text['search'], get_search_query() ) . $after;
+				} elseif ( $show_last_sep ) {
+					echo $sep;
 				}
 			} elseif ( is_year() ) {
 
@@ -565,7 +559,7 @@ class Messia_Help_Queries extends Messia_Help_Database {
 				if ( $show_home_link ) {
 					echo $sep;
 				}
-				$position++;
+				++$position;
 				echo sprintf( $link, get_year_link( get_the_time( 'Y' ) ), get_the_time( 'Y' ), $position );
 
 				if ( $show_current ) {
@@ -579,9 +573,9 @@ class Messia_Help_Queries extends Messia_Help_Database {
 					echo $sep;
 				}
 
-				$position++;
+				++$position;
 				echo sprintf( $link, get_year_link( get_the_time( 'Y' ) ), get_the_time( 'Y' ), $position ) . $sep;
-				$position++;
+				++$position;
 				echo sprintf( $link, get_month_link( get_the_time( 'Y' ), get_the_time( 'm' ) ), get_the_time( 'F' ), $position );
 
 				if ( $show_current ) {
@@ -593,7 +587,7 @@ class Messia_Help_Queries extends Messia_Help_Database {
 
 				if ( 'messia_object' === get_post_type() ) {
 
-					$position++;
+					++$position;
 
 					if ( $position > 1 ) {
 						echo $sep;
@@ -615,7 +609,7 @@ class Messia_Help_Queries extends Messia_Help_Database {
 					}
 				} elseif ( get_post_type() !== 'post' ) {
 
-						$position++;
+						++$position;
 						$post_type = get_post_type_object( get_post_type() );
 
 					if ( $position > 1 ) {
@@ -638,7 +632,7 @@ class Messia_Help_Queries extends Messia_Help_Database {
 					$parents[] = $cat_id;
 
 					foreach ( $parents as $cat ) {
-						$position++;
+						++$position;
 						if ( $position > 1 ) {
 							echo $sep;
 						}
@@ -646,15 +640,13 @@ class Messia_Help_Queries extends Messia_Help_Database {
 					}
 
 					if ( get_query_var( 'cpage' ) ) {
-						$position++;
+						++$position;
 						echo $sep . sprintf( $link, get_permalink(), get_the_title(), $position );
 						echo $sep . $before . sprintf( $text['cpage'], get_query_var( 'cpage' ) ) . $after;
-					} else {
-						if ( $show_current ) {
+					} elseif ( $show_current ) {
 							echo $sep . $before . get_the_title() . $after;
-						} elseif ( $show_last_sep ) {
-							echo $sep;
-						}
+					} elseif ( $show_last_sep ) {
+						echo $sep;
 					}
 				}
 			} elseif ( is_post_type_archive() ) {
@@ -663,7 +655,7 @@ class Messia_Help_Queries extends Messia_Help_Database {
 
 				if ( get_query_var( 'paged' ) ) {
 
-					$position++;
+					++$position;
 
 					if ( $position > 1 ) {
 						echo $sep;
@@ -694,14 +686,14 @@ class Messia_Help_Queries extends Messia_Help_Database {
 					$parents[] = $cat_id;
 
 					foreach ( $parents as $cat ) {
-						$position++;
+						++$position;
 						if ( $position > 1 ) {
 							echo $sep;
 						}
 						echo sprintf( $link, get_category_link( $cat ), get_cat_name( $cat ), $position );
 					}
 
-					$position++;
+					++$position;
 
 					echo $sep . sprintf( $link, get_permalink( $parent ), $parent->post_title, $position );
 				}
@@ -743,7 +735,7 @@ class Messia_Help_Queries extends Messia_Help_Database {
 					$parents = get_post_ancestors( (int) $segment_post->ID );
 
 					foreach ( array_reverse( $parents ) as $page_id ) {
-						$position++;
+						++$position;
 
 						if ( $position > 1 ) {
 							echo $sep;
@@ -764,13 +756,13 @@ class Messia_Help_Queries extends Messia_Help_Database {
 					}
 				} else {
 
-					$position++;
+					++$position;
 					$length = count( $current_categories );
 
 					echo sprintf( $link, get_page_link( $segment_post->ID ), $segment_post->post_title, $position );
 
 					for ( $i = 0; $i < $length; $i++ ) {
-						$position++;
+						++$position;
 
 						if ( $position > 1 ) {
 							echo $sep;
@@ -800,7 +792,7 @@ class Messia_Help_Queries extends Messia_Help_Database {
 				$parents = get_post_ancestors( get_the_ID() );
 
 				foreach ( array_reverse( $parents ) as $page_id ) {
-					$position++;
+					++$position;
 
 					if ( $position > 1 ) {
 						echo $sep;
@@ -815,7 +807,7 @@ class Messia_Help_Queries extends Messia_Help_Database {
 			} elseif ( is_tag() ) {
 
 				if ( get_query_var( 'paged' ) ) {
-					$position++;
+					++$position;
 					$tag_id = get_query_var( 'tag_id' );
 					echo $sep . sprintf( $link, get_tag_link( $tag_id ), single_tag_title( '', false ), $position );
 					echo $sep . $before . sprintf( $text['page'], get_query_var( 'paged' ) ) . $after;
@@ -836,7 +828,7 @@ class Messia_Help_Queries extends Messia_Help_Database {
 
 				if ( get_query_var( 'paged' ) ) {
 
-					$position++;
+					++$position;
 					echo $sep . sprintf( $link, get_author_posts_url( $author->ID ), sprintf( $text['author'], $author->display_name ), $position );
 					echo $sep . $before . sprintf( $text['page'], get_query_var( 'paged' ) ) . $after;
 				} else {

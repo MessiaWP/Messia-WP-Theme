@@ -160,7 +160,7 @@ class Messia_Template_Loader {
 	 * Or child theme may become swithced off.
 	 *
 	 * @param string $template_class Full qualified class name of template.
-	 * @param string $type Template type listing|object|home.
+	 * @param string $type           Template type listing|object|home.
 	 *
 	 * @return object Instance of template class.
 	 * @throws Exception If class does not exists.

@@ -173,7 +173,7 @@ class Messia_Block_Testimonials extends Messia_Block_Abstract_Dynamic {
 	 * It is top level category term and their direct children.
 	 *
 	 * @param array  $attributes Current attributes.
-	 * @param string $content Block content (always null due to block is dynamic).
+	 * @param string $content    Block content (always null due to block is dynamic).
 	 *
 	 * @throws Exception On unexpected $this->refer_widget value.
 	 *
@@ -222,7 +222,7 @@ class Messia_Block_Testimonials extends Messia_Block_Abstract_Dynamic {
 			"cm.meta_value >= {$attributes['ratingMin']}",
 			"cm.meta_value <= {$attributes['ratingMax']}",
 		];
-		$join   = [
+		$join  = [
 			"INNER JOIN $wpdb->commentmeta AS cm ON cm.comment_id = c.comment_ID",
 		];
 
@@ -470,7 +470,6 @@ class Messia_Block_Testimonials extends Messia_Block_Abstract_Dynamic {
 
 		// translators: %s - word On.
 		echo sprintf( "<span>%s</span><a href='{$object_page_url}'>{$object_title}</a>", __( 'On', 'messia' ) );
-
 	}
 
 

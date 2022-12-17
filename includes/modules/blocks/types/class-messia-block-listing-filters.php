@@ -141,7 +141,7 @@ class Messia_Block_Listing_Filters extends Messia_Block_Abstract_Dynamic {
 	 * It is top level category term and their direct children.
 	 *
 	 * @param array  $attributes Current attributes.
-	 * @param string $content Block content (always null due to block is dynamic).
+	 * @param string $content    Block content (always null due to block is dynamic).
 	 *
 	 * @throws Exception On unexpected $this->refer_widget value.
 	 *

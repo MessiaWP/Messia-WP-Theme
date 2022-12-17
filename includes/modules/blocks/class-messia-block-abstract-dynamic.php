@@ -61,7 +61,7 @@ abstract class Messia_Block_Abstract_Dynamic {
 	 * Force child to have method for render block itself.
 	 *
 	 * @param array  $attributes Current block attributes.
-	 * @param string $content Block content (always null for dynamic blocks).
+	 * @param string $content    Block content (always null for dynamic blocks).
 	 *
 	 * @return string
 	 */
@@ -327,7 +327,7 @@ abstract class Messia_Block_Abstract_Dynamic {
 	 * CSS and JS conflicts.
 	 *
 	 * @param array  $attributes Block attributes being rendered.
-	 * @param string $render Render result.
+	 * @param string $render     Render result.
 	 *
 	 * @return string
 	 */

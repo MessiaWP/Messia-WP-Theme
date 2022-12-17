@@ -111,19 +111,17 @@ class Messia_Comments {
 						]
 					);
 				}
-			} else {
-				if ( false === $recaptcha->success ) {
+			} elseif ( false === $recaptcha->success ) {
 					$r = (array) $recaptcha;
-					if ( isset( $r['error-codes'] ) ) {
-						wp_die(
-							sprintf( '<p><strong>%s</strong>: %s</p>', __( 'Error', 'messia' ), __( 'gCaptha V3 validation error.', 'messia' ) ),
-							__( 'Comment Submission Failure', 'messia' ),
-							[
-								'response'  => 200,
-								'back_link' => true,
-							]
-						);
-					}
+				if ( isset( $r['error-codes'] ) ) {
+					wp_die(
+						sprintf( '<p><strong>%s</strong>: %s</p>', __( 'Error', 'messia' ), __( 'gCaptha V3 validation error.', 'messia' ) ),
+						__( 'Comment Submission Failure', 'messia' ),
+						[
+							'response'  => 200,
+							'back_link' => true,
+						]
+					);
 				}
 			}
 		}
@@ -147,9 +145,9 @@ class Messia_Comments {
 	 * Callback for WP comment_post action.
 	 * Adds comment meta data (rating).
 	 *
-	 * @param int        $id The comment ID.
+	 * @param int        $id               The comment ID.
 	 * @param int|string $comment_approved 1 if the comment is approved, 0 if not, 'spam' if spam.
-	 * @param array      $comment Comment data.
+	 * @param array      $comment          Comment data.
 	 *
 	 * @return void
 	 */
@@ -217,7 +215,7 @@ class Messia_Comments {
 	 * Saves comment rating value.
 	 *
 	 * @param int   $comment_id ID of comment.
-	 * @param array $data Comment data.
+	 * @param array $data       Comment data.
 	 *
 	 * @return void
 	 */

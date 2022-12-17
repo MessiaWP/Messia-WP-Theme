@@ -655,9 +655,9 @@ final class Messia_Config_Styles {
 	/**
 	 * Generates CSS rule.
 	 *
-	 * @param string      $rule CSS rule name.
+	 * @param string      $rule  CSS rule name.
 	 * @param string      $value CSS rule value.
-	 * @param string|null $dim reule value dimention - px, %, em, etc...
+	 * @param string|null $dim   reule value dimention - px, %, em, etc...
 	 *
 	 * @return string
 	 */

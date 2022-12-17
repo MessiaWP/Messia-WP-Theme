@@ -171,7 +171,7 @@ abstract class Messia_Listing_Tmpl_Base extends Messia_Module_Base {
 	/**
 	 * Child class forced to use it for filters rendring.
 	 *
-	 * @param array $args All widget data it was registered with.
+	 * @param array $args     All widget data it was registered with.
 	 * @param array $instance Current saved value.
 	 *
 	 * @return string
@@ -398,10 +398,10 @@ abstract class Messia_Listing_Tmpl_Base extends Messia_Module_Base {
 	/**
 	 * Search for objects by URL condition.
 	 *
-	 * @param array  $taxonomies_terms Taxonomy term IDs to search objects within.
+	 * @param array  $taxonomies_terms  Taxonomy term IDs to search objects within.
 	 * @param array  $constructor_query Constructor terms.
-	 * @param string $sort Valid sort order condition.
-	 * @param string $search Search substring.
+	 * @param string $sort              Valid sort order condition.
+	 * @param string $search            Search substring.
 	 *
 	 * @return array
 	 */
@@ -744,7 +744,7 @@ abstract class Messia_Listing_Tmpl_Base extends Messia_Module_Base {
 	 * Put property filters into corresponding user groups.
 	 *
 	 * @param array $property_groups User custom groups.
-	 * @param array $property_terms Taxonomy Property terms.
+	 * @param array $property_terms  Taxonomy Property terms.
 	 *
 	 * @return array
 	 */

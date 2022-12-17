@@ -152,8 +152,8 @@ class Messia_Help_Database {
 	/**
 	 * Wrapper for WP get_term_meta, having own cache.
 	 *
-	 * @param int    $term_id ID of term.
-	 * @param string $meta_name Meta value key.
+	 * @param int    $term_id     ID of term.
+	 * @param string $meta_name   Meta value key.
 	 * @param bool   $flush_cache Whether to bypass cache.
 	 *
 	 * @return mixed
@@ -254,8 +254,8 @@ class Messia_Help_Database {
 	/**
 	 * Get terms post belongs to.
 	 *
-	 * @param array $postid ID of post.
-	 * @param array $taxonomy Registered taxonomy names.
+	 * @param array $postid    ID of post.
+	 * @param array $taxonomy  Registered taxonomy names.
 	 * @param array $meta_keys Meta key which value to include in result.
 	 *
 	 * @return array
@@ -300,8 +300,8 @@ class Messia_Help_Database {
 	/**
 	 * Get terms objects belongs to.
 	 *
-	 * @param array $objects ID of objects.
-	 * @param array $taxonomy Registered taxonomy names.
+	 * @param array $objects   ID of objects.
+	 * @param array $taxonomy  Registered taxonomy names.
 	 * @param array $meta_keys Meta key which value to include in result.
 	 *
 	 * @return array

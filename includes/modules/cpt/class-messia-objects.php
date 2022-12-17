@@ -214,7 +214,6 @@ class Messia_Objects {
 
 					echo "<div class='metabox-stuff-fields'>{$html}</div>";
 					wp_nonce_field( 'messia_metabox', 'messia_nonce', false );
-
 				},
 				'messia_object',
 				'side',
@@ -344,7 +343,6 @@ class Messia_Objects {
 
 					echo "<div class='metabox-constructor-fields'>{$element_html}</div>";
 					wp_nonce_field( 'messia_metabox', 'messia_nonce', false );
-
 				},
 				'messia_object',
 				'normal',
@@ -358,10 +356,10 @@ class Messia_Objects {
 	 *
 	 * @see Smartbits\Messia\Includes\Modules\Cpt\add_object_metaboxes_constructor()
 	 *
-	 * @param array  $pattern Custom field HTML configuration.
-	 * @param array  $field Current constructed value of field in post.
+	 * @param array  $pattern           Custom field HTML configuration.
+	 * @param array  $field             Current constructed value of field in post.
 	 * @param object $post_segment_term Segment taxonomy term.
-	 * @param object $meta_value Current constructed value of field in term.
+	 * @param object $meta_value        Current constructed value of field in term.
 	 *
 	 * @return string HTML code for filed in post.
 	 */
@@ -554,8 +552,8 @@ class Messia_Objects {
 	 * Save all object metadata.
 	 *
 	 * @param int     $post_id Post ID.
-	 * @param WP_Post $post Post object.
-	 * @param bool    $update Whether this is an existing post being updated.
+	 * @param WP_Post $post    Post object.
+	 * @param bool    $update  Whether this is an existing post being updated.
 	 *
 	 * @return void
 	 */
@@ -639,8 +637,8 @@ class Messia_Objects {
 	 * post does not belongs to.
 	 *
 	 * @param int     $post_id Post ID.
-	 * @param WP_Post $post Post object.
-	 * @param bool    $update Whether this is an existing post being updated.
+	 * @param WP_Post $post    Post object.
+	 * @param bool    $update  Whether this is an existing post being updated.
 	 *
 	 * @return void
 	 * @throws Exception If no default value for meta field provided.
@@ -739,8 +737,8 @@ class Messia_Objects {
 	 * Callback for WP rest_insert_{messia_object} action.
 	 * Set default segment, category and property for object.
 	 *
-	 * @param WP_Post         $post Inserted or updated post object.
-	 * @param WP_REST_Request $request Request object.
+	 * @param WP_Post         $post     Inserted or updated post object.
+	 * @param WP_REST_Request $request  Request object.
 	 * @param bool            $creating True when creating a post, false when updating.
 	 *
 	 * @return void
@@ -793,8 +791,8 @@ class Messia_Objects {
 	 * Add custom param to response to inform client
 	 * that page reload requires.
 	 *
-	 * @param WP_HTTP_Response $result Result to send to the client. Usually a WP_REST_Response.
-	 * @param WP_REST_Server   $server Server instance.
+	 * @param WP_HTTP_Response $result  Result to send to the client. Usually a WP_REST_Response.
+	 * @param WP_REST_Server   $server  Server instance.
 	 * @param WP_REST_Request  $request Request used to generate the response.
 	 *
 	 * @return WP_REST_Response
@@ -812,7 +810,7 @@ class Messia_Objects {
 	 * Adds dropdown to filter objects by segment in admin
 	 *
 	 * @param string $post_type Registered post type name.
-	 * @param string $which top | bottom The location of the extra table nav markup.
+	 * @param string $which     top | bottom The location of the extra table nav markup.
 	 *
 	 * @return void
 	 */
@@ -866,7 +864,7 @@ class Messia_Objects {
 	 * Fill site rating column for object's list with data.
 	 *
 	 * @param string $column_name The name of the column to display.
-	 * @param int    $post_id The current post ID.
+	 * @param int    $post_id     The current post ID.
 	 *
 	 * @return void
 	 */
@@ -903,7 +901,7 @@ class Messia_Objects {
 	 * Adds data to post quick edit.
 	 *
 	 * @param array  $actions An array of row action links.
-	 * @param object $post The post object.
+	 * @param object $post    The post object.
 	 *
 	 * @return array @actions
 	 */
@@ -991,7 +989,7 @@ class Messia_Objects {
 	 * Add ability to sort objects in admin by column rating
 	 *
 	 * @param string   $orderby The ORDER BY clause of the query.
-	 * @param WP_Query $query The WP_Query instance (passed by reference).
+	 * @param WP_Query $query   The WP_Query instance (passed by reference).
 	 *
 	 * @return string
 	 */
@@ -1335,8 +1333,8 @@ class Messia_Objects {
 	 * Save all page metadata.
 	 *
 	 * @param int     $post_id Post ID.
-	 * @param WP_Post $post Post object.
-	 * @param bool    $update Whether this is an existing post being updated.
+	 * @param WP_Post $post    Post object.
+	 * @param bool    $update  Whether this is an existing post being updated.
 	 *
 	 * @return void
 	 */
@@ -1359,9 +1357,9 @@ class Messia_Objects {
 	 * Do pre-save validation on update term.
 	 *
 	 * @param array  $new_term Term data to be updated.
-	 * @param int    $term_id Term ID.
+	 * @param int    $term_id  Term ID.
 	 * @param string $taxonomy Registered taxonomy name.
-	 * @param array  $args Arguments passed to wp_update_term().
+	 * @param array  $args     Arguments passed to wp_update_term().
 	 *
 	 * @return array
 	 */
@@ -1382,9 +1380,9 @@ class Messia_Objects {
 	 * Do pre-save validation on update term.
 	 *
 	 * @param array  $new_term Term data to be updated.
-	 * @param int    $term_id Term ID.
+	 * @param int    $term_id  Term ID.
 	 * @param string $taxonomy Registered taxonomy name.
-	 * @param array  $args Arguments passed to wp_update_term().
+	 * @param array  $args     Arguments passed to wp_update_term().
 	 *
 	 * @return array
 	 */
@@ -1446,9 +1444,9 @@ class Messia_Objects {
 	 * Do pre-save validation on update term.
 	 *
 	 * @param array  $new_term Term data to be updated.
-	 * @param int    $term_id Term ID.
+	 * @param int    $term_id  Term ID.
 	 * @param string $taxonomy Registered taxonomy name.
-	 * @param array  $args Arguments passed to wp_update_term().
+	 * @param array  $args     Arguments passed to wp_update_term().
 	 *
 	 * @return array
 	 */
@@ -1470,9 +1468,9 @@ class Messia_Objects {
 	 * term of messia_object_segment taxonomy.
 	 * Do pre-save validation on insert term.
 	 *
-	 * @param array  $data Term data to be inserted.
+	 * @param array  $data     Term data to be inserted.
 	 * @param string $taxonomy Taxonomy slug.
-	 * @param array  $args Arguments passed to wp_insert_term().
+	 * @param array  $args     Arguments passed to wp_insert_term().
 	 *
 	 * @return array
 	 */
@@ -1509,10 +1507,10 @@ class Messia_Objects {
 	 * Callback for WP map_meta_cap filter.
 	 * Restrict delete segment term that is default.
 	 *
-	 * @param array  $caps Array of the user's capabilities.
-	 * @param string $cap Capability name.
+	 * @param array  $caps    Array of the user's capabilities.
+	 * @param string $cap     Capability name.
 	 * @param int    $user_id The user ID.
-	 * @param array  $args Adds the context to the cap. Typically the object ID.
+	 * @param array  $args    Adds the context to the cap. Typically the object ID.
 	 *
 	 * @return array
 	 */
@@ -1533,7 +1531,7 @@ class Messia_Objects {
 	 * Creates corresponding static page per each segment term.
 	 *
 	 * @param int $term_id Term ID.
-	 * @param int $tt_id Term taxonomy ID.
+	 * @param int $tt_id   Term taxonomy ID.
 	 *
 	 * @return void
 	 */
@@ -1579,10 +1577,10 @@ class Messia_Objects {
 	 * Delete corresponding static page per each segment term and updates
 	 * widget instances and object custom fields, depending on segemnts.
 	 *
-	 * @param int     $term_id Term ID.
-	 * @param int     $tt_id Term taxonomy ID.
+	 * @param int     $term_id      Term ID.
+	 * @param int     $tt_id        Term taxonomy ID.
 	 * @param WP_Term $deleted_term Copy of the already-deleted term.
-	 * @param array   $object_ids List of term object IDs.
+	 * @param array   $object_ids   List of term object IDs.
 	 *
 	 * @return void
 	 */
@@ -1729,10 +1727,10 @@ class Messia_Objects {
 	 * Callback for WP delete_{delete_messia_object_category} action.
 	 * Removes deleted category term refference from property terms category_parent mate data.
 	 *
-	 * @param int     $term_id Term ID.
-	 * @param int     $tt_id Term taxonomy ID.
+	 * @param int     $term_id      Term ID.
+	 * @param int     $tt_id        Term taxonomy ID.
 	 * @param WP_Term $deleted_term Copy of the already-deleted term.
-	 * @param array   $object_ids List of term object IDs.
+	 * @param array   $object_ids   List of term object IDs.
 	 *
 	 * @return void
 	 */
@@ -1869,7 +1867,7 @@ class Messia_Objects {
 	 * If page is segment term page - prevent trashing.
 	 *
 	 * @param bool|null $trash Whether to go forward with trashing.
-	 * @param WP_Post   $post Post object.
+	 * @param WP_Post   $post  Post object.
 	 *
 	 * @return mixed bool|null
 	 */
@@ -1899,8 +1897,8 @@ class Messia_Objects {
 	 * Callback for WP pre_delete_post filter.
 	 * If page is segment term page - prevent deletion.
 	 *
-	 * @param bool|null $delete Whether to go forward with deletion.
-	 * @param WP_Post   $post Post object.
+	 * @param bool|null $delete       Whether to go forward with deletion.
+	 * @param WP_Post   $post         Post object.
 	 * @param bool      $force_delete Whether to bypass the Trash.
 	 *
 	 * @return mixed bool|null
@@ -2057,7 +2055,7 @@ class Messia_Objects {
 	 * Single entry point to validate saving post possibility.
 	 *
 	 * @param int     $post_id Saving post ID.
-	 * @param WP_Post $post Saving post instance.
+	 * @param WP_Post $post    Saving post instance.
 	 *
 	 * @return bool
 	 */
@@ -2137,7 +2135,7 @@ class Messia_Objects {
 	 *
 	 * @return string
 	 */
-	public function post_data_revert_delete( string $location ):string {
+	public function post_data_revert_delete( string $location ): string {
 
 		MIA()->set_messia_admin_notice_transient( 5 );
 		remove_filter( 'wp_redirect', [ $this, 'post_data_revert_delete' ] );
@@ -2149,8 +2147,8 @@ class Messia_Objects {
 	 * Fire in $this->on_update_post() on preventing post slug changing.
 	 * Adds extra data to rest response to show notification to user.
 	 *
-	 * @param WP_HTTP_Response $result Result to send to the client. Usually a `WP_REST_Response`.
-	 * @param WP_REST_Server   $object Server instance.
+	 * @param WP_HTTP_Response $result  Result to send to the client. Usually a `WP_REST_Response`.
+	 * @param WP_REST_Server   $object  Server instance.
 	 * @param WP_REST_Request  $request Request used to generate the response.
 	 *
 	 * @return WP_REST_Response
@@ -2169,8 +2167,8 @@ class Messia_Objects {
 	 * Fire in $this->on_pre_delete_post(), $this->on_pre_trash_post() on preventing direct post deletion.
 	 * Adds extra data to rest response to show notification to user.
 	 *
-	 * @param WP_HTTP_Response $result Result to send to the client. Usually a `WP_REST_Response`.
-	 * @param WP_REST_Server   $object Server instance.
+	 * @param WP_HTTP_Response $result  Result to send to the client. Usually a `WP_REST_Response`.
+	 * @param WP_REST_Server   $object  Server instance.
 	 * @param WP_REST_Request  $request Request used to generate the response.
 	 *
 	 * @return WP_REST_Response

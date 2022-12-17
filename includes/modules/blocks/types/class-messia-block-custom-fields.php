@@ -131,7 +131,7 @@ class Messia_Block_Custom_Fields extends Messia_Block_Abstract_Dynamic {
 	 * It is top level category term and their direct children.
 	 *
 	 * @param array  $attributes Current attributes.
-	 * @param string $content Block content (always null due to block is dynamic).
+	 * @param string $content    Block content (always null due to block is dynamic).
 	 *
 	 * @throws Exception On unexpected $this->refer_widget value.
 	 *
@@ -270,7 +270,7 @@ class Messia_Block_Custom_Fields extends Messia_Block_Abstract_Dynamic {
 	 * Some terms could be deleted after creating block -
 	 * they should be removed from saved attrs.
 	 *
-	 * @param array $db_terms Segment terms to validate.
+	 * @param array $db_terms   Segment terms to validate.
 	 * @param array $attributes Current block attributes.
 	 *
 	 * @return array
@@ -324,9 +324,9 @@ class Messia_Block_Custom_Fields extends Messia_Block_Abstract_Dynamic {
 	 * Sorts the fields in the term meta constructor
 	 * according to their stored order in the block.
 	 *
-	 * @param array  $instance Saved value.
+	 * @param array  $instance           Saved value.
 	 * @param array  $term_custom_fields Custom fields constructed for term.
-	 * @param string $segment_slug Term id of taxonomy segment.
+	 * @param string $segment_slug       Term id of taxonomy segment.
 	 *
 	 * @return void
 	 */

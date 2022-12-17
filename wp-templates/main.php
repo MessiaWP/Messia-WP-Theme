@@ -2,6 +2,7 @@
 /**
  * The template for displaying regular pages.
  * Template Name: Blog page
+ *
  * @package Messia\Templates
  */
 

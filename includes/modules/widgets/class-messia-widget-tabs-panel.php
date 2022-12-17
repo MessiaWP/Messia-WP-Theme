@@ -94,8 +94,8 @@ class Messia_Widget_Tabs_Panel extends WP_Widget {
 	/**
 	 * Render widget content in frontend.
 	 *
-	 * @param array $args All widget data it was registered with.
-	 * @param array $instance Current saved value.
+	 * @param array $args       All widget data it was registered with.
+	 * @param array $instance   Current saved value.
 	 * @param bool  $block_mode Whether called as block (turn off then scripts and styles).
 	 *
 	 * @return void
@@ -188,7 +188,7 @@ class Messia_Widget_Tabs_Panel extends WP_Widget {
 								</div>";
 			}
 
-			$i++;
+			++$i;
 		}
 
 		if ( 1 === $this->blog_settings['debugger'] && empty( $widget_html ) ) {

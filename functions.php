@@ -31,13 +31,13 @@ if ( ! defined( 'MESSIA_FUNCTIONS_FILE' ) ) {
 
 // Check requirements.
 if ( ! class_exists( 'Messia_Requirements' ) ) {
-	require_once dirname( __FILE__ ) . '/includes/class-messia-requirements.php';
+	require_once __DIR__ . '/includes/class-messia-requirements.php';
 	$requirements = Messia_Requirements::instance();
 }
 
 // Include the main Messia_Core class.
 if ( ! class_exists( 'Messia_Core' ) ) {
-	require_once dirname( __FILE__ ) . '/includes/class-messia-core.php';
+	require_once __DIR__ . '/includes/class-messia-core.php';
 }
 
 /**

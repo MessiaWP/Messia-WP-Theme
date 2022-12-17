@@ -120,9 +120,9 @@ class Messia_User_Settings {
 	 * Define whether page reload requires after saving setting.
 	 *
 	 * @param string $setting_preset The name of preset.
-	 * @param array  $to_save Incoming settings.
-	 * @param array  $old_settings Old data.
-	 * @param array  $new_settings New saved settings.
+	 * @param array  $to_save        Incoming settings.
+	 * @param array  $old_settings   Old data.
+	 * @param array  $new_settings   New saved settings.
 	 *
 	 * @return void
 	 */
@@ -138,9 +138,9 @@ class Messia_User_Settings {
 	 * Trigger on saving setting.
 	 *
 	 * @param string $setting_preset The name of preset.
-	 * @param array  $to_save Incoming settings.
-	 * @param array  $old_settings Old data.
-	 * @param array  $new_settings New saved settings.
+	 * @param array  $to_save        Incoming settings.
+	 * @param array  $old_settings   Old data.
+	 * @param array  $new_settings   New saved settings.
 	 *
 	 * @return void
 	 */
@@ -152,9 +152,9 @@ class Messia_User_Settings {
 	 * Trigger on saving setting handle with .htaccess content in root of site.
 	 *
 	 * @param string $setting_preset The name of preset.
-	 * @param array  $to_save Incoming settings.
-	 * @param array  $old_settings Old data.
-	 * @param array  $new_settings New saved settings.
+	 * @param array  $to_save        Incoming settings.
+	 * @param array  $old_settings   Old data.
+	 * @param array  $new_settings   New saved settings.
 	 *
 	 * @return void
 	 */
@@ -253,8 +253,8 @@ class Messia_User_Settings {
 	 * Callback for menu control when control type is callback.
 	 * This one render element to define order of object in search rsults.
 	 *
-	 * @param array  $args Nothing for now.
-	 * @param string $option_name Menu option name.
+	 * @param array  $args          Nothing for now.
+	 * @param string $option_name   Menu option name.
 	 * @param string $current_value Menu option value.
 	 *
 	 * @return void
@@ -291,8 +291,8 @@ class Messia_User_Settings {
 	 * Callback for menu control when control type is callback.
 	 * This one render element to define site rating criteria.
 	 *
-	 * @param array  $args Nothing for now.
-	 * @param string $option_name Menu option name.
+	 * @param array  $args          Nothing for now.
+	 * @param string $option_name   Menu option name.
 	 * @param string $current_value Menu option value.
 	 *
 	 * @return void
@@ -329,8 +329,8 @@ class Messia_User_Settings {
 	 * Callback for menu control when control type is callback.
 	 * This one render element to define property groups for filters.
 	 *
-	 * @param array  $args Nothing for now.
-	 * @param string $option_name Menu option name.
+	 * @param array  $args          Nothing for now.
+	 * @param string $option_name   Menu option name.
 	 * @param string $current_value Menu option value.
 	 *
 	 * @return void
@@ -367,8 +367,8 @@ class Messia_User_Settings {
 	 * Callback for menu control when control type is callback.
 	 * This one render element select and save image(s) from media library.
 	 *
-	 * @param array  $args Nothing for now.
-	 * @param string $option_name Menu option name.
+	 * @param array  $args          Nothing for now.
+	 * @param string $option_name   Menu option name.
 	 * @param string $current_value Menu option value.
 	 *
 	 * @return void
@@ -509,8 +509,8 @@ class Messia_User_Settings {
 	 * Callback for menu control when control type is callback.
 	 * This one render select tags with google fonts.
 	 *
-	 * @param array  $args All Google fonts.
-	 * @param string $option_name Menu option name.
+	 * @param array  $args               All Google fonts.
+	 * @param string $option_name        Menu option name.
 	 * @param string $current_value_json Menu option value with google fonts list in JSON format.
 	 *
 	 * @return void
@@ -658,14 +658,14 @@ class Messia_User_Settings {
 									'id'   => $value,
 									'text' => $name,
 								];
-							};
+							}
 							$subsets = [];
 							foreach ( $generic_font['subsets'] as $value => $name ) {
 								$subsets[] = [
 									'id'   => $value,
 									'text' => $name,
 								];
-							};
+							}
 							?>
 							<option value="<?php echo esc_html( $generic_font['family'] ); ?>"<?php echo selected( $generic_font['family'], $current_value['family'] ); ?> data-category='<?php echo $category; ?>' data-variants='<?php echo wp_json_encode( $variants ); ?>' data-subsets='<?php echo wp_json_encode( $subsets ); ?>'><?php echo esc_html( $generic_font['family'] ); ?></option>
 							<?php
@@ -688,14 +688,14 @@ class Messia_User_Settings {
 									'id'   => $value,
 									'text' => self::get_font_weight_alias( $dictionary, $value ),
 								];
-							};
+							}
 							$subsets = [];
 							foreach ( $google_font['subsets'] as $value ) {
 								$subsets[] = [
 									'id'   => $value,
 									'text' => ucfirst( $value ),
 								];
-							};
+							}
 							?>
 							<option value="<?php echo $google_font['family']; ?>" <?php echo selected( $google_font['family'], $current_value['family'] ); ?> data-category='<?php echo $category; ?>' data-variants='<?php echo wp_json_encode( $variants ); ?>' data-subsets='<?php echo wp_json_encode( $subsets ); ?>'><?php echo $google_font['family']; ?></option>
 							<?php
@@ -724,7 +724,7 @@ class Messia_User_Settings {
 								'id'   => $value,
 								'text' => $name,
 							];
-						};
+						}
 						foreach ( $selected_generic['variants'] as $variant_value => $variant_name ) {
 							?>
 							<option value="<?php echo $variant_value; ?>" <?php echo selected( $variant_value, $current_value['variant'] ); ?> data-subsets='<?php echo wp_json_encode( $subsets ); ?>'><?php echo $variant_name; ?></option>
@@ -739,7 +739,7 @@ class Messia_User_Settings {
 								'id'   => $value,
 								'text' => ucfirst( $value ),
 							];
-						};
+						}
 						foreach ( $selected_google['variants'] as $variant ) {
 							?>
 							<option value="<?php echo $variant; ?>" <?php echo selected( $variant, $current_value['variant'] ); ?> data-subsets='<?php echo wp_json_encode( $subsets ); ?>'><?php echo self::get_font_weight_alias( $dictionary, $variant ); ?></option>
@@ -799,7 +799,7 @@ class Messia_User_Settings {
 	 * Replace google font weight with human readable value from dictionary,
 	 * 400 - Regular, 600 -Bold, etc...
 	 *
-	 * @param array  $dictionary Search->Replace array.
+	 * @param array  $dictionary   Search->Replace array.
 	 * @param string $google_value Google font weight.
 	 *
 	 * @return string

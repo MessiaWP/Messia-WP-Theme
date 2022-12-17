@@ -834,7 +834,7 @@ final class Messia_Core {
 	/**
 	 * Setter for class module.
 	 *
-	 * @param string $module_name Valid theme module.
+	 * @param string $module_name  Valid theme module.
 	 * @param mixed  $module_value Module itself.
 	 *
 	 * @return void

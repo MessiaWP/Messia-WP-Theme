@@ -46,10 +46,10 @@ class Messia_Css_Beautifier {
 			switch ( true ) {
 				case preg_match( '/{/', $line ):
 					$line = self::check_healthy_white_spaces( self::create_taps( $line, $taps ), preg_match( '/@/', $line ) );
-					$taps++;
+					++$taps;
 					break;
 				case preg_match( '/}/', $line ):
-					$taps--;
+					--$taps;
 					$line = self::create_taps( $line, $taps );
 					break;
 				default:
@@ -137,7 +137,7 @@ class Messia_Css_Beautifier {
 	/**
 	 * Check the line for a healthy structure.
 	 *
-	 * @param string $string CSS rule.
+	 * @param string $string              CSS rule.
 	 * @param int    $check_double_points Sequence of ".".
 	 *
 	 * @return string
@@ -162,7 +162,7 @@ class Messia_Css_Beautifier {
 	 * Create the needed taps.
 	 *
 	 * @param string $string CSS rule.
-	 * @param int    $taps Number of taps to insert.
+	 * @param int    $taps   Number of taps to insert.
 	 *
 	 * @return string
 	 */

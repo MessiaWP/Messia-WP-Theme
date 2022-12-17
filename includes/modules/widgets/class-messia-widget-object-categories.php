@@ -81,8 +81,8 @@ class Messia_Widget_Object_Categories extends WP_Widget {
 	/**
 	 * Render widget content in frontend.
 	 *
-	 * @param array $args All widget data it was registered with.
-	 * @param array $instance Current saved value.
+	 * @param array $args       All widget data it was registered with.
+	 * @param array $instance   Current saved value.
 	 * @param bool  $block_mode Whether called as block (turn off then scripts and styles).
 	 *
 	 * @return void
@@ -289,11 +289,11 @@ class Messia_Widget_Object_Categories extends WP_Widget {
 			}
 
 			if ( isset( $term['children'] ) ) {
-				$indent++;
+				++$indent;
 				foreach ( $term['children'] as $child_term ) {
 					$level = $this->flatten_crosslinked_terms_hierarhy( [ $term['term_id'] => $child_term ], $root_term_id, $relative_path, $term, $level, $indent );
 				}
-				$indent--;
+				--$indent;
 			}
 
 			$level[ $root_term_id ]['html'] .= '</ul>';
@@ -363,11 +363,11 @@ class Messia_Widget_Object_Categories extends WP_Widget {
 			}
 
 			if ( isset( $term['children'] ) ) {
-				$indent++;
+				++$indent;
 				foreach ( $term['children'] as $child_term ) {
 					$level = $this->flatten_crosslinked_terms_hierarhy( [ $term['term_id'] => $child_term ], $root_term_id, $relative_path, $term, $level, $indent );
 				}
-				$indent--;
+				--$indent;
 			}
 
 			$level[ $root_term_id ]['html'] .= '</ul>';

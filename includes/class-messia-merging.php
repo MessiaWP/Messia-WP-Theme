@@ -353,6 +353,5 @@ class Messia_Merging {
 		file_put_contents( $this->merged_css_file, file_get_contents( $this->merged_css_file ) . $merged_style );
 		$filename = basename( $this->merged_css_file );
 		wp_enqueue_style( 'merged-style', MESSIA_THEME_URL . '/includes/assets/css/' . $filename, [], false, 'all' ); // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.NoExplicitVersion
-
 	}
 }
