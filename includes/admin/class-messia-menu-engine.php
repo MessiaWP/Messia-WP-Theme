@@ -60,7 +60,7 @@ abstract class Messia_Menu_Engine {
 	/**
 	 * Messia_Menu_Engine Constructor.
 	 *
-	 * @param string $menu_type Network or regular.
+	 * @param string $menu_type   Network or regular.
 	 * @param array  $menu_config Static menu configuration.
 	 *
 	 * @return void
@@ -337,8 +337,8 @@ abstract class Messia_Menu_Engine {
 	/**
 	 * Prepare hole menu HTML content.
 	 *
-	 * @param array  $controls Elements to render.
-	 * @param array  $options Current value.
+	 * @param array  $controls             Elements to render.
+	 * @param array  $options              Current value.
 	 * @param string $theme_licence_status Current status.
 	 *
 	 * @return string HTML
@@ -526,7 +526,7 @@ abstract class Messia_Menu_Engine {
 						$radios .= "<input id={$rid} {$data_html} {$class} name='{$control['name']}' type='radio' {$disabled} {$value} value='{$radio['value']}'/>
 									{$control['descr']}
 									<label for='{$rid}'>{$radio['title']}</label>";
-						$i++;
+						++$i;
 					}
 
 					$element = "<div class='label'>
@@ -697,7 +697,7 @@ abstract class Messia_Menu_Engine {
 	 * Detect curent page type and set "iconFonts" var for JS to show
 	 * or hide icon fonts selector in WP media frame.
 	 *
-	 * @param string    $page_hook WP page hook.
+	 * @param string    $page_hook      WP page hook.
 	 * @param WP_Screen $current_screen WP current screen.
 	 *
 	 * @return bool
@@ -735,8 +735,8 @@ abstract class Messia_Menu_Engine {
 	 * Get HTML data for current value for control element.
 	 *
 	 * @param string $control_type Valid control type from config array.
-	 * @param array  $options Current saved set of options to search in.
-	 * @param string $name Menu option name to search.
+	 * @param array  $options      Current saved set of options to search in.
+	 * @param string $name         Menu option name to search.
 	 *
 	 * @return null|string
 	 */
@@ -780,8 +780,8 @@ abstract class Messia_Menu_Engine {
 	 * Get HTML data for current value for radio element.
 	 *
 	 * @param array  $options Current saved set of options to search in.
-	 * @param string $name Menu option name to search.
-	 * @param string $radios Radio item option value.
+	 * @param string $name    Menu option name to search.
+	 * @param string $radios  Radio item option value.
 	 *
 	 * @return null|string
 	 */
@@ -795,8 +795,8 @@ abstract class Messia_Menu_Engine {
 	/**
 	 * Get HTML data for current value for select element.
 	 *
-	 * @param array  $options Current saved set of options to search in.
-	 * @param string $name Menu option name to search.
+	 * @param array  $options        Current saved set of options to search in.
+	 * @param string $name           Menu option name to search.
 	 * @param array  $select_options Select tag Options.
 	 * @param array  $select_default Preselected tag option if no selected value yet exists.
 	 *
@@ -839,9 +839,9 @@ abstract class Messia_Menu_Engine {
 	/**
 	 * Get HTML data for current value for multi select element.
 	 *
-	 * @param array  $options Current saved set of options to search in.
-	 * @param string $name Menu option name to search.
-	 * @param array  $select_options Select tag options.
+	 * @param array  $options         Current saved set of options to search in.
+	 * @param string $name            Menu option name to search.
+	 * @param array  $select_options  Select tag options.
 	 * @param array  $select_defaults Preselected tag options if no selected value yet exists.
 	 *
 	 * @return string
@@ -1277,7 +1277,7 @@ abstract class Messia_Menu_Engine {
 					$valid[] = 'Error reading file' . basename( $template );
 				}
 
-				$valid = $this->validate_demo( $template, null, $zip->comment );
+				$valid = $this->validate_demo( $template, $zip->comment );
 
 				if ( ! empty( $valid ) ) {
 					unset( $templates[ $key ] );
@@ -1482,7 +1482,7 @@ abstract class Messia_Menu_Engine {
 				}
 
 				try {
-					$valid = $this->validate_demo( $demo_file['output_file'], $demo_file['original_ext'], $zip->comment );
+					$valid = $this->validate_demo( $demo_file['output_file'], $zip->comment, $demo_file['original_ext'] );
 
 					// Is not Messia valid demo.
 					if ( ! empty( $valid ) ) {
@@ -1647,7 +1647,7 @@ abstract class Messia_Menu_Engine {
 				return (int) $value;
 			} else {
 				return (float) $value;
-			};
+			}
 		}
 
 		$value = stripslashes_deep( $value );
@@ -1659,7 +1659,7 @@ abstract class Messia_Menu_Engine {
 	 * Adds classes to option if there are notice exists for it.
 	 *
 	 * @param array $title_class HTML classes.
-	 * @param array $control Current saved option.
+	 * @param array $control     Current saved option.
 	 *
 	 * @return string
 	 */
@@ -1705,11 +1705,11 @@ abstract class Messia_Menu_Engine {
 	 *
 	 * @param string $demo_file    Full path to demo file.
 	 * @param string $original_ext If not provided will be taken from $demo_file.
-	 * @param string $comment Demo archive comment.
+	 * @param string $comment      Demo archive comment.
 	 *
 	 * @return array
 	 */
-	private function validate_demo( string $demo_file, ?string $original_ext = null, string $comment ): array {
+	private function validate_demo( string $demo_file, string $comment, ?string $original_ext = null ): array {
 
 		$errors = [];
 

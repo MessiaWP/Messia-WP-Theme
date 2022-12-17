@@ -28,9 +28,9 @@ class Messia_Config_Custom_Fields {
 	 *
 	 * @return array
 	 */
-	public static function get_units (): array {
+	public static function get_units(): array {
 
-		if ( is_null( self::$units) ) {
+		if ( is_null( self::$units ) ) {
 
 			self::$units = [
 				'currency' => [
@@ -62,7 +62,6 @@ class Messia_Config_Custom_Fields {
 
 		$cf_units = self::get_units();
 		$cf_units = array_merge( ...array_values( $cf_units ) );
-		
 
 		switch ( $constructor['field_type'] ) {
 			case 'input_number':

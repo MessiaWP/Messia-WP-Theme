@@ -5,7 +5,8 @@
  * @package Messia
  */
 
-// phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
+// Should be as simple as possible.
+// phpcs:disable
 
 declare(strict_types = 1);
 
@@ -119,12 +120,12 @@ class Messia_Requirements {
 			}
 		}
 
-		if ( version_compare( $php_version, '7.4.0', '<' ) ) {
+		if ( version_compare( $php_version, '8.1.0', '<' ) ) {
 			// translators: %s - php version.
-			$this->errors['fatal'][] = sprintf( __( 'Messia requires at least PHP 7.4.0 version or higher, you have PHP %s', 'messia' ), $php_version );
+			$this->errors['fatal'][] = sprintf( __( 'Messia requires at least PHP 8.1.0 version or higher, you have PHP %s', 'messia' ), $php_version );
 		}
 
-		if ( version_compare( $wp_version, '5.8.0', '<' ) ) {
+		if ( version_compare( $wp_version, '6.0.0', '<' ) ) {
 			// translators: %s - php version.
 			$this->errors['fatal'][] = sprintf( __( 'Messia requires at least WordPress 5.5.0 version or higher, you have WordPress %s', 'messia' ), $wp_version );
 		}
@@ -298,3 +299,4 @@ class Messia_Requirements {
 		return $this->errors;
 	}
 }
+// phpcs:enable

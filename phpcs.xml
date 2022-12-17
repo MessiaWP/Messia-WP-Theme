@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<!--
+	Customize the rules WP Enforcer uses by editing this file according to PHP_CodeSniffer's
+	ruleset.xml standard: https://github.com/squizlabs/PHP_CodeSniffer/wiki/Annotated-ruleset.xml
+-->
+<ruleset name="WP-Enforcer">
+	<!-- <config name="installed_paths" value="../../../vendor/wp-coding-standards/wpcs" /> -->
+	<description>Coding standards from WP Enforcer.</description>
+
+	<!-- FILES -->
+	<exclude-pattern>phpcs.xml</exclude-pattern>
+	<exclude-pattern>*\.js$</exclude-pattern> <!-- WP Inspector does not handle ES6 very well -->
+	<exclude-pattern>./vendor</exclude-pattern>
+	<exclude-pattern>./includes/phpwee</exclude-pattern>
+	<exclude-pattern>./node_modules</exclude-pattern>
+
+	<!--
+		Don't get angry about checking files that don't contain code
+		@link https://github.com/stevegrunwell/wp-enforcer/issues/12
+	-->
+	<rule ref="Internal.NoCodeFound">
+		<severity>0</severity>
+	</rule>
+
+	<rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
+
+	<!-- Ignore WordPress-Core stupid decision to disallow short array syntax [] -->
+	<rule ref="Universal.Arrays.DisallowShortArraySyntax">
+		<severity>0</severity>
+	</rule>
+
+	<!-- Ignore unused $vars -->
+	<rule ref="Generic.CodeAnalysis.UnusedFunctionParameter.FoundBeforeLastUsed">
+		<severity>0</severity>
+	</rule>
+
+	<config name="testVersion" value="8.0-"/>
+	<rule ref="PHPCompatibilityWP">
+		<include-pattern>*\.php$</include-pattern>
+	</rule>
+
+	<rule ref="WordPress-Core" />
+	<rule ref="WordPress-Extra" />
+	<rule ref="WordPress-Docs" />
+
+	<!-- Ignore some WP rules for doc blocks and type hinting. Must be after WordPress-Docs  -->
+	<rule ref="Squiz.Commenting.FunctionComment.ParamCommentNotCapital">
+		<severity>5</severity>
+	</rule>
+
+	<rule ref="Squiz.Commenting.FunctionComment.SpacingAfterParamName">
+		<severity>5</severity>
+	</rule>
+
+	<rule ref="Squiz.Commenting.DocCommentAlignment.SpaceAfterStar">
+		<severity>5</severity>
+	</rule>
+
+	<rule ref="Squiz.Commenting.FunctionComment.ScalarTypeHintMissing">
+		<severity>5</severity>
+	</rule>
+
+	<rule ref="Squiz.Commenting.FunctionComment.TypeHintMissing">
+		<severity>5</severity>
+	</rule>
+
+	<rule ref="Generic.Commenting.DocComment.ParamGroup">
+		<severity>5</severity>
+	</rule>
+
+	<rule ref="Generic.Commenting.DocComment.TagsNotGrouped">
+		<severity>5</severity>
+	</rule>
+
+	<rule ref="Squiz.Commenting.FunctionComment.MissingReturn">
+		<severity>5</severity>
+	</rule>
+</ruleset>

@@ -1,6 +1,7 @@
 *.log
 
 /node_modules
+/vendor
 
 /includes/assets/css/_custom_blog_id_*.css
 /includes/assets/css/_custom_blog_id_*.min.css

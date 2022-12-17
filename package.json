@@ -5,7 +5,9 @@
 	"private": true,
 	"scripts": {
 		"dev": "webpack --watch",
-		"prod": "webpack"
+		"prod": "webpack",
+		"phpcs": "vendor/bin/phpcs -s . --standard=phpcs.xml --report=full",
+		"phpcbf": "vendor/bin/phpcbf -p . --standard=phpcs.xml --report=full"
 	},
 	"repository": {
 		"type": "git",
