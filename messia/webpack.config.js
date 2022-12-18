@@ -7,7 +7,8 @@ const webpack = require('webpack'),
 	CssMinimizerPlugin = require('css-minimizer-webpack-plugin'),
 	TerserPlugin = require('terser-webpack-plugin'),
 	StylelintPlugin = require('stylelint-webpack-plugin'),
-	localConfig = require('./webpack-local.json');
+	fs = require('fs'),
+	Warning = require('postcss').Warning;
 
 const
 	themePath = '.',
@@ -266,31 +267,48 @@ function getConfig(env) {
 				],
 			})
 		);
-		config.plugins.push(
-			new BrowserSyncPlugin(
-				{
-					notify: true,
-					host: localConfig.browserSync.localSiteDomain,
-					open: 'external',
-					port: 4000,
-					logLevel: 'silent',
-					files: [
-						`${themePath}/**/*.*`,
-					],
-					proxy: {
-						target: localConfig.browserSync.localSiteHost,
-						ws: true
-					},
-					https: {
-						key: localConfig.browserSync.localSiteCertPathKey,
-						cert: localConfig.browserSync.localSiteCertPathCrt,
-					},
-				},
-				{
-					reload: false
-				}
-			)
-		);
+
+		try {
+			const localWebPackPath = './webpack-local.json';
+
+			if (!fs.existsSync(localWebPackPath)) {
+				throw new Warning('webpack-local.json not found. BrowserSync plugin will not be activated.');
+			}
+
+			const
+				localWebPackConfig = require(localWebPackPath),
+				BrowserSync = new BrowserSyncPlugin(
+					new BrowserSyncPlugin(
+						{
+							notify: true,
+							host: localWebPackConfig.browserSync.localSiteDomain,
+							open: 'external',
+							port: 4000,
+							logLevel: 'silent',
+							files: [
+								`${themePath}/**/*.*`,
+							],
+							proxy: {
+								target: localWebPackConfig.browserSync.localSiteHost,
+								ws: true
+							},
+							https: {
+								key: localWebPackConfig.browserSync.localSiteCertPathKey,
+								cert: localWebPackConfig.browserSync.localSiteCertPathCrt,
+							},
+						},
+						{
+							reload: false
+						}
+					)
+				);
+
+				config.plugins.push(BrowserSync);
+
+		} catch (err) {
+			console.log("\x1b[36m%s\x1b[0m", `\n${err}\n`);
+		}
+
 		config.plugins.push(
 			new StylelintPlugin({
 				overrideConfigFile: './.stylelintrc',

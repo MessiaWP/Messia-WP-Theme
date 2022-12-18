@@ -1,0 +1,8 @@
+{
+	"browserSync": {
+		"localSiteDomain": "",
+		"localSiteHost": "",
+		"localSiteCertPathKey": "",
+		"localSiteCertPathCrt": ""
+	}
+}

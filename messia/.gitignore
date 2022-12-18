@@ -6,9 +6,11 @@
 /includes/assets/css/_custom_blog_id_*.css
 /includes/assets/css/_custom_blog_id_*.min.css
 
-# Auto minified
-/includes/assets/css/backend/libraries/*.min.css
-/includes/assets/js/backend/libraries/*.min.js
+# Compiled
+/includes/assets/css
+/includes/assets/js
+/includes/assets/audio
+/includes/assets/images
 
 # Demo
 /.staff
