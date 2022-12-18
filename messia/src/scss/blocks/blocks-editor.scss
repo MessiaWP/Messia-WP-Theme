@@ -1,0 +1,130 @@
+@import "../init";
+.#{$m-namespace-admin} {
+	.block-editor,
+	.blocks-widgets-container {
+		.messia-block {
+			width: 100%;
+
+			.messia-tabs-panel {
+				[role="tablist"] {
+					border-bottom: 1px solid #bbb;
+					overflow: hidden;
+				}
+
+				[role="tabpanel"] {
+					margin-top: 15px;
+				}
+
+				[role="tab"] {
+					border-radius: 0;
+					box-shadow: none;
+				}
+
+				[role="tab"].active-tab {
+					box-shadow: inset 0 -3px #007cba;
+					font-weight: 600;
+					position: relative;
+				}
+			}
+
+			.messia-card {
+				border: 1px solid #efefef;
+				background: #f8f8f8;
+				color: #868686;
+				z-index: 1;
+
+				.messia-card-content {
+					padding: 10px;
+				}
+			}
+
+			.components-notice {
+				margin: 5px 15px 20px 0;
+				flex-basis: 100%;
+			}
+
+			.ui-sortable {
+				overflow: auto;
+
+				.sortable-placeholder {
+					margin: revert;
+				}
+			}
+
+			.messia-drop-zone {
+				color: #868686;
+				border: 1px solid #efefef;
+				padding: 5px;
+				display: grid;
+				row-gap: .5em;
+
+				&.dragging {
+					border: 1px dashed #c4c4c4;
+					box-sizing: border-box;
+					transition: color .3s;
+				}
+
+				&:empty {
+					min-height: 100px;
+				}
+
+				&:empty:before {
+					content: attr(data-title);
+					font-size: 1.5em;
+					text-align: center;
+					display: inline-flex;
+					margin: auto;
+				}
+			}
+
+			.move {
+				cursor: grab;
+			}
+
+			.remove:before,
+			.toggle:before {
+				font-family: dashicons;
+				line-height: 1;
+				font-weight: 400;
+				font-style: normal;
+				text-decoration: inherit;
+				text-transform: none;
+				text-rendering: auto;
+				font-size: 20px;
+				vertical-align: middle;
+				text-align: center;
+				transition: color .1s ease-in;
+			}
+
+			.remove:before {
+				content: "\f153";
+				cursor: pointer;
+			}
+
+			.toggle:before {
+				content: "\f14f";
+				cursor: pointer;
+			}
+
+			.collapsed.toggle:before,
+			.collapsed .toggle:before {
+				content: "\f10f";
+			}
+		}
+
+		.block-editor-block-list__layout [data-type^="messia/"] {
+			&:focus:after {
+				box-shadow: 0 0 0 1.5px red;
+			}
+
+			.components-placeholder__fieldset .components-button {
+				margin-bottom: 0;
+			}
+		}
+
+		.messia-preview-frame {
+			width: 100%;
+			pointer-events: none;
+		}
+	}
+}

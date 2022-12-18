@@ -1,0 +1,244 @@
+::-moz-selection {
+	background: #EC8744;
+}
+
+::selection {
+	background: #EC8744;
+}
+.datepicker.datepicker-dropdown table tr td.day.active, .datepicker.datepicker-dropdown table tr td.day.active:hover, .datepicker.datepicker-dropdown table tr td .month.active, .datepicker.datepicker-dropdown table tr td .month.active:hover, .datepicker.datepicker-dropdown table tr td .year.active, .datepicker.datepicker-dropdown table tr td .year.active:hover {
+	background-color: #EC8744;
+}
+.datepicker.datepicker-dropdown table thead tr:first-child th:hover {
+	color: #EC8744;
+}
+.sidebar-estate .instagram .red-screen {
+	background: #EC8744;
+}
+.section_header .section_title:after,
+.btn-default:hover,
+.btn-red,
+.latest_listing_area .btn-prev.btn-large:hover,
+.latest_listing_area .btn-next.btn-large:hover {
+	background-color: #EC8744;
+}
+
+a.dropdown-item:hover {
+	background: #EC8744;
+}
+
+.main-slide.main-restaurant .slide-content .btn-default {
+	background: #e87224;
+	border-color: #e87224;
+}
+.main-slide.main-restaurant .slide-content .btn-default:hover {
+	background: #EC8744 ;
+	border-color: #EC8744 ;
+}
+.main-slide.main-restaurant .owl-dots .owl-dot.active {
+	background: #EC8744;
+}
+
+.price-range .slider-horizontal .slider-selection,
+.main-slide .search-bar .nav-tabs .nav-item .nav-link.active {
+	background: #EC8744;
+}
+
+.sidebar-estate .categories .link-item:hover:before {
+	color: #EC8744;
+}
+.google-map .card .card-body .rating-review .fa-star {
+	color: #EC8744;
+}
+.btn-red:hover {
+	background: #EC8744 !important;
+}
+
+.card_top_review .btn:hover {
+	background: #EC8744;
+}
+
+.header-bottom-block {
+	background: #EC8744;
+}
+
+.header_three .header-menu-three > .nav-item.signin .dropdown-menu,
+.dropdown-menu {
+	border-top-color: #EC8744;
+}
+.header_three .header-menu-three > .nav-item.signin .dropdown-menu:before,
+.dropdown-menu:before {
+	border-bottom-color: #EC8744;
+}
+
+.dropdown-menu .dropdown-item:hover {
+	background: #EC8744;
+}
+
+.entry-meta > div > .fa {
+	color: #EC8744;
+}
+
+.sidebar-estate .widget-title:before {
+	background-color: #EC8744;
+}
+.main-slide .slide-item .slide-content .title-script,
+.header_three .header-menu-three > .nav-item.signin .form-login .text-red,
+.header_three .header-menu-three > .nav-item.signin .form-signup .text-red,
+.sidebar-estate .search .search-form:after {
+	color: #EC8744;
+}
+
+.sidebar-estate .filter_tabs .tab.active {
+	background-color: #EC8744;
+}
+
+.sidebar-estate .filter_tabs {
+	border-color: #EC8744;
+}
+
+.headline:before {
+	background-color: #EC8744;
+}
+
+
+
+.sidebar-estate .post-item .post-info .post-title:hover,
+.sidebar-estate .post-item .post-info .date:before,
+.sidebar-estate .categories .link-item:hover,
+.sidebar-estate .archives .link-item:hover,
+.sidebar-estate .archives .link-item:hover:before {
+	color: #EC8744;
+}
+
+.site_content .page-blog .blog-content .post-item .image-text .text-link .link-item:before,
+.site_content .page-blog .blog-content .footer .tags:before,
+.site_content .page-blog .blog-content .about-admin .admin-info .title .admin-name .name,
+.card-next-prev.horizontal .date:before,
+.site_content .sub-section.leave-comments .section-title .number,
+.site_content .comment-item .comment-info .rating .fa-star {
+	color: #EC8744;
+}
+
+.card-next-prev.horizontal:hover .card-body,
+.site_content .sub-section .section-title:after,
+.card_team_member:hover .card_body {
+	background-color: #EC8744;
+}
+
+.card_food .card_body .rating_review .rating .fa-star,
+.card_team_member .card_body > p,
+.card_top_review .card_body .location_rating .rating .fa-star {
+	color: #EC8744;
+}
+
+.btn-default:hover,
+.btn-red {
+	border-color: #EC8744;
+}
+
+.filter-item > li.active > a {
+	background: #EC8744;
+}
+.restaurant-tab-content .nav-tabs .nav-link.active {
+	background: #EC8744;
+}
+
+.customer-feedback-inner .customer-image {
+	border-color: #EC8744;
+}
+
+.service_items .service_item:hover {
+	background: #EC8744;
+}
+
+.content-title:after {
+	background: #EC8744;
+}
+.restaurant_ratings_review .restaurant_avarage_rating {
+	background: #EC8744;
+}
+.restaurant-footer .tags:before,
+.customer-feedback-inner .customer-content .customer-name .customer-rating .fa-star {
+	color: #EC8744;
+}
+.restaurant-menu-list > li .menu-price .price {
+	color: #EC8744;
+}
+.customer-feedback-slider .owl-dots .owl-dot.active > span {
+	background: #EC8744;
+}
+.restaurant-call-to {
+	background: #EC8744;
+}
+.widget.widget_contact .link-items .link-item .link-detail p,
+.widget .link-items .link-item:hover,
+.widget.widget_about .link-items .link-item .fa,
+.card_contact_info .info_icon {
+	color: #EC8744;
+}
+
+.site_footer #return_to_top,
+.card_contact_info:hover {
+	background: #EC8744;
+}
+
+.section_header .section_title:after,
+.btn-default:hover,
+.btn-red,
+.latest_listing_area .btn-prev.btn-large:hover,
+.latest_listing_area .btn-next.btn-large:hover,
+.filter_tabs_nav .tab:hover,
+.filter_tabs_nav .tab.active,
+.page_sorting_info .page_sorting_tab .nav-tabs > .nav-item > .nav-link:hover,
+.page_sorting_info .page_sorting_tab .nav-tabs > .nav-item > .nav-link.active,
+.pagination_area > .pagination > .page-item > .page-link:hover,
+.pagination_area > .pagination > .page-item > .page-link.active,
+.promo_area_two,
+.widget .widget_title:before,
+.price_range .slider-horizontal .slider-selection,
+.filter_checkbox [type="checkbox"]:checked + label:before {
+	background-color: #e87224;
+}
+.slider-selection {
+	background: #EC8744;
+}
+
+.section_header .title_script,
+.story_content .link-more,
+.card_food .card_body .rating_review .rating .fa-star,
+.page_sorting_info .right .current-items,
+.sidebar .widget.widget_ratings .checkbox_list label .fa-star,
+.sidebar .widget.widget_ratings .checkbox_list .rating_number,
+.sidebar .widget.widget_tags .tag_list > a:hover,
+.card_food.food_list > .card_info .card_body .card_distance::before,
+.widget_food_categories > .checkbox_list > .filter_checkbox > label > span,
+.page_header.page_header_three .page_title > span,
+.page_header .breadcrumb .breadcrumb-item.active,
+.page_header .breadcrumb .breadcrumb-item > a:hover,
+.page_header .breadcrumb .breadcrumb-item:before {
+	color: #EC8744;
+}
+
+.page_sorting_info .page_sorting_tab .nav-tabs > .nav-item > .nav-link:hover,
+.page_sorting_info .page_sorting_tab .nav-tabs > .nav-item > .nav-link.active,
+.pagination_area > .pagination > .page-item > .page-link:hover,
+.pagination_area > .pagination > .page-item > .page-link.active,
+.filter_checkbox [type="checkbox"]:checked + label:before,
+.btn-default:hover,
+.btn-red {
+	border-color: #EC8744;
+	border: #EC8744;
+}
+.error-page-content a:hover{
+	background-color: #EC8744 !important;
+}
+.restaurant_review_lists .review-list .review-metadata > .review-rating .fa-star,
+.ratings .fa-star {
+	color: #EC8744;
+}
+.restaurant-contact-items .link-detail > p {
+	color: #EC8744;
+}
+.newsletter {
+	background: #EC8744;
+}

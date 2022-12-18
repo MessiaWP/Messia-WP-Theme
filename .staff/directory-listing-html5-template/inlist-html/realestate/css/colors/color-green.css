@@ -1,0 +1,204 @@
+::-moz-selection {
+	background: #0ec0b3;
+}
+
+::selection {
+	background: #0ec0b3;
+}
+
+.video_play_button .icon,
+.sidebar-estate .instagram .red-screen {
+	background-color: rgba(14, 192, 179, 0.9);
+}
+
+.section_header .section_title:after,
+.btn-default:hover,
+.card_team_member:hover .card_body,
+.btn-red,
+.video_play_button .icon:hover,
+.dropdown-menu .dropdown-item:hover,
+.site_header .header_top .navbar-collapse .social_links a:hover,
+.price_range .slider-horizontal .slider-selection,
+.search_bar .search_bar_tab .nav-tabs .nav-item .nav-link.active,
+.newsletter,
+.page_sorting_info .page_sorting_tab .nav-tabs > .nav-item > .nav-link:hover,
+.page_sorting_info .page_sorting_tab .nav-tabs > .nav-item > .nav-link.active,
+.sidebar .filter_tabs .tab.active, .advance_search_block .section_title:before {
+	background-color: #0ec0b3;
+}
+
+.filter_tabs_nav .tab:hover, .filter_tabs_nav .tab.active {
+	background-color: #0ec0b3;
+}
+
+.sidebar-estate .post-item .post-info .post-title:hover {
+	color: #0ec0b3;
+}
+
+.card_team_member .card_body > p,
+.card_team_member .card_image .social_links a:hover,
+.entry-meta > span > .fa,
+.site_header .header_top .navbar-collapse .navbar_left > li > a > i.fa,
+.site_header .header_top .navbar-collapse .signin .text-red,
+.site_header .header_top .navbar-collapse .signin .form_signup .btn-default,
+.main_slide_area .main_slide_block .slide_block_content .title_script,
+.page_header .page_title > span,
+.page_header .breadcrumb .breadcrumb-item.active,
+.page_header .breadcrumb .breadcrumb-item::before,
+.page_header .breadcrumb .breadcrumb-item > a:hover,
+.page_sorting_info .right .current-items,
+.widget .link-items .link-item:hover,
+.widget .link-items .link-item > span {
+	color: #0ec0b3;
+}
+
+
+.btn-default:hover,
+.btn-red,
+.site_header .header_top .navbar-collapse .social_links a:hover,
+.site_header .header_top .navbar-collapse .signin .form_signup .btn-default,
+.site_header .header_top .navbar-collapse .signin .form-control:focus,
+.page_sorting_info .page_sorting_tab .nav-tabs > .nav-item > .nav-link:hover,
+.page_sorting_info .page_sorting_tab .nav-tabs > .nav-item > .nav-link.active,
+.sidebar .filter_tabs {
+	border-color: #0ec0b3;
+}
+.dropdown-menu {
+	border-top-color: #0ec0b3;
+}
+.dropdown-menu::before {
+	border-bottom-color: #0ec0b3;
+}
+
+.real_eastate_footer .widget.widget_about .link-items .link-item .fa {
+	color: #0ec0b3;
+}
+.real_eastate_footer .widget.widget_contact .link-items .link-item .link-detail p {
+	color: #0ec0b3;
+}
+.site_footer #return_to_top {
+	background-color: #0ec0b3;
+}
+.estate_meta i {
+	color: #0ec0b3;
+}
+.section-min-title:after,
+.section-max-title:after {
+	background: #0ec0b3;
+}
+.estate_single_area .single-estate-title + .estate_meta:after {
+	background: #0ec0b3;
+}
+.estate_single_area .estate_apartment_amities .amities_lists > li > .icon_thumb {
+	color: #0ec0b3;
+}
+.average_estate_rating_wrap .fa-star,
+.estate_make_rating .fa-star {
+	color: #0ec0b3;
+}
+.estate_single_area .estate_review_lists .review-list .review-metadata .fa-star {
+	color: #0ec0b3;
+}
+.widget_estate_agent_contact .contact_title,
+.widget_estate_agent_contact .agent_phone i {
+	color: #0ec0b3;
+}
+.estate_sidebara_area .widget .widget_title:before,
+.sidebar-estate .widget-title:before,
+.sidebar-estate .filter_tabs .tab.active {
+	background: #0ec0b3;
+}
+.sidebar-estate .search .search-form:after,
+.entry-meta > div > .fa {
+	color: #0ec0b3;
+}
+.sidebar-estate .filter_tabs {
+	border-color: #0ec0b3;
+}
+.sidebar-estate .post-item .post-info .date:before,
+.section_header .title_script,
+.card-post .post-info > div:before,
+.site_content .comment-item .comment-info .rating .fa-star,
+.site_content .sub-section.leave-comments .section-title .number {
+	color: #0ec0b3;
+}
+.card_contact_info:hover,
+.section-titlesed:after,
+.site_content .sub-section .section-title:after {
+	background: #0ec0b3;
+}
+
+.services_area.services_area_three > .service_items > .service_item:hover .service_icon,
+.card_top_review .card_body .location_rating .rating .fa-star {
+	color: #0ec0b3;
+}
+
+.services_area.services_style_two .service_items .service_item:hover {
+	background: #0ec0b3;
+}
+
+.headline:before {
+	background-color: #0ec0b3;
+}
+
+.btn-prev:hover,
+.btn-next:hover,
+.card-next-prev.horizontal:hover
+.card-body,
+.btn-red:hover {
+	background-color: #04a398;
+}
+
+.site_content .page-blog .blog-content .post-item .image-text .text-link .link-item:before,
+.site_content .page-blog .blog-content .footer .tags:before,
+.site_content .page-blog .blog-content .about-admin .admin-info .title .admin-name .name,
+.card-next-prev.horizontal .date:before, .card_contact_info .info_icon {
+	color: #0ec0b3;
+}
+.site_content .page-blog .blog-content .footer .social-links a:hover {
+	background-color: #0ec0b3;
+	border-color: #0ec0b3;
+}
+.estate_single_area .estate_apartment_amities .nav-tabs {
+	border-color: #0ec0b3;
+}
+.estate_single_area .estate_apartment_amities .nav-tabs .nav-item.show .nav-link,
+.estate_single_area .estate_apartment_amities .nav-tabs .nav-link.active {
+	background-color: #0ec0b3;
+	border-color: #0ec0b3;
+}
+
+.card_hotel_package .card_image .price:before {
+	border-right-color: #0ec0b3;
+}
+.card_hotel_package .card_image .price span {
+	background-color: #0ec0b3;
+}
+.google-map .card .card_body .rating_review .fa-star {
+	color: #0ec0b3;
+}
+.card_tour_package .card_body .card_title:before,
+.card_hotel_package .card_body .card_title:before {
+	background-color: #0ec0b3
+}
+
+.pagination_area > .pagination > .page-item > .page-link:hover,
+.pagination_area > .pagination > .page-item.active > .page-link {
+	background-color: #0ec0b3;
+	border-color: #0ec0b3;
+}
+
+.sidebar-estate .categories .link-item:hover,
+.sidebar-estate .categories .link-item:hover:before,
+.sidebar-estate .archives .link-item:hover,
+.sidebar-estate .archives .link-item:hover:before {
+	color: #0ec0b3;
+}
+
+.card-next-prev.horizontal:hover .card-body {
+	background-color: #0ec0b3;
+}
+
+.site_content .listing-website:nth-child(2) .section-title:hover span {
+	color: #0ec0b3;
+}

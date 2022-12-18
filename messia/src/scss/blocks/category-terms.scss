@@ -1,0 +1,25 @@
+/* BLOCK */
+@import "../init";
+
+.categories-terms-items {
+	display: grid;
+	grid-gap: 1.5rem;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+
+	.category {
+		border-radius: $m-border-radius;
+		box-shadow: $m-boxshadow;
+
+		.category-inner {
+			@include maskBackground($background-color: $m-category-terms-mask-color, $background-opacity: 1);
+		}
+
+		img {
+			width: 100%;
+		}
+
+		.term-title {
+			color: $m-category-terms-title-color;
+		}
+	}
+}

@@ -1,0 +1,169 @@
+@font-face {
+	font-family: 'paradise';
+	src:
+	url('../fonts/paradise.ttf?gatml8') format('truetype'),
+	url('../fonts/paradise.woff?gatml8') format('woff'),
+	url('../fonts/paradise.svg?gatml8#paradise') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.lp {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'paradise' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.lp-ac:before {
+	content: "\e900";
+}
+.lp-arrow-left:before {
+	content: "\e901";
+}
+.lp-arrow-right:before {
+	content: "\e902";
+}
+.lp-bathroom:before {
+	content: "\e903";
+}
+.lp-bed:before {
+	content: "\e904";
+}
+.lp-bell:before {
+	content: "\e905";
+}
+.lp-best-dish:before {
+	content: "\e906";
+}
+.lp-burger:before {
+	content: "\e907";
+}
+.lp-cake:before {
+	content: "\e908";
+}
+.lp-calender:before {
+	content: "\e909";
+}
+.lp-call:before {
+	content: "\e90a";
+}
+.lp-coffe:before {
+	content: "\e90b";
+}
+.lp-curency:before {
+	content: "\e90c";
+}
+.lp-discount:before {
+	content: "\e90d";
+}
+.lp-dish:before {
+	content: "\e90e";
+}
+.lp-email-large:before {
+	content: "\e90f";
+}
+.lp-fizza:before {
+	content: "\e910";
+}
+.lp-flag:before {
+	content: "\e911";
+}
+.lp-floor:before {
+	content: "\e912";
+}
+.lp-garanty:before {
+	content: "\e913";
+}
+.lp-globe:before {
+	content: "\e914";
+}
+.lp-graphchat:before {
+	content: "\e915";
+}
+.lp-grid-view:before {
+	content: "\e916";
+}
+.lp-headphone:before {
+	content: "\e917";
+}
+.lp-heart:before {
+	content: "\e918";
+}
+.lp-home:before {
+	content: "\e919";
+}
+.lp-hotel:before {
+	content: "\e91a";
+}
+.lp-list-view:before {
+	content: "\e91b";
+}
+.lp-location-finder:before {
+	content: "\e91c";
+}
+.lp-location-large:before {
+	content: "\e91d";
+}
+.lp-menu-list:before {
+	content: "\e91e";
+}
+.lp-multi-home:before {
+	content: "\e91f";
+}
+.lp-parking:before {
+	content: "\e920";
+}
+.lp-phone:before {
+	content: "\e921";
+}
+.lp-phone-large:before {
+	content: "\e922";
+}
+.lp-play:before {
+	content: "\e923";
+}
+.lp-quote:before {
+	content: "\e924";
+}
+.lp-seqiruty:before {
+	content: "\e925";
+}
+.lp-size:before {
+	content: "\e926";
+}
+.lp-spoon:before {
+	content: "\e927";
+}
+.lp-stair:before {
+	content: "\e928";
+}
+.lp-store:before {
+	content: "\e929";
+}
+.lp-swimming-pool:before {
+	content: "\e92a";
+}
+.lp-table:before {
+	content: "\e92b";
+}
+.lp-tea:before {
+	content: "\e92c";
+}
+.lp-user:before {
+	content: "\e92d";
+}
+.lp-water-drop:before {
+	content: "\e92e";
+}
+.lp-weather:before {
+	content: "\e92f";
+}

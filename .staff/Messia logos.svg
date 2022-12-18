@@ -1,0 +1,23 @@
+<svg width="640" height="480" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:se="http://svg-edit.googlecode.com">
+ <g class="layer">
+  <title>Layer 1</title>
+  <defs transform="translate(9 21)">
+   <style data-bx-fonts="Dongle">@import url(https://fonts.googleapis.com/css2?family=Dongle%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C700&amp;display=swap);</style>
+  </defs>
+  <g id="svg_7">
+   <ellipse cx="281.891" cy="149.063" fill="rgb(255, 95, 95)" id="svg_8" rx="15.545" ry="15.545" stroke="rgb(0, 0, 0)" stroke-width="0px"/>
+   <text fill="rgb(51, 51, 51)" font-family="Dongle" font-size="62.3px" id="svg_9" x="299.444" y="158.201">essia</text>
+   <path d="m276.55698,141.77101l-2.059,15.048" fill="rgb(216, 216, 216)" id="svg_10" stroke="rgb(255, 255, 255)" stroke-linecap="round" stroke-width="4px"/>
+   <path d="m288.95698,141.77001l-2.059,15.048" fill="rgb(216, 216, 216)" id="svg_11" stroke="rgb(255, 255, 255)" stroke-linecap="round" stroke-width="4px"/>
+   <path d="m282.45498,143.97601l-0.67,4.891" fill="rgb(216, 216, 216)" id="svg_12" stroke="rgb(255, 255, 255)" stroke-linecap="round" stroke-width="4px"/>
+  </g>
+  <g id="svg_14">
+   <text fill="rgb(51, 51, 51)" font-family="Dongle" font-size="62.3px" id="svg_2" x="292.27" y="236.037">essia</text>
+   <g id="svg_3" transform="matrix(0.988691 0 0 0.988691 -127.28 -139.259)">
+    <path d="m407.2402,362.97004l0,15.22" fill="rgb(216, 216, 216)" id="svg_4" stroke="rgb(255, 95, 95)" stroke-linecap="round" stroke-width="4px"/>
+    <path d="m419.7822,362.96904l0,15.22" fill="rgb(216, 216, 216)" id="svg_5" stroke="rgb(255, 95, 95)" stroke-linecap="round" stroke-width="4px"/>
+    <path d="m413.5102,365.20004l0,4.947" fill="rgb(216, 216, 216)" id="svg_6" stroke="rgb(255, 95, 95)" stroke-linecap="round" stroke-width="4px"/>
+   </g>
+  </g>
+ </g>
+</svg>

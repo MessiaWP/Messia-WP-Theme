@@ -1,0 +1,30 @@
+@import "../../init";
+.#{$m-namespace-front} {
+	$m-width-height-toggle: 40px;
+
+	.panel-top-content {
+		gap: .7rem;
+
+		.list-map-button {
+			order: 3;
+			gap: 1rem;
+
+			.view-toggle:not(:first-of-type) {
+				margin-left: 15px;
+			}
+		}
+	}
+
+	.sort {
+		order: 2;
+		gap: 1rem;
+	}
+
+	.count-items-title {
+		order: 1;
+		width: 100%;
+		@include media-breakpoint-up(md) {
+			width: auto;
+		}
+	}
+}

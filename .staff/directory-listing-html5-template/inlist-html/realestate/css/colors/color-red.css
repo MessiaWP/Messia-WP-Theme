@@ -1,0 +1,95 @@
+.video_play_button .icon {
+	background-color: rgba(239, 91, 91, 0.9);
+}
+
+.section_header .section_title:after,
+.btn-default:hover,
+.card_team_member:hover .card_body,
+.btn-red,
+.video_play_button .icon:hover,
+.dropdown-menu .dropdown-item:hover,
+.site_header .header_top .navbar-collapse .social_links a:hover,
+.price_range .slider-horizontal .slider-selection,
+.search_bar .search_bar_tab .nav-tabs .nav-item .nav-link.active,
+.newsletter,
+.page_sorting_info .page_sorting_tab .nav-tabs > .nav-item > .nav-link:hover,
+.page_sorting_info .page_sorting_tab .nav-tabs > .nav-item > .nav-link.active,
+.sidebar .filter_tabs .tab.active, .advance_search_block .section_title:before {
+	background-color: #ef5b5b;
+}
+
+.slider-selection {
+	background: #ef5b5b;
+}
+
+
+.card_team_member .card_body > p,
+.card_team_member .card_image .social_links a:hover,
+.entry-meta > span > .fa,
+.site_header .header_top .navbar-collapse .navbar_left > li > a > i.fa,
+.site_header .header_top .navbar-collapse .signin .text-red,
+.site_header .header_top .navbar-collapse .signin .form_signup .btn-default,
+.main_slide_area .main_slide_block .slide_block_content .title_script,
+.page_header .page_title > span,
+.page_header .breadcrumb .breadcrumb-item.active,
+.page_header .breadcrumb .breadcrumb-item::before,
+.page_header .breadcrumb .breadcrumb-item > a:hover,
+.page_sorting_info .right .current-items,
+.widget .link-items .link-item:hover,
+.widget .link-items .link-item > span {
+	color: #ef5b5b;
+}
+
+.btn-default:hover,
+.btn-red,
+.site_header .header_top .navbar-collapse .social_links a:hover,
+.site_header .header_top .navbar-collapse .signin .form_signup .btn-default,
+.site_header .header_top .navbar-collapse .signin .form-control:focus,
+.page_sorting_info .page_sorting_tab .nav-tabs > .nav-item > .nav-link:hover,
+.page_sorting_info .page_sorting_tab .nav-tabs > .nav-item > .nav-link.active,
+.sidebar .filter_tabs {
+	border-color: #ef5b5b;
+}
+.dropdown-menu {
+	border-top-color: #ef5b5b;
+}
+.dropdown-menu::before {
+	border-bottom-color: #ef5b5b;
+}
+
+.real_eastate_footer .widget.widget_about .link-items .link-item .fa {
+	color: #ef5b5b;
+}
+.real_eastate_footer .widget.widget_contact .link-items .link-item .link-detail p {
+	color: #ef5b5b;
+}
+.site_footer #return_to_top {
+	background-color: #ef5b5b;
+}
+.estate_meta i {
+	color: #ef5b5b;
+}
+.section-min-title:after,
+.section-max-title:after {
+	background: #ef5b5b;
+}
+.estate_single_area .single-estate-title + .estate_meta:after {
+	background: #ef5b5b;
+}
+.estate_single_area .estate_apartment_amities .amities_lists > li > .icon_thumb {
+	color: #ef5b5b;
+}
+.average_estate_rating_wrap .fa-star,
+.estate_make_rating .fa-star {
+	color: #ef5b5b;
+}
+.estate_single_area .estate_review_lists .review-list .review-metadata .fa-star {
+	color: #ef5b5b;
+}
+.widget_estate_agent_contact .contact_title,
+.widget_estate_agent_contact .agent_phone i {
+	color: #ef5b5b;
+}
+.estate_sidebara_area .widget .widget_title:before {
+	background: #ef5b5b;
+}

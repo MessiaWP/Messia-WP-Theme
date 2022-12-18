@@ -1,0 +1,120 @@
+html {
+	font-size: $m-font-size-base;
+}
+
+.#{$m-namespace-front} {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+
+	@include frontend_scrollbar;
+
+	&.messia-preview-block {
+		min-height: auto;
+	}
+
+	&.overflow-hidden {
+		overflow: hidden;
+	}
+
+	header,
+	footer,
+	main {
+		width: 100%;
+	}
+
+	main {
+		flex-grow: 1;
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+		display: block;
+	}
+
+	b,
+	strong {
+		font-weight: bold;
+	}
+
+	.messia-icon {
+		display: block;
+
+		span {
+			display: block;
+		}
+
+		svg {
+			display: block;
+		}
+	}
+
+	.widget-title {
+		margin-bottom: $m-font-size-widget-title;
+	}
+
+	*,
+	*:hover,
+	*:focus,
+	*:active,
+	*:after,
+	*:before {
+		outline: none;
+	}
+
+	.wp-block-group__inner-container {
+		@extend .container;
+	}
+
+	.line-throw-left,
+	.line-throw-right,
+	.line-throw-center {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.line-throw-left {
+		&:before {
+			content: "";
+			flex: 1 1;
+			border-bottom: 1px solid;
+			margin: auto;
+		}
+
+		&:before {
+			margin-right: 10px;
+		}
+	}
+
+	.line-throw-right {
+		&:after {
+			content: "";
+			flex: 1 1;
+			border-bottom: 1px solid;
+			margin: auto;
+		}
+
+		&:after {
+			margin-left: 10px;
+		}
+	}
+
+	.line-throw-center {
+		&:before,
+		&:after {
+			content: "";
+			flex: 1 1;
+			border-bottom: 1px solid;
+			margin: auto;
+		}
+
+		&:before {
+			margin-right: 10px;
+		}
+
+		&:after {
+			margin-left: 10px;
+		}
+	}
+}

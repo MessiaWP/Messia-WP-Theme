@@ -1,0 +1,4403 @@
+# Copyright (C) 2022 Outcomer
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Messia 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/messia\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2022-12-18T18:08:13+03:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.7.1\n"
+"X-Domain: messia\n"
+
+#. Theme Name of the theme
+#: includes/admin/class-messia-menu-engine.php:944
+#: includes/config/class-messia-config-settings.php:1817
+#: includes/config/class-messia-config-settings.php:1841
+#: includes/modules/blocks/class-messia-block-blocks.php:202
+#: includes/modules/widgets/class-messia-widget-category-crosslinks.php:84
+#: includes/modules/widgets/class-messia-widget-custom-fields.php:80
+#: includes/modules/widgets/class-messia-widget-listing-data.php:61
+#: includes/modules/widgets/class-messia-widget-listing-filters.php:61
+#: includes/modules/widgets/class-messia-widget-object-categories.php:71
+#: includes/modules/widgets/class-messia-widget-object-properties.php:79
+#: includes/modules/widgets/class-messia-widget-post-content.php:61
+#: includes/modules/widgets/class-messia-widget-sitewide-search.php:67
+#: includes/modules/widgets/class-messia-widget-tabs-panel.php:84
+msgid "Messia"
+msgstr ""
+
+#. Theme URI of the theme
+msgid "https://messiawp.com/"
+msgstr ""
+
+#. Description of the theme
+msgid "Messia is a high performance WordPress theme that will help you not only to create your Directory & Listing website."
+msgstr ""
+
+#. Author of the theme
+msgid "Outcomer"
+msgstr ""
+
+#. Author URI of the theme
+msgid "4341922.com"
+msgstr ""
+
+#: header.php:217
+#: includes/class-messia-comments.php:82
+#: includes/class-messia-comments.php:106
+#: includes/class-messia-comments.php:118
+#: includes/class-messia-comments.php:132
+#: includes/class-messia-comments.php:158
+#: includes/modules/home/skins/class-messia-home-tmpl-default.php:63
+msgid "Error"
+msgstr ""
+
+#. translators: %s - search query.
+#: header.php:220
+msgid "Search: %s"
+msgstr ""
+
+#: includes/admin/class-messia-demo.php:124
+msgid "Can not open temporary dump file."
+msgstr ""
+
+#: includes/admin/class-messia-demo.php:127
+msgid "Can not write into temporary dump file."
+msgstr ""
+
+#. translators: %s - MySQL table name.
+#: includes/admin/class-messia-demo.php:136
+#: includes/admin/class-messia-demo.php:422
+msgid "Can not create table \"%s\" - table already exist."
+msgstr ""
+
+#: includes/admin/class-messia-demo.php:285
+#: includes/admin/class-messia-demo.php:293
+#: includes/admin/class-messia-demo.php:303
+msgid "Error writing into temporary dump file."
+msgstr ""
+
+#: includes/admin/class-messia-demo.php:411
+msgid "Can't find demo data on the server."
+msgstr ""
+
+#. translators: %s - MySQL table name.
+#: includes/admin/class-messia-demo.php:626
+msgid "Table \"%s\" for renaming does not exist."
+msgstr ""
+
+#. translators: %s - path to folder.
+#: includes/admin/class-messia-demo.php:934
+msgid "Source directory \"%s\" to restore uploads from does not exists."
+msgstr ""
+
+#: includes/admin/class-messia-menu-engine.php:259
+msgid "Save changes"
+msgstr ""
+
+#: includes/admin/class-messia-menu-engine.php:261
+msgid "External error. Please reload page & try again."
+msgstr ""
+
+#: includes/admin/class-messia-menu-engine.php:262
+msgid "Unexpected server response."
+msgstr ""
+
+#: includes/admin/class-messia-menu-engine.php:263
+msgid "Please wait..."
+msgstr ""
+
+#: includes/admin/class-messia-menu-engine.php:268
+msgid "Your browser does not support `FormData` method, using uploader impossible. Put demo file on server and install it from here later."
+msgstr ""
+
+#: includes/admin/class-messia-menu-engine.php:270
+msgid "Demo packages managment"
+msgstr ""
+
+#: includes/admin/class-messia-menu-engine.php:271
+msgid "Installation will delete all existing website content and replace it with demo content. In multisite environment, it affects only current website. You will become author and owner of any post and author of non-anonymous comments. All users, their passwords and data will remain unchanged. Continue?"
+msgstr ""
+
+#: includes/admin/class-messia-menu-engine.php:272
+msgid "The result will contain all the website data and can be imported to any Messia website."
+msgstr ""
+
+#: includes/admin/class-messia-menu-engine.php:273
+msgid "Selected demo will be uploaded on server. Once done it will be available for installation. Continue?"
+msgstr ""
+
+#: includes/admin/class-messia-menu-engine.php:274
+msgid "Selected demo will be removed from server. Operation can not be undone. Continue?"
+msgstr ""
+
+#: includes/admin/class-messia-menu-engine.php:275
+msgid "This action will set theme settings to initial (default) values. Do you want to continue?"
+msgstr ""
+
+#. translators: %s placeholder for real file type.
+#: includes/admin/class-messia-menu-engine.php:283
+msgid "Incorrect file type `%s`."
+msgstr ""
+
+#: includes/admin/class-messia-menu-engine.php:314
+msgid "All saved"
+msgstr ""
+
+#: includes/admin/class-messia-menu-engine.php:318
+msgid "Reset settings"
+msgstr ""
+
+#: includes/admin/class-messia-menu-engine.php:323
+msgid "Export Demo"
+msgstr ""
+
+#: includes/admin/class-messia-menu-engine.php:328
+msgid "Import Demo"
+msgstr ""
+
+#: includes/admin/class-messia-menu-engine.php:955
+msgid "Messia reports"
+msgstr ""
+
+#: includes/admin/class-messia-menu-engine.php:958
+msgid "Close"
+msgstr ""
+
+#: includes/admin/class-messia-menu-engine.php:1010
+msgid "Save error. Please try again"
+msgstr ""
+
+#: includes/admin/class-messia-menu-engine.php:1029
+msgid "Changes saved"
+msgstr ""
+
+#: includes/admin/class-messia-menu-engine.php:1054
+msgid "Data is corrupted"
+msgstr ""
+
+#: includes/admin/class-messia-menu-engine.php:1063
+#: includes/admin/class-messia-menu-engine.php:1109
+#: includes/modules/hooks/class-messia-hooks.php:1163
+#: includes/modules/theme/class-messia-access.php:271
+#: includes/modules/theme/class-messia-update.php:333
+msgid "Access violation - reload the page and try again"
+msgstr ""
+
+#: includes/admin/class-messia-menu-engine.php:1082
+msgid "Forbidden"
+msgstr ""
+
+#: includes/admin/class-messia-menu-engine.php:1083
+msgid "Sorry, only Administrator can reset settings."
+msgstr ""
+
+#: includes/admin/class-messia-menu-engine.php:1098
+msgid "Reloading..."
+msgstr ""
+
+#: includes/admin/class-messia-menu-engine.php:1099
+msgid "Settings dropped to defaults. Applying..."
+msgstr ""
+
+#: includes/admin/class-messia-menu-engine.php:1128
+msgid "Sorry, only Administrator can export demo."
+msgstr ""
+
+#: includes/admin/class-messia-menu-engine.php:1142
+msgid "Export again"
+msgstr ""
+
+#: includes/admin/class-messia-menu-engine.php:1143
+msgid "Website database is successfully exported."
+msgstr ""
+
+#: includes/admin/class-messia-menu-engine.php:1152
+msgid "Try export again"
+msgstr ""
+
+#. translators: %s - php error message text.
+#: includes/admin/class-messia-menu-engine.php:1154
+msgid "Export failed with error(s): %s"
+msgstr ""
+
+#: includes/admin/class-messia-menu-engine.php:1164
+#: includes/admin/class-messia-menu-engine.php:1233
+#: includes/admin/class-messia-menu-engine.php:1309
+#: includes/admin/class-messia-menu-engine.php:1557
+#: includes/admin/class-messia-menu-engine.php:1611
+msgid "Access violation - reload the page and try again."
+msgstr ""
+
+#: includes/admin/class-messia-menu-engine.php:1183
+msgid "Sorry, only Administrator can install demo."
+msgstr ""
+
+#: includes/admin/class-messia-menu-engine.php:1193
+msgid "Nothing selected to install."
+msgstr ""
+
+#: includes/admin/class-messia-menu-engine.php:1210
+msgid "Demo content installed. Applying..."
+msgstr ""
+
+#. translators: %s - PHP error text.
+#: includes/admin/class-messia-menu-engine.php:1223
+msgid "Installation failed with error(s): %s"
+msgstr ""
+
+#. translators: %s the list of errors with zip operations.
+#: includes/admin/class-messia-menu-engine.php:1264
+msgid "You can see the list of available demo package on your server. Select one to install, also you can add/remove packages.%s"
+msgstr ""
+
+#: includes/admin/class-messia-menu-engine.php:1268
+msgid "Please activate your copy of Messia theme to enable demo operations."
+msgstr ""
+
+#: includes/admin/class-messia-menu-engine.php:1328
+msgid "Sorry, only Administrator can add demo."
+msgstr ""
+
+#. translators: %s - folder path.
+#: includes/admin/class-messia-menu-engine.php:1372
+msgid "Target directory %s can not be created or is write protected."
+msgstr ""
+
+#. translators: %s file name.
+#: includes/admin/class-messia-menu-engine.php:1388
+msgid "Error uploading '%s'."
+msgstr ""
+
+#. translators: %s exception error message.
+#: includes/admin/class-messia-menu-engine.php:1410
+msgid "Error appending part file content: %s"
+msgstr ""
+
+#: includes/admin/class-messia-menu-engine.php:1422
+msgid "Error part file checksize against incoming file."
+msgstr ""
+
+#. translators: %s - file name.
+#: includes/admin/class-messia-menu-engine.php:1436
+msgid "Demo %s partially uploaded."
+msgstr ""
+
+#: includes/admin/class-messia-menu-engine.php:1455
+msgid "Not enough free disk space."
+msgstr ""
+
+#. translators: %1$s file name, %2$s file mime type.
+#: includes/admin/class-messia-menu-engine.php:1463
+msgid "File `%1$s` has incorrect type `%2$s`."
+msgstr ""
+
+#. translators: %1$s file name, %2$s ZipArchive error code.
+#: includes/admin/class-messia-menu-engine.php:1475
+msgid "Output archive `%1$s` corrupted, error code: `%2$s`."
+msgstr ""
+
+#. translators: %1$s file name, %2$s exception message.
+#: includes/admin/class-messia-menu-engine.php:1480
+msgid "Unexpected error on opening output archive `%1$s`, exception: `%2$s`."
+msgstr ""
+
+#. translators: %1$s file name, %2$s exception message.
+#: includes/admin/class-messia-menu-engine.php:1494
+msgid "Unexpected error on demo validation archive `%1$s`, exception: `%2$s`."
+msgstr ""
+
+#. translators: %1$s file name, %2$s exception error message.
+#: includes/admin/class-messia-menu-engine.php:1526
+msgid "Error moving file `%1$s` into templates folder: 2%2$s"
+msgstr ""
+
+#. translators: %s - file name.
+#: includes/admin/class-messia-menu-engine.php:1538
+msgid "Demo %s uploaded and ready for installation."
+msgstr ""
+
+#: includes/admin/class-messia-menu-engine.php:1547
+msgid "File processing error:"
+msgstr ""
+
+#: includes/admin/class-messia-menu-engine.php:1576
+msgid "Sorry, only Administrator can remove demo."
+msgstr ""
+
+#: includes/admin/class-messia-menu-engine.php:1601
+msgid "Demo packages removed."
+msgstr ""
+
+#. translators: %1$s file name.
+#: includes/admin/class-messia-menu-engine.php:1729
+msgid "File `%1$s` has no Messia signature."
+msgstr ""
+
+#. translators: %1$s file name.
+#: includes/admin/class-messia-menu-engine.php:1732
+msgid "File `%1$s` does not provide demo version."
+msgstr ""
+
+#. translators: %1$s file name.
+#: includes/admin/class-messia-menu-engine.php:1735
+msgid "File `%1$s` has invalid Messia signature."
+msgstr ""
+
+#. translators: %1$s file name.
+#: includes/admin/class-messia-menu-engine.php:1738
+msgid "Demo `%1$s` requires at least Messia %2$s version, you have %3$s."
+msgstr ""
+
+#: includes/admin/class-messia-menu.php:113
+msgid "Messia warning!!"
+msgstr ""
+
+#: includes/admin/class-messia-menu.php:296
+#: includes/config/class-messia-settings.php:757
+msgid "Your changes have been saved."
+msgstr ""
+
+#: includes/admin/class-messia-menu.php:372
+msgid "Currency position"
+msgstr ""
+
+#: includes/admin/class-messia-menu.php:408
+#: includes/config/class-messia-config-settings.php:764
+#: includes/modules/cpt/class-messia-cpt-config.php:418
+msgid "Left"
+msgstr ""
+
+#: includes/admin/class-messia-menu.php:409
+#: includes/config/class-messia-config-settings.php:768
+#: includes/modules/cpt/class-messia-cpt-config.php:420
+msgid "Right"
+msgstr ""
+
+#: includes/admin/class-messia-menu.php:410
+msgid "Left with space"
+msgstr ""
+
+#: includes/admin/class-messia-menu.php:411
+msgid "Right with space"
+msgstr ""
+
+#: includes/admin/class-messia-user-settings.php:189
+msgid "Fail to save .htaccess custom content. File unwritable."
+msgstr ""
+
+#: includes/admin/class-messia-user-settings.php:223
+msgid "Module is deactivated forcibly;"
+msgstr ""
+
+#: includes/admin/class-messia-user-settings.php:224
+msgid "* - Required plugin;"
+msgstr ""
+
+#: includes/admin/class-messia-user-settings.php:225
+msgid "** - Required theme;"
+msgstr ""
+
+#: includes/admin/class-messia-user-settings.php:265
+msgid "Name of object or slug"
+msgstr ""
+
+#: includes/admin/class-messia-user-settings.php:303
+msgid "Criteria name"
+msgstr ""
+
+#: includes/admin/class-messia-user-settings.php:341
+msgid "Group name"
+msgstr ""
+
+#: includes/admin/class-messia-user-settings.php:452
+msgid "Can't connect to Google Fonts service -> "
+msgstr ""
+
+#: includes/admin/class-messia-user-settings.php:471
+msgid "Message from Google Fonts service: "
+msgstr ""
+
+#: includes/admin/class-messia-user-settings.php:471
+msgid "Only last used font is available. "
+msgstr ""
+
+#: includes/admin/class-messia-user-settings.php:522
+msgid "Thin"
+msgstr ""
+
+#: includes/admin/class-messia-user-settings.php:523
+msgid "200"
+msgstr ""
+
+#: includes/admin/class-messia-user-settings.php:524
+msgid "Light"
+msgstr ""
+
+#: includes/admin/class-messia-user-settings.php:525
+#: includes/admin/class-messia-user-settings.php:545
+#: includes/admin/class-messia-user-settings.php:554
+#: includes/admin/class-messia-user-settings.php:563
+#: includes/admin/class-messia-user-settings.php:572
+#: includes/admin/class-messia-user-settings.php:581
+#: includes/admin/class-messia-user-settings.php:590
+#: includes/admin/class-messia-user-settings.php:599
+#: includes/admin/class-messia-user-settings.php:608
+#: includes/admin/class-messia-user-settings.php:617
+msgid "Regular"
+msgstr ""
+
+#: includes/admin/class-messia-user-settings.php:526
+msgid "Medium"
+msgstr ""
+
+#: includes/admin/class-messia-user-settings.php:527
+msgid "Semi-bold"
+msgstr ""
+
+#: includes/admin/class-messia-user-settings.php:528
+#: includes/admin/class-messia-user-settings.php:546
+#: includes/admin/class-messia-user-settings.php:555
+#: includes/admin/class-messia-user-settings.php:564
+#: includes/admin/class-messia-user-settings.php:573
+#: includes/admin/class-messia-user-settings.php:582
+#: includes/admin/class-messia-user-settings.php:591
+#: includes/admin/class-messia-user-settings.php:600
+#: includes/admin/class-messia-user-settings.php:609
+#: includes/admin/class-messia-user-settings.php:618
+msgid "Bold"
+msgstr ""
+
+#: includes/admin/class-messia-user-settings.php:529
+msgid "800"
+msgstr ""
+
+#: includes/admin/class-messia-user-settings.php:530
+msgid "Black"
+msgstr ""
+
+#: includes/admin/class-messia-user-settings.php:533
+msgid "Italic"
+msgstr ""
+
+#. Template Name of the theme
+#: includes/admin/class-messia-user-settings.php:548
+#: includes/admin/class-messia-user-settings.php:557
+#: includes/admin/class-messia-user-settings.php:566
+#: includes/admin/class-messia-user-settings.php:575
+#: includes/admin/class-messia-user-settings.php:584
+#: includes/admin/class-messia-user-settings.php:593
+#: includes/admin/class-messia-user-settings.php:602
+#: includes/admin/class-messia-user-settings.php:611
+#: includes/admin/class-messia-user-settings.php:620
+msgid "Default"
+msgstr ""
+
+#: includes/admin/class-messia-user-settings.php:648
+msgid "Font:"
+msgstr ""
+
+#: includes/admin/class-messia-user-settings.php:650
+msgid "Generic Fonts:"
+msgstr ""
+
+#: includes/admin/class-messia-user-settings.php:679
+msgid "Google Fonts:"
+msgstr ""
+
+#: includes/admin/class-messia-user-settings.php:715
+msgid "Variant:"
+msgstr ""
+
+#: includes/admin/class-messia-user-settings.php:753
+msgid "Subset:"
+msgstr ""
+
+#: includes/admin/class-messia-user-settings.php:776
+msgid "Size, px:"
+msgstr ""
+
+#: includes/admin/class-messia-user-settings.php:783
+msgid "LH*, rate:"
+msgstr ""
+
+#: includes/admin/class-messia-user-settings.php:790
+msgid "Color:"
+msgstr ""
+
+#: includes/admin/class-messia-user-settings.php:881
+msgid "Applying..."
+msgstr ""
+
+#: includes/class-messia-comments.php:82
+#: includes/class-messia-comments.php:158
+msgid "invalid verification data"
+msgstr ""
+
+#: includes/class-messia-comments.php:83
+#: includes/class-messia-comments.php:107
+#: includes/class-messia-comments.php:119
+#: includes/class-messia-comments.php:133
+#: includes/class-messia-comments.php:159
+#: includes/modules/theme/class-messia-template-loader.php:193
+msgid "Comment Submission Failure"
+msgstr ""
+
+#: includes/class-messia-comments.php:106
+msgid "suspicious activity detected, comment cannot be posted."
+msgstr ""
+
+#: includes/class-messia-comments.php:118
+msgid "gCaptha V3 validation error."
+msgstr ""
+
+#: includes/class-messia-comments.php:132
+msgid "please fill in required fields (name)."
+msgstr ""
+
+#: includes/class-messia-comments.php:190
+#: includes/modules/blocks/types/class-messia-block-objects-filtered.php:565
+#: includes/modules/cpt/class-messia-cpt-config.php:108
+#: includes/modules/cpt/class-messia-objects.php:856
+msgid "Rating"
+msgstr ""
+
+#: includes/class-messia-comments.php:201
+msgid "Assessment"
+msgstr ""
+
+#: includes/class-messia-comments.php:201
+msgid "A number between 0 and 5 inclusive."
+msgstr ""
+
+#: includes/class-messia-core.php:343
+msgid "You are about to edit the value of the identifier field. Please note that after saving these changes, all object metadata and widget data that refer to the changed field name will be permanently deleted. Continue editing?"
+msgstr ""
+
+#: includes/class-messia-core.php:344
+msgid "The page to be deleted is dependent on the term Taxonomy Segments. You cannot delete it directly; to do this, delete the corresponding term - the page will be deleted automatically."
+msgstr ""
+
+#: includes/class-messia-core.php:345
+msgid "This page is dependent on the term Taxonomy Segments. You cannot directly change its slug or name, for this change the corresponding value at the term itself - the page will be synchronized automatically. Also take into account that the title of this page is not displayed on the website. Instead, the value of the meta fields \"Tag H1\" and \"Query result\" is displayed. You can edit these fields, however you need to use dynamic variables."
+msgstr ""
+
+#: includes/class-messia-core.php:346
+msgid "Please fill in all required fields!"
+msgstr ""
+
+#: includes/class-messia-core.php:347
+msgid "Failed to get list of fonts from Google server. Check your API key as well as limit settings for requests."
+msgstr ""
+
+#: includes/class-messia-core.php:348
+msgid "Invalid URL"
+msgstr ""
+
+#: includes/class-messia-core.php:350
+msgid "Fail to load icon fonts."
+msgstr ""
+
+#: includes/class-messia-core.php:351
+msgid "Fail to load icon set."
+msgstr ""
+
+#: includes/class-messia-core.php:352
+msgid "Select images"
+msgstr ""
+
+#: includes/class-messia-core.php:353
+msgid "Select Icons"
+msgstr ""
+
+#: includes/class-messia-core.php:354
+msgid "Material Icons"
+msgstr ""
+
+#: includes/class-messia-core.php:356
+msgid "Select image"
+msgstr ""
+
+#: includes/class-messia-core.php:359
+msgid "Select icon"
+msgstr ""
+
+#: includes/class-messia-core.php:362
+msgid "No results were found for this request."
+msgstr ""
+
+#: includes/class-messia-core.php:363
+msgid "Post will be saved and reloaded to update metaboxes."
+msgstr ""
+
+#. translators: %s - terms slugs.
+#: includes/class-messia-core.php:365
+msgid "For taxonomy Property, reserved values cannot be used in term names - %s"
+msgstr ""
+
+#: includes/class-messia-core.php:366
+msgid "Please rename duplicated slugs!"
+msgstr ""
+
+#: includes/class-messia-core.php:367
+msgid "Comment author must specify only name"
+msgstr ""
+
+#: includes/class-messia-core.php:368
+msgid "The term alias cannot duplicate its slug. Alias is set to the previous value."
+msgstr ""
+
+#: includes/class-messia-core.php:369
+msgid "Object can be saved only if included in Segment."
+msgstr ""
+
+#: includes/class-messia-core.php:370
+msgid "Dependent page is being created, fields of dependent widgets are updated."
+msgstr ""
+
+#. translators: %1$s, %2$s - html tags.
+#: includes/class-messia-core.php:372
+msgid "Segment page and all its custom fields are deleted, dependent widgets updated. %1$sPay attention!!! You need to assign all objects from deleted segment to another segment to make them visible from outside.%2$s"
+msgstr ""
+
+#: includes/class-messia-core.php:373
+msgid "Name and slug of dependent page, fields of dependent widgets are updated."
+msgstr ""
+
+#: includes/class-messia-core.php:374
+msgid "This term is marked as primary in Messia settings and can not be deleted. You can rename it and use it as a regular term or set another primary term in the theme menu. All objects that are not assigned any segment will be attached to this term."
+msgstr ""
+
+#: includes/class-messia-core.php:375
+msgid "Select options"
+msgstr ""
+
+#: includes/class-messia-core.php:376
+msgid "The order of terms has been updated, please reload the page to see updated results."
+msgstr ""
+
+#: includes/class-messia-core.php:377
+#: includes/modules/hooks/class-messia-hooks.php:777
+msgid "We have just updated the version of the application! Apply new version now?"
+msgstr ""
+
+#: includes/class-messia-core.php:378
+msgid "You should reload the page to apply the changes. Reload now?"
+msgstr ""
+
+#: includes/class-messia-core.php:477
+msgid "Default Segment"
+msgstr ""
+
+#: includes/class-messia-core.php:528
+msgid "Value of the meta field \"SEO 1\" Taxonomy Segments relevant to the object in the request."
+msgstr ""
+
+#: includes/class-messia-core.php:532
+msgid "Value of the meta field \"SEO 2\" Taxonomy Segments relevant to the object in the request."
+msgstr ""
+
+#: includes/class-messia-core.php:536
+msgid "The value of the meta field \"SEO 1\" Category taxonomy relevant to the object in the request."
+msgstr ""
+
+#: includes/class-messia-core.php:540
+msgid "The value of the meta field \"SEO 2\" Category taxonomy relevant to the object in the request."
+msgstr ""
+
+#: includes/class-messia-core.php:544
+msgid "Object Title"
+msgstr ""
+
+#: includes/class-messia-core.php:548
+msgid "Current Time"
+msgstr ""
+
+#: includes/class-messia-core.php:552
+msgid "Current Date"
+msgstr ""
+
+#: includes/class-messia-core.php:556
+msgid "Site URL"
+msgstr ""
+
+#: includes/class-messia-core.php:697
+msgid "Main Menu"
+msgstr ""
+
+#. translators: %s - MySQL version.
+#: includes/class-messia-requirements.php:113
+msgid "Messia requires at least MariaDB 5.5.5 and above or MySQL 8.0.0 and above, you have MariaDB %s"
+msgstr ""
+
+#. translators: %s - MySQL version.
+#: includes/class-messia-requirements.php:119
+msgid "Messia requires at least MariaDB 5.5.5 and above or MySQL 8.0.0 and above, you have MySQL %s"
+msgstr ""
+
+#. translators: %s - php version.
+#: includes/class-messia-requirements.php:125
+msgid "Messia requires at least PHP 8.1.0 version or higher, you have PHP %s"
+msgstr ""
+
+#. translators: %s - php version.
+#: includes/class-messia-requirements.php:130
+msgid "Messia requires at least WordPress 5.5.0 version or higher, you have WordPress %s"
+msgstr ""
+
+#: includes/class-messia-requirements.php:149
+msgid "Gutenberg Widgets Editor is turned off. Messia still works, but some of its capabilities are not available."
+msgstr ""
+
+#: includes/class-messia-requirements.php:188
+msgid "Before setting key be sure to activate Messia theme on the main site, otherwise link would not work."
+msgstr ""
+
+#. translators: %s - html tag a.
+#: includes/class-messia-requirements.php:193
+msgid "My Account"
+msgstr ""
+
+#: includes/class-messia-requirements.php:194
+msgid "Messia settings"
+msgstr ""
+
+#. translators: %1$s & %2$s - html tags a.
+#: includes/class-messia-requirements.php:197
+msgid "Please enter your Messia theme license key to unlock full functionality, access support and automatic updates. To get key visit %1$s, to set - open %2$s. %3$s"
+msgstr ""
+
+#: includes/class-messia-requirements.php:213
+msgid "Gutenberg Block Editor is turned off. Messia still works, but some of its capabilities are not available."
+msgstr ""
+
+#: includes/class-messia-requirements.php:225
+msgid "Messia can't be launched due to its requirements violation:"
+msgstr ""
+
+#: includes/class-messia-requirements.php:229
+msgid "Messia requirement missed"
+msgstr ""
+
+#: includes/class-messia-requirements.php:282
+msgid "Messia requirements violation:"
+msgstr ""
+
+#. translators: %s - custom field name.
+#: includes/class-messia-shortcodes.php:129
+msgid "Custom field %s is empty."
+msgstr ""
+
+#: includes/class-messia-shortcodes.php:130
+#: includes/traits/trait-messia-custom-fields.php:93
+msgid "Custom fields can be used only at object page, including shortcodes."
+msgstr ""
+
+#. translators: %s - custom field slug.
+#: includes/class-messia-shortcodes.php:228
+msgid "Custom fields %s can be displayed via shortcode only at the object page."
+msgstr ""
+
+#. translators: %s - custom field slug.
+#: includes/class-messia-shortcodes.php:230
+#: includes/class-messia-shortcodes.php:252
+#: includes/class-messia-shortcodes.php:325
+msgid "Custom field %s"
+msgstr ""
+
+#. translators: %s - segment term id.
+#: includes/class-messia-shortcodes.php:255
+msgid "Object does not belongs to segment term ID -> %s"
+msgstr ""
+
+#. translators: %s - custom field slug.
+#: includes/class-messia-shortcodes.php:271
+msgid "Constructor for segment term ID -> %s is empty."
+msgstr ""
+
+#. translators: %s - custom field slug.
+#: includes/class-messia-shortcodes.php:277
+msgid "Custom field %s does not exist."
+msgstr ""
+
+#. translators: %s - custom field slug, %s - term id.
+#: includes/class-messia-shortcodes.php:293
+msgid "Constructed field %1$s that is found for this post does not exist in segment term id=%2$s constructor."
+msgstr ""
+
+#: includes/class-messia-shortcodes.php:479
+#: includes/class-messia-shortcodes.php:605
+msgid "New reply form can be placed only at the object page."
+msgstr ""
+
+#. translators: %s - custom field slug.
+#: includes/class-messia-shortcodes.php:481
+#: includes/class-messia-shortcodes.php:607
+msgid "Shortcode \"add_review_form\""
+msgstr ""
+
+#: includes/class-messia-shortcodes.php:487
+msgid "Comments are closed."
+msgstr ""
+
+#. translators: %s - * symbol.
+#: includes/class-messia-shortcodes.php:509
+msgid "Required fields are marked %s"
+msgstr ""
+
+#: includes/class-messia-shortcodes.php:529
+#: includes/class-messia-shortcodes.php:534
+#: includes/modules/blocks/types/class-messia-block-objects-filtered.php:560
+msgid "Name"
+msgstr ""
+
+#: includes/class-messia-shortcodes.php:541
+msgid "Your email will not be published."
+msgstr ""
+
+#: includes/class-messia-shortcodes.php:543
+msgid "Your rating (optional)"
+msgstr ""
+
+#: includes/class-messia-shortcodes.php:548
+msgid "Your review"
+msgstr ""
+
+#: includes/class-messia-shortcodes.php:558
+msgid "Leave a new reply"
+msgstr ""
+
+#. translators: %s - post title.
+#: includes/class-messia-shortcodes.php:561
+msgid "Leave a new reply to %s"
+msgstr ""
+
+#: includes/class-messia-shortcodes.php:564
+msgid "Leave review"
+msgstr ""
+
+#: includes/class-messia-shortcodes.php:572
+#: includes/class-messia-shortcodes.php:579
+msgid "Email"
+msgstr ""
+
+#: includes/config/class-messia-config-custom-fields.php:37
+msgid "€"
+msgstr ""
+
+#: includes/config/class-messia-config-custom-fields.php:38
+msgid "$"
+msgstr ""
+
+#: includes/config/class-messia-config-custom-fields.php:41
+msgid "sqft"
+msgstr ""
+
+#: includes/config/class-messia-config-custom-fields.php:42
+msgid "sqm"
+msgstr ""
+
+#: includes/config/class-messia-config-custom-fields.php:45
+msgid "year"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:132
+msgid "Help"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:148
+#: includes/config/class-messia-config-settings.php:151
+msgid "Site Settings"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:153
+msgid "Site settings"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:153
+msgid "This section contains general settings that affect entire website. The most important of these settings:"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:155
+#: includes/config/class-messia-config-settings.php:371
+msgid "Google Fonts"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:155
+msgid "Radically change the appearance and perception of the website. You need to get Google Fonts API key in order to use Google Fonts."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:156
+#: includes/config/class-messia-config-settings.php:359
+msgid "Font Awesome Icons"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:156
+msgid "Once you have generated Font Awesome Kit you will see its service name and connection string like this <script src=\"https://kit.fontawesome.com/52dfe25b5b.js\" crossorigin=\"anonymous\"></script>. So the JavaScript file name here is 52dfe25b5b. This is what you need to type in option value."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:165
+msgid "Home Page"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:169
+#: includes/config/class-messia-config-settings.php:172
+#: includes/modules/blocks/types/class-messia-block-search-snippet.php:419
+#: includes/modules/blocks/types/class-messia-block-search-snippet.php:445
+#: includes/modules/widgets/class-messia-widget-listing-filters.php:148
+msgid "Search"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:173
+msgid "Using search"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:173
+msgid "Settings for the object search page:"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:175
+#: includes/config/class-messia-config-settings.php:925
+msgid "Primary segment"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:175
+msgid "In some cases, when it is necessary to form a link to the search page, and the site contains more than one segment, it becomes impossible to determine the search by which segment should be performed and as a result, the formation of such a link becomes impossible. To eliminate this uncertainty, use this option. In the event of such situations, a link will be formed for the segment indicated here as a primary."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:176
+msgid "Objects per page"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:176
+msgid "This parameter is a direct analogue of the MySQL LIMIT operator and limits the number of rows in a search query."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:177
+#: includes/config/class-messia-config-settings.php:959
+msgid "Hide Empty Categories"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:177
+msgid "This parameter determines whether category terms that has no one object will be included in the drop-down options."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:178
+#: includes/config/class-messia-config-settings.php:970
+msgid "Hide Empty Properties"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:178
+msgid "This parameter determines whether property terms that has no one object will form checkbox filters."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:179
+#: includes/config/class-messia-config-settings.php:981
+msgid "Use Canonical URLs"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:179
+msgid "For complex listing queries, a URL can be generated containing categories, properties and values of custom fields. From a search point of view, it doesn't matter in which order they are listed. For example \"domain/segment/?prop=bar,breakfast\" and \"domain/segment/?prop=breakfast,bar\" will successfully return the same set of objects. But from the point of view of search engines, site will contain two pages with the same content, but different URLs. This can lead to penalties and lower search rankings. Enabling this option will redirect all non-canonical listing URLs to their canonical version with status 301. The URL is considered canonical if the order of terms in which corresponds to their order of storage in the database."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:180
+#: includes/config/class-messia-config-settings.php:993
+msgid "Property URL format"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:180
+msgid "Properties in URL parameters will let search engines to index each search parameters combination separately. This will create bugger number of indexed URLs on your website, but it might cause penalties, since these pages content will not be unique. If you choose to store search terms in URI fragment, search engines will not consider each URL with different property values as a separate webpage."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:188
+#: includes/config/class-messia-config-settings.php:191
+msgid "Object Page"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:192
+msgid "Object settings"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:192
+msgid "Settings for the object page:"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:194
+msgid "Object page template"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:194
+#: includes/config/class-messia-config-settings.php:257
+msgid "The option sets the server template that will be used when displaying the page. This makes it possible to write code to display the same content in different functions, so when you need to change the server logic to get different data for the frontend, instead of rewriting the existing code and, as a result, losing it, you can create a new template and place modified code into it. A template cannot affect or change the data architecture; it should be taken as a “skin”. The data included in the template is always the same. But he can operate on the available data completely autonomously and independently. For example, interchange the order of data output, change labels and signatures, show or not text and other data. So, for example, you can create different types of cards in terms of content, remove and swap the main blocks - sidebar, content, SEO blocks, map, etc."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:195
+msgid "Tag Title"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:195
+msgid "The value specified in the field will be inserted into the html title tag, which in turn will be displayed in the head section of the object’s page. This field does not allow html markup. You can use plain text and theme-supported seo-plesholders in any combination. Leave the field blank to get the unchanged native WordPress title tag."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:196
+msgid "Tag Description"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:196
+msgid "The value specified in the field will be inserted into the content attribute of the html of the description tag, which in turn will be displayed in the head section of the object’s page. This field does not allow html markup. You can use plain text and theme-supported seo-plesholders in any combination. Leave the field blank to not display this tag at all."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:197
+msgid "Tag H1"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:197
+msgid "The value specified in the field will be inserted into the html tag h1, which in turn will be displayed in the body section of the object’s page. This field does not allow html markup. You can use plain text and theme-supported seo-plesholders in any combination. Leave the field blank to not display this tag at all."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:205
+#: includes/config/class-messia-config-settings.php:208
+msgid "Services"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:209
+msgid "Use of services"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:209
+msgid "The following service types are supported:"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:211
+#: includes/config/class-messia-config-settings.php:1089
+msgid "Module Activation Events"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:211
+msgid "You can receive notifications about events on your website directly to the Slack app channel. To do this, you need to create an application in your Slack account, install this application in Slack Workspace and create a web hook in your application - \"Post to - you preffered channel\". You can get more detailed information by the link in the help sidebar."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:219
+#: includes/config/class-messia-config-settings.php:222
+msgid "Rating Management"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:223
+msgid "Rating Management Settings"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:223
+msgid "Object Rating Settings:"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:225
+#: includes/config/class-messia-config-settings.php:1231
+msgid "Override visitor ratings"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:225
+msgid "You can use the information left by users as a base for building a rating of objects, or you can evaluate objects yourself and assign a rating to them at your discretion through the admin panel."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:226
+#: includes/config/class-messia-config-settings.php:1243
+msgid "Object rating criteria"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:226
+msgid "If you are using site rankings, you can create as many scoring criteria as you like and rate the object for each of them. The overall rating will be calculated as an average value based on each criteria value."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:234
+#: includes/config/class-messia-config-settings.php:237
+msgid "SEO"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:238
+msgid "SEO Settings"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:238
+msgid "Search engine optimization settings:"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:240
+#: includes/config/class-messia-config-settings.php:1262
+msgid "SEO placeholders"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:240
+msgid "SEO placeholder before being displayed on the page is replaced with its logical value. The logic of such a replacement requires using the capabilities of the programming language, so it is impossible to define or redefine it using the theme settings. Thus, in the topic settings, the list of placeholders is presented in read-only mode, if necessary, change the list or the behavior of the placeholder this should be done through the source code."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:241
+msgid "Merging CSS"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:241
+msgid "Merging CSS files into a single file improves site performance in terms of search engines. When this option is enabled, at the time of loading any page of the web interface, the following happens: all CSS files planned for output are combined into one file that is output in the footer, regardless of where the source style files should be displayed - in the footer or header . Use this option with caution because a lot depends on how the code is written and how sensitive it is to the order in which styles are loaded."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:242
+msgid "Merging JS"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:242
+msgid "Merging JS files into a single file improves site performance in terms of search engines. When this option is enabled, at the time of loading any page of the web interface, the following happens: all CSS files planned for output are combined into one file that is output in the footer, regardless of where the source style files should be displayed - in the footer or header . Use this option with caution because a lot depends on how the code is written and how sensitive it is to the order in which styles are loaded."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:243
+msgid "Critical CSS"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:243
+msgid "Embedding critical CSS into a <head> tag of page can help you improve your SEO page performance. Do not try to write it yourself, but use any specialized online service for this. Generate the code in it and then add it into propper option."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:251
+#: includes/config/class-messia-config-settings.php:254
+msgid "Development"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:255
+msgid "Site optimization"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:255
+msgid "This option allows you to speed up your website. Read this to understand how it works:"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:257
+msgid "Page templates"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:258
+#: includes/config/class-messia-config-settings.php:1460
+msgid "Ajax Dispatcher"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:258
+msgid "Ajax dispatcher works on the basis of the rules contained inside its configuration file, which contains a list of plugins that are allowed to be launched during Ajax calls to the site. Thus, the more precisely these rules are configured, the less unnecessary plugins will be executed during the request and the faster the request will be processed. Dispatcher is completely disabled for any requests from the backend."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:259
+#: includes/config/class-messia-config-settings.php:1471
+msgid "Dispatcher Log"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:259
+msgid "Ajax dispatcher can keep its own log, the request data will be written if the rule for such a request did not work in the dispatcher settings. Enabling logging can help you configure dispatcher filtering rules. The log file size is limited to 2 MB, when this size is reached, the log will be cleared and will start filling up again."
+msgstr ""
+
+#. translators: %s - url.
+#: includes/config/class-messia-config-settings.php:267
+#: includes/config/class-messia-config-settings.php:270
+#: includes/config/class-messia-config-settings.php:272
+msgid "PWA"
+msgstr ""
+
+#. translators: %s - url.
+#: includes/config/class-messia-config-settings.php:272
+msgid "PWA - progressive web application is a technology in web development that visually and functionally transforms a website into an application (mobile application in a browser). Read more on it %s."
+msgstr ""
+
+#. translators: %s - url.
+#. translators: %s html tag a.
+#. translators: %1$s html tag a, %2$s html tag a.
+#. translators: %s - html tag a.
+#: includes/config/class-messia-config-settings.php:272
+#: includes/config/class-messia-config-settings.php:348
+#: includes/config/class-messia-config-settings.php:373
+#: includes/config/class-messia-config-settings.php:1113
+#: includes/config/class-messia-config-settings.php:1134
+#: includes/config/class-messia-config-settings.php:1145
+#: includes/config/class-messia-config-settings.php:1156
+#: includes/config/class-messia-config-settings.php:1178
+#: includes/config/class-messia-config-settings.php:1189
+#: includes/config/class-messia-config-settings.php:1201
+#: includes/config/class-messia-config-settings.php:1223
+msgid "Here"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:274
+msgid "PWA mode"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:274
+msgid "PWA mode will allow your site to behave like a native application on mobile clients. Also, in this mode, the client cache will be involved, which will significantly increase the speed of page loading. A valid SSL certificate is required for this mode to work!"
+msgstr ""
+
+#. translators: %s - url.
+#: includes/config/class-messia-config-settings.php:282
+#: includes/config/class-messia-config-settings.php:285
+#: includes/config/class-messia-config-settings.php:287
+msgid "Support"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:289
+#: includes/config/class-messia-config-settings.php:1564
+msgid "Theme licence"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:289
+msgid "To recieve automatic updates, be intouch with latest news and also be able to have 24/7 support, please, enter Licence Key that was generated for You after checkout."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:290
+#: includes/config/class-messia-config-settings.php:1580
+msgid "Support access"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:290
+msgid "When contacting support, in some cases our engineers may need to access the site's control panel. You can grant it for a limited period and revoke it at any time before the expiration date."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:309
+msgid "Fonts"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:313
+msgid "Colors"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:317
+msgid "Header"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:321
+msgid "Page"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:325
+msgid "Content"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:329
+msgid "Footer"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:346
+msgid "Google Icons"
+msgstr ""
+
+#. translators: %s html tag a.
+#: includes/config/class-messia-config-settings.php:348
+msgid "This is a special icon font. Select this option if you want to use icons. The list of available icons and instructions for use can be found %s."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:351
+msgid "Use"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:358
+msgid "Font Awesome valid kit name"
+msgstr ""
+
+#. translators: %1$s html tag a, %2$s html tag a.
+#: includes/config/class-messia-config-settings.php:361
+msgid "To use Font Awesome icons you need to register at %1$s, create your own kit and type here generated JavaScript file name. See section %2$s reference. Leave it blank if not required."
+msgstr ""
+
+#. translators: %s - URL.
+#: includes/config/class-messia-config-settings.php:370
+msgid "Get the Google Fonts API key here: %s"
+msgstr ""
+
+#. translators: %1$s html tag a, %2$s html tag a.
+#: includes/config/class-messia-config-settings.php:373
+msgid "To use Google fonts you need to get API key. Leave it blank if not required. Get the Google Fonts API key %1$s and be sure you have enabled Google service Web Fonts Developer API. You may preview all available Google fonts at %2$s."
+msgstr ""
+
+#. translators: %1$s opening html tag span, %2$s closing html tag span.
+#: includes/config/class-messia-config-settings.php:382
+msgid "Font for %1$s<body>%2$s"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:383
+#: includes/config/class-messia-config-settings.php:405
+#: includes/config/class-messia-config-settings.php:427
+#: includes/config/class-messia-config-settings.php:449
+#: includes/config/class-messia-config-settings.php:471
+#: includes/config/class-messia-config-settings.php:493
+#: includes/config/class-messia-config-settings.php:515
+#: includes/config/class-messia-config-settings.php:536
+msgid "* LH - line-height(rate)."
+msgstr ""
+
+#. translators: %1$s opening html tag span, %2$s closing html tag span.
+#: includes/config/class-messia-config-settings.php:404
+msgid "Font for %1$s<h1>%2$s"
+msgstr ""
+
+#. translators: %1$s opening html tag span, %2$s closing html tag span.
+#: includes/config/class-messia-config-settings.php:426
+msgid "Font for %1$s<h2>%2$s"
+msgstr ""
+
+#. translators: %1$s opening html tag span, %2$s closing html tag span.
+#: includes/config/class-messia-config-settings.php:448
+msgid "Font for %1$s<h3>%2$s"
+msgstr ""
+
+#. translators: %1$s opening html tag span, %2$s closing html tag span.
+#: includes/config/class-messia-config-settings.php:470
+msgid "Font for %1$s<h4>%2$s"
+msgstr ""
+
+#. translators: %1$s opening html tag span, %2$s closing html tag span.
+#: includes/config/class-messia-config-settings.php:492
+msgid "Font for %1$s<h5>%2$s"
+msgstr ""
+
+#. translators: %1$s opening html tag span, %2$s closing html tag span.
+#: includes/config/class-messia-config-settings.php:514
+msgid "Font for %1$s<h6>%2$s"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:535
+msgid "Font for Main menu"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:557
+msgid "Navigation"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:559
+msgid "Color of a links within the text of a given web page, linking to anywhere."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:568
+msgid "Navigation on interaction"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:570
+msgid "Color of a links within the text of a given web page, linking to anywhere while user use it, such as hovering over or clicking."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:579
+msgid "Controls initial"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:581
+msgid "The color of interactive elements - buttons, checkboxes, dropboxes, etc."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:590
+msgid "Controls initial inner"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:592
+msgid "Internal content color of controls, such as color of the text on a button, color of flag in checkbox."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:601
+msgid "Controls on interaction"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:603
+msgid "The color of controls while user use it, such as hovering over a button, clicking checkbox."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:612
+msgid "Controls on interaction inner"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:614
+msgid "The color of internal content of controls while user use it, such as hovering over a button, clicking checkbox."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:623
+#: includes/config/class-messia-config-settings.php:833
+msgid "Top Area text color"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:625
+#: includes/config/class-messia-config-settings.php:835
+msgid "Color of any text inside Top Area"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:634
+#: includes/config/class-messia-config-settings.php:844
+msgid "Top Area background color"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:636
+msgid "Background color of the area above main menu"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:644
+msgid "Nav Menu mode"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:645
+msgid "If enabled - show navigation menu items as pills."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:648
+msgid "Pills"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:655
+msgid "Hide Top Area"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:656
+msgid "Don't show area above main menu."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:659
+#: includes/config/class-messia-config-settings.php:739
+#: includes/config/class-messia-config-settings.php:750
+#: includes/config/class-messia-config-settings.php:880
+msgid "Hide"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:666
+msgid "Add into <head> tag"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:667
+#: includes/config/class-messia-config-settings.php:888
+#: includes/config/class-messia-config-settings.php:912
+msgid "Type any valid HTML or JS code"
+msgstr ""
+
+#. translators: %1$s and %2$s - html code.
+#: includes/config/class-messia-config-settings.php:670
+msgid "This code will be injected inside <head></head> section. Allowed only HTML tags: %1$smeta%2$s %1$slink%2$s %1$stitle%2$s %1$sstyle%2$s %1$sscript%2$s %1$snoscript%2$s and %1$sbase%2$s."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:682
+msgid "Title color"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:684
+msgid "Color of H1 text inside title area."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:693
+msgid "Subtitle color"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:695
+msgid "Color of any other text inside title area."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:704
+msgid "Title background color"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:706
+msgid "Background color of the title area."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:714
+msgid "Title background image"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:715
+msgid "Background image for title area. Overrides page title background color."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:725
+msgid "Breadcrumbs background color"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:727
+msgid "Background color of breadcrumbs box."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:735
+msgid "Hide Title"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:736
+msgid "Don't show page title and breadcrumbs area."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:746
+msgid "Hide Breadcrumbs"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:747
+msgid "This setting works only if Title is visible."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:757
+msgid "Sidebar"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:758
+msgid "Position of sidebar on bigger screens. On mobile devices sidebar is always on top, before main content."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:777
+msgid "WP Post async load"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:778
+msgid "On the posts page, when using pagination and navigating to the next (previous) post, update the content without reloading the page."
+msgstr ""
+
+#. translators: %s - word On.
+#: includes/config/class-messia-config-settings.php:781
+#: includes/config/class-messia-config-settings.php:792
+#: includes/config/class-messia-config-settings.php:803
+#: includes/modules/blocks/types/class-messia-block-testimonials.php:472
+msgid "On"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:788
+msgid "Cards animation"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:789
+msgid "Animate the appearance of cards on the search page. May not work with some browsers."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:799
+msgid "Card bubble hover effect"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:800
+msgid "Activate effect on object card while user hover it."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:811
+msgid "Card color"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:813
+msgid "Background color of object card."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:822
+msgid "Card hover color"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:824
+msgid "Color of object card while bubble hover effect is active and user hover mouse over card."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:846
+msgid "Background color of the footer top area."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:855
+msgid "Bottom Area text color"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:857
+msgid "Color of any text inside Bottom Area"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:866
+msgid "Bottom Area background color"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:868
+msgid "Background color of the footer bottom area."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:876
+msgid "Hide Bottom Area"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:877
+msgid "Don't show footer bottom area."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:887
+msgid "Text below footer"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:890
+msgid "This text is shown on the very bottom of your website."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:901
+msgid "Home page Hero Area Background Image"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:902
+msgid "This image will be shown on the Home page just below the header. You can leave both Hero image and Hero content empty to hide hero area completely."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:911
+msgid "Home page Hero Area Content"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:914
+msgid "This text will be shown in the Hero Area. Use it to display the main message of your website."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:927
+msgid "By default, new objects will be created in this segment."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:937
+msgid "Add Objects to Parent Categories"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:938
+msgid "When assigning a category to an object, add this object automatically to all parent cagtegories. It is not recommended to disable the option, otherwise search engine may not work properly."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:948
+msgid "Root category terms"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:949
+msgid "For an object to be found, it must also be included in all root terms of the Category taxonomy. For example, if in the Category taxonomy there are two root terms \"communication_types\" and \"payment_types\", then when processing the search query of the type \"domain/segment/{other-terms}/\" it will be converted to \"domain/segment/communication_types/payment_types/{other-terms}/\"."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:960
+msgid "Don't show empty categories in filters. If a term is empty, but it has non-empty descendants, it will still be used."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:971
+msgid "Don't show empty properties in filters."
+msgstr ""
+
+#. translators: %s html tag <a>.
+#: includes/config/class-messia-config-settings.php:983
+msgid "Enabe this option to force 301 redirect all non-canonical listing URLs to their canonical version. More info in %s."
+msgstr ""
+
+#. translators: %s html tag a.
+#: includes/config/class-messia-config-settings.php:995
+msgid "Read %s to make a decision."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1001
+msgid "URL parameters (after \"?\" symbol)"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1005
+msgid "URI fragment (after \"#\" symbol)"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1017
+msgid "Integer"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1018
+msgid "Number of objects per page"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1019
+msgid "The number of objects displayed in search results per page."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1027
+msgid "Manual order"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1028
+msgid "You can put certain objects on top of search results. Objects will be displayed only if they match a search criteria."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1037
+msgid "Property groups"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1038
+msgid "If you have too many properties, you can create and order property groups. Then you can bind each property to the group."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1047
+msgid "Property groups collapsed"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1048
+msgid "With settled to On all groups will be collapsed once page loaded, except ones having checked filters."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1058
+msgid "Title Tag"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1059
+#: includes/config/class-messia-config-settings.php:1069
+#: includes/config/class-messia-config-settings.php:1079
+#: includes/modules/cpt/class-messia-objects.php:1274
+msgid "Plain text and/or SEO placeholders"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1060
+msgid "This text will be used as the content of the title tag as follows - <title> [text] </title>."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1068
+msgid "Description Tag"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1070
+msgid "This text will be used as the content of the meta tag as follows - <meta name=\"description\" content=\"[text]\">."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1078
+msgid "H1 Tag"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1080
+msgid "This text will be used as the content of the H1 tag as follows - <h1>[text]</h1>."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1088
+msgid "Any valid URL, ex: https://hooks.slack.com/services/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"
+msgstr ""
+
+#. translators: %s - html tag a.
+#: includes/config/class-messia-config-settings.php:1091
+msgid "At the time of automatic shutdown of any of the modules, you can send information about this event to the Webhook indicated here. Read %s section of Messia documentation on how to create Slack App."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1100
+msgid "Google Analytics ID"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1101
+msgid "Insert the correct service identifier to connect to Google Analytics tracker. Leave the field blank if you do not need it."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1111
+msgid "Google maps API key"
+msgstr ""
+
+#. translators: %s - html tag a.
+#: includes/config/class-messia-config-settings.php:1113
+msgid "Google Maps API allows to use Google Maps on your website to show objects in a map view. Leave the field blank if you do not need it. Get Google Maps API key %s."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1122
+msgid "gCaptha V3 public key"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1132
+msgid "gCaptha V3 secret key"
+msgstr ""
+
+#. translators: %s - html tag a.
+#: includes/config/class-messia-config-settings.php:1134
+msgid "gCaptha service protects your website against spam comments. Leave both keys(public and secret) blank if not required. Get gCaptha keys %s."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1143
+msgid "Google App ID"
+msgstr ""
+
+#. translators: %s html tag a.
+#: includes/config/class-messia-config-settings.php:1145
+msgid "Google App allows visitors to login to your website using their Google account. Leave ID and secret blank if not required. Get the app's data %s."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1154
+msgid "Google App Secret Key"
+msgstr ""
+
+#. translators: %s - html tag a.
+#: includes/config/class-messia-config-settings.php:1156
+msgid "Google App allows visitors to login to your website using Google account. Leave ID and secret blank if not required. Get the app's data %s."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1165
+msgid "Facebook App ID"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1176
+msgid "Facebook App Secret Key"
+msgstr ""
+
+#. translators: %s - html tag a.
+#: includes/config/class-messia-config-settings.php:1178
+msgid "Facebook App allows visitors to login to your website using Facebook account. Leave ID and secret blank if not required. Get the app's data %s."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1187
+msgid "Yandex App ID"
+msgstr ""
+
+#. translators: %s html tag a.
+#. translators: %s - html tag a.
+#: includes/config/class-messia-config-settings.php:1189
+#: includes/config/class-messia-config-settings.php:1201
+msgid "Yandex App allows visitors to login to your website using Yandex account. Leave ID and secret blank if not required. Get the app's data %s."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1199
+msgid "Yandex app secret key"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1210
+msgid "VK App ID"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1221
+msgid "VK App Secret Key"
+msgstr ""
+
+#. translators: %s - html tag a.
+#: includes/config/class-messia-config-settings.php:1223
+msgid "VK app allows visitors to login to your web site using VK account. Leave ID and secret blank if not required. Get the app's data %s."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1232
+msgid "Override average visitor rating with the rating set by website adinistrator."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1244
+msgid "You can set rating of any object based on these criteria. The rating of each object will be calculated automatically as the arithmetic average of the criteria values."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1253
+msgid "Valid PHP format characters"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1254
+msgid "Current year date format"
+msgstr ""
+
+#. translators: %s - URL.
+#: includes/config/class-messia-config-settings.php:1256
+msgid "Will be used to show comment date if it belongs to current year. You can use the table of Date and Time format characters %s."
+msgstr ""
+
+#. translators: %s - URL.
+#: includes/config/class-messia-config-settings.php:1256
+msgid "directly from the PHP website"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1263
+msgid "List of placeholders supported by Messia theme. Not editable."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1272
+msgid "Custom .htaccess Content"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1273
+msgid "Type any valid Apache/Nginx code"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1275
+msgid "The field value will be appended to .htacces file in root of the site folder, if it does not exist it will be created."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1286
+msgid "Critical CSS for home page"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1287
+#: includes/config/class-messia-config-settings.php:1302
+#: includes/config/class-messia-config-settings.php:1317
+msgid "Type any valid CSS code"
+msgstr ""
+
+#. translators: %1$s and %2$s - html code.
+#: includes/config/class-messia-config-settings.php:1290
+#: includes/config/class-messia-config-settings.php:1305
+#: includes/config/class-messia-config-settings.php:1320
+msgid "This code will be rendered inline at the very beginning of the head tag. More info in %s."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1301
+msgid "Critical CSS for object page"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1316
+msgid "Critical CSS for search page"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1331
+msgid "Async load JS Scripts"
+msgstr ""
+
+#. translators: %1$s, %2$s - html tags.
+#: includes/config/class-messia-config-settings.php:1333
+msgid "Add attribute %1$sdefer%2$s to all JS scripts with non-empty attribute src. Speed up page load but may cause errors."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1343
+msgid "Async load CSS Styles"
+msgstr ""
+
+#. translators: %1$s, %2$s - html tags.
+#: includes/config/class-messia-config-settings.php:1345
+msgid "Add attribute %1$srel='preload'%2$s and %1$sas='style'%2$s to all CSS styles with non-empty attribute src. Speed up page load but may cause blinking content."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1355
+msgid "Merge CSS files"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1356
+msgid "All CSS files that are needed to display your website will be combined on the fly into one file and moved to footer. Use with caution."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1366
+msgid "Merge JS files"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1367
+msgid "All Javascript files that are needed to display your website will be combined on the fly into one file and moved to footer. Use with caution."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1377
+msgid "Template for Home page"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1389
+msgid "Template for Object page"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1401
+msgid "Template for Search Page"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1413
+msgid "Template for Archive page"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1425
+msgid "Template for Regular page"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1437
+msgid "Template for Single page"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1449
+msgid "Debugger"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1450
+msgid "Enabling this option will let you see notifications and error messages on your website. Will be shown only to logged in administarators."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1461
+msgid "Enabling this option will deactivate plugins during query execution accordancing to internal settings and reduce server response time."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1472
+msgid "To check the settings of the dispatcher, you can enable logging of his work. This option is taken into account only when Ajax Dispatcher is enabled."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1489
+msgid "Enable PWA"
+msgstr ""
+
+#. translators: %s - html code.
+#: includes/config/class-messia-config-settings.php:1491
+msgid "Be sure your site uses HTTPS protocol, otherwise PWA will not work. More info in %s."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1502
+msgid "URL path relative to current domain"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1503
+msgid "Start URL"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1504
+msgid "The page on which the application will start. Should be inside current site domain."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1512
+msgid "(maximum of 12 characters)"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1513
+msgid "App short name"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1514
+msgid "The short_name (maximum of 12 characters recommended) is a short version of the App`s name. It is an optional field and if not specified, the name will be used, though it will likely be truncated. The short name is typically used where there is insufficient space to display the full name, such as App launcher."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1522
+msgid "(maximum of 45 characters)"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1523
+msgid "App name"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1524
+msgid "The name (maximum of 45 characters) is the primary identifier of the application and is a required field. It is displayed in Install dialog."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1532
+msgid "Any text"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1533
+msgid "App description"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1534
+msgid "This text should explain what this app do and was created for."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1543
+msgid "Theme color"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1545
+msgid "Theme color defines the default theme color for the application. This sometimes affects how the OS displays the site (e.g., on Android`s task switcher, the theme color surrounds the site)."
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1554
+msgid "Background color"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1556
+msgid "Therefore background_color should match the background-color CSS property in the site`s stylesheet for a smooth transition between launching the web application and loading the site`s content."
+msgstr ""
+
+#. translators: %1$s - html tag a, %2$s - html tag a.
+#: includes/config/class-messia-config-settings.php:1566
+msgid "Enter the key you received when purchasing the theme. Save canges and activate the key. Key can be found in %1$s. More info in %2$s."
+msgstr ""
+
+#. translators: %1$s - html tag a, %2$s - html tag a.
+#: includes/config/class-messia-config-settings.php:1566
+msgid "My account"
+msgstr ""
+
+#. translators: %1$s - time string.
+#: includes/config/class-messia-config-settings.php:1583
+msgid "You can grant temporary access to the site to members of the support team here. Access duration is calculated relative to server time, that now has: %1$s"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1815
+msgid "Messia Settings"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1819
+msgid "Messia settings management"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1839
+msgid "Messia Network Settings"
+msgstr ""
+
+#: includes/config/class-messia-config-settings.php:1843
+msgid "Messia network settings management"
+msgstr ""
+
+#: includes/config/class-messia-settings.php:753
+msgid "Some modules cannot be activated due to violation of dependency rules"
+msgstr ""
+
+#. translators: %s - taxonomy term slug.
+#: includes/helpers/class-messia-help-database.php:431
+msgid "Termin with slug %s in taxonomy messia_object_category not found"
+msgstr ""
+
+#: includes/helpers/class-messia-help-queries.php:442
+msgid "Home"
+msgstr ""
+
+#. translators: %s - search query string.
+#: includes/helpers/class-messia-help-queries.php:449
+msgid "Search results for \"%s\""
+msgstr ""
+
+#. translators: %s - tag name.
+#: includes/helpers/class-messia-help-queries.php:451
+msgid "Posts tagged \"%s\""
+msgstr ""
+
+#. translators: %s - author name.
+#: includes/helpers/class-messia-help-queries.php:453
+msgid "Articles by author %s"
+msgstr ""
+
+#: includes/helpers/class-messia-help-queries.php:454
+msgid "Error 404"
+msgstr ""
+
+#. translators: %s - page title.
+#: includes/helpers/class-messia-help-queries.php:456
+msgid "Page %s"
+msgstr ""
+
+#. translators: %s - comment page number.
+#: includes/helpers/class-messia-help-queries.php:458
+msgid "Comments page № %s"
+msgstr ""
+
+#: includes/helpers/class-messia-help.php:422
+msgid "Outside a group"
+msgstr ""
+
+#. translators: %s - URL to file.
+#: includes/helpers/class-messia-help.php:640
+msgid "Asset %s does not exists in both parent and child themes assets."
+msgstr ""
+
+#. translators: %s - URL to file.
+#: includes/helpers/class-messia-help.php:649
+msgid "Asset %s does not exists in parent theme assets."
+msgstr ""
+
+#: includes/helpers/class-messia-help.php:1184
+msgid "Reviews snippet cannot be displayed indicating to disable all its modules."
+msgstr ""
+
+#: includes/helpers/class-messia-help.php:1200
+msgid "Unrated"
+msgstr ""
+
+#: includes/helpers/class-messia-help.php:1250
+msgid "review"
+msgid_plural "reviews"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/helpers/class-messia-help.php:1292
+msgid "Pingback:"
+msgstr ""
+
+#: includes/helpers/class-messia-help.php:1294
+#: includes/helpers/class-messia-help.php:1338
+msgid "(Edit)"
+msgstr ""
+
+#: includes/helpers/class-messia-help.php:1318
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: includes/helpers/class-messia-help.php:1438
+msgid "Note"
+msgstr ""
+
+#. translators: %s - category term slug.
+#: includes/helpers/class-messia-help.php:1613
+msgid "Fail to build path to a deepest category term. %s"
+msgstr ""
+
+#. translators: %s - segment ID.
+#: includes/helpers/class-messia-object-card.php:145
+msgid "Object has no meta data for segment ID %s."
+msgstr ""
+
+#. translators: %s - object title.
+#: includes/helpers/class-messia-object-card.php:147
+msgid "Object %s"
+msgstr ""
+
+#. translators: %s - custom field type.
+#: includes/helpers/class-messia-object-card.php:291
+msgid "Object card does not serve field of type \"%s\""
+msgstr ""
+
+#: includes/helpers/class-messia-object-card.php:321
+msgid "Featured"
+msgstr ""
+
+#. translators: %s: Number of search results.
+#: includes/modules/archive/skins/class-messia-archive-tmpl-default.php:114
+msgid "%s result found."
+msgid_plural "%s results found."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/modules/archive/skins/class-messia-archive-tmpl-default.php:123
+msgid "We could not find any results for your search. You can give it another try using the search form below."
+msgstr ""
+
+#: includes/modules/archive/skins/class-messia-archive-tmpl-default.php:156
+msgid "Read more"
+msgstr ""
+
+#: includes/modules/archive/skins/class-messia-archive-tmpl-default.php:181
+#: includes/modules/single/skins/class-messia-single-tmpl-default.php:166
+msgid "Categories:"
+msgstr ""
+
+#. translators: %s: Author name
+#. translators: %s: Author name.
+#: includes/modules/archive/skins/class-messia-archive-tmpl-default.php:225
+#: includes/modules/single/skins/class-messia-single-tmpl-default.php:210
+msgid "By %s"
+msgstr ""
+
+#: includes/modules/archive/skins/class-messia-archive-tmpl-default.php:293
+msgid "Sticky post"
+msgstr ""
+
+#: includes/modules/blocks/types/class-messia-block-category-terms.php:189
+#: includes/modules/blocks/types/class-messia-block-search-snippet.php:216
+#: includes/modules/widgets/class-messia-widget-category-crosslinks.php:131
+msgid "Nothing to show. Change conditions."
+msgstr ""
+
+#. translators: %s - taxonomy slug.
+#: includes/modules/blocks/types/class-messia-block-category-terms.php:210
+#: includes/modules/blocks/types/class-messia-block-search-snippet.php:241
+#: includes/modules/widgets/class-messia-widget-category-crosslinks.php:158
+msgid "Segement term with slug %s does not exist."
+msgstr ""
+
+#. translators: %s - taxonomy slug.
+#: includes/modules/blocks/types/class-messia-block-category-terms.php:227
+#: includes/modules/blocks/types/class-messia-block-search-snippet.php:283
+msgid "Category with slug %s does not exist."
+msgstr ""
+
+#. translators: %s - taxonomy slug.
+#: includes/modules/blocks/types/class-messia-block-category-terms.php:236
+#: includes/modules/blocks/types/class-messia-block-search-snippet.php:319
+#: includes/modules/blocks/types/class-messia-block-search-snippet.php:382
+msgid "Category term \"%s\" is empty and was excluded due to current theme setting."
+msgstr ""
+
+#. translators: %s - taxonomy slug.
+#: includes/modules/blocks/types/class-messia-block-category-terms.php:247
+msgid "Error getting parents for category term with slug %s."
+msgstr ""
+
+#. translators: %s - block name
+#. translators: %s - block name.
+#. translators: %s - widget or block name.
+#: includes/modules/blocks/types/class-messia-block-category-terms.php:293
+#: includes/modules/blocks/types/class-messia-block-search-snippet.php:405
+#: includes/modules/blocks/types/class-messia-block-testimonials.php:217
+#: includes/modules/widgets/class-messia-widget-category-crosslinks.php:310
+msgid "To fix errors you may try to resave the %s."
+msgstr ""
+
+#. translators: %s - block name.
+#: includes/modules/blocks/types/class-messia-block-objects-filtered.php:182
+msgid "To fix errors you may try to change conditions and re-save %s."
+msgstr ""
+
+#: includes/modules/blocks/types/class-messia-block-objects-filtered.php:238
+msgid "Missing segment."
+msgstr ""
+
+#: includes/modules/blocks/types/class-messia-block-objects-filtered.php:329
+msgid "You have overrided visitor ratings. In this case, sorting by number of reviews is not possible. To use it, turn off \"Override visitor ratings\" option in Messia theme settings."
+msgstr ""
+
+#. translators: %s - sorting parameter.
+#: includes/modules/blocks/types/class-messia-block-objects-filtered.php:405
+msgid "Unrecognized sorting parameter %s"
+msgstr ""
+
+#. translators: %s - sorting direction.
+#: includes/modules/blocks/types/class-messia-block-objects-filtered.php:422
+#: includes/modules/blocks/types/class-messia-block-testimonials.php:270
+msgid "Unrecognized sorting direction %s"
+msgstr ""
+
+#: includes/modules/blocks/types/class-messia-block-objects-filtered.php:452
+msgid "More..."
+msgstr ""
+
+#: includes/modules/blocks/types/class-messia-block-objects-filtered.php:461
+msgid "Nothing found. Change conditions or object's data."
+msgstr ""
+
+#: includes/modules/blocks/types/class-messia-block-objects-filtered.php:555
+msgid "Date published"
+msgstr ""
+
+#: includes/modules/blocks/types/class-messia-block-objects-filtered.php:570
+msgid "Reviews"
+msgstr ""
+
+#. translators: %s - term slug.
+#: includes/modules/blocks/types/class-messia-block-objects-filtered.php:655
+msgid "Segment term %s does not exist and was ignored."
+msgstr ""
+
+#. translators: %s - term slug.
+#: includes/modules/blocks/types/class-messia-block-objects-filtered.php:668
+msgid "Category term %s does not exist and was ignored."
+msgstr ""
+
+#. translators: %s - term slug.
+#: includes/modules/blocks/types/class-messia-block-objects-filtered.php:682
+msgid "Property term %s does not exist and was ignored."
+msgstr ""
+
+#: includes/modules/blocks/types/class-messia-block-search-snippet.php:128
+msgid "Select Category"
+msgstr ""
+
+#: includes/modules/blocks/types/class-messia-block-search-snippet.php:129
+msgid "Select Property"
+msgstr ""
+
+#: includes/modules/blocks/types/class-messia-block-search-snippet.php:269
+#: includes/modules/listing/skins/class-messia-listing-tmpl-default.php:567
+#: includes/modules/listing/skins/class-messia-listing-tmpl-default.php:573
+msgid "Search by object name"
+msgstr ""
+
+#. translators: %s - taxonomy slug.
+#: includes/modules/blocks/types/class-messia-block-search-snippet.php:309
+msgid "Category term \"%s\" does not have any children."
+msgstr ""
+
+#. translators: %s - block name.
+#: includes/modules/blocks/types/class-messia-block-search-snippet.php:345
+msgid "No term selected in %s settings. Nothing to show."
+msgstr ""
+
+#. translators: %s - taxonomy slugs.
+#: includes/modules/blocks/types/class-messia-block-search-snippet.php:373
+msgid "Next Property slug does not exist: %s."
+msgstr ""
+
+#. translators: %s - block name.
+#: includes/modules/blocks/types/class-messia-block-segment-wrapper.php:159
+msgid "%s can be used only at valid object or listing page."
+msgstr ""
+
+#. translators: %s - block name.
+#: includes/modules/blocks/types/class-messia-block-segment-wrapper.php:180
+msgid "%s skipped render it's content due to inappropriate segment."
+msgstr ""
+
+#: includes/modules/blocks/types/class-messia-block-testimonials.php:277
+msgid "No comments found. Change parameters."
+msgstr ""
+
+#: includes/modules/blocks/types/class-messia-block-testimonials.php:445
+#: includes/modules/cpt/class-messia-cpt-config.php:611
+#: includes/modules/cpt/class-messia-cpt-config.php:641
+msgid "Posts"
+msgstr ""
+
+#: includes/modules/blocks/types/class-messia-block-testimonials.php:452
+#: includes/modules/cpt/class-messia-cpt-config.php:612
+#: includes/modules/cpt/class-messia-cpt-config.php:642
+#: includes/modules/cpt/class-messia-cpt-config.php:998
+#: includes/modules/cpt/class-messia-cpt-config.php:1005
+msgid "Objects"
+msgstr ""
+
+#. translators: placeholder is post title.
+#: includes/modules/class-messia-module-base.php:81
+msgid "Protected: %s"
+msgstr ""
+
+#. translators: placeholder is post title.
+#: includes/modules/class-messia-module-base.php:87
+msgid "Private: %s"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:100
+msgid "Card layout"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:104
+#: includes/modules/widgets/class-messia-widget-object-categories.php:177
+#: includes/modules/widgets/class-messia-widget-object-properties.php:193
+#: includes/modules/widgets/class-messia-widget-sitewide-search.php:137
+msgid "Title"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:105
+#: includes/modules/cpt/class-messia-cpt-config.php:815
+#: includes/modules/widgets/class-messia-widget-listing-filters.php:151
+msgid "Properties"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:106
+msgid "Features block"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:106
+msgid "Features inline"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:107
+#: includes/modules/cpt/class-messia-cpt-config.php:148
+msgid "Excerpt"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:109
+#: includes/modules/cpt/class-messia-cpt-config.php:155
+msgid "CTA"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:114
+msgid "Object layout"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:118
+msgid "LOGO"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:119
+msgid "MENU"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:123
+msgid "Object Page Hero"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:126
+msgid "Object Page Top"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:127
+msgid "Object Page Content"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:129
+msgid "Object Page Sidebar"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:131
+msgid "Object Page Bottom"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:140
+msgid "Do not show on card."
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:141
+msgid "Off"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:147
+#: includes/modules/cpt/class-messia-cpt-config.php:154
+#: includes/modules/cpt/class-messia-cpt-config.php:161
+#: includes/modules/cpt/class-messia-cpt-config.php:168
+msgid "The option determines whether the value of this field is displayed in the corresponding area of the object on the list of objects."
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:162
+msgid "Features Block"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:169
+msgid "Features Inline"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:175
+msgid "The option determines whether the value of this field is displayed in the corresponding area at the object page."
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:176
+msgid "Hero"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:202
+msgid "No units"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:212
+#: includes/modules/cpt/class-messia-cpt-config.php:214
+msgid "Segments"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:214
+msgid "Segment"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:216
+msgid "Parent Segment"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:217
+msgid "Parent Segment:"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:218
+msgid "Choose from frequently used Segments"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:219
+msgid "Browse segment"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:220
+msgid "New segment name"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:221
+msgid "Back to segments"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:222
+msgid "No segments"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:223
+msgid "Segment List"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:224
+msgid "Segment List Navigation"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:225
+#: includes/modules/cpt/class-messia-cpt-config.php:703
+#: includes/modules/cpt/class-messia-cpt-config.php:826
+#: includes/modules/cpt/class-messia-cpt-config.php:918
+#: includes/modules/cpt/class-messia-cpt-config.php:959
+msgid "Frequently used"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:251
+msgid "Is Featured"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:252
+msgid "Turning this option on will let you filter objects by this parameter in some blocks."
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:257
+msgid "Text"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:273
+#: includes/modules/cpt/class-messia-cpt-config.php:299
+msgid "Max-length"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:279
+#: includes/modules/cpt/class-messia-cpt-config.php:305
+#: includes/modules/cpt/class-messia-cpt-config.php:517
+msgid "Any text and HTML."
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:283
+msgid "Textarea"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:309
+msgid "Address"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:315
+msgid "Latitude"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:319
+msgid "Longitude"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:341
+msgid "With map"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:342
+msgid "Show map below address instead of popup"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:348
+msgid "This type of field is used to calculate the geo-coordinates at the entered address. It uses Google geocoding service. This service requires a paid account and imposes other restrictions. Without geocoordinates, it is not possible to display the label of an object on the map. If you don't want to use geocoding, but you need to display objects on the map, delete the address completely and enter the coordinates manually."
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:352
+msgid "Checkbox"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:367
+msgid "Yes/No"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:371
+msgid "Number"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:387
+msgid "Min"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:394
+msgid "Max"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:401
+msgid "Step"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:407
+msgid "Units"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:414
+msgid "R/L"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:419
+msgid "Left+"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:421
+msgid "Right+"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:427
+msgid "Split 1000"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:434
+msgid "Split decimal"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:441
+msgid "Precision"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:448
+msgid "Form filter:"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:454
+msgid "No"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:458
+msgid "Range"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:462
+msgid "Toggle"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:470
+msgid "Make sortable"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:476
+msgid "Number according to the rules specified in the constructor."
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:480
+msgid "Link"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:488
+#: includes/modules/cpt/class-messia-cpt-config.php:535
+msgid "Any valid URL"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:493
+msgid "Link URL"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:504
+msgid "Open in a new tab"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:511
+msgid "Use field title as URL title"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:521
+msgid "Media"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:549
+msgid "Media from the gallery. Clicking on the image will open it in a pop-up window, however, if a link is specified for the image, it will open in a new tab."
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:553
+msgid "Embedded media"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:568
+msgid "HTML code. A structure is expected in which all top-level nodes will contain links to external media. Each node will be displayed on the page as a separate block. Clicking on a block will open its contents in a popup window."
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:572
+msgid "HTML"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:587
+msgid "Any valid HTML code. The value will be displayed without changes.."
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:591
+msgid "Post single"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:606
+#: includes/modules/cpt/class-messia-cpt-config.php:636
+msgid "Options"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:610
+#: includes/modules/cpt/class-messia-cpt-config.php:640
+msgid "Pages"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:617
+msgid "One of website records according to the field settings in the constructor."
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:621
+msgid "Post multiple"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:648
+msgid "As card"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:649
+msgid "Use object card design instead of regular link to object."
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:655
+msgid "One or more website records according to the field settings in the constructor."
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:664
+msgid "Alias"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:665
+msgid "Alias will allow you to open the object page by the url of the form: domain / alias / slug-object /. Leave blank to use the default value \"messia_object_segment\"."
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:672
+#: includes/modules/cpt/class-messia-cpt-config.php:795
+msgid "SEO#1"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:673
+#: includes/modules/cpt/class-messia-cpt-config.php:796
+msgid "This field sets the first variable that participates in SEO templates."
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:680
+#: includes/modules/cpt/class-messia-cpt-config.php:803
+msgid "SEO#2"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:681
+#: includes/modules/cpt/class-messia-cpt-config.php:804
+msgid "This field sets the second variable that participates in SEO templates."
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:690
+#: includes/modules/cpt/class-messia-cpt-config.php:692
+msgid "Category"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:692
+#: includes/modules/widgets/class-messia-widget-listing-filters.php:150
+msgid "Categories"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:694
+msgid "Parent Category"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:695
+msgid "Parent Category:"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:696
+msgid "Choose from frequently used Categories"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:697
+msgid "Browse category"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:698
+msgid "New Category Name"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:699
+msgid "Back to category"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:700
+msgid "No categories"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:701
+msgid "Category List"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:702
+msgid "Category List Navigation"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:730
+msgid "Filter header"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:731
+msgid "The value will be used as the text of the header displayed before the filter, if the given term forms it (the term must have descendants). Leave blank if no title is needed.."
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:737
+msgid "Any value"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:738
+msgid "Option Select All"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:739
+msgid "The visual value of the option in the filter, which determines the display of all objects in this term (applies if the term has children.)"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:746
+msgid "Filter type"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:750
+msgid "Single select"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:754
+msgid "Multiple select"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:758
+msgid "The value of the option determines with which HTML tag the term filter will be displayed on the search page."
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:765
+msgid "Branch as filters"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:766
+msgid "Create separate filters in the frontend from the node and all its direct descendants. In the active state, the option \"Select all\" will be ignored, because it is replaced by the very meaning of this node."
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:773
+msgid "Crosslinks"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:774
+msgid "Exclude the term and its descendants from linking cloud."
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:781
+#: includes/modules/cpt/class-messia-cpt-config.php:896
+#: includes/modules/cpt/class-messia-cpt.php:286
+#: includes/modules/cpt/class-messia-cpt.php:305
+msgid "Icon"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:782
+#: includes/modules/cpt/class-messia-cpt-config.php:789
+msgid "This image will be used to display along with the name of the term."
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:788
+msgid "Thumbnail"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:813
+#: includes/modules/cpt/class-messia-cpt-config.php:815
+msgid "Property"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:817
+msgid "Parent Property"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:818
+msgid "Parent Property:"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:819
+msgid "Choose from frequently used Properties"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:820
+msgid "View Property"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:821
+msgid "New Property Name"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:822
+msgid "Back to property"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:823
+msgid "No properties"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:824
+msgid "Property list"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:825
+msgid "Property List Navigation"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:854
+msgid "Group"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:855
+msgid "Properties can be grouped for better visual perception. Groups can be created and sorted in the \"Search\" tab of Messia settings ."
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:872
+msgid "Parent categories"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:873
+msgid "This setting is needed to create hierarchical filters. Child filters appear only when Parent filter value is chosen."
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:880
+msgid "Show as filter"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:881
+msgid "If checked, this term will be shown as a checkbox in the filter area."
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:888
+msgid "Show on card"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:889
+msgid "If checked, this term will be shown on object card as an icon if you set it, or as a term name if icon is not set."
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:897
+msgid "This image will be used in addition to the name of the term."
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:905
+#: includes/modules/cpt/class-messia-cpt-config.php:907
+msgid "Products/Services"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:907
+msgid "Product/Service"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:909
+msgid "Parent Product/Service"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:910
+msgid "Parent Product/Service:"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:911
+msgid "Choose from frequently used Products/Services"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:912
+msgid "View product/service"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:913
+msgid "Name of new product/service"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:914
+msgid "Back to products/services"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:915
+msgid "No Products/Services"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:916
+msgid "List of Products/Services"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:917
+msgid "Product/Service List Navigation"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:946
+#: includes/modules/cpt/class-messia-cpt-config.php:948
+msgid "Specifications"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:948
+msgid "Specification"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:950
+msgid "Parent Specification"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:951
+msgid "Parent Specification:"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:952
+msgid "Choose from commonly used Specifications"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:953
+msgid "View specifications"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:954
+msgid "Name of new specification"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:955
+msgid "Back to specifications"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:956
+msgid "No specifications"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:957
+msgid "Specifications List"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:958
+msgid "Specification List Navigation"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:997
+msgid "Object"
+msgstr ""
+
+#. translators: %s post type plural name.
+#. translators: %s taxonomy plural name.
+#: includes/modules/cpt/class-messia-cpt-config.php:1007
+#: includes/modules/cpt/class-messia-cpt-config.php:1089
+msgid "All %s"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:1008
+msgid "Add new"
+msgstr ""
+
+#. translators: %s post type singular name.
+#: includes/modules/cpt/class-messia-cpt-config.php:1010
+#: includes/modules/cpt/class-messia-cpt-config.php:1015
+msgid "Add %s"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:1011
+msgid "Edit"
+msgstr ""
+
+#. translators: %s post type singular name.
+#. translators: %s taxonomy singular name.
+#: includes/modules/cpt/class-messia-cpt-config.php:1013
+#: includes/modules/cpt/class-messia-cpt-config.php:1091
+msgid "Edit %s"
+msgstr ""
+
+#. translators: %s post type singular name.
+#: includes/modules/cpt/class-messia-cpt-config.php:1017
+#: includes/modules/cpt/class-messia-cpt-config.php:1019
+msgid "View %s"
+msgstr ""
+
+#. translators: %s post type plural name.
+#. translators: %s taxonomy plural name.
+#: includes/modules/cpt/class-messia-cpt-config.php:1021
+#: includes/modules/cpt/class-messia-cpt-config.php:1087
+msgid "Search %s"
+msgstr ""
+
+#. translators: %s post type plural name.
+#: includes/modules/cpt/class-messia-cpt-config.php:1023
+msgid "%s not found"
+msgstr ""
+
+#. translators: %s post type plural name.
+#: includes/modules/cpt/class-messia-cpt-config.php:1025
+msgid "%s not found in trash"
+msgstr ""
+
+#. translators: %s post type plural name.
+#: includes/modules/cpt/class-messia-cpt-config.php:1027
+msgid "Parent %s"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:1028
+msgid "Object Image"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:1029
+msgid "Set image"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:1030
+msgid "Remove image"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:1031
+msgid "Use as Object Image"
+msgstr ""
+
+#. translators: %s post type singular name.
+#: includes/modules/cpt/class-messia-cpt-config.php:1034
+msgid "Here you can create and edit %s."
+msgstr ""
+
+#. translators: %s taxonomy plural name.
+#: includes/modules/cpt/class-messia-cpt-config.php:1093
+msgid "Refresh %s"
+msgstr ""
+
+#. translators: %s taxonomy plural name.
+#: includes/modules/cpt/class-messia-cpt-config.php:1095
+msgid "Add New %s"
+msgstr ""
+
+#. translators: %s taxonomy plural name.
+#: includes/modules/cpt/class-messia-cpt-config.php:1097
+msgid "Popular %s"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:1098
+msgid "No items found"
+msgstr ""
+
+#. translators: %s taxonomy plural name.
+#: includes/modules/cpt/class-messia-cpt-config.php:1100
+msgid "%s separates by commas"
+msgstr ""
+
+#. translators: %s taxonomy plural name.
+#: includes/modules/cpt/class-messia-cpt-config.php:1102
+msgid "Add or Remove %s"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:1117
+msgid "Visible name (optional)"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:1134
+msgid "Service name (required)"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:1151
+msgid "Slug (required unique)"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:1183
+msgid "Active"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt-config.php:1184
+#: includes/modules/widgets/class-messia-widget-custom-fields.php:241
+msgid "The field is active and its value will be displayed?"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt.php:285
+#: includes/modules/cpt/class-messia-cpt.php:304
+msgid "Order"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt.php:287
+msgid "Image"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt.php:302
+msgid "Filter"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt.php:303
+msgid "Card"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt.php:600
+msgid "You can set the value of the option after creating the term."
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt.php:944
+msgid "Object field constructor"
+msgstr ""
+
+#. translators: %1$s - shortcode.
+#: includes/modules/cpt/class-messia-cpt.php:951
+msgid "Please note - for each new field a shortcode is automatically registered. You can display the value of this field on the object page and object card in the search results using this shortcode. The shortcode has %1$s format where slug is the value in the Slug field of the constructor element."
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt.php:957
+msgid "Some fields support their own arguments:"
+msgstr ""
+
+#. translators: %1$s - field type name.
+#: includes/modules/cpt/class-messia-cpt.php:961
+msgid "Field type %1$s - with_map=\"true|false\", default true - show map right after address, othewise show map in popup on address click."
+msgstr ""
+
+#. translators: %1$s - field type name.
+#: includes/modules/cpt/class-messia-cpt.php:963
+msgid "Field type %1$s - card_mode=\"true|false\", default true - show object as card, otherwise show as link. Applicable only for post type Objects. Other post types always shows as link."
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt.php:966
+msgid "In addition to auto-shortcodes, static shortcodes are available:"
+msgstr ""
+
+#. translators: %1$s - shortcode.
+#: includes/modules/cpt/class-messia-cpt.php:970
+msgid "%1$s - displays the content of the object"
+msgstr ""
+
+#. translators: %1$s - shortcode.
+#: includes/modules/cpt/class-messia-cpt.php:972
+msgid "%1$s - displays the form for adding comments"
+msgstr ""
+
+#. translators: %1$s - shortcode.
+#: includes/modules/cpt/class-messia-cpt.php:974
+msgid "%1$s - displays comments"
+msgstr ""
+
+#. translators: %1$s - shortcode.
+#: includes/modules/cpt/class-messia-cpt.php:976
+msgid "%1$s - displays object's categories"
+msgstr ""
+
+#. translators: %1$s - shortcode.
+#: includes/modules/cpt/class-messia-cpt.php:978
+msgid "%1$s - displays object's properties"
+msgstr ""
+
+#. translators: %1$s - title name, %2$s - title name.
+#: includes/modules/cpt/class-messia-cpt.php:985
+msgid "In the content of constructor fields, including tile dynamic elements are supported, which, when output, are replaced with their values, : %1$s, %2$s"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt.php:997
+msgid "Content areas layout:"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt.php:1013
+msgid "Drag and drop the fields below:"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt.php:1014
+msgid "Drop item here"
+msgstr ""
+
+#. translators: %s - term name.
+#: includes/modules/cpt/class-messia-cpt.php:1630
+msgid "Any in %s"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt.php:1678
+#: includes/modules/cpt/class-messia-cpt.php:1777
+msgid "Reset order"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt.php:1679
+#: includes/modules/cpt/class-messia-cpt.php:1778
+msgid "Before"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt.php:1680
+#: includes/modules/cpt/class-messia-cpt.php:1779
+msgid "After"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt.php:1681
+#: includes/modules/cpt/class-messia-cpt.php:1780
+msgid "Target"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt.php:1683
+#: includes/modules/cpt/class-messia-cpt.php:1782
+msgid "Search for target term..."
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt.php:1754
+msgid "As filter"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-cpt.php:1765
+msgid "On card"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-objects.php:175
+msgid "Messia Stuff"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-objects.php:258
+#: includes/modules/cpt/class-messia-objects.php:294
+msgid "Messia Custom Fields"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-objects.php:260
+msgid "Attach an object to a segment to allow custom fields."
+msgstr ""
+
+#. translators: %1$s - open html tag, %2$s - term html tag, %3$s - close html tag.
+#: includes/modules/cpt/class-messia-objects.php:303
+msgid "%1$sThe constructor for this term is empty. You can create fields set on the segment page %2$s.%3$s"
+msgstr ""
+
+#. translators: %1$s - open html tag, %2$s - term html tag, %3$s - close html tag.
+#: includes/modules/cpt/class-messia-objects.php:314
+msgid "%1$sYou can modify the field set on the segment page %2$s.%3$s"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-objects.php:516
+msgid "Choose an option"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-objects.php:830
+msgid "All segments"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-objects.php:1032
+msgid "Assessment of the site by site criteria"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-objects.php:1046
+msgid "Rating criteria guide is empty."
+msgstr ""
+
+#: includes/modules/cpt/class-messia-objects.php:1051
+msgid "Object does not belong to any segment."
+msgstr ""
+
+#: includes/modules/cpt/class-messia-objects.php:1059
+msgid "Set rating values for existing criteria on a scale of 1 to 5 at any interval. If the object should not be evaluated by any criterion at all, delete the rating value for this criterion. Deleting rating values for all criteria within a segment will result in the evaluation of the object."
+msgstr ""
+
+#: includes/modules/cpt/class-messia-objects.php:1063
+msgid "Evaluation criterion"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-objects.php:1099
+msgid "Estimated value:"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-objects.php:1131
+msgid "Access violation - please reload the page and try again"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-objects.php:1264
+msgid "SEO templates"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-objects.php:1291
+msgid "Set the SEO template for this page. Templates differ by usage elements (title, description, h1 and query result). Content SEO fields support dynamic variables. View Help section in the Messia settings menu for more details."
+msgstr ""
+
+#: includes/modules/cpt/class-messia-objects.php:1294
+msgid "Set the SEO template for this page. Templates differ by usage elements (title, description, h1). This is a regular page, so no listing specific dynamic variables supports. Use only general dynamic variables and/or plain text!"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-objects.php:1300
+msgid "Tag Title:"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-objects.php:1306
+msgid "Tag Description:"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-objects.php:1312
+msgid "Tag H1:"
+msgstr ""
+
+#: includes/modules/cpt/class-messia-objects.php:1320
+msgid "Query result:"
+msgstr ""
+
+#. translators: %s - google geocoder response.
+#: includes/modules/cpt/class-messia-objects.php:2394
+#: includes/modules/cpt/class-messia-objects.php:2430
+msgid "Message from Google geocoder: %s"
+msgstr ""
+
+#: includes/modules/home/skins/class-messia-home-tmpl-default.php:63
+msgid "The main segment is not set when using the \"One segment\" main page template."
+msgstr ""
+
+#: includes/modules/home/skins/class-messia-home-tmpl-default.php:64
+msgid "Default Segment is not set"
+msgstr ""
+
+#: includes/modules/hooks/class-messia-hooks.php:774
+msgid "Selected 1 item"
+msgstr ""
+
+#: includes/modules/hooks/class-messia-hooks.php:775
+msgid "Selected %n items"
+msgstr ""
+
+#: includes/modules/hooks/class-messia-hooks.php:1039
+msgid "Additional JS"
+msgstr ""
+
+#: includes/modules/hooks/class-messia-hooks.php:1060
+msgid "Code typed here will be displayed inside html tag <head>, being wrapped into <script> tag."
+msgstr ""
+
+#: includes/modules/hooks/class-messia-hooks.php:1127
+msgid "Error loading icons from remote host."
+msgstr ""
+
+#: includes/modules/hooks/class-messia-hooks.php:1153
+msgid "Icons loaded"
+msgstr ""
+
+#. translators: %s - URL.
+#: includes/modules/listing/skins/class-messia-listing-tmpl-base.php:302
+msgid "Invalid listing URL, redirecting to correct one %s."
+msgstr ""
+
+#: includes/modules/listing/skins/class-messia-listing-tmpl-base.php:353
+#: includes/modules/listing/skins/class-messia-listing-tmpl-default.php:1358
+msgid "Permission error - please reload the page & try again"
+msgstr ""
+
+#: includes/modules/listing/skins/class-messia-listing-tmpl-default.php:113
+msgid "Filters"
+msgstr ""
+
+#: includes/modules/listing/skins/class-messia-listing-tmpl-default.php:445
+msgid "Rating [1-5]"
+msgstr ""
+
+#: includes/modules/listing/skins/class-messia-listing-tmpl-default.php:449
+msgid "Rating [5-1]"
+msgstr ""
+
+#: includes/modules/listing/skins/class-messia-listing-tmpl-default.php:453
+msgid "Name [A-Z]"
+msgstr ""
+
+#: includes/modules/listing/skins/class-messia-listing-tmpl-default.php:457
+msgid "Name [Z-A]"
+msgstr ""
+
+#: includes/modules/listing/skins/class-messia-listing-tmpl-default.php:494
+msgid "Sort by:"
+msgstr ""
+
+#: includes/modules/listing/skins/class-messia-listing-tmpl-default.php:517
+msgid "Show"
+msgstr ""
+
+#: includes/modules/listing/skins/class-messia-listing-tmpl-default.php:538
+msgid "Reset all filters"
+msgstr ""
+
+#: includes/modules/listing/skins/class-messia-listing-tmpl-default.php:877
+msgid "Others"
+msgstr ""
+
+#: includes/modules/listing/skins/class-messia-listing-tmpl-default.php:1109
+msgid "Any"
+msgstr ""
+
+#: includes/modules/listing/skins/class-messia-listing-tmpl-default.php:1195
+msgid "Mode:"
+msgstr ""
+
+#: includes/modules/listing/skins/class-messia-listing-tmpl-default.php:1205
+msgid "Grid"
+msgstr ""
+
+#: includes/modules/listing/skins/class-messia-listing-tmpl-default.php:1218
+msgid "List"
+msgstr ""
+
+#: includes/modules/listing/skins/class-messia-listing-tmpl-default.php:1235
+msgid "Map"
+msgstr ""
+
+#: includes/modules/listing/skins/class-messia-listing-tmpl-default.php:1258
+msgid "object"
+msgid_plural "objects"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/modules/listing/skins/class-messia-listing-tmpl-default.php:1310
+msgid "Load more"
+msgstr ""
+
+#: includes/modules/rest/oauth/class-messia-oauth-methods.php:77
+msgid "User with this email does not exist."
+msgstr ""
+
+#: includes/modules/rest/oauth/class-messia-oauth-methods.php:95
+msgid "<strong>ERROR</strong>: Enter a username or email address."
+msgstr ""
+
+#: includes/modules/rest/oauth/class-messia-oauth-methods.php:99
+#: includes/modules/rest/oauth/class-messia-oauth-methods.php:110
+msgid "<strong>ERROR</strong>: There is no account associated with this username or email address."
+msgstr ""
+
+#: includes/modules/rest/oauth/class-messia-oauth-methods.php:127
+msgid "Someone has requested a password reset for the following account:"
+msgstr ""
+
+#. translators: %s - site name.
+#: includes/modules/rest/oauth/class-messia-oauth-methods.php:129
+msgid "Site Name: %s"
+msgstr ""
+
+#. translators: %s - user name.
+#: includes/modules/rest/oauth/class-messia-oauth-methods.php:131
+msgid "Username: %s"
+msgstr ""
+
+#: includes/modules/rest/oauth/class-messia-oauth-methods.php:132
+msgid "If this was a mistake, just ignore this email and nothing will happen."
+msgstr ""
+
+#: includes/modules/rest/oauth/class-messia-oauth-methods.php:133
+msgid "To reset your password, follow this link:"
+msgstr ""
+
+#. translators: %s - site name.
+#: includes/modules/rest/oauth/class-messia-oauth-methods.php:137
+msgid "[%s] Password Reset"
+msgstr ""
+
+#. translators: %s - url.
+#: includes/modules/rest/oauth/class-messia-oauth-methods.php:148
+msgid "<strong>ERROR</strong>: The email could not be sent. Your site may not be correctly configured to send emails. <a href=\"%s\">Get support for resetting your password</a>."
+msgstr ""
+
+#: includes/modules/rest/oauth/class-messia-oauth.php:84
+msgid "Sorry, you are already logged in."
+msgstr ""
+
+#: includes/modules/rest/oauth/class-messia-oauth.php:87
+msgid "Sorry, the verification data is incorrect"
+msgstr ""
+
+#: includes/modules/rest/oauth/class-messia-oauth.php:101
+msgid "Invalid data type."
+msgstr ""
+
+#: includes/modules/rest/oauth/social/class-messia-oauth-fb.php:139
+#: includes/modules/rest/oauth/social/class-messia-oauth-google.php:137
+#: includes/modules/rest/oauth/social/class-messia-oauth-vk.php:138
+#: includes/modules/rest/oauth/social/class-messia-oauth-ya.php:136
+msgid "You are already logged in."
+msgstr ""
+
+#: includes/modules/rest/oauth/social/class-messia-oauth-vk.php:152
+msgid "An error has occurred"
+msgstr ""
+
+#: includes/modules/rest/oauth/social/class-messia-oauth-vk.php:163
+msgid "Missing access token"
+msgstr ""
+
+#: includes/modules/theme/class-messia-access.php:157
+msgid "Support team members access status"
+msgstr ""
+
+#: includes/modules/theme/class-messia-access.php:162
+msgid "Access will expire in:"
+msgstr ""
+
+#. translators: %1$s - days range string, %2$s - hours range string.
+#: includes/modules/theme/class-messia-access.php:185
+msgid "Days range %1$s, Hours range %2$s, inclusive."
+msgstr ""
+
+#: includes/modules/theme/class-messia-access.php:195
+msgid "Revoke"
+msgstr ""
+
+#: includes/modules/theme/class-messia-access.php:221
+#: includes/modules/theme/class-messia-update.php:260
+msgid "Incoming Data are corrupted"
+msgstr ""
+
+#. translators: %1$s - operation name.
+#: includes/modules/theme/class-messia-access.php:237
+msgid "Invalid operation type: %1$s"
+msgstr ""
+
+#. translators: %1$s - exception message.
+#: includes/modules/theme/class-messia-access.php:260
+msgid "Error: %1$s"
+msgstr ""
+
+#: includes/modules/theme/class-messia-access.php:261
+#: includes/modules/theme/class-messia-update.php:323
+msgid "Retry"
+msgstr ""
+
+#: includes/modules/theme/class-messia-access.php:272
+#: includes/modules/theme/class-messia-update.php:334
+msgid "Repeat"
+msgstr ""
+
+#. translators: %1$s - WP error message.
+#: includes/modules/theme/class-messia-access.php:306
+msgid "Fail to create Messia user -> %1$s."
+msgstr ""
+
+#. translators: %1$d - user ID, %2$s - full date.
+#: includes/modules/theme/class-messia-access.php:331
+msgid "Messia user created. User ID - %1$d. User will be deleted automatically at: %2$s."
+msgstr ""
+
+#. translators: %1$d - user ID, %2$s - full date.
+#: includes/modules/theme/class-messia-access.php:334
+msgid "Validity date for Messia user ID %1$d changed. User will be deleted automatically at: %2$s."
+msgstr ""
+
+#: includes/modules/theme/class-messia-access.php:357
+msgid "Messia user already deleted and has no access therefore."
+msgstr ""
+
+#: includes/modules/theme/class-messia-access.php:376
+msgid "Messia user successfully deleted and has no access anymore."
+msgstr ""
+
+#. translators: %1$s - email, %2$s -url.
+#: includes/modules/theme/class-messia-access.php:382
+msgid "Messia user %1$s was deleted from site %2$s."
+msgstr ""
+
+#: includes/modules/theme/class-messia-access.php:395
+msgid "Fail to delete Messia user. You can delete it manualy from site users section."
+msgstr ""
+
+#: includes/modules/theme/class-messia-access.php:484
+msgid "Grant access"
+msgstr ""
+
+#: includes/modules/theme/class-messia-access.php:486
+msgid "Change expiration"
+msgstr ""
+
+#: includes/modules/theme/class-messia-access.php:502
+msgid "No access"
+msgstr ""
+
+#. translators: %1$s - date.
+#: includes/modules/theme/class-messia-access.php:505
+msgid "Granted until %1$s"
+msgstr ""
+
+#: includes/modules/theme/class-messia-access.php:522
+msgid "Incoming Data are corrupted - duration does not provided."
+msgstr ""
+
+#: includes/modules/theme/class-messia-access.php:526
+msgid "Incoming Data are corrupted - units does not provided"
+msgstr ""
+
+#. translators: %1$s - units string.
+#: includes/modules/theme/class-messia-access.php:535
+msgid "Illegal access units provided - %1$s"
+msgstr ""
+
+#: includes/modules/theme/class-messia-access.php:548
+msgid "Min level access range violation"
+msgstr ""
+
+#: includes/modules/theme/class-messia-access.php:552
+msgid "Max level access range violation"
+msgstr ""
+
+#: includes/modules/theme/class-messia-access.php:569
+msgid "Days"
+msgstr ""
+
+#: includes/modules/theme/class-messia-access.php:575
+msgid "Hours"
+msgstr ""
+
+#. translators: %1$s - datetime string.
+#: includes/modules/theme/class-messia-access.php:604
+msgid "This is temporary account. It will be deleted automatically at %1$s"
+msgstr ""
+
+#: includes/modules/theme/class-messia-access.php:619
+msgid "Messia support account was deleted from site, due to time came."
+msgstr ""
+
+#. translators: %1$s - template type, %2$s - method.
+#: includes/modules/theme/class-messia-template-loader.php:86
+msgid "Unrecognized template type <strong>%1$s</strong> passes to <strong>%2$s</strong>."
+msgstr ""
+
+#: includes/modules/theme/class-messia-template-loader.php:102
+msgid "Child theme"
+msgstr ""
+
+#. translators: %s - template name.
+#: includes/modules/theme/class-messia-template-loader.php:126
+msgid "overrides %s"
+msgstr ""
+
+#. translators: %s - template type.
+#: includes/modules/theme/class-messia-template-loader.php:141
+msgid "Fail to load default template class of type <strong>%s</strong>."
+msgstr ""
+
+#. translators: %s - PHP class name.
+#: includes/modules/theme/class-messia-template-loader.php:184
+msgid "Template class %s for a page not found. Fallback to default one. Did you switched theme to parent?"
+msgstr ""
+
+#: includes/modules/theme/class-messia-template-loader.php:192
+msgid "Fail to load template class:"
+msgstr ""
+
+#: includes/modules/theme/class-messia-update.php:118
+msgid "A valid license is required to receive automatic updates and access to support."
+msgstr ""
+
+#: includes/modules/theme/class-messia-update.php:119
+msgid "Buy licence"
+msgstr ""
+
+#: includes/modules/theme/class-messia-update.php:120
+msgid "Activate licence"
+msgstr ""
+
+#: includes/modules/theme/class-messia-update.php:209
+msgid "Automatic Updates Setting (licence status)"
+msgstr ""
+
+#: includes/modules/theme/class-messia-update.php:218
+msgid "licence Key *"
+msgstr ""
+
+#: includes/modules/theme/class-messia-update.php:276
+msgid "Invalid licence action."
+msgstr ""
+
+#: includes/modules/theme/class-messia-update.php:300
+msgid "Would you like to receive automatic updates and unlock premium support? Please activate your copy of Messia Theme."
+msgstr ""
+
+#. translators: %1$s, %2$s - html tags, %1$s - exception message.
+#: includes/modules/theme/class-messia-update.php:321
+msgid "%1$sLicence error%2$s: %3$s"
+msgstr ""
+
+#: includes/modules/theme/class-messia-update.php:420
+msgid "Response body corrupted"
+msgstr ""
+
+#. translators: %1$s - licence key status, %2$s - licence status.
+#: includes/modules/theme/class-messia-update.php:455
+msgid "%1$s License status - %2$s."
+msgstr ""
+
+#: includes/modules/theme/class-messia-update.php:465
+msgid "Licence info:"
+msgstr ""
+
+#: includes/modules/theme/class-messia-update.php:466
+msgid "Licence error:"
+msgstr ""
+
+#. translators: %s - Heading text.
+#: includes/modules/theme/class-messia-update.php:473
+#: includes/modules/theme/class-messia-update.php:478
+msgid "%s key successfully activated for this domain."
+msgstr ""
+
+#. translators: %s - Heading text.
+#: includes/modules/theme/class-messia-update.php:483
+msgid "%s  key successfully unassigned from domain."
+msgstr ""
+
+#. translators: %s - Heading text.
+#: includes/modules/theme/class-messia-update.php:488
+msgid "%s key is valid, but not assigned to any domain."
+msgstr ""
+
+#. translators: %s - Heading text.
+#: includes/modules/theme/class-messia-update.php:493
+msgid "%s key is active and valid for this domain."
+msgstr ""
+
+#. translators: %s - Heading text.
+#: includes/modules/theme/class-messia-update.php:510
+msgid "%s key successfully deleted."
+msgstr ""
+
+#. translators: %s - Heading text.
+#: includes/modules/theme/class-messia-update.php:516
+msgid "%s invalid provided data."
+msgstr ""
+
+#. translators: %s - Heading text.
+#: includes/modules/theme/class-messia-update.php:521
+msgid "%s invalid licence key."
+msgstr ""
+
+#. translators: %s - Heading text.
+#: includes/modules/theme/class-messia-update.php:526
+msgid "%s order does not exists anymore."
+msgstr ""
+
+#. translators: %s - Heading text.
+#: includes/modules/theme/class-messia-update.php:531
+msgid "%s order status not allowed."
+msgstr ""
+
+#. translators: %s - Heading text.
+#: includes/modules/theme/class-messia-update.php:536
+msgid "%s invalid key or licence not active for domain."
+msgstr ""
+
+#. translators: %s - Heading text.
+#: includes/modules/theme/class-messia-update.php:541
+msgid "%s invalid licence data."
+msgstr ""
+
+#. translators: %s - Heading text.
+#: includes/modules/theme/class-messia-update.php:546
+msgid "%s you had reached the maximum number of domains for this theme licence key."
+msgstr ""
+
+#. translators: %s - Heading text.
+#: includes/modules/theme/class-messia-update.php:551
+msgid "%s key not active for current domain."
+msgstr ""
+
+#. translators: %s - Heading text.
+#: includes/modules/theme/class-messia-update.php:556
+msgid "%s key does not match this product."
+msgstr ""
+
+#. translators: %s - Heading text.
+#: includes/modules/theme/class-messia-update.php:565
+msgid "%s invalid product unique ID."
+msgstr ""
+
+#: includes/modules/theme/class-messia-update.php:581
+msgid "Deactivate"
+msgstr ""
+
+#: includes/modules/theme/class-messia-update.php:585
+msgid "Activate"
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget-category-crosslinks.php:84
+msgid "Category crosslinks"
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget-category-crosslinks.php:87
+msgid "Shows category links cloud."
+msgstr ""
+
+#. translators: %s - term name.
+#: includes/modules/widgets/class-messia-widget-category-crosslinks.php:246
+msgid "No objects in segment %s. Nothing to link to."
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget-category-crosslinks.php:281
+msgid "Collapse"
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget-category-crosslinks.php:281
+msgid "Show more..."
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget-category-crosslinks.php:350
+#: includes/modules/widgets/class-messia-widget-custom-fields.php:222
+#: includes/modules/widgets/class-messia-widget-tabs-panel.php:232
+msgid "No segments found."
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget-category-crosslinks.php:386
+msgid "Setup options:"
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget-category-crosslinks.php:390
+msgid "Show count:"
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget-category-crosslinks.php:401
+msgid "Visible:"
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget-custom-fields.php:80
+msgid "Object custom fields"
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget-custom-fields.php:83
+msgid "Displays the value of a specific constructor field for an object."
+msgstr ""
+
+#. translators: %s - widget or block name.
+#: includes/modules/widgets/class-messia-widget-custom-fields.php:106
+#: includes/modules/widgets/class-messia-widget-object-categories.php:108
+#: includes/modules/widgets/class-messia-widget-object-properties.php:116
+msgid "%s can be used only at valid object page."
+msgstr ""
+
+#. translators: %s - widget or block name.
+#: includes/modules/widgets/class-messia-widget-custom-fields.php:120
+msgid "%s can not show anything if object does not belong to at least one segment termin."
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget-custom-fields.php:234
+msgid "Select one of the fields you created in the constructor."
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget-custom-fields.php:248
+msgid "The constructor for this term is empty"
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget-custom-fields.php:314
+#: includes/modules/widgets/class-messia-widget-listing-data.php:130
+#: includes/modules/widgets/class-messia-widget-listing-filters.php:159
+msgid "Title:"
+msgstr ""
+
+#. translators: %s - taxonomy term name.
+#: includes/modules/widgets/class-messia-widget-custom-fields.php:320
+#: includes/modules/widgets/class-messia-widget-tabs-panel.php:279
+msgid "Segment %s"
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget-listing-data.php:61
+msgid "Listing results"
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget-listing-data.php:64
+msgid "Shows listing results."
+msgstr ""
+
+#. translators: %s - widget or block name.
+#: includes/modules/widgets/class-messia-widget-listing-data.php:96
+#: includes/modules/widgets/class-messia-widget-listing-filters.php:96
+msgid "%s can be used only at valid listing page."
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget-listing-data.php:140
+msgid "Split cards to columns in grid view mode by:"
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget-listing-data.php:151
+msgid "Two"
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget-listing-data.php:160
+msgid "Three"
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget-listing-filters.php:61
+msgid "Listing filters"
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget-listing-filters.php:64
+msgid "Creates and displays elements for filtering & searching objects."
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget-listing-filters.php:147
+msgid "Reset"
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget-listing-filters.php:149
+msgid "Custom fields"
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget-listing-filters.php:196
+msgid "Order filter groups as needed."
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget-listing-filters.php:199
+msgid "Order of filter groups:"
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget-object-categories.php:71
+msgid "Object categories"
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget-object-categories.php:74
+msgid "List of categories that the object belongs to."
+msgstr ""
+
+#. translators: %s - widget or block name.
+#: includes/modules/widgets/class-messia-widget-object-categories.php:125
+msgid "%s can not show anything if object does not belong to at least one segment and one category."
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget-object-categories.php:175
+#: includes/modules/widgets/class-messia-widget-object-properties.php:191
+msgid "Widget works only at object page."
+msgstr ""
+
+#. translators: %s - taxonomy term name.
+#: includes/modules/widgets/class-messia-widget-object-categories.php:258
+#: includes/modules/widgets/class-messia-widget-object-categories.php:346
+msgid "Objects within category %s"
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget-object-properties.php:79
+msgid "Object properties"
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget-object-properties.php:82
+msgid "List of properties that the object belongs to."
+msgstr ""
+
+#. translators: %s - widget or block name.
+#: includes/modules/widgets/class-messia-widget-object-properties.php:131
+msgid "%s can't show anything if the object does not belong to at least one segment and one property."
+msgstr ""
+
+#. translators: %s - taxonomy term name.
+#: includes/modules/widgets/class-messia-widget-object-properties.php:157
+msgid "Objects within property %s"
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget-post-content.php:61
+msgid "WP Post content "
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget-post-content.php:64
+msgid "Output the content of any current WP object (page/post)"
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget-post-content.php:96
+msgid "Widget do not support any settings."
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget-sitewide-search.php:67
+#: includes/modules/widgets/class-messia-widget-sitewide-search.php:170
+msgid "Sitewide search"
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget-sitewide-search.php:70
+#: includes/modules/widgets/class-messia-widget-sitewide-search.php:135
+msgid "Provides sitewide search."
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget-tabs-panel.php:84
+msgid "Tabs"
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget-tabs-panel.php:87
+msgid "Creates and displays tabs with content."
+msgstr ""
+
+#. translators: %s - widget or block name.
+#: includes/modules/widgets/class-messia-widget-tabs-panel.php:125
+msgid "%s can be used only on post that belongs to segement term."
+msgstr ""
+
+#. translators: %s - taxonomy term slug.
+#: includes/modules/widgets/class-messia-widget-tabs-panel.php:141
+msgid "No custom fields found for segement term with slug %s."
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget-tabs-panel.php:195
+msgid "No one tab is active - nothing to show."
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget-tabs-panel.php:236
+msgid "The tab is active and will be displayed."
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget-tabs-panel.php:237
+msgid "Tab name"
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget-tabs-panel.php:238
+msgid "Click to create a new tab."
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget-tabs-panel.php:239
+msgid "Click to enable bookmark sorting mode."
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget-tabs-panel.php:241
+msgid "Create and customize tabs and display rules."
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget.php:121
+msgid "Header top (column 1)"
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget.php:123
+#: includes/modules/widgets/class-messia-widget.php:135
+msgid "Place here the widgets that you want to be on the very top of your pages."
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget.php:133
+msgid "Header top (column 2)"
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget.php:145
+msgid "Header right"
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget.php:147
+msgid "Place here the widgets that you want to be to the right of the main menu."
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget.php:157
+msgid "Footer top (column 1)"
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget.php:159
+#: includes/modules/widgets/class-messia-widget.php:171
+#: includes/modules/widgets/class-messia-widget.php:183
+#: includes/modules/widgets/class-messia-widget.php:195
+msgid "Place here the widgets that you want to be at the bootom of your pages after content."
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget.php:169
+msgid "Footer top (column 2)"
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget.php:181
+msgid "Footer top (column 3)"
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget.php:193
+msgid "Footer top (column 4)"
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget.php:205
+msgid "Footer bottom (column 1)"
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget.php:207
+msgid "Place here the widgets that you want to be at the very bootom of page after footer top area."
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget.php:217
+msgid "Footer bottom (column 2)"
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget.php:219
+msgid "Place here the widgets that you need at the very bootom of page after footer top area."
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget.php:229
+msgid "Sidebar of Object page"
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget.php:231
+msgid "Place here the widgets that you want to be at the sidebar on your object page."
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget.php:241
+msgid "Sidebar of Search page"
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget.php:243
+msgid "Place here the widgets that you want to be at the sidebar of the object list page."
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget.php:253
+msgid "Sidebar of Regular page"
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget.php:255
+msgid "Place here the widgets that you want to be at any regular WP page."
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget.php:265
+msgid "Sidebar of Archive post"
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget.php:267
+msgid "Place here the widgets that you want to be at WP archive page."
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget.php:277
+msgid "Search page content"
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget.php:279
+msgid "Place here the widgets that you want to be at the main part of object page, after the header."
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget.php:289
+msgid "Search page bootm"
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget.php:291
+#: includes/modules/widgets/class-messia-widget.php:339
+msgid "Place here the widgets that you want to be at the bottom of object page, after content and sidebar."
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget.php:301
+msgid "Object page Hero"
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget.php:303
+msgid "Place here the widgets that you want to be at the top of object page, after the header."
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget.php:313
+msgid "Object page top"
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget.php:315
+msgid "Place here the widgets that you want to be at the top of object page, after the hero area."
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget.php:325
+msgid "Object page content"
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget.php:327
+msgid "Place here the widgets that you want to be at the main part of object page, after top zone."
+msgstr ""
+
+#: includes/modules/widgets/class-messia-widget.php:337
+msgid "Object page bottom"
+msgstr ""
+
+#. translators: %1$s - custom field name.
+#: includes/traits/trait-messia-custom-fields.php:95
+msgid "Custom field \"%1$s\" of type \"%2$s\" is empty."
+msgstr ""
+
+#: includes/traits/trait-messia-custom-fields.php:115
+msgid "Custom fileds:"
+msgstr ""
+
+#: searchform.php:19
+msgid "Search …"
+msgstr ""
+
+#: wp-templates/404-no-segment.php:13
+#: wp-templates/404.php:13
+#: wp-templates/permalinks-error.php:14
+msgid "404"
+msgstr ""
+
+#: wp-templates/404-no-segment.php:14
+#: wp-templates/404.php:14
+#: wp-templates/permalinks-error.php:15
+msgid "Oops! This page is not found."
+msgstr ""
+
+#: wp-templates/404-no-segment.php:15
+msgid "This object does not belongs to any segment and therefore cannot be shown."
+msgstr ""
+
+#: wp-templates/404.php:15
+msgid "Sorry, the page you were looking for does not exist."
+msgstr ""
+
+#. translators: %s: post title.
+#: wp-templates/comments.php:30
+msgctxt "comments title"
+msgid "One reply on &ldquo;%s&rdquo;"
+msgstr ""
+
+#. translators: 1: number of comments, 2: post title.
+#: wp-templates/comments.php:34
+msgctxt "comments title"
+msgid "%1$s reply on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s replies on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: wp-templates/comments.php:57
+msgid "Reply"
+msgstr ""
+
+#: wp-templates/comments.php:58
+msgid "Log in, to reply."
+msgstr ""
+
+#: wp-templates/comments.php:80
+msgid "Previous comments"
+msgstr ""
+
+#: wp-templates/comments.php:81
+msgid "Next comments"
+msgstr ""
+
+#. translators: %s - html tag a.
+#: wp-templates/demo-manage-template.php:27
+msgid "A valid license is required to work with demo packages. You can purchase a license in %s."
+msgstr ""
+
+#. translators: %s - html tag a.
+#: wp-templates/demo-manage-template.php:52
+msgid "You can download demo packages from %s page."
+msgstr ""
+
+#. Template Name of the theme
+msgid "Blog page"
+msgstr ""
+
+#. translators: %1$s, %2$s - current site url.
+#: wp-templates/permalinks-error.php:17
+msgid "Messia theme does not support a simple permalink system like %1$s/?p=123. Turn on symbolic permalinks, for example, \"Post Title\" (%2$s/sample-post/) to use the theme."
+msgstr ""
+
+#: wp-templates/template-parts/oauth-form.php:29
+#: wp-templates/template-parts/oauth-form.php:45
+#: wp-templates/template-parts/oauth-form.php:51
+#: wp-templates/template-parts/oauth-form.php:77
+msgid "Login"
+msgstr ""
+
+#: wp-templates/template-parts/oauth-form.php:31
+msgid "No account?"
+msgstr ""
+
+#: wp-templates/template-parts/oauth-form.php:32
+#: wp-templates/template-parts/oauth-form.php:48
+#: wp-templates/template-parts/oauth-form.php:71
+msgid "Register"
+msgstr ""
+
+#: wp-templates/template-parts/oauth-form.php:39
+#: wp-templates/template-parts/oauth-form.php:60
+#: wp-templates/template-parts/oauth-form.php:84
+msgid "E-mail*"
+msgstr ""
+
+#: wp-templates/template-parts/oauth-form.php:40
+#: wp-templates/template-parts/oauth-form.php:61
+msgid "Password*"
+msgstr ""
+
+#: wp-templates/template-parts/oauth-form.php:42
+msgid "Forgot password?"
+msgstr ""
+
+#: wp-templates/template-parts/oauth-form.php:43
+msgid "Recover"
+msgstr ""
+
+#: wp-templates/template-parts/oauth-form.php:50
+#: wp-templates/template-parts/oauth-form.php:76
+msgid "Already have an account?"
+msgstr ""
+
+#. translators: %%1$s - page url, %2$s - page title
+#: wp-templates/template-parts/oauth-form.php:68
+msgid "I have read and understood the user %1$s agreement %2$s"
+msgstr ""
+
+#: wp-templates/template-parts/oauth-form.php:74
+msgid "Password<br>recovery"
+msgstr ""
+
+#: wp-templates/template-parts/oauth-form.php:86
+msgid "RECOVER"
+msgstr ""
+
+#: wp-templates/template-parts/oauth-form.php:89
+msgid "Login with:"
+msgstr ""

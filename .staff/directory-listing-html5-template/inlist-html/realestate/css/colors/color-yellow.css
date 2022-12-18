@@ -1,0 +1,24 @@
+.section_header .section_title:after,
+.btn-default:hover,
+.btn-red,
+.latest_listing_area .btn-prev.btn-large:hover,
+.latest_listing_area .btn-next.btn-large:hover {
+	background-color: #EC8744;
+}
+
+.card_food .card_body .rating_review .rating .fa-star {
+	color: #EC8744;
+}
+
+.btn-default:hover,
+.btn-red {
+	border-color: #EC8744;
+}
+
+
+.btn_links > .btn-default {
+	border-radius: 45px;
+}
+.btn_links > .btn-default.btn-red {
+	padding: 0 70px;
+}

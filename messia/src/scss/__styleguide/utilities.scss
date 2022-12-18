@@ -1,0 +1,478 @@
+// stylelint-disable scss/no-global-function-names
+
+// Utilities
+
+$enable-important-utilities: false;
+$utilities: () !default;
+$utilities: map-merge(
+	(
+		"overflow": (
+			property: overflow,
+			values: auto hidden,
+		),
+		"td": (
+			property: text-decoration,
+			class: td,
+			values: none underline,
+		),
+		"tt": (
+			property: text-transform,
+			class: tt,
+			values: none uppercase,
+		),
+		"display": (
+			responsive: true,
+			print: true,
+			property: display,
+			class: d,
+			values: inline-block block grid flex inline-flex none,
+		),
+		"position": (
+			property: position,
+			responsive: true,
+			values: static relative absolute fixed sticky,
+		),
+		"top": (
+			property: top,
+			values: $position-values,
+		),
+		"bottom": (
+			property: bottom,
+			values: $position-values,
+		),
+		"start": (
+			property: left,
+			class: start,
+			values: $position-values,
+		),
+		"end": (
+			property: right,
+			class: end,
+			values: $position-values,
+		),
+		"translate-middle": (
+			property: transform,
+			class: translate-middle,
+			values: (
+				null: translate(-50%, -50%),
+				x: translateX(-50%),
+				y: translateY(-50%),
+			),
+		),
+		"height": (
+			property: height,
+			class: h,
+			values: (
+				0: 0,
+				25: 25%,
+				50: 50%,
+				75: 75%,
+				100: 100%,
+				auto: auto,
+			),
+		),
+		"flex": (
+			responsive: true,
+			property: flex,
+			values: (
+				fill: 1 1 auto,
+			),
+		),
+		"flex-direction": (
+			responsive: true,
+			property: flex-direction,
+			class: flex,
+			values: row column row-reverse column-reverse,
+		),
+		"flex-grow": (
+			responsive: true,
+			property: flex-grow,
+			class: flex,
+			values: (
+				grow-0: 0,
+				grow-1: 1,
+			),
+		),
+		"flex-shrink": (
+			responsive: true,
+			property: flex-shrink,
+			class: flex,
+			values: (
+				shrink-0: 0,
+				shrink-1: 1,
+			),
+		),
+		"flex-wrap": (
+			responsive: true,
+			property: flex-wrap,
+			class: flex,
+			values: wrap nowrap wrap-reverse,
+		),
+		"gap": (
+			responsive: true,
+			property: gap,
+			class: gap,
+			values: $spacers,
+		),
+		"justify-content": (
+			responsive: true,
+			property: justify-content,
+			values: (
+				start: flex-start,
+				end: flex-end,
+				center: center,
+				between: space-between,
+				around: space-around,
+				evenly: space-evenly,
+			),
+		),
+		"align-items": (
+			responsive: true,
+			property: align-items,
+			values: (
+				start: flex-start,
+				end: flex-end,
+				center: center,
+				baseline: baseline,
+				stretch: stretch,
+			),
+		),
+		"align-content": (
+			responsive: true,
+			property: align-content,
+			values: (
+				start: flex-start,
+				end: flex-end,
+				center: center,
+				between: space-between,
+				around: space-around,
+				stretch: stretch,
+			),
+		),
+		"align-self": (
+			responsive: true,
+			property: align-self,
+			values: (
+				auto: auto,
+				start: flex-start,
+				end: flex-end,
+				center: center,
+				baseline: baseline,
+				stretch: stretch,
+			),
+		),
+		"order": (
+			responsive: true,
+			property: order,
+			values: (
+				first: -1,
+				0: 0,
+				1: 1,
+				2: 2,
+				3: 3,
+				4: 4,
+				5: 5,
+				last: 6,
+			),
+		),
+		"margin": (
+			responsive: true,
+			property: margin,
+			class: m,
+			values:
+			map-merge(
+				$spacers,
+				(
+					auto: auto,
+				)
+			),
+		),
+		"margin-x": (
+			responsive: true,
+			property: margin-right margin-left,
+			class: mx,
+			values:
+			map-merge(
+				$spacers,
+				(
+					auto: auto,
+				)
+			),
+		),
+		"margin-y": (
+			responsive: true,
+			property: margin-top margin-bottom,
+			class: my,
+			values:
+			map-merge(
+				$spacers,
+				(
+					auto: auto,
+				)
+			),
+		),
+		"margin-top": (
+			responsive: true,
+			property: margin-top,
+			class: mt,
+			values:
+			map-merge(
+				$spacers,
+				(
+					auto: auto,
+				)
+			),
+		),
+		"margin-end": (
+			responsive: true,
+			property: margin-right,
+			class: me,
+			values:
+			map-merge(
+				$spacers,
+				(
+					auto: auto,
+				)
+			),
+		),
+		"margin-bottom": (
+			responsive: true,
+			property: margin-bottom,
+			class: mb,
+			values:
+			map-merge(
+				$spacers,
+				(
+					auto: auto,
+				)
+			),
+		),
+		"margin-start": (
+			responsive: true,
+			property: margin-left,
+			class: ms,
+			values:
+			map-merge(
+				$spacers,
+				(
+					auto: auto,
+				)
+			),
+		),
+		"padding": (
+			responsive: true,
+			property: padding,
+			class: p,
+			values: $spacers,
+		),
+		"padding-x": (
+			responsive: true,
+			property: padding-right padding-left,
+			class: px,
+			values: $spacers,
+		),
+		"padding-y": (
+			responsive: true,
+			property: padding-top padding-bottom,
+			class: py,
+			values: $spacers,
+		),
+		"padding-top": (
+			responsive: true,
+			property: padding-top,
+			class: pt,
+			values: $spacers,
+		),
+		"padding-end": (
+			responsive: true,
+			property: padding-right,
+			class: pe,
+			values: $spacers,
+		),
+		"padding-bottom": (
+			responsive: true,
+			property: padding-bottom,
+			class: pb,
+			values: $spacers,
+		),
+		"padding-start": (
+			responsive: true,
+			property: padding-left,
+			class: ps,
+			values: $spacers,
+		),
+		"font-size": (
+			rfs: true,
+			property: font-size,
+			class: fs,
+			values: $font-sizes,
+		),
+		"font-style": (
+			property: font-style,
+			class: fst,
+			values: italic normal,
+		),
+		"font-weight": (
+			property: font-weight,
+			class: fw,
+			values: (
+				light: $font-weight-light,
+				lighter: $font-weight-lighter,
+				normal: $font-weight-normal,
+				semibold: 600,
+				bold: $font-weight-bold,
+				bolder: $font-weight-bolder,
+			),
+		),
+		"line-height": (
+			property: line-height,
+			class: lh,
+			values: (
+				1: 1,
+				sm: $line-height-sm,
+				base: $line-height-base,
+				lg: $line-height-lg,
+			),
+		),
+		"text-align": (
+			responsive: true,
+			property: text-align,
+			class: text,
+			values: (
+				start: left,
+				end: right,
+				center: center,
+			),
+		),
+		"text-decoration": (
+			property: text-decoration,
+			values: none underline line-through,
+		),
+		"text-transform": (
+			property: text-transform,
+			class: text,
+			values: lowercase uppercase capitalize,
+		),
+		"white-space": (
+			property: white-space,
+			class: text,
+			values: (
+				wrap: normal,
+				nowrap: nowrap,
+			),
+		),
+		"pointer-events": (
+			property: pointer-events,
+			class: pe,
+			values: none auto,
+		),
+		"rounded": (
+			property: border-radius,
+			class: rounded,
+			values: (
+				null: $border-radius,
+				0: 0,
+				1: $border-radius-sm,
+				2: $border-radius,
+				3: $border-radius-lg,
+				circle: 50%,
+				pill: $border-radius-pill,
+			),
+		),
+		"rounded-top": (
+			property: border-top-left-radius border-top-right-radius,
+			class: rounded-top,
+			values: (
+				null: $border-radius,
+			),
+		),
+		"rounded-end": (
+			property: border-top-right-radius border-bottom-right-radius,
+			class: rounded-end,
+			values: (
+				null: $border-radius,
+			),
+		),
+		"rounded-bottom": (
+			property: border-bottom-right-radius border-bottom-left-radius,
+			class: rounded-bottom,
+			values: (
+				null: $border-radius,
+			),
+		),
+		"rounded-start": (
+			property: border-bottom-left-radius border-top-left-radius,
+			class: rounded-start,
+			values: (
+				null: $border-radius,
+			),
+		),
+		"visibility": (
+			property: visibility,
+			class: null,
+			values: (
+				visible: visible,
+				invisible: hidden,
+			),
+		),
+		"list": (
+			property: list-style,
+			class: list,
+			values: (
+				none: none,
+			),
+		),
+		"border": (
+			property: border,
+			values: (
+				null: $border-width solid $border-color,
+				0: 0,
+			),
+		),
+		"min-viewport-height": (
+			property: min-height,
+			responsive: true,
+			class: min-vh,
+			values: (
+				100: 100vh,
+				75: 75vh,
+				50: 50vh,
+			),
+		),
+		"z-index": (
+			property: z-index,
+			class: zi,
+			values: (
+				10: 10,
+				20: 20,
+				30: 30,
+				40: 40,
+				50: 50,
+				60: 60,
+				70: 70,
+				80: 80,
+				90: 90,
+			),
+		),
+		"width": (
+			property: width,
+			class: w,
+			values: (
+				0: 0,
+				25: 25%,
+				50: 50%,
+				75: 75%,
+				100: 100%,
+				auto: auto,
+			),
+		),
+		"cursor": (
+			property: cursor,
+			class: cursor,
+			values: (
+				pointer: pointer,
+			),
+		),
+	),
+	$utilities
+);

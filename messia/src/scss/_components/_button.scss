@@ -1,0 +1,12 @@
+.#{$m-namespace-front} {
+	.messia-btn,
+	button:not([class]),
+	input[type="submit"] {
+		@include button;
+
+		svg,
+		path {
+			transition: $m-transition-fill;
+		}
+	}
+}
