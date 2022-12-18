@@ -9,4 +9,4 @@ php -r "copy('https://github.com/phpDocumentor/phpDocumentor/releases/download/v
 # if you want to have graphs generated https://www.graphviz.org/ must be installed in your OS.
 php phpDocumentor.phar -c phpdoc.xml --force --setting=graphs.enabled=$1
 
-# rm -f phpDocumentor.phar
+rm -f phpDocumentor.phar

@@ -8,6 +8,6 @@ cd $SELF_DIR
 cd ..
 
 echo -e "${GREEN_FG}Installing VENDORS FOR Messia${ENDCOLOR}"
-echo -e "${GREEN_FG}------------------------------------${ENDCOLOR}"
+echo -e "${GREEN_FG}-----------------------------${ENDCOLOR}"
 composer install
 echo -e "${GREEN_FG}DONE${ENDCOLOR}\n\n\n"
