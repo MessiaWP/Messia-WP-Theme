@@ -1,0 +1,587 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Messia 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: Outcomer\n"
+"Language-Team: Outcomer <4341922@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2022-01-04 22:22+0300\n"
+"PO-Revision-Date: 2022-01-04 22:22+0300\n"
+"Language: ru_RU\n"
+"X-Generator: Poedit 3.0\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Poedit-KeywordsList: _x:1,2c;_nx:4c,1,2;__;_e;esc_html__;esc_html_e;esc_attr_e;_n:1,2\n"
+"X-Poedit-SourceCharset: UTF-8: Конструктор полей объекта не содержит поля со слагом "site"Конструктор полей объекта не содержит поля со слагом "short-text"отзывЗависимая страница создана, поля зависимых виджетов обновлены.Зависимая страница удалена, зависимые виджеты обновлены.Устраните повторяющиеся значения слагов!По данному запросу ничего не найденоАвтор комментария должен указать только имя\n"
+
+#: block-category-crosslinks-editor.js:348
+#: block-category-terms-editor.js:834
+#: block-listing-data-editor.js:122
+#: block-search-snippet-editor.js:1042
+msgid "Settings"
+msgstr "Настройки"
+
+#: block-category-crosslinks-editor.js:350
+msgid "Visible"
+msgstr ""
+
+#: block-category-crosslinks-editor.js:355
+msgid "Initially visible numbers of items per group. Set 0 for unlimited."
+msgstr ""
+
+#: block-category-crosslinks-editor.js:362
+#: block-category-terms-editor.js:836
+#: block-search-snippet-editor.js:1044
+msgid "Show on front number of objects per term."
+msgstr "Показывать во фронтэнде количество объектов в термине."
+
+#: block-category-crosslinks-editor.js:375
+#: block-category-terms-editor.js:861
+#: block-custom-fields-editor.js:641
+#: block-listing-data-editor.js:144
+#: block-listing-filters-editor.js:109
+#: block-object-categories-editor.js:130
+#: block-object-properties-editor.js:130
+#: block-objects-filtered-editor.js:134
+#: block-post-content-editor.js:108
+#: block-search-snippet-editor.js:1057
+#: block-segment-wrapper-editor.js:103
+#: block-sitewide-search-editor.js:62
+#: block-tabs-panel-editor.js:717
+#: block-testimonials-editor.js:254
+msgid "Options"
+msgstr "Опции"
+
+#: block-category-crosslinks-editor.js:377
+#: block-category-terms-editor.js:863
+#: block-custom-fields-editor.js:643
+#: block-listing-data-editor.js:146
+#: block-listing-filters-editor.js:111
+#: block-object-categories-editor.js:132
+#: block-object-properties-editor.js:132
+#: block-objects-filtered-editor.js:136
+#: block-post-content-editor.js:110
+#: block-search-snippet-editor.js:1059
+#: block-segment-wrapper-editor.js:105
+#: block-sitewide-search-editor.js:64
+#: block-tabs-panel-editor.js:719
+#: block-testimonials-editor.js:256
+msgid "Preview"
+msgstr "Предпросмотр"
+
+#: block-category-crosslinks-editor.js:377
+#: block-category-terms-editor.js:863
+#: block-custom-fields-editor.js:643
+#: block-listing-data-editor.js:146
+#: block-listing-filters-editor.js:111
+#: block-object-categories-editor.js:132
+#: block-object-properties-editor.js:132
+#: block-objects-filtered-editor.js:136
+#: block-post-content-editor.js:110
+#: block-search-snippet-editor.js:1059
+#: block-segment-wrapper-editor.js:105
+#: block-sitewide-search-editor.js:64
+#: block-tabs-panel-editor.js:719
+#: block-testimonials-editor.js:256
+msgid "Edit"
+msgstr "Редактировать"
+
+#: block-category-crosslinks-editor.js:433
+msgid "Specify the segment of the category, terms for which will be displayed as links to the search page for them. The set will contain only top-level terms (that have no parent) and their direct descendants. The list of terms is subordinate to the value of the \"Empty category terms\" option. Certain terms can be excluded from the set on term edit page."
+msgstr "Укажите сегмент категории, термины по которой будут отображаться в виде ссылок на страницу поиска по ним. Набор будет содержать только термины верхнего уровня (не имеющие родителя) и их прямых потомков. Список терминов подчинен значению опции «Пустая категория терминов». Некоторые термины могут быть исключены из набора на странице редактирования терминов."
+
+#: block-category-crosslinks-editor.js:471
+#: block-category-terms-editor.js:947
+#: block-custom-fields-editor.js:737
+#: block-objects-filtered-editor.js:307
+#: block-segment-wrapper-editor.js:187
+#: block-tabs-panel-editor.js:816
+msgid "Messia Category Terms: No terms were found in taxonomy Segment. Unit operation is not possible."
+msgstr ""
+
+#: block-category-crosslinks-editor.js:481
+#: block-category-terms-editor.js:967
+#: block-custom-fields-editor.js:747
+#: block-segment-wrapper-editor.js:197
+#: block-tabs-panel-editor.js:826
+msgid "An error occurred while receiving data from the server for Category Terms block"
+msgstr ""
+
+#: block-category-crosslinks-editor.js:532
+msgid "Category crosslinks"
+msgstr "Перелинковка по категории"
+
+#: block-category-crosslinks-editor.js:533
+msgid "Taxonomy term reference cloud Categories that include all zero-level terms and their direct descendants"
+msgstr ""
+
+#: block-category-terms-editor.js:602
+msgid "Category term slot"
+msgstr "Слот терминов Категории"
+
+#: block-category-terms-editor.js:603
+msgid "Add Category term"
+msgstr "Добавить термин Категории"
+
+#: block-category-terms-editor.js:764
+msgid "The list of terms is subordinate to the value of the \"Empty category terms\" option. Each list contains all terms of taxonomy Category. In frontend selected term will be shown as a link to the search page by this value."
+msgstr ""
+
+#: block-category-terms-editor.js:846
+#: block-testimonials-editor.js:426
+msgid "Show in slider"
+msgstr ""
+
+#: block-category-terms-editor.js:889
+#: block-search-snippet-editor.js:1085
+#: block-tabs-panel-editor.js:759
+msgid "Drop item here."
+msgstr ""
+
+#: block-category-terms-editor.js:904
+#: block-custom-fields-editor.js:694
+#: block-search-snippet-editor.js:1100
+#: block-segment-wrapper-editor.js:144
+#: block-tabs-panel-editor.js:773
+msgid "You have no segments. Create one."
+msgstr ""
+
+#: block-category-terms-editor.js:956
+msgid "Messia Category Terms: No terms were found in taxonomy Category. Add some to use block."
+msgstr ""
+
+#: block-category-terms-editor.js:1053
+msgid "Category's terms"
+msgstr "Термины Категорий"
+
+#: block-category-terms-editor.js:1054
+#: block-objects-filtered-editor.js:394
+msgid "Terms of taxonomy Category by parameters"
+msgstr ""
+
+#: block-custom-fields-editor.js:668
+#, fuzzy
+msgid "These are a custom fields created via constructor per segment term."
+msgstr "Выберите одно из полей, созданных Вами в конструкторе."
+
+#: block-custom-fields-editor.js:680
+#, fuzzy
+msgid "Constructor for this segment are empty"
+msgstr "Конструктор этого термина пуст"
+
+#: block-custom-fields-editor.js:823
+#: block-listing-filters-editor.js:59
+msgid "Custom fields"
+msgstr ""
+
+#: block-custom-fields-editor.js:824
+msgid "Output custom field value for current viewed object."
+msgstr ""
+
+#: block-listing-data-editor.js:124
+msgid "Split cards to columns in grid view mode by:"
+msgstr ""
+
+#: block-listing-data-editor.js:127
+msgid "Two"
+msgstr ""
+
+#: block-listing-data-editor.js:130
+#: block-objects-filtered-editor.js:258
+msgid "Three"
+msgstr ""
+
+#: block-listing-data-editor.js:170
+msgid "The block creates the main content of the search page and handles search queries."
+msgstr ""
+
+#: block-listing-data-editor.js:171
+#: block-listing-filters-editor.js:129
+msgid "Block title:"
+msgstr ""
+
+#: block-listing-data-editor.js:192
+msgid "Preview is too complex and too big to show here. Open the page in front to see results."
+msgstr ""
+
+#: block-listing-data-editor.js:225
+#, fuzzy
+msgid "Listing data"
+msgstr "Страница поиска"
+
+#: block-listing-data-editor.js:226
+msgid "Creates the main content of the search page and handles search queries."
+msgstr ""
+
+#: block-listing-filters-editor.js:57
+msgid "Reset"
+msgstr ""
+
+#: block-listing-filters-editor.js:58
+msgid "Search"
+msgstr "Поиск"
+
+#: block-listing-filters-editor.js:60
+#, fuzzy
+msgid "Categories"
+msgstr "Категории:"
+
+#: block-listing-filters-editor.js:61
+msgid "Properties"
+msgstr "Свойства"
+
+#: block-listing-filters-editor.js:128
+msgid "Notes: Block works only at valid segment page."
+msgstr ""
+
+#: block-listing-filters-editor.js:139
+msgid "Order of filter groups:"
+msgstr ""
+
+#: block-listing-filters-editor.js:151
+#: block-object-categories-editor.js:150
+#: block-object-properties-editor.js:150
+#: block-sitewide-search-editor.js:79
+msgid "Title:"
+msgstr "Заголовок:"
+
+#: block-listing-filters-editor.js:207
+#, fuzzy
+msgid "Listing filters"
+msgstr "Дополнительные фильтры"
+
+#: block-listing-filters-editor.js:208
+msgid "Set of filters coordinated on the basis of data categories and properties of the site"
+msgstr ""
+
+#: block-object-categories-editor.js:149
+#: block-object-properties-editor.js:149
+msgid "Notes: Block works only at valid object page."
+msgstr ""
+
+#: block-object-categories-editor.js:197
+#, fuzzy
+msgid "Object Categories"
+msgstr "Категории:"
+
+#: block-object-categories-editor.js:198
+#, fuzzy
+msgid "The list of categories that object belongs to."
+msgstr "Lists categories the object belongs to."
+
+#: block-object-properties-editor.js:197
+#, fuzzy
+msgid "Object Properties"
+msgstr "Свойства"
+
+#: block-object-properties-editor.js:198
+#, fuzzy
+msgid "The list of properties that object belongs to."
+msgstr "Lists categories the object belongs to."
+
+#: block-objects-filtered-editor.js:155
+msgid "Build Your conditions for searching objects to find ones."
+msgstr ""
+
+#: block-objects-filtered-editor.js:155
+#: block-testimonials-editor.js:275
+msgid "Notes:"
+msgstr ""
+
+#: block-objects-filtered-editor.js:155
+msgid "the list of terms is subordinate to the value of the \"Empty category terms\" option."
+msgstr ""
+
+#: block-objects-filtered-editor.js:155
+msgid "sorting by reviews could be disabled if theme option Site rating are On."
+msgstr ""
+
+#: block-objects-filtered-editor.js:155
+msgid "set parameter Limit to 0 to unlimit number of objects."
+msgstr ""
+
+#: block-objects-filtered-editor.js:160
+msgid "Number of objects"
+msgstr "Количество объектов"
+
+#: block-objects-filtered-editor.js:175
+#: block-testimonials-editor.js:307
+msgid "Sort by:"
+msgstr ""
+
+#: block-objects-filtered-editor.js:192
+#: block-testimonials-editor.js:332
+msgid "Sort direction:"
+msgstr ""
+
+#: block-objects-filtered-editor.js:194
+#: block-testimonials-editor.js:334
+msgid "Ascending"
+msgstr ""
+
+#: block-objects-filtered-editor.js:196
+#: block-testimonials-editor.js:336
+msgid "Descending"
+msgstr ""
+
+#: block-objects-filtered-editor.js:198
+#: block-testimonials-editor.js:338
+msgid "Random"
+msgstr ""
+
+#: block-objects-filtered-editor.js:205
+msgid "Belongs to Segment:"
+msgstr "Принадлежит Сегменту:"
+
+#: block-objects-filtered-editor.js:218
+msgid "AND Belongs to Categories:"
+msgstr "И принадлежащие Категориям:"
+
+#: block-objects-filtered-editor.js:231
+msgid "AND Having Properties:"
+msgstr "И имеющие свойства:"
+
+#: block-objects-filtered-editor.js:248
+msgid "Marked as featured:"
+msgstr ""
+
+#: block-objects-filtered-editor.js:250
+msgid "Yes"
+msgstr "Да"
+
+#: block-objects-filtered-editor.js:252
+msgid "No"
+msgstr ""
+
+#: block-objects-filtered-editor.js:254
+#: block-segment-wrapper-editor.js:246
+#: block-testimonials-editor.js:379
+#: block-testimonials-editor.js:542
+#: block-testimonials-editor.js:557
+msgid "Any"
+msgstr "Не важно"
+
+#: block-objects-filtered-editor.js:255
+msgid "Split cards to columns by:"
+msgstr ""
+
+#: block-objects-filtered-editor.js:261
+msgid "Four"
+msgstr ""
+
+#: block-objects-filtered-editor.js:317
+msgid "An error occurred while receiving data from the server for Object Filtered block"
+msgstr ""
+
+#: block-objects-filtered-editor.js:366
+msgid "Any / None category"
+msgstr "Любая/Никакая категория"
+
+#: block-objects-filtered-editor.js:377
+msgid "Any / None property"
+msgstr "Любое/Никакое свойство"
+
+#: block-objects-filtered-editor.js:393
+msgid "Objects by filters"
+msgstr "Фильтр объектов"
+
+#: block-post-content-editor.js:127
+msgid "Notes: Block will display the content of the current post."
+msgstr ""
+
+#: block-post-content-editor.js:140
+msgid "Preview is impossible from admin side."
+msgstr ""
+
+#: block-post-content-editor.js:165
+#, fuzzy
+msgid "Post content"
+msgstr "Одна запись"
+
+#: block-post-content-editor.js:166
+msgid "Outputs the content of the currently viewed post/page/object."
+msgstr ""
+
+#: block-search-snippet-editor.js:772
+msgid "The list of terms is subordinate to the value of the \"Empty category/property terms\" option. This list of categories contains all the key terms of the Category taxonomy, i.e. terms that have descendants. In the frontend, this list will show all the descendants of the term selected here."
+msgstr ""
+
+#: block-search-snippet-editor.js:788
+#: block-search-snippet-editor.js:898
+msgid "by String"
+msgstr "по Строке"
+
+#: block-search-snippet-editor.js:806
+#: block-search-snippet-editor.js:921
+msgid "by Category"
+msgstr "по Категории"
+
+#: block-search-snippet-editor.js:816
+#: block-search-snippet-editor.js:868
+#: block-search-snippet-editor.js:931
+#: block-search-snippet-editor.js:1018
+msgid "Set name for Select All option"
+msgstr ""
+
+#: block-search-snippet-editor.js:860
+#: block-search-snippet-editor.js:1010
+msgid "by Property"
+msgstr "по Свойству"
+
+#: block-search-snippet-editor.js:1143
+msgid "Messia Search Snippet: No terms were found in taxonomy Segment. Unit operation is not possible."
+msgstr ""
+
+#: block-search-snippet-editor.js:1152
+msgid "Messia Search Snippet Terms: No terms were found in taxonomy Category. Add some to use filter."
+msgstr ""
+
+#: block-search-snippet-editor.js:1161
+msgid "Messia Search Snippet Terms: No terms were found in taxonomy Property. Add some to use filter."
+msgstr ""
+
+#: block-search-snippet-editor.js:1172
+msgid "An error occurred while receiving data from the server for Search snippet block"
+msgstr ""
+
+#: block-search-snippet-editor.js:1258
+msgid "Search snippet"
+msgstr "Поисковый сниппет"
+
+#: block-search-snippet-editor.js:1259
+msgid "Constructor of search filters"
+msgstr "Конструктор поисковых фильтров"
+
+#: block-search-snippet-editor.js:1287
+msgid "Select Category"
+msgstr "Выберите Категорию"
+
+#: block-search-snippet-editor.js:1291
+msgid "Select Property"
+msgstr "Выберите Свойство"
+
+#: block-segment-wrapper-editor.js:127
+msgid "Add any inner blocks and specify the segments. The content of the block will be displayed only if the currently viewed object or listing page belongs to the segments specified in the settings."
+msgstr ""
+
+#: block-segment-wrapper-editor.js:132
+#, fuzzy
+msgid "Wrap in segments:"
+msgstr "Основной сегмент"
+
+#: block-segment-wrapper-editor.js:261
+#, fuzzy
+msgid "Segment wrapper"
+msgstr "Сегмент %s"
+
+#: block-segment-wrapper-editor.js:262
+msgid "Show block content only for certain segment"
+msgstr ""
+
+#: block-sitewide-search-editor.js:126
+msgid "Sitewide search"
+msgstr ""
+
+#: block-sitewide-search-editor.js:127
+msgid "Search form that provides search accross hole site."
+msgstr ""
+
+#: block-tabs-panel-editor.js:620
+msgid "Tab name"
+msgstr "Имя закладки"
+
+#: block-tabs-panel-editor.js:689
+#, fuzzy
+msgid "The tab is active and will be displayed"
+msgstr "Закладка активна и будет выводится?"
+
+#: block-tabs-panel-editor.js:744
+msgid "Add tab into segments, set it's content, activity status and reorder them if needed."
+msgstr ""
+
+#: block-tabs-panel-editor.js:749
+msgid "Add a tab"
+msgstr ""
+
+#: block-tabs-panel-editor.js:898
+#, fuzzy
+msgid "Tabs panel"
+msgstr "Панель закладок"
+
+#: block-tabs-panel-editor.js:899
+msgid "Customisable tabs with objects custom fields data or any content."
+msgstr ""
+
+#: block-testimonials-editor.js:241
+msgid "An error occurred while receiving data from the server for Testimonials block"
+msgstr ""
+
+#: block-testimonials-editor.js:275
+msgid "Build Your conditions for searching testimonials."
+msgstr ""
+
+#: block-testimonials-editor.js:275
+msgid "all conditions joint by AND operator."
+msgstr ""
+
+#: block-testimonials-editor.js:275
+msgid "set parameter Limit to 0 to unlimit number of comments."
+msgstr ""
+
+#: block-testimonials-editor.js:280
+msgid "Number of testimonials"
+msgstr ""
+
+#: block-testimonials-editor.js:292
+msgid "Text limit"
+msgstr ""
+
+#: block-testimonials-editor.js:315
+msgid "Date published"
+msgstr ""
+
+#: block-testimonials-editor.js:319
+msgid "Rating value"
+msgstr "Значение оценки"
+
+#: block-testimonials-editor.js:348
+msgid "In response to post of type:"
+msgstr ""
+
+#: block-testimonials-editor.js:357
+msgid "Post"
+msgstr "Запись"
+
+#: block-testimonials-editor.js:360
+msgid "Page"
+msgstr "Страница"
+
+#: block-testimonials-editor.js:363
+msgid "Object"
+msgstr "Объект"
+
+#: block-testimonials-editor.js:370
+msgid "In response to Posts/Pages/Objects:"
+msgstr ""
+
+#: block-testimonials-editor.js:388
+msgid "Min rating:"
+msgstr "Минимальный рейтинг:"
+
+#: block-testimonials-editor.js:407
+msgid "Max rating:"
+msgstr "Максимальный рейтинг:"
+
+#: block-testimonials-editor.js:435
+msgid "Exclude objects or posts that never been rated."
+msgstr ""
+
+#: block-testimonials-editor.js:571
+msgid "Testimonials"
+msgstr ""
+
+#: block-testimonials-editor.js:572
+msgid "Testimonials by parameters"
+msgstr ""

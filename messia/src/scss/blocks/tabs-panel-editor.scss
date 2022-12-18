@@ -1,0 +1,38 @@
+/* WIDGET */
+@import "../init";
+
+.#{$m-namespace-admin} {
+	.block-editor,
+	.blocks-widgets-container {
+		.wp-block-messia-block-tabs-panel {
+			.tab-constructed {
+				display: grid;
+				row-gap: .5em;
+
+				.tab {
+					&.inactive {
+						opacity: .6;
+					}
+
+					.header {
+						flex-grow: 1;
+					}
+
+					.components-toggle-control .components-base-control__field {
+						margin-bottom: 0;
+					}
+
+					&.collapsed .content {
+						display: none;
+					}
+
+					.tab-content textarea {
+						display: block;
+						min-height: 10em;
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}

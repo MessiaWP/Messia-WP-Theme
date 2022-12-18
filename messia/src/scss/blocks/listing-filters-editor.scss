@@ -1,0 +1,47 @@
+/* WIDGET */
+@import "../init";
+
+.#{$m-namespace-admin} {
+	.block-editor,
+	.blocks-widgets-container {
+		.wp-block-messia-block-listing-filters {
+			.filters-order-drop-zone {
+				display: grid;
+				row-gap: .5em;
+				overflow: auto;
+
+				.sortable-placeholder {
+					margin-bottom: 0;
+					border-radius: 2px;
+				}
+
+				.search-filter-inner {
+					position: relative;
+					display: grid;
+					align-items: center;
+					grid-template-columns: 2em 1fr 1fr;
+					border: 1px solid #f3f3f3;
+					border-radius: 2px;
+					background: #f9f9f9;
+					color: #828282;
+					user-select: none;
+					padding: .7em .3em;
+
+					.reorder-filter {
+						font-size: 1.3em;
+						text-align: center;
+						cursor: grab;
+					}
+
+					&.over:after {
+						content: "";
+						border-top: 1px solid red;
+						position: absolute;
+						width: 100%;
+						bottom: -.4em;
+					}
+				}
+			}
+		}
+	}
+}

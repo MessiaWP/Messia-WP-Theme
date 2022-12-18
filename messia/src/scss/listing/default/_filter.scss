@@ -1,0 +1,236 @@
+.#{$m-namespace-front} {
+	@include media-breakpoint-down(lg) {
+		.messia-widget-listing-filters {
+			position: fixed;
+			top: 0;
+			left: -414px;
+			z-index: 10;
+			max-width: 414px;
+			overflow: auto;
+			transition: left .3s;
+			bottom: 0;
+			margin-bottom: 0;
+			width: 100%;
+			border-radius: 0;
+			box-shadow: $box-shadow;
+			background: $m-white;
+			padding: 1rem;
+			@include frontend_scrollbar;
+
+			.widget-content {
+				padding-bottom: 50px;
+
+				.rsa {
+					margin-bottom: 2rem;
+				}
+
+				> .widget-title {
+					padding-top: 0;
+				}
+			}
+
+			&.open_filters {
+				left: 0;
+			}
+		}
+
+		#wpadminbar {
+			z-index: 1;
+		}
+	}
+
+	.invisible-filter {
+		@include invisible_filter;
+	}
+
+	button.close-filters {
+		position: relative;
+		z-index: 99;
+		width: 35px;
+		height: 35px;
+		border-radius: 50%;
+		padding: 0;
+		min-height: 1px;
+		display: none;
+		@include media-breakpoint-down(lg) {
+			display: block;
+		}
+
+		&:after {
+			content: "";
+			position: absolute;
+			width: 2px;
+			height: 20px;
+			background: $m-white;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%) rotate(-45deg);
+		}
+
+		&:before {
+			content: "";
+			position: absolute;
+			width: 2px;
+			height: 20px;
+			transform: translate(-50%, -50%) rotate(45deg);
+			background: $m-white;
+			top: 50%;
+			left: 50%;
+		}
+	}
+
+	.sidebar {
+		// ANIMATION START
+		.filter,
+		.property-group-heading {
+			&.off {
+				display: none;
+			}
+
+			&.get-scroll-height {
+				display: inherit;
+			}
+		}
+
+		.filter,
+		.property-group {
+			&.hidden {
+				@include filterHide(400, "--messia-filters-hide-timing");
+			}
+
+			&.shown {
+				@include filterShow(400, "--messia-filters-show-timing");
+			}
+
+			.property-group-heading {
+				&.hidden {
+					@include groupHide(400, "--messia-group-hide-timing");
+				}
+
+				&.shown {
+					@include groupShow(400, "--messia-group-show-timing");
+				}
+			}
+		}
+
+		// ANIMATION END
+		.property-group {
+			.property-group-heading {
+				position: relative;
+				padding: 0 0 10px;
+				margin-top: 10px;
+				user-select: none;
+
+				&:after {
+					border-color: #888 transparent transparent;
+					border-style: solid;
+					border-width: 5px 4px 0;
+					right: 0;
+					position: absolute;
+					top: calc(50% - 6px);
+					content: "";
+					transition: transform .6s;
+				}
+			}
+
+			&.collapsed .property-group-heading {
+				&:after {
+					transform: scale(-1);
+				}
+			}
+		}
+
+		.filter-heading,
+		.property-group-heading {
+			margin-left: -$m-sidebar-padding;
+			transform: translateX(-1px);
+
+			.title {
+				margin: 0;
+				padding-left: $m-sidebar-padding;
+				border-left-style: solid;
+				border-left-width: 4px;
+				display: block;
+			}
+		}
+
+		.filter {
+			select {
+				margin-bottom: 1rem;
+			}
+
+			.messia-checkbox {
+				width: 100%;
+
+				.messia-checkbox-label {
+					display: flex;
+					justify-content: space-between;
+					min-width: calc(100% - 15px - 18px);
+					width: 100%;
+				}
+			}
+
+			.toggle-filters-wrapper .filter-toggle {
+				margin-right: 10px;
+			}
+		}
+
+		.widget .form-group.filter {
+			.widget-title {
+				margin-top: 1rem;
+			}
+
+			.widget-title ~ .select2.select2-container {
+				margin-top: 0;
+			}
+		}
+	}
+
+	.apply-filter {
+		position: fixed;
+		bottom: 0;
+		left: -414px;
+		z-index: 10;
+		max-width: 414px;
+		margin: 0;
+		border-radius: 0;
+		width: 100%;
+		min-height: 45px;
+		box-shadow: 0 -1px 4px 0 #aeaeae;
+		transition: transform .5s, left .3s;
+
+		&.open_filters {
+			left: 0;
+		}
+	}
+
+	.listing.searching,
+	.listing.updating-found {
+		.apply-filter {
+			transform: translateY(100%);
+		}
+	}
+
+	.object-filter {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		margin: 0;
+		border-radius: 0;
+		min-height: 45px;
+
+		img {
+			max-width: 20px;
+		}
+	}
+
+	.object-filter-container {
+		position: sticky;
+		top: -36px;
+		transition: $m-transition-top;
+		z-index: 2;
+		@include media-breakpoint-up(lg) {
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,28 @@
+/* WIDGET */
+@import "../init";
+
+.#{$m-namespace-admin} {
+	.block-editor,
+	.blocks-widgets-container {
+		.wp-block-messia-block-custom-fields {
+			.custom-fields {
+				display: grid;
+				row-gap: .5em;
+
+				.field-item {
+					&.inactive {
+						opacity: .6;
+					}
+
+					.header {
+						flex-grow: 1;
+					}
+
+					.components-toggle-control .components-base-control__field {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+}

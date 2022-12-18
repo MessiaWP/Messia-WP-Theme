@@ -1,0 +1,26 @@
+/* WIDGET */
+@import "../init";
+
+.#{$m-namespace-admin} {
+	.block-editor,
+	.blocks-widgets-container {
+		.wp-block-messia-block-post-content {
+			.conditions {
+				flex-direction: column;
+
+				.components-base-control__field {
+					display: flex;
+					flex-direction: column;
+				}
+
+				select {
+					max-width: none;
+				}
+			}
+
+			.components-button {
+				margin: 0;
+			}
+		}
+	}
+}

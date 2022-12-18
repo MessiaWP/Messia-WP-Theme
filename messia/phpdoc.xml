@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpdocumentor
+        configVersion="3"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="https://www.phpdoc.org"
+        xsi:noNamespaceSchemaLocation="data/xsd/phpdoc.xsd"
+>
+    <title>WP Messia Theme</title>
+    <paths>
+        <output>../documentation/public</output>
+		<cache>../documentation/cache</cache>
+    </paths>
+    <version number="3.0.0">
+        <api>
+            <source dsn=".">
+                <path>.</path>
+            </source>
+            <ignore hidden="true" symlinks="true">
+                <path>tests/**/*</path>
+                <path>build/**/*</path>
+                <path>var/**/*</path>
+                <path>vendor/**/*</path>
+                <path>node_modules/**/*</path>
+                <path>includes/phpwee</path>
+            </ignore>
+            <extensions>
+                <extension>php</extension>
+                <extension>js</extension>
+            </extensions>
+            <visibility>private</visibility>
+            <visibility>protected</visibility>
+            <visibility>public</visibility>
+            <default-package-name>All</default-package-name>
+            <markers>
+                <!--1 or more repetitions:-->
+                <marker>TODO</marker>
+                <marker>FIXME</marker>
+                <marker>FILTER</marker>
+                <marker>ACTION</marker>
+            </markers>
+        </api>
+    </version>
+    <setting name="guides.enabled" value="true"/>
+    <!-- clean | default -->
+    <template name="default"/>
+</phpdocumentor>

@@ -1,0 +1,21 @@
+*.log
+
+/node_modules
+/vendor
+
+/includes/assets/css/_custom_blog_id_*.css
+/includes/assets/css/_custom_blog_id_*.min.css
+
+# Auto minified
+/includes/assets/css/backend/libraries/*.min.css
+/includes/assets/js/backend/libraries/*.min.js
+
+# Demo
+/.staff
+/data/templates/*.zip
+
+# Merged styles and scripts
+/includes/assets/css/__m*M.css
+/includes/assets/js/__m*M.js=
+phpDocumentor.phar
+webpack-local.json

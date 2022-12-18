@@ -1,0 +1,66 @@
+.#{$m-namespace-front} {
+	.footer-top {
+		color: $m-white;
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			color: inherit;
+		}
+
+		a {
+			color: $m-navigation_initial_color;
+			@include media-breakpoint-down(md) {
+				padding: 5px 0;
+			}
+
+			&:hover {
+				color: $m-navigation_interaction_color;
+			}
+		}
+
+		.col {
+			min-width: 15rem;
+		}
+	}
+
+	.footer-bottom {
+		color: $m-white;
+
+		.widget + .widget {
+			margin-top: 1rem;
+		}
+
+		.col:last-child {
+			text-align: right;
+		}
+
+		a {
+			color: $m-navigation_initial_color;
+
+			&:hover {
+				color: $m-navigation_interaction_color;
+			}
+		}
+
+		.widget-area {
+			.widget-content {
+				display: flex;
+				align-items: center;
+				flex-wrap: wrap;
+			}
+
+			.widget-title {
+				margin-bottom: 0;
+				color: inherit;
+
+				+ * {
+					margin-left: .5rem;
+				}
+			}
+		}
+	}
+}

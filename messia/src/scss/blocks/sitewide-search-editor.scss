@@ -1,0 +1,11 @@
+/* WIDGET */
+@import "../init";
+
+.#{$m-namespace-admin} {
+	.block-editor,
+	.blocks-widgets-container {
+		.wp-block-messia-block-sitewide-search {
+
+		}
+	}
+}
