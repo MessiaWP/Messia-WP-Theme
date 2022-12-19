@@ -221,7 +221,7 @@ class Messia_Archive_Tmpl_Default extends Messia_Archive_Tmpl_Base {
 			<span class="ms-2">
 			<?php
 			printf(
-				/* translators: %s: Author name */
+				// translators: %s author name.
 				__( 'By %s', 'messia' ),
 				'<a href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author_meta( 'display_name' ) ) . '</a>'
 			);

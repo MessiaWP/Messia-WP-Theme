@@ -71,14 +71,11 @@
 
 			.settings::-webkit-scrollbar-thumb {
 				background-color: #007cba;
+				border-radius: 2px;
 			}
 
 			.settings::-webkit-scrollbar-track-piece {
 				background-color: #e2e2e2;
-			}
-
-			.settings::-webkit-scrollbar-thumb {
-				border-radius: 2px;
 			}
 		}
 	}

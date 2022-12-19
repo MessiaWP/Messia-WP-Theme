@@ -147,8 +147,8 @@
 		}
 
 		$('.column-messia_site_rating span.set_site_rating').on('click', Messia.setSiteRating);
-		$('#messia_modal_warning').on('input', '#site-rating-setting .criteria.data .value', Messia.changeCriteriaValue);
-		$('#messia_modal_warning').on('focus', '#site-rating-setting .criteria.data .value', Messia.focusCriteriaValue);
+		$('#messia-modal-warning').on('input', '#site-rating-setting .criteria.data .value', Messia.changeCriteriaValue);
+		$('#messia-modal-warning').on('focus', '#site-rating-setting .criteria.data .value', Messia.focusCriteriaValue);
 
 	});
 })(jQuery);

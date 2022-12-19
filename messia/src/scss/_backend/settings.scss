@@ -174,7 +174,7 @@
 		&:before {
 			content: "\f463";
 			color: #008ec2;
-			font-family: dashicons;
+			font-family: dashicons, sans-serif;
 			animation: rotate 1s linear infinite;
 			font-size: 20px;
 			position: absolute;
@@ -246,7 +246,7 @@
 					left: 2px;
 					top: 2px;
 					border-radius: 50%;
-					font: 9px/16px Helvetica;
+					font: 9px/16px Helvetica, sans-serif;
 					text-transform: uppercase;
 					font-weight: bold;
 					text-indent: -18px;
@@ -288,7 +288,7 @@
 						&:before {
 							content: "\f333";
 							cursor: grabbing;
-							font-family: Dashicons;
+							font-family: dashicons, sans-serif;
 							text-align: center;
 							color: #999;
 							display: block;
@@ -304,7 +304,7 @@
 						&:before {
 							content: "\f158";
 							cursor: pointer;
-							font-family: Dashicons;
+							font-family: dashicons, sans-serif;
 							text-align: center;
 							color: #999;
 							display: block;
@@ -326,7 +326,7 @@
 						&:before {
 							content: "\f333";
 							cursor: grabbing;
-							font-family: Dashicons;
+							font-family: dashicons, sans-serif;
 							text-align: center;
 							color: #999;
 							display: block;
@@ -342,7 +342,7 @@
 						&:before {
 							content: "\f158";
 							cursor: pointer;
-							font-family: Dashicons;
+							font-family: dashicons, sans-serif;
 							text-align: center;
 							color: #999;
 							display: block;
@@ -364,7 +364,7 @@
 						&:before {
 							content: "\f333";
 							cursor: grabbing;
-							font-family: Dashicons;
+							font-family: dashicons, sans-serif;
 							text-align: center;
 							color: #999;
 							display: block;
@@ -380,7 +380,7 @@
 						&:before {
 							content: "\f158";
 							cursor: pointer;
-							font-family: Dashicons;
+							font-family: dashicons, sans-serif;
 							text-align: center;
 							color: #999;
 							display: block;

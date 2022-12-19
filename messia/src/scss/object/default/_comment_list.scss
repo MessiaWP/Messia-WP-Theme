@@ -1,6 +1,6 @@
 .#{$m-namespace-front} {
 	.comment-items {
-		@include comment_items($m-cols: 1, $boxshadow: none);
+		@include comment-items($m-cols: 1, $boxshadow: none);
 
 		.comment {
 			.comment-inner {

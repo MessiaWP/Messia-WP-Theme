@@ -959,7 +959,7 @@ abstract class Messia_Menu_Engine {
 			]
 		);
 
-		echo "<div id='messia_modal_warning' title='{$title}' style='display: none;' data-settings='{$settings}'></div>";
+		echo "<div id='messia-modal-warning' title='{$title}' style='display: none;' data-settings='{$settings}'></div>";
 	}
 
 	/**

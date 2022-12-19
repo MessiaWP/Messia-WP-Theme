@@ -1,20 +1,22 @@
+// stylelint-disable max-line-length
+
 @mixin unrated {
 	background: $m-navigation_initial_color;
 	padding: 3px 8px;
-	border-radius: $m-border-radius-control/2;
+	border-radius: $m-border-radius-control / 2;
 	display: inline-block;
 	color: $m-controls_color_on_interaction_inner;
 	font-size: .75rem;
 }
 
-@mixin filterShow($speed, $timingName) {
-	animation: $speed + ms cubic-bezier(.55, .06, .68, .19) 0ms 1 normal forwards running filterShow;
+@mixin filter-show($speed, $timingName) {
+	animation: $speed + ms cubic-bezier(.55, .06, .68, .19) 0ms 1 normal forwards running filter-show;
 
 	@at-root .messia-core-custom-scope .sidebar .messia-widget-listing-filters {
 		#{$timingName}: $speed;
 	}
 
-	@keyframes filterShow {
+	@keyframes filter-show {
 		0% {
 			max-height: 0;
 			opacity: 0;
@@ -35,14 +37,14 @@
 	}
 }
 
-@mixin filterHide($speed, $timingName) {
-	animation: $speed + ms cubic-bezier(.55, .06, .68, .19) 0ms 1 normal forwards running filterHide;
+@mixin filter-hide($speed, $timingName) {
+	animation: $speed + ms cubic-bezier(.55, .06, .68, .19) 0ms 1 normal forwards running filter-hide;
 
 	@at-root .messia-core-custom-scope .sidebar .messia-widget-listing-filters {
 		#{$timingName}: $speed;
 	}
 
-	@keyframes filterHide {
+	@keyframes filter-hide {
 		0% {
 			opacity: 1;
 			max-height: var(--max-height);
@@ -61,14 +63,14 @@
 	}
 }
 
-@mixin groupShow($speed, $timingName) {
-	animation: $speed + ms cubic-bezier(.55, .06, .68, .19) 0ms 1 normal forwards running groupShow;
+@mixin group-show($speed, $timingName) {
+	animation: $speed + ms cubic-bezier(.55, .06, .68, .19) 0ms 1 normal forwards running group-show;
 
 	@at-root .messia-core-custom-scope .sidebar .messia-widget-listing-filters {
 		#{$timingName}: $speed;
 	}
 
-	@keyframes groupShow {
+	@keyframes group-show {
 		0% {
 			max-height: 0;
 			opacity: 0;
@@ -88,14 +90,14 @@
 	}
 }
 
-@mixin groupHide($speed, $timingName) {
-	animation: $speed + ms cubic-bezier(.55, .06, .68, .19) 0ms 1 normal forwards running groupHide;
+@mixin group-hide($speed, $timingName) {
+	animation: $speed + ms cubic-bezier(.55, .06, .68, .19) 0ms 1 normal forwards running group-hide;
 
 	@at-root .messia-core-custom-scope .sidebar .messia-widget-listing-filters {
 		#{$timingName}: $speed;
 	}
 
-	@keyframes groupHide {
+	@keyframes group-hide {
 		0% {
 			opacity: 1;
 			max-height: var(--max-height);
@@ -117,7 +119,7 @@
 
 // New mixins
 
-@mixin maskBackground(
+@mixin mask-background(
 	$background-color: $m-mask-background-color, // Background color
 	$background-opacity: $m-mask-background-opacity) { // Opacity background
 	position: relative;
@@ -135,7 +137,7 @@
 	}
 }
 
-@mixin input_text(
+@mixin input-text(
 	$border-radius: $m-border-radius-control, // Border Radius
 	$border-color: $m-controls_initial_border_color, // Border Color
 	$padding: $m-padding-input, // Padding input and textarea
@@ -156,6 +158,31 @@
 		left: 0;
 		right: 0;
 		border: 2px solid transparent;
+	}
+
+	textarea {
+		padding: .7rem 1rem;
+
+		+ .messia-label-container {
+			label {
+				transform: none;
+				top: .6rem;
+				z-index: 6;
+			}
+
+			&:after {
+				content: "";
+				position: absolute;
+				top: 1px;
+				bottom: 1px;
+				left: 1px;
+				right: 1px;
+				background: #fff;
+				z-index: 5;
+				border-radius: $m-border-radius;
+				transition: all .1s;
+			}
+		}
 	}
 
 	input,
@@ -193,31 +220,6 @@
 		input,
 		textarea {
 			border-color: $hover-color;
-		}
-	}
-
-	textarea {
-		padding: .7rem 1rem;
-
-		+ .messia-label-container {
-			label {
-				transform: none;
-				top: .6rem;
-				z-index: 6;
-			}
-
-			&:after {
-				content: "";
-				position: absolute;
-				top: 1px;
-				bottom: 1px;
-				left: 1px;
-				right: 1px;
-				background: #fff;
-				z-index: 5;
-				border-radius: $m-border-radius;
-				transition: all .1s;
-			}
 		}
 	}
 
@@ -375,7 +377,7 @@ $m-featured-left: .9rem;
 		font-size: $card-font-size-default;
 		@include featured;
 
-		@keyframes cardFadeInUp {
+		@keyframes card-fade-in-up {
 			0% {
 				opacity: 0;
 				transform: translate3d(0, -30%, 0);
@@ -387,7 +389,7 @@ $m-featured-left: .9rem;
 			}
 		}
 
-		@keyframes cardFadeInDown {
+		@keyframes card-fade-in-down {
 			0% {
 				opacity: 0;
 				transform: translate3d(0, 30%, 0);
@@ -492,16 +494,16 @@ $m-featured-left: .9rem;
 		}
 
 		&.fade-in-up {
-			animation-name: cardFadeInUp;
+			animation-name: card-fade-in-up;
 		}
 
 		&.fade-in-down {
-			animation-name: cardFadeInDown;
+			animation-name: card-fade-in-down;
 		}
 	}
 }
 
-@mixin comment_items(
+@mixin comment-items(
 	$m-cols: 3,
 	$m-size-avatar: $m-size-avatar,
 	$boxshadow: $m-boxshadow,
@@ -529,8 +531,7 @@ $m-featured-left: .9rem;
 	}
 }
 
-@mixin frontend_scrollbar() {
-	&::-webkit-scrollbar,
+@mixin frontend-scrollbar() {
 	&::-webkit-scrollbar {
 		/* 1 - скроллбар */
 		width: $m-scroll-width;
@@ -539,24 +540,20 @@ $m-featured-left: .9rem;
 		border-radius: 0;
 	}
 
-	&::-webkit-scrollbar-button,
 	&::-webkit-scrollbar-button {
 		/* 2 - кнопка */
 		display: none;
 	}
 
-	&::-webkit-scrollbar-track,
 	&::-webkit-scrollbar-track {
 		/* 3 - трек */
 	}
 
-	&::-webkit-scrollbar-track-piece,
 	&::-webkit-scrollbar-track-piece {
 		/* 4 - видимая часть трека */
 		background-color: $m-scroll-background-color;
 	}
 
-	&::-webkit-scrollbar-thumb,
 	&::-webkit-scrollbar-thumb {
 		/* 5 - ползунок */
 		background: $m-navigation_initial_color;
@@ -565,18 +562,16 @@ $m-featured-left: .9rem;
 		/* border: 1px solid #eaeaea; */
 	}
 
-	&::-webkit-scrollbar-corner,
 	&::-webkit-scrollbar-corner {
 		/* 6 - уголок */
 	}
 
-	&::-webkit-resizer,
 	&::-webkit-resizer {
 		/* 7 - изменение размеров */
 	}
 }
 
-@mixin invisible_filter() {
+@mixin invisible-filter() {
 	position: absolute;
 	visibility: hidden;
 	width: 0;

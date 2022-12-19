@@ -100,7 +100,7 @@ import '../_components/_worker_dispatcher.js';
 			select2Multiple: '',
 			select2Async: '',
 			stickyTransition: 600,
-			dialog_object: $('#messia_modal_warning'),
+			dialog_object: $('#messia-modal-warning'),
 			dialog_arg: {
 				autoOpen: false,
 				modal: true,

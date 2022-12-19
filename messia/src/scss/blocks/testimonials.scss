@@ -4,7 +4,7 @@
 .#{$m-namespace-front} {
 	.block-testimonials {
 		.comment-items {
-			@include comment_items;
+			@include comment-items;
 
 			.comment-inner {
 				padding: 1.5rem;

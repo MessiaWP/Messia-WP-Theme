@@ -1,4 +1,5 @@
 // General rules
+// stylelint-disable max-line-length
 @import "../init";
 @import "../_components/loader";
 
@@ -16,7 +17,7 @@
 
 	@media (min-width: 961px) {
 		.messia-core-dialog-warning {
-			#messia_modal_warning {
+			#messia-modal-warning {
 				max-width: calc(100vw - 140px);
 				max-height: calc(100vh - 140px);
 				overflow: auto;
@@ -26,7 +27,7 @@
 
 	@media (min-width: 783px) and (max-width: 960px) {
 		.messia-core-dialog-warning {
-			#messia_modal_warning {
+			#messia-modal-warning {
 				max-width: calc(100vw - 60px);
 				max-height: calc(100vh - 60px);
 				overflow: auto;
@@ -158,8 +159,8 @@
 		z-index: 99999 !important; // stylelint-disable-line declaration-no-important
 
 		ul {
-			list-style-position: inside !important; // stylelint-disable-line declaration-no-important
 			list-style: square;
+			list-style-position: inside !important; // stylelint-disable-line declaration-no-important
 		}
 
 		~ {
@@ -181,7 +182,7 @@
 			}
 		}
 
-		#messia_modal_warning {
+		#messia-modal-warning {
 			img {
 				max-width: 100%;
 				height: auto;
@@ -532,7 +533,7 @@
 		}
 	}
 
-	#messia_modal_warning {
+	#messia-modal-warning {
 		max-height: calc(100vh - 140px) !important; // stylelint-disable-line declaration-no-important
 		margin-bottom: -1px;
 		display: flex;

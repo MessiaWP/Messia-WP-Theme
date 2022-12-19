@@ -11,7 +11,7 @@
 		box-shadow: $m-boxshadow;
 
 		.category-inner {
-			@include maskBackground($background-color: $m-category-terms-mask-color, $background-opacity: 1);
+			@include mask-background($background-color: $m-category-terms-mask-color, $background-opacity: 1);
 		}
 
 		img {

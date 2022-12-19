@@ -15,7 +15,7 @@
 			box-shadow: $box-shadow;
 			background: $m-white;
 			padding: 1rem;
-			@include frontend_scrollbar;
+			@include frontend-scrollbar;
 
 			.widget-content {
 				padding-bottom: 50px;
@@ -40,7 +40,7 @@
 	}
 
 	.invisible-filter {
-		@include invisible_filter;
+		@include invisible-filter;
 	}
 
 	button.close-filters {
@@ -95,20 +95,20 @@
 		.filter,
 		.property-group {
 			&.hidden {
-				@include filterHide(400, "--messia-filters-hide-timing");
+				@include filter-hide(400, "--messia-filters-hide-timing");
 			}
 
 			&.shown {
-				@include filterShow(400, "--messia-filters-show-timing");
+				@include filter-show(400, "--messia-filters-show-timing");
 			}
 
 			.property-group-heading {
 				&.hidden {
-					@include groupHide(400, "--messia-group-hide-timing");
+					@include group-hide(400, "--messia-group-hide-timing");
 				}
 
 				&.shown {
-					@include groupShow(400, "--messia-group-show-timing");
+					@include group-show(400, "--messia-group-show-timing");
 				}
 			}
 		}

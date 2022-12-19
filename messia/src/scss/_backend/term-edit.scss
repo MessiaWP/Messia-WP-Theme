@@ -13,9 +13,8 @@
 			.remove {
 				&:after {
 					content: "\f158";
-					font-family: dashicons;
+					font-family: dashicons, sans-serif;
 					width: 100%;
-					margin-left: 5px;
 					color: #686868;
 					cursor: pointer;
 					flex-direction: row;
@@ -26,7 +25,7 @@
 			.move {
 				&:after {
 					content: "\f545";
-					font-family: dashicons;
+					font-family: dashicons, sans-serif;
 					font-size: 1.1em;
 					text-align: right;
 					width: 100%;
@@ -330,7 +329,7 @@
 					position: absolute;
 					user-select: none;
 					line-height: 1;
-					font-family: dashicons;
+					font-family: dashicons, sans-serif;
 					border-radius: 2px;
 					background: #353535;
 					color: #fff;
@@ -348,7 +347,7 @@
 					position: absolute;
 					user-select: none;
 					line-height: 1;
-					font-family: dashicons;
+					font-family: dashicons, sans-serif;
 					border-radius: 2px;
 					background: #353535;
 					color: #fff;
@@ -364,14 +363,14 @@
 					user-select: none;
 					content: "\f128";
 					line-height: 1;
-					font-family: dashicons;
+					font-family: dashicons, sans-serif;
 					color: #0085ba;
 					display: block;
 					margin: auto;
 
 					&:before {
 						content: "\f128";
-						font-family: dashicons;
+						font-family: dashicons, sans-serif;
 					}
 				}
 			}
@@ -394,7 +393,7 @@
 			line-height: 1.6em;
 			border: 1px solid #a2a2a2;
 			border-radius: 3px;
-			background-color: rgb(var(--sk_foreground_min, 29, 28, 29) .04);
+			background-color: rgb(var(--sk-foreground-min, 29, 28, 29) .04);
 			color: #e01e5a;
 		}
 	}
@@ -409,7 +408,7 @@
 			line-height: 1.6em;
 			border: 1px solid #a2a2a2;
 			border-radius: 3px;
-			background-color: rgb(var(--sk_foreground_min, 29, 28, 29) .04);
+			background-color: rgb(var(--sk-foreground-min, 29, 28, 29) .04);
 			color: #e01e5a;
 		}
 	}
@@ -425,7 +424,7 @@
 
 			&:after {
 				content: "\f103";
-				font-family: dashicons;
+				font-family: dashicons, sans-serif;
 			}
 		}
 
@@ -434,7 +433,7 @@
 			line-height: 1.6em;
 			border: 1px solid #a2a2a2;
 			border-radius: 3px;
-			background-color: rgb(var(--sk_foreground_min, 29, 28, 29) .04);
+			background-color: rgb(var(--sk-foreground-min, 29, 28, 29) .04);
 			color: #e01e5a;
 		}
 	}
@@ -478,7 +477,7 @@
 				position: absolute;
 				user-select: none;
 				line-height: 1;
-				font-family: dashicons;
+				font-family: dashicons, sans-serif;
 				border-radius: 2px;
 				background: #353535;
 				color: #fff;
@@ -496,7 +495,7 @@
 				position: absolute;
 				user-select: none;
 				line-height: 1;
-				font-family: dashicons;
+				font-family: dashicons, sans-serif;
 				border-radius: 2px;
 				background: #353535;
 				color: #fff;
@@ -512,14 +511,14 @@
 				user-select: none;
 				content: "\f128";
 				line-height: 1;
-				font-family: dashicons;
+				font-family: dashicons, sans-serif;
 				color: #0085ba;
 				display: block;
 				margin: auto;
 
 				&:before {
 					content: "\f128";
-					font-family: dashicons;
+					font-family: dashicons, sans-serif;
 				}
 			}
 		}
@@ -564,7 +563,7 @@
 				position: absolute;
 				user-select: none;
 				line-height: 1;
-				font-family: dashicons;
+				font-family: dashicons, sans-serif;
 				border-radius: 2px;
 				background: #353535;
 				color: #fff;
@@ -582,7 +581,7 @@
 				position: absolute;
 				user-select: none;
 				line-height: 1;
-				font-family: dashicons;
+				font-family: dashicons, sans-serif;
 				border-radius: 2px;
 				background: #353535;
 				color: #fff;
@@ -598,14 +597,14 @@
 				user-select: none;
 				content: "\f128";
 				line-height: 1;
-				font-family: dashicons;
+				font-family: dashicons, sans-serif;
 				color: #0085ba;
 				display: block;
 				margin: auto;
 
 				&:before {
 					content: "\f128";
-					font-family: dashicons;
+					font-family: dashicons, sans-serif;
 				}
 			}
 		}
@@ -662,14 +661,14 @@
 				user-select: none;
 				content: "\f128";
 				line-height: 1;
-				font-family: dashicons;
+				font-family: dashicons, sans-serif;
 				color: #0085ba;
 				display: block;
 				margin: auto;
 
 				&:before {
 					content: "\f128";
-					font-family: dashicons;
+					font-family: dashicons, sans-serif;
 				}
 			}
 		}
@@ -724,14 +723,14 @@
 				user-select: none;
 				content: "\f128";
 				line-height: 1;
-				font-family: dashicons;
+				font-family: dashicons, sans-serif;
 				color: #0085ba;
 				display: block;
 				margin: auto;
 
 				&:before {
 					content: "\f128";
-					font-family: dashicons;
+					font-family: dashicons, sans-serif;
 				}
 			}
 		}
@@ -804,7 +803,7 @@
 	tbody#the-list {
 		.messia-help-tip {
 			&:before {
-				font-family: Dashicons;
+				font-family: dashicons, sans-serif;
 				font-weight: 400;
 				text-transform: none;
 				line-height: 1;

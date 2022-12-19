@@ -268,8 +268,8 @@ final class Messia_Config_Settings {
 				'help'     => [
 					'id'       => 'pwa_help',
 					'title'    => __( 'PWA', 'messia' ),
-					// translators: %s - url.
-					'content'  => '<h2>' . __( 'PWA', 'messia' ) . '</h2><p>' . sprintf( __( 'PWA - progressive web application is a technology in web development that visually and functionally transforms a website into an application (mobile application in a browser). Read more on it %s.', 'messia' ), '<a target="_blank" href="https://web.dev/progressive-web-apps/">' . __( 'Here', 'messia' ) . '</a>' ) . '</p>
+					// translators: %1$s html tag a.
+					'content'  => '<h2>' . __( 'PWA', 'messia' ) . '</h2><p>' . sprintf( __( 'PWA - progressive web application is a technology in web development that visually and functionally transforms a website into an application (mobile application in a browser). Read more on it %1$s.', 'messia' ), '<a target="_blank" href="https://web.dev/progressive-web-apps/">' . __( 'Here', 'messia' ) . '</a>' ) . '</p>
 											<ul>
 												<li><span class="wparam">' . __( 'PWA mode', 'messia' ) . '</span> - ' . __( 'PWA mode will allow your site to behave like a native application on mobile clients. Also, in this mode, the client cache will be involved, which will significantly increase the speed of page loading. A valid SSL certificate is required for this mode to work!', 'messia' ) . '</li>
 											</ul>',
@@ -344,8 +344,8 @@ final class Messia_Config_Settings {
 				'id'      => 'use_google_meterial_icons',
 				'name'    => 'use_google_meterial_icons',
 				'title'   => __( 'Google Icons', 'messia' ),
-				// translators: %s html tag a.
-				'tip'     => sprintf( __( 'This is a special icon font. Select this option if you want to use icons. The list of available icons and instructions for use can be found %s.', 'messia' ), '<a target="_blank" href="https://material.io/resources/icons/">' . __( 'Here', 'messia' ) . '</a>', '<a target="_blank" href="http://www.google.com/fonts/">Google Fonts directory</a>' ),
+				// translators: %1$s html tag a.
+				'tip'     => sprintf( __( 'This is a special icon font. Select this option if you want to use icons. The list of available icons and instructions for use can be found %1$s.', 'messia' ), '<a target="_blank" href="https://material.io/resources/icons/">' . __( 'Here', 'messia' ) . '</a>', '<a target="_blank" href="http://www.google.com/fonts/">Google Fonts directory</a>' ),
 				'disable' => false,
 				'class'   => [ 'messia-core-toggle' ],
 				'descr'   => __( 'Use', 'messia' ),
@@ -1109,8 +1109,8 @@ final class Messia_Config_Settings {
 				'name'        => 'google_maps_api_key',
 				'placeholder' => '6LcuczoUAAAAAA_uwQ8DxTQtHqpLpEz9C9k5fiCc',
 				'title'       => __( 'Google maps API key', 'messia' ),
-				// translators: %s - html tag a.
-				'tip'         => sprintf( __( 'Google Maps API allows to use Google Maps on your website to show objects in a map view. Leave the field blank if you do not need it. Get Google Maps API key %s.', 'messia' ), '<a target="_blank" href="https://developers.google.com/identity/sign-in/web/sign-in/">' . __( 'Here', 'messia' ) . '</a>' ),
+				// translators: %1$s html tag a.
+				'tip'         => sprintf( __( 'Google Maps API allows to use Google Maps on your website to show objects in a map view. Leave the field blank if you do not need it. Get Google Maps API key %1$s.', 'messia' ), '<a target="_blank" href="https://developers.google.com/identity/sign-in/web/sign-in/">' . __( 'Here', 'messia' ) . '</a>' ),
 				'disable'     => false,
 				'type'        => 'text',
 				'init'        => 'AIzaSyDgzTAo1oZpUb9WSMYPCe2L8bQ30zAGIe4',
@@ -1130,8 +1130,8 @@ final class Messia_Config_Settings {
 				'name'        => 'google_captcha_v3_secret_key',
 				'placeholder' => '6KcuetoUAAAAAMozOaI9rtpqaVF5kG67cZmdx5vz',
 				'title'       => __( 'gCaptha V3 secret key', 'messia' ),
-				// translators: %s - html tag a.
-				'tip'         => sprintf( __( 'gCaptha service protects your website against spam comments. Leave both keys(public and secret) blank if not required. Get gCaptha keys %s.', 'messia' ), '<a target="_blank" href="https://www.google.com/recaptcha/admin/">' . __( 'Here', 'messia' ) . '</a>' ),
+				// translators: %1$s html tag a.
+				'tip'         => sprintf( __( 'gCaptha service protects your website against spam comments. Leave both keys(public and secret) blank if not required. Get gCaptha keys %1$s.', 'messia' ), '<a target="_blank" href="https://www.google.com/recaptcha/admin/">' . __( 'Here', 'messia' ) . '</a>' ),
 				'disable'     => false,
 				'type'        => 'text',
 				'init'        => null,
@@ -1141,8 +1141,8 @@ final class Messia_Config_Settings {
 				'name'        => 'google_app_id',
 				'placeholder' => '81156926044-fcv91dij5p9sl3ghah3fv55jqjn21eor.apps.googleusercontent.com',
 				'title'       => __( 'Google App ID', 'messia' ),
-				// translators: %s html tag a.
-				'tip'         => sprintf( __( 'Google App allows visitors to login to your website using their Google account. Leave ID and secret blank if not required. Get the app\'s data %s.', 'messia' ), '<a target="_blank" href="https://developers.google.com/identity/sign-in/web/sign-in/">' . __( 'Here', 'messia' ) . '</a>' ),
+				// translators: %1$s html tag a.
+				'tip'         => sprintf( __( 'Google App allows visitors to login to your website using their Google account. Leave ID and secret blank if not required. Get the app\'s data %1$s.', 'messia' ), '<a target="_blank" href="https://developers.google.com/identity/sign-in/web/sign-in/">' . __( 'Here', 'messia' ) . '</a>' ),
 				'disable'     => false,
 				'type'        => 'text',
 				'init'        => null,
@@ -1152,8 +1152,8 @@ final class Messia_Config_Settings {
 				'name'        => 'google_app_secret_key',
 				'placeholder' => 'mH5rvhSjeg_RQPIP5qjinG3Y',
 				'title'       => __( 'Google App Secret Key', 'messia' ),
-				// translators: %s - html tag a.
-				'tip'         => sprintf( __( 'Google App allows visitors to login to your website using Google account. Leave ID and secret blank if not required. Get the app\'s data %s.', 'messia' ), '<a target="_blank" href="https://developers.google.com/identity/sign-in/web/sign-in/">' . __( 'Here', 'messia' ) . '</a>' ),
+				// translators: %1$s html tag a.
+				'tip'         => sprintf( __( 'Google App allows visitors to login to your website using Google account. Leave ID and secret blank if not required. Get the app\'s data %1$s.', 'messia' ), '<a target="_blank" href="https://developers.google.com/identity/sign-in/web/sign-in/">' . __( 'Here', 'messia' ) . '</a>' ),
 				'disable'     => false,
 				'type'        => 'text',
 				'init'        => null,
@@ -1174,8 +1174,8 @@ final class Messia_Config_Settings {
 				'name'        => 'facebook_app_secret_key',
 				'placeholder' => '104456bf1c77879b0ea5357b7534f933',
 				'title'       => __( 'Facebook App Secret Key', 'messia' ),
-				// translators: %s - html tag a.
-				'tip'         => sprintf( __( 'Facebook App allows visitors to login to your website using Facebook account. Leave ID and secret blank if not required. Get the app\'s data %s.', 'messia' ), '<a target="_blank" href="https://developers.facebook.com/apps/">' . __( 'Here', 'messia' ) . '</a>' ),
+				// translators: %1$s html tag a.
+				'tip'         => sprintf( __( 'Facebook App allows visitors to login to your website using Facebook account. Leave ID and secret blank if not required. Get the app\'s data %1$s.', 'messia' ), '<a target="_blank" href="https://developers.facebook.com/apps/">' . __( 'Here', 'messia' ) . '</a>' ),
 				'disable'     => false,
 				'type'        => 'text',
 				'init'        => null,
@@ -1185,8 +1185,8 @@ final class Messia_Config_Settings {
 				'name'        => 'yandex_app_id',
 				'placeholder' => 'f968499349673ffd88cd35843b604a12',
 				'title'       => __( 'Yandex App ID', 'messia' ),
-				// translators: %s html tag a.
-				'tip'         => sprintf( __( 'Yandex App allows visitors to login to your website using Yandex account. Leave ID and secret blank if not required. Get the app\'s data %s.', 'messia' ), '<a target="_blank" href="https://oauth.yandex.ru/client/new/">' . __( 'Here', 'messia' ) . '</a>' ),
+				// translators: %1$s html tag a.
+				'tip'         => sprintf( __( 'Yandex App allows visitors to login to your website using Yandex account. Leave ID and secret blank if not required. Get the app\'s data %1$s.', 'messia' ), '<a target="_blank" href="https://oauth.yandex.ru/client/new/">' . __( 'Here', 'messia' ) . '</a>' ),
 				'disable'     => false,
 				'control_svg' => file_get_contents( MESSIA_CORE_ABSPATH . '/assets/images/svg/yandex.svg' ), // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
 				'type'        => 'text',
@@ -1197,8 +1197,8 @@ final class Messia_Config_Settings {
 				'name'        => 'yandex_app_secret_key',
 				'placeholder' => '56d9d5cadf732a4c843c4c89fc87093c',
 				'title'       => __( 'Yandex app secret key', 'messia' ),
-				// translators: %s - html tag a.
-				'tip'         => sprintf( __( 'Yandex App allows visitors to login to your website using Yandex account. Leave ID and secret blank if not required. Get the app\'s data %s.', 'messia' ), '<a target="_blank" href="https://oauth.yandex.ru/client/new/">' . __( 'Here', 'messia' ) . '</a>' ),
+				// translators: %1$s html tag a.
+				'tip'         => sprintf( __( 'Yandex App allows visitors to login to your website using Yandex account. Leave ID and secret blank if not required. Get the app\'s data %1$s.', 'messia' ), '<a target="_blank" href="https://oauth.yandex.ru/client/new/">' . __( 'Here', 'messia' ) . '</a>' ),
 				'disable'     => false,
 				'type'        => 'text',
 				'init'        => null,
@@ -1219,8 +1219,8 @@ final class Messia_Config_Settings {
 				'name'        => 'vkontakte_app_secret_key',
 				'placeholder' => null,
 				'title'       => __( 'VK App Secret Key', 'messia' ),
-				// translators: %s - html tag a.
-				'tip'         => sprintf( __( 'VK app allows visitors to login to your web site using VK account. Leave ID and secret blank if not required. Get the app\'s data %s.', 'messia' ), '<a target="_blank" href="https://oauth.yandex.ru/client/new/">' . __( 'Here', 'messia' ) . '</a>' ),
+				// translators: %1$s html tag a.
+				'tip'         => sprintf( __( 'VK app allows visitors to login to your web site using VK account. Leave ID and secret blank if not required. Get the app\'s data %1$s.', 'messia' ), '<a target="_blank" href="https://oauth.yandex.ru/client/new/">' . __( 'Here', 'messia' ) . '</a>' ),
 				'disable'     => false,
 				'type'        => 'text',
 				'init'        => null,

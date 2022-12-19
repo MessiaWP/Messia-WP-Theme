@@ -7,29 +7,20 @@
 		border: 1px solid $m-controls_initial_border_color;
 		border-radius: $m-border-radius-control;
 		background-position-x: calc(100% - 25px);
+		text-overflow: ellipsis;
+		align-items: center;
+		min-height: $m-min-height-control;
+		background: $m-white;
+		width: 100%;
+		font-size: $m-font-size-control;
+		color: $m-controls_color_initial_inner;
 
 		&:hover {
 			border-color: $m-controls_on_interaction_border_color;
 		}
 	}
 
-	select {
-		text-overflow: ellipsis;
-	}
-
 	select::-ms-expand {
 		display: none;
-	}
-
-	select {
-		border: 1px solid $m-controls_initial_border_color;
-		align-items: center;
-		border-radius: $m-border-radius-control;
-		padding: .5rem 1rem;
-		min-height: $m-min-height-control;
-		background: $m-white;
-		width: 100%;
-		font-size: $m-font-size-control;
-		color: $m-controls_color_initial_inner;
 	}
 }

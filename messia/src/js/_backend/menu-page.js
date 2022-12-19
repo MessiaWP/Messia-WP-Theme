@@ -327,15 +327,15 @@
 					$(operator).prop('disabled', true);
 					$(operator).val($('#tabs').data('general').statusBetweenRequests).removeClass();
 
-					$('body').prepend(`<div id="spinner_saving" style="z-index: 99999;"><div id="spinner_saving_inner"><svg class="lds-curve-bars" width="120px" height="120px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid"><g transform="translate(50,50)"><circle cx="0" cy="0" r="8.333333333333334" fill="none" stroke="#4658ac" stroke-width="2" stroke-dasharray="26.179938779914945 26.179938779914945" transform="rotate(2.58798)"><animateTransform attributeName="transform" type="rotate" values="0 0 0;360 0 0" times="0;1" dur="1s" calcMode="spline" keySplines="0.2 0 0.8 1" begin="0" repeatCount="indefinite"></animateTransform></circle><circle cx="0" cy="0" r="16.666666666666668" fill="none" stroke="#e7008a" stroke-width="2" stroke-dasharray="52.35987755982989 52.35987755982989" transform="rotate(64.3712)"><animateTransform attributeName="transform" type="rotate" values="0 0 0;360 0 0" times="0;1" dur="1s" calcMode="spline" keySplines="0.2 0 0.8 1" begin="-0.2" repeatCount="indefinite"></animateTransform></circle><circle cx="0" cy="0" r="25" fill="none" stroke="#ff003a" stroke-width="2" stroke-dasharray="78.53981633974483 78.53981633974483" transform="rotate(149.659)"><animateTransform attributeName="transform" type="rotate" values="0 0 0;360 0 0" times="0;1" dur="1s" calcMode="spline" keySplines="0.2 0 0.8 1" begin="-0.4" repeatCount="indefinite"></animateTransform></circle><circle cx="0" cy="0" r="33.333333333333336" fill="none" stroke="#ff6d00" stroke-width="2" stroke-dasharray="104.71975511965978 104.71975511965978" transform="rotate(239.03)"><animateTransform attributeName="transform" type="rotate" values="0 0 0;360 0 0" times="0;1" dur="1s" calcMode="spline" keySplines="0.2 0 0.8 1" begin="-0.6" repeatCount="indefinite"></animateTransform></circle><circle cx="0" cy="0" r="41.666666666666664" fill="none" stroke="#ffc53f" stroke-width="2" stroke-dasharray="130.89969389957471 130.89969389957471" transform="rotate(320.012)"><animateTransform attributeName="transform" type="rotate" values="0 0 0;360 0 0" times="0;1" dur="1s" calcMode="spline" keySplines="0.2 0 0.8 1" begin="-0.8" repeatCount="indefinite"></animateTransform></circle></g></svg></div></div>`);
+					$('body').prepend(`<div id="spinner-saving" style="z-index: 99999;"><div id="spinner-saving-inner"><svg class="lds-curve-bars" width="120px" height="120px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid"><g transform="translate(50,50)"><circle cx="0" cy="0" r="8.333333333333334" fill="none" stroke="#4658ac" stroke-width="2" stroke-dasharray="26.179938779914945 26.179938779914945" transform="rotate(2.58798)"><animateTransform attributeName="transform" type="rotate" values="0 0 0;360 0 0" times="0;1" dur="1s" calcMode="spline" keySplines="0.2 0 0.8 1" begin="0" repeatCount="indefinite"></animateTransform></circle><circle cx="0" cy="0" r="16.666666666666668" fill="none" stroke="#e7008a" stroke-width="2" stroke-dasharray="52.35987755982989 52.35987755982989" transform="rotate(64.3712)"><animateTransform attributeName="transform" type="rotate" values="0 0 0;360 0 0" times="0;1" dur="1s" calcMode="spline" keySplines="0.2 0 0.8 1" begin="-0.2" repeatCount="indefinite"></animateTransform></circle><circle cx="0" cy="0" r="25" fill="none" stroke="#ff003a" stroke-width="2" stroke-dasharray="78.53981633974483 78.53981633974483" transform="rotate(149.659)"><animateTransform attributeName="transform" type="rotate" values="0 0 0;360 0 0" times="0;1" dur="1s" calcMode="spline" keySplines="0.2 0 0.8 1" begin="-0.4" repeatCount="indefinite"></animateTransform></circle><circle cx="0" cy="0" r="33.333333333333336" fill="none" stroke="#ff6d00" stroke-width="2" stroke-dasharray="104.71975511965978 104.71975511965978" transform="rotate(239.03)"><animateTransform attributeName="transform" type="rotate" values="0 0 0;360 0 0" times="0;1" dur="1s" calcMode="spline" keySplines="0.2 0 0.8 1" begin="-0.6" repeatCount="indefinite"></animateTransform></circle><circle cx="0" cy="0" r="41.666666666666664" fill="none" stroke="#ffc53f" stroke-width="2" stroke-dasharray="130.89969389957471 130.89969389957471" transform="rotate(320.012)"><animateTransform attributeName="transform" type="rotate" values="0 0 0;360 0 0" times="0;1" dur="1s" calcMode="spline" keySplines="0.2 0 0.8 1" begin="-0.8" repeatCount="indefinite"></animateTransform></circle></g></svg></div></div>`);
 					$('body').addClass('setting-saving');
 
-					$('body #spinner_saving').animate({
+					$('body #spinner-saving').animate({
 						opacity: 1,
 					}, 150, "swing", function () {
 
 						setTimeout(function () {
-							$('body #spinner_saving_inner').animate({
+							$('body #spinner-saving-inner').animate({
 								opacity: 1,
 							}, 200, "swing", function () {
 								resolve([event, operator]);
@@ -348,7 +348,7 @@
 
 				return await new Promise((resolve, reject) => {
 
-					$('body #spinner_saving_inner').animate({
+					$('body #spinner-saving-inner').animate({
 						opacity: 0,
 					}, 250, "swing", function () {
 
@@ -370,16 +370,16 @@
 						location.reload();
 					});
 
-					$('body #spinner_saving_inner').animate({
+					$('body #spinner-saving-inner').animate({
 						opacity: 0,
 					}, 250, "swing", function () {
 
 						setTimeout(function () {
-							$('body #spinner_saving').animate({
+							$('body #spinner-saving').animate({
 								opacity: 0,
 							}, 100, "swing", function () {
 
-								$('body #spinner_saving').remove();
+								$('body #spinner-saving').remove();
 								resolve();
 							});
 						}, 500);
@@ -735,7 +735,7 @@
 				$('.wrap.settings-loading').removeClass('settings-loading');
 			},
 			remove_spinner() {
-				$('body #spinner_saving, body #spinner_saving_inner').remove();
+				$('body #spinner-saving, body #spinner-saving-inner').remove();
 			},
 			confirm: async (message) => {
 				let result = await new Promise((resolve, reject) => {

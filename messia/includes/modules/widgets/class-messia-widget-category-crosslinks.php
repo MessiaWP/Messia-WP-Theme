@@ -306,7 +306,7 @@ class Messia_Widget_Category_Crosslinks extends WP_Widget {
 			}
 		}
 
-		// translators: %s - widget or block name.
+		// translators: %s - block name.
 		$trick  = sprintf( __( 'To fix errors you may try to resave the %s.', 'messia' ), $this->name );
 		$errors = $this->helpers::print_errors( $this->name, $errors, $trick );
 
