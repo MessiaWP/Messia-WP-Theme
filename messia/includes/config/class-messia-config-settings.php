@@ -1113,7 +1113,7 @@ final class Messia_Config_Settings {
 				'tip'         => sprintf( __( 'Google Maps API allows to use Google Maps on your website to show objects in a map view. Leave the field blank if you do not need it. Get Google Maps API key %1$s.', 'messia' ), '<a target="_blank" href="https://developers.google.com/identity/sign-in/web/sign-in/">' . __( 'Here', 'messia' ) . '</a>' ),
 				'disable'     => false,
 				'type'        => 'text',
-				'init'        => 'AIzaSyDgzTAo1oZpUb9WSMYPCe2L8bQ30zAGIe4',
+				'init'        => 'AIzaSyA3jYSgkgxouTG2NakAKDmXD_j7TCwAs4w',
 			],
 			'control_google_captcha_v3_public_key'        => [
 				'id'          => 'google_captcha_v3_public_key',
