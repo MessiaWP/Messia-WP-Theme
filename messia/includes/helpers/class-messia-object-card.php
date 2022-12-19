@@ -36,7 +36,7 @@ class Messia_Object_Card {
 	 *
 	 * @var array
 	 */
-	private static $areas = false;
+	private static $areas = [];
 
 	/**
 	 * Get namespaced class name.
@@ -73,7 +73,7 @@ class Messia_Object_Card {
 
 		self::set_helpers();
 
-		if ( false === self::$areas ) {
+		if ( empty( self::$areas ) ) {
 			self::setup_areas();
 		}
 
