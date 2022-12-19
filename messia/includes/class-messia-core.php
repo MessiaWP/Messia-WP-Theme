@@ -262,8 +262,10 @@ final class Messia_Core {
 
 	/**
 	 * Messia_Core Constructor.
+	 *
+	 * @return void
 	 */
-	private function init() {
+	private function init(): void {
 
 		// TODO - move "load_theme_textdomain" to the event "after_setup_theme".
 		load_theme_textdomain( 'messia', MESSIA_THEME_DIR . '/includes/assets/langs' );
@@ -336,6 +338,8 @@ final class Messia_Core {
 
 	/**
 	 * Define Messia_Core Constants.
+	 *
+	 * @return void
 	 */
 	private function define_constants(): void {
 
@@ -379,20 +383,17 @@ final class Messia_Core {
 
 		];
 
+		// Parent.
 		define( 'MESSIA_NAMESPACE_FRONT', 'mccs' );
 		define( 'MESSIA_NAMESPACE_ADMIN', 'macs' );
 		define( 'MESSIA_LIST_SORT_SEARCH', $this->reserved_terms['messia_object_property'] );
 		define( 'MESSIA_MESSAGES', $messages );
 		define( 'MESSIA_WP_TEMPLATES_PREFIX', '/wp-templates' );
 		define( 'MESSIA_CODEPATH_PREFIX', '/includes' );
-		define( 'MESSIA_CODEPATH_PREFIX_CHILD', '/includes' );
 		define( 'MESSIA_CORE_ABSPATH', MESSIA_THEME_DIR . MESSIA_CODEPATH_PREFIX ); // e.g.: /wp-content/themes/messia/includes.
-		define( 'MESSIA_CORE_ABSPATH_CHILD', MESSIA_THEME_DIR_CHILD . MESSIA_CODEPATH_PREFIX_CHILD ); // e.g.: /wp-content/themes/messia-child/includes.
 		define( 'MESSIA_THEME_ABSPATH', dirname( MESSIA_FUNCTIONS_FILE ) . '/' );
 		define( 'MESSIA_THEME_VERSION', wp_get_theme()->version );
 		define( 'MESSIA_THEME_URL', get_template_directory_uri() );
-		define( 'MESSIA_THEME_URL_CHILD', get_stylesheet_directory_uri() );
-		define( 'MESSIA_THEME_MENU_PAGE_SLUG', 'messia-blog-settings' );
 		define( 'MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME', 'messia_blog_settings_preset' );
 		define( 'MESSIA_THEME_SITE_SETTINGS_PRESET_NAME', 'messia_site_settings_preset' );
 		define( 'MESSIA_POSTMETA_CONSTRUCTED_PREFIX', '_segment_constructor_term_id_' );
@@ -400,15 +401,29 @@ final class Messia_Core {
 		define( 'MESSIA_POSTMETA_STUFF_NAME', '_stuff_meta_%name%_segment_term_id_%Id%' );
 		define( 'MESSIA_SITERATING_NAME', '_messia_site_rating_term_id_%Id%' );
 		define( 'MESSIA_THEME_NAMESPACE_BASE', 'Smartbits\Messia' );
-		define( 'MESSIA_THEME_NAMESPACE_BASE_CHILD', 'Smartbits\MessiaChild' );
 		define( 'MESSIA_DEMO_PACKAGE_COMMENT', 'Messia Demo Package' );
 		define( 'MESSIA_SHOP_URL', 'https://messiawp.com' );
 		define( 'MESSIA_SHOP_MY_ACCOUNT_URL', MESSIA_SHOP_URL . '/my-account' );
 		define( 'MESSIA_SHOP_PRODUCT_ID', 'Messia-Listing-WP-Theme' );
+
+		// Child.
+		if ( ! defined( 'MESSIA_THEME_NAMESPACE_BASE_CHILD' ) ) {
+			define( 'MESSIA_THEME_NAMESPACE_BASE_CHILD', 'Smartbits\MessiaChild' );
+		}
+
+		if ( ! defined( 'MESSIA_CODEPATH_PREFIX_CHILD' ) ) {
+			define( 'MESSIA_CODEPATH_PREFIX_CHILD', '/includes' );
+		}
+
+		define( 'MESSIA_CORE_ABSPATH_CHILD', MESSIA_THEME_DIR_CHILD . MESSIA_CODEPATH_PREFIX_CHILD ); // e.g.: /wp-content/themes/messia-child/includes.
+		define( 'MESSIA_THEME_URL_CHILD', get_stylesheet_directory_uri() );
+		define( 'MESSIA_THEME_MENU_PAGE_SLUG', 'messia-blog-settings' );
 	}
 
 	/**
 	 * Include required core files used in admin and on the frontend.
+	 *
+	 * @return void
 	 */
 	private function includes(): void {
 		include_once MESSIA_THEME_ABSPATH . 'includes/class-messia-autoloader.php';
@@ -826,7 +841,7 @@ final class Messia_Core {
 	 *
 	 * @return void
 	 */
-	public function set_module( string $module_name, $module_value ): void {
+	public function set_module( string $module_name, mixed $module_value ): void {
 		$this->{$module_name} = $module_value;
 	}
 

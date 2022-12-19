@@ -120,9 +120,9 @@ class Messia_Requirements {
 			}
 		}
 
-		if ( version_compare( $php_version, '8.1.0', '<' ) ) {
+		if ( version_compare( $php_version, '8.0.0', '<' ) ) {
 			// translators: %s - php version.
-			$this->errors['fatal'][] = sprintf( __( 'Messia requires at least PHP 8.1.0 version or higher, you have PHP %s', 'messia' ), $php_version );
+			$this->errors['fatal'][] = sprintf( __( 'Messia requires at least PHP 8.0.0 version or higher, you have PHP %s', 'messia' ), $php_version );
 		}
 
 		if ( version_compare( $wp_version, '6.0.0', '<' ) ) {

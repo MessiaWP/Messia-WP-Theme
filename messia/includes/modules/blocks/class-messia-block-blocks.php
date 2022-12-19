@@ -193,7 +193,7 @@ class Messia_Block_Blocks {
 	 *
 	 * @return array
 	 */
-	public function register_blocks_category( array $categories, $context ): array {
+	public function register_blocks_category( array $categories, mixed $context ): array {
 
 		return array_merge(
 			[
@@ -216,7 +216,7 @@ class Messia_Block_Blocks {
 	 *
 	 * @return bool|array
 	 */
-	public function filter_blocks( $allowed_block_types, $context ) {
+	public function filter_blocks( bool|array $allowed_block_types, mixed $context ): bool|array {
 
 		$screen = get_current_screen();
 

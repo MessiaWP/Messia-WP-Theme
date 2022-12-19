@@ -68,7 +68,7 @@ trait Messia_Custom_Fields {
 	 *
 	 * @return string HTML
 	 */
-	protected static function get_custom_field( string $field_type, array $constructor, int $segment_id, $field_value, array $args, $block_mode = false ): ?string {
+	protected static function get_custom_field( string $field_type, array $constructor, int $segment_id, mixed $field_value, array $args, bool $block_mode = false ): ?string {
 
 		if ( false === $block_mode ) {
 
@@ -139,12 +139,12 @@ trait Messia_Custom_Fields {
 	 *
 	 * @param array   $constructor Meta value of constructed term.
 	 * @param integer $segment_id  Segment term id that object belongs to.
-	 * @param array   $field_value Current constructed value of field.
+	 * @param string  $field_value Current constructed value of field.
 	 * @param array   $args        Additional attributes.
 	 *
 	 * @return string HTML
 	 */
-	private static function get_field_input_text( array $constructor, int $segment_id, $field_value, array $args ): string {
+	private static function get_field_input_text( array $constructor, int $segment_id, string $field_value, array $args ): string {
 
 		$title       = self::get_custom_field_title( $constructor );
 		$field_value = "<div class='custom-field-value'>{$field_value}</div>";
@@ -159,12 +159,12 @@ trait Messia_Custom_Fields {
 	 *
 	 * @param array   $constructor Meta value of constructed term.
 	 * @param integer $segment_id  Segment term id that object belongs to.
-	 * @param array   $field_value Current constructed value of field.
+	 * @param string  $field_value Current constructed value of field.
 	 * @param array   $args        Additional attributes.
 	 *
 	 * @return string HTML
 	 */
-	private static function get_field_input_textarea( array $constructor, int $segment_id, $field_value, array $args ): string {
+	private static function get_field_input_textarea( array $constructor, int $segment_id, string $field_value, array $args ): string {
 
 		$title       = self::get_custom_field_title( $constructor );
 		$field_value = "<div class='custom-field-value'>{$field_value}</div>";
@@ -184,7 +184,7 @@ trait Messia_Custom_Fields {
 	 *
 	 * @return string HTML
 	 */
-	private static function get_field_input_link( array $constructor, int $segment_id, $field_value, array $args ): string {
+	private static function get_field_input_link( array $constructor, int $segment_id, array $field_value, array $args ): string {
 
 		$title      = self::get_custom_field_title( $constructor );
 		$link_title = array_keys( $field_value );
@@ -215,7 +215,7 @@ trait Messia_Custom_Fields {
 	 *
 	 * @return string HTML
 	 */
-	private static function get_field_input_address( array $constructor, int $segment_id, $field_value, array $args ): string {
+	private static function get_field_input_address( array $constructor, int $segment_id, array $field_value, array $args ): string {
 
 		$blog_settings = self::$custom_fields_trait_blog_settings;
 		$address       = $field_value['user_address'];
@@ -259,12 +259,12 @@ trait Messia_Custom_Fields {
 	 *
 	 * @param array   $constructor Meta value of constructed term.
 	 * @param integer $segment_id  Segment term id that object belongs to.
-	 * @param array   $field_value Current constructed value of field.
+	 * @param string  $field_value Current constructed value of field.
 	 * @param array   $args        Additional attributes.
 	 *
 	 * @return string HTML
 	 */
-	private static function get_field_input_checkbox( array $constructor, int $segment_id, $field_value, array $args ): ?string {
+	private static function get_field_input_checkbox( array $constructor, int $segment_id, string $field_value, array $args ): ?string {
 
 		if ( '0' === $field_value ) {
 			return null;
@@ -282,12 +282,12 @@ trait Messia_Custom_Fields {
 	 *
 	 * @param array   $constructor Meta value of constructed term.
 	 * @param integer $segment_id  Segment term id that object belongs to.
-	 * @param array   $field_value Current constructed value of field.
+	 * @param float   $field_value Current constructed value of field.
 	 * @param array   $args        Additional attributes.
 	 *
 	 * @return string HTML
 	 */
-	private static function get_field_input_number( array $constructor, int $segment_id, $field_value, array $args ): string {
+	private static function get_field_input_number( array $constructor, int $segment_id, float $field_value, array $args ): string {
 
 		$number    = Messia_Config_Custom_Fields::get_custom_field_formatted_value( $constructor, $field_value );
 		$dimension = $constructor['units'];
@@ -369,12 +369,12 @@ trait Messia_Custom_Fields {
 	 *
 	 * @param array   $constructor Meta value of constructed term.
 	 * @param integer $segment_id  Segment term id that object belongs to.
-	 * @param array   $field_value Current constructed value of field.
+	 * @param string  $field_value Current constructed value of field.
 	 * @param array   $args        Additional attributes.
 	 *
 	 * @return string HTML
 	 */
-	private static function get_field_input_external_media( array $constructor, int $segment_id, $field_value, array $args ): string {
+	private static function get_field_input_external_media( array $constructor, int $segment_id, string $field_value, array $args ): string {
 
 		$title = self::get_custom_field_title( $constructor );
 
@@ -388,12 +388,12 @@ trait Messia_Custom_Fields {
 	 *
 	 * @param array   $constructor Meta value of constructed term.
 	 * @param integer $segment_id  Segment term id that object belongs to.
-	 * @param array   $field_value Current constructed value of field.
+	 * @param string  $field_value Current constructed value of field.
 	 * @param array   $args        Additional attributes.
 	 *
 	 * @return string HTML
 	 */
-	private static function get_field_input_html( array $constructor, int $segment_id, $field_value, array $args ): string {
+	private static function get_field_input_html( array $constructor, int $segment_id, string $field_value, array $args ): string {
 
 		$title       = self::get_custom_field_title( $constructor );
 		$field_value = "<div class='custom-field-value'>{$field_value}</div>";
@@ -408,12 +408,12 @@ trait Messia_Custom_Fields {
 	 *
 	 * @param array   $constructor Meta value of constructed term.
 	 * @param integer $segment_id  Segment term id that object belongs to.
-	 * @param array   $field_value Current constructed value of field.
+	 * @param string  $field_value Current constructed value of field.
 	 * @param array   $args        Additional attributes.
 	 *
 	 * @return string HTML
 	 */
-	private static function get_field_select_post_single( array $constructor, int $segment_id, $field_value, array $args ): ?string {
+	private static function get_field_select_post_single( array $constructor, int $segment_id, string $field_value, array $args ): ?string {
 
 		if ( '-1' === $field_value ) {
 			return null;
@@ -443,12 +443,12 @@ trait Messia_Custom_Fields {
 	 *
 	 * @param array   $constructor Meta value of constructed term.
 	 * @param integer $segment_id  Segment term id that object belongs to.
-	 * @param array   $field_value Current constructed value of field.
+	 * @param mixed   $field_value Current constructed value of field.
 	 * @param array   $args        Additional attributes.
 	 *
 	 * @return string HTML
 	 */
-	private static function get_field_select_post_multi( array $constructor, int $segment_id, $field_value, array $args ): ?string {
+	private static function get_field_select_post_multi( array $constructor, int $segment_id, mixed $field_value, array $args ): ?string {
 
 		if ( ! is_array( $field_value ) ) {
 			return null;
@@ -503,14 +503,14 @@ trait Messia_Custom_Fields {
 	/**
 	 * Get title for custom field.
 	 *
-	 * @param string      $constructor Meta value of constructed term.
-	 * @param string|null $include     Extra data to add to title.
-	 * @param array       $classes     CSS classes to add to title.
-	 * @param array       $attributes  CSS attributes to add to title.
+	 * @param string|array $constructor Meta value of constructed term.
+	 * @param string|null  $extra_data  Extra data to add to title.
+	 * @param array        $classes     CSS classes to add to title.
+	 * @param array        $attributes  CSS attributes to add to title.
 	 *
 	 * @return string|null
 	 */
-	private static function get_custom_field_title( $constructor, ?string $include = null, array $classes = [], array $attributes = [] ): ?string {
+	private static function get_custom_field_title( string|array $constructor, ?string $extra_data = null, array $classes = [], array $attributes = [] ): ?string {
 
 		$icon  = self::get_custom_field_icon( $constructor['icon'] );
 		$title = ( empty( $constructor['title'] ) ) ? $constructor['name'] : $constructor['title'];
@@ -530,7 +530,7 @@ trait Messia_Custom_Fields {
 
 		$attributes = implode( ' ', $attributes );
 		$classes    = implode( ' ', $classes );
-		return "<h4 class='{$classes} d-flex w-100 align-items-center' {$attributes}>{$icon}{$title}{$include}</h4>";
+		return "<h4 class='{$classes} d-flex w-100 align-items-center' {$attributes}>{$icon}{$title}{$extra_data}</h4>";
 	}
 
 	/**
@@ -540,7 +540,7 @@ trait Messia_Custom_Fields {
 	 *
 	 * @return string|null
 	 */
-	private static function get_custom_field_icon( $constructor_icon ): ?string {
+	private static function get_custom_field_icon( string $constructor_icon ): ?string {
 
 		if ( empty( $constructor_icon ) ) {
 			return null;

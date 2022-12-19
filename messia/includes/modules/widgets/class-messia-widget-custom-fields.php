@@ -96,7 +96,7 @@ class Messia_Widget_Custom_Fields extends WP_Widget {
 	 *
 	 * @return void
 	 */
-	public function widget( $args, $instance, $block_mode = false ): void {
+	public function widget( $args, $instance, $block_mode = false ): void { // phpcs:ignore Squiz.Commenting.FunctionComment.TypeHintMissing, Squiz.Commenting.FunctionComment.ScalarTypeHintMissing
 
 		$errors       = [];
 		$widget_title = null;
@@ -198,7 +198,7 @@ class Messia_Widget_Custom_Fields extends WP_Widget {
 	 * @return void
 	 * @throws Exception If custom constructor field has in config unknown HTML type.
 	 */
-	public function form( $instance ): void {
+	public function form( mixed $instance ): void {
 
 		global $wpdb;
 
@@ -335,7 +335,7 @@ class Messia_Widget_Custom_Fields extends WP_Widget {
 	 *
 	 * @return array
 	 */
-	public function update( $new_instance, $old_instance ): array {
+	public function update( mixed $new_instance, mixed $old_instance ): array {
 
 		foreach ( $new_instance['title'] as $segment_slug => $title ) {
 			$new_instance['title'][ $segment_slug ] = wp_strip_all_tags( $title );

@@ -15,7 +15,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-use Smartbits\Messia\Includes\Config\Messia_Config_Settings;
 use Exception;
 use RecursiveIteratorIterator;
 use RecursiveDirectoryIterator;
@@ -516,11 +515,11 @@ class Messia_Demo {
 	/**
 	 * Build SQL dump.
 	 *
-	 * @param array<int, string> $table Table to dump.
+	 * @param string $table Table to dump.
 	 *
 	 * @return string
 	 */
-	private function get_dump_text( $table ): string {
+	private function get_dump_text( string $table ): string {
 
 		global $wpdb;
 
@@ -784,7 +783,7 @@ class Messia_Demo {
 	/**
 	 * Add to ZIP site uploads based on info from Uploads dir content
 	 *
-	 * @param ZipArchive $zip zipping dump.
+	 * @param ZipArchive $zip Zipping dump.
 	 *
 	 * @return void
 	 */
@@ -825,7 +824,7 @@ class Messia_Demo {
 	/**
 	 * Add to ZIP site uploads based on info from DB
 	 *
-	 * @param ZipArchive $zip zipping dump.
+	 * @param ZipArchive $zip Zipping dump.
 	 *
 	 * @return  void
 	 */
@@ -911,8 +910,8 @@ class Messia_Demo {
 	/**
 	 * Restore uploads from zip to file system
 	 *
-	 * @param WP_Filesystem_Direct $wp_filesystem instance of WP filesystem.
-	 * @param string               $source        where to search for files to restore.
+	 * @param WP_Filesystem_Direct $wp_filesystem Instance of WP filesystem.
+	 * @param string               $source        Where to search for files to restore.
 	 *
 	 * @throws Exception On source folder not found or does not exist.
 	 *

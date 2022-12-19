@@ -1603,7 +1603,6 @@ final class Messia_Config_Settings {
 	private static function get_tabs_standalone(): array {
 
 		$tabs = [
-			'site'        => self::$tabs->tab_site,
 			'homepage'    => self::$tabs->tab_homepage,
 			'searchpage'  => self::$tabs->tab_searchpage,
 			'objectpage'  => self::$tabs->tab_objectpage,
@@ -1879,7 +1878,7 @@ final class Messia_Config_Settings {
 	 *
 	 * @return array
 	 */
-	public static function find_controls_by( $conditions ): array {
+	public static function find_controls_by( array $conditions ): array {
 		$found = [];
 
 		self::init_config();

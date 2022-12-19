@@ -1170,6 +1170,8 @@ abstract class Messia_Menu_Engine {
 	/**
 	 * Reset site content to data from dump (also with media files).
 	 *
+	 * @throws Exception If nothing was selected to install.
+	 *
 	 * @return void
 	 */
 	public function demo_install(): void {
@@ -1639,11 +1641,11 @@ abstract class Messia_Menu_Engine {
 	 *
 	 * @return mixed
 	 */
-	private function normalize_types( $value ) {
+	private function normalize_types( mixed $value ) {
 
 		if ( is_numeric( $value ) ) {
 
-			if ( $value == (int) $value ) { // phpcs:ignore WordPress.PHP.StrictComparisons.LooseComparison
+			if ( $value == (int) $value ) { // phpcs:ignore Universal.Operators.StrictComparisons.LooseEqual
 				return (int) $value;
 			} else {
 				return (float) $value;
@@ -1704,8 +1706,8 @@ abstract class Messia_Menu_Engine {
 	 * Validate demo against requirments.
 	 *
 	 * @param string $demo_file    Full path to demo file.
-	 * @param string $original_ext If not provided will be taken from $demo_file.
 	 * @param string $comment      Demo archive comment.
+	 * @param string $original_ext If not provided will be taken from $demo_file.
 	 *
 	 * @return array
 	 */

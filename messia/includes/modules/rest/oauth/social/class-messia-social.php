@@ -116,7 +116,7 @@ abstract class Messia_Social {
 	 *
 	 * @param string $url    Requested URL.
 	 * @param array  $params URL query data.
-	 * @param string $type   json|str.
+	 * @param string $type   Type json|str.
 	 *
 	 * @return string
 	 *
@@ -129,12 +129,13 @@ abstract class Messia_Social {
 		curl_setopt( $curl, CURLOPT_POSTFIELDS, urldecode( http_build_query( $params ) ) );
 		curl_setopt( $curl, CURLOPT_RETURNTRANSFER, true );
 		curl_setopt( $curl, CURLOPT_SSL_VERIFYPEER, false );
-		$result = curl_exec( $curl );
+		$response = curl_exec( $curl );
 		curl_close( $curl );
 		if ( 'json' === $type ) {
-			return json_decode( $result, 1 );
+			return json_decode( $response, true );
 		} elseif ( 'str' === $type ) {
-			return parse_str( $result );
+			parse_str( $response, $result );
+			return $result;
 		} else {
 			exit; // Just in case.
 		}

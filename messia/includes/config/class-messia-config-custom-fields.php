@@ -21,6 +21,11 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 class Messia_Config_Custom_Fields {
 
+	/**
+	 * Dimentions.
+	 *
+	 * @var array
+	 */
 	private static ?array $units = null;
 
 	/**
@@ -58,7 +63,7 @@ class Messia_Config_Custom_Fields {
 	 *
 	 * @return string
 	 */
-	public static function get_custom_field_formatted_value( array $constructor, $value ): string {
+	public static function get_custom_field_formatted_value( array $constructor, mixed $value ): string {
 
 		$cf_units = self::get_units();
 		$cf_units = array_merge( ...array_values( $cf_units ) );

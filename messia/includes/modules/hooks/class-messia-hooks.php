@@ -346,7 +346,7 @@ class Messia_Hooks {
 	 *
 	 * @return string
 	 */
-	public function document_title( $title ): ?string {
+	public function document_title( string $title ): ?string {
 
 		if ( is_404() || ! is_singular() ) {
 			return $title;
@@ -678,6 +678,8 @@ class Messia_Hooks {
 	 * @param array       $response   Array of prepared attachment data.
 	 * @param WP_Post     $attachment Attachment object.
 	 * @param array|false $meta       Array of attachment meta data, or false if there is none.
+	 *
+	 * @return array
 	 */
 	public function get_attachment_svg_media_library( array $response, WP_Post $attachment, $meta ): array {
 
@@ -741,7 +743,7 @@ class Messia_Hooks {
 	 *
 	 * @return array
 	 */
-	public function cc_filetype_and_ext( array $file_info, string $file, string $filename, $mimes, $real_mime ): array {
+	public function cc_filetype_and_ext( array $file_info, string $file, string $filename, array $mimes, $real_mime ): array {
 		$wp_filetype = wp_check_filetype( $filename, $mimes );
 		if ( 'svg' === $wp_filetype['ext'] ) {
 			$file_info['ext']  = 'svg';
@@ -823,7 +825,7 @@ class Messia_Hooks {
 	 *
 	 * @return string
 	 */
-	public static function filter_style_tags( string $tag, string $handle, string $src, $media ): string {
+	public static function filter_style_tags( string $tag, string $handle, string $src, string $media ): string {
 
 		if ( false === $src || empty( $src ) || is_null( $src ) ) {
 			return $tag;
@@ -917,7 +919,7 @@ class Messia_Hooks {
 	 * Callback for Messia messia_standalone_save_settings_success action.
 	 * Install ajax dispatcher if user switched it on.
 	 *
-	 * @param string $setting_preset messia_blog_settings_preset or messia_site_settings_preset.
+	 * @param string $setting_preset Option messia_blog_settings_preset or messia_site_settings_preset.
 	 * @param array  $to_save        Incoming settings.
 	 * @param array  $old_settings   Previous settings.
 	 * @param array  $new_settings   New settings.
@@ -927,15 +929,18 @@ class Messia_Hooks {
 	public function on_standalone_saved( string $setting_preset, array $to_save, array $old_settings, array $new_settings ): void {
 		$this->setup_ajax_dispatcher( $new_settings );
 	}
+
 	/**
 	 * Return propper translation filename
 	 * The problem that "wp i18n make-json [source path] --no-purge" create file with name
 	 * as md5 of source key in resulting JSON. Ex: "search-snippet/search-snippet-editor.js"
 	 * but wp_set_script_translations search file by $handle.
 	 *
-	 * @param string $file   .../wp-content/themes/messia/includes/assets/langs/blocks/messia-ru_RU-search-snippet.json.
+	 * @param string $file   Path .../wp-content/themes/messia/includes/assets/langs/blocks/messia-ru_RU-search-snippet.json.
 	 * @param string $handle Block registration name, ex: search-snippet.
-	 * @param string $domain messia.
+	 * @param string $domain Messia.
+	 *
+	 * @return string
 	 */
 	public function on_load_script_translation_file( string $file, string $handle, string $domain ): string {
 

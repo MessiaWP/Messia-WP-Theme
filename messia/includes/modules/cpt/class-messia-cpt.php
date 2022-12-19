@@ -1011,7 +1011,7 @@ class Messia_Cpt {
 			</tr>
 			<tr class="form-field" style="border-bottom: 1px solid #dedede;">
 				<th scope="row" valign="top"><?php esc_html_e( 'Drag and drop the fields below:', 'messia' ); ?></th>
-				<td><div id="constructed-wrapper" data-title="<?php _e( 'Drop item here', 'messia' ); ?>"><?php echo $constructed_fields_html; ?></div></td>
+				<td><div id="constructed-wrapper" data-title="<?php esc_html_e( 'Drop item here', 'messia' ); ?>"><?php echo $constructed_fields_html; ?></div></td>
 				<input id="constructor_cf" type="hidden" name="constructor_cf">
 			</tr>
 		<?php
@@ -1026,7 +1026,7 @@ class Messia_Cpt {
 	 *
 	 * @return mixed
 	 */
-	private function get_term_meta_value( int $term_id, string $meta_key, $default_value ) {
+	private function get_term_meta_value( int $term_id, string $meta_key, mixed $default_value ): mixed {
 
 		if ( metadata_exists( 'term', $term_id, $meta_key ) ) {
 			return get_term_meta( $term_id, $meta_key, true );
@@ -1569,7 +1569,7 @@ class Messia_Cpt {
 						$block['attrs']['constructedFields'] = array_filter(
 							$block['attrs']['constructedFields'],
 							function( $value ) use ( $segment_slug, $to_del ) {
-								if ( $value['segmentSlug'] === $segment_slug && in_array( $value['fieldSlug'], $to_del ) ) {
+								if ( $value['segmentSlug'] === $segment_slug && in_array( $value['fieldSlug'], $to_del, true ) ) {
 									return false;
 								}
 								return true;
@@ -1591,8 +1591,8 @@ class Messia_Cpt {
 	 *
 	 * In 2 and 3 there no meta data from client, so it will be setted to default
 	 *
-	 * @param int $term_id currently saving term.
-	 * @param int $tt_id   currently saving term.
+	 * @param int $term_id Currently saving term.
+	 * @param int $tt_id   Currently saving term.
 	 *
 	 * @return void
 	 */

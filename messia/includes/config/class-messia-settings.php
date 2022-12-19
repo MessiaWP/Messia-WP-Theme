@@ -477,7 +477,7 @@ class Messia_Settings {
 	 * @return void
 	 * @throws Exception If preset name unrecognized.
 	 */
-	public function refresh_site_setting( $preset ): void {
+	public function refresh_site_setting( string $preset ): void {
 
 		switch ( $preset ) {
 
@@ -496,8 +496,9 @@ class Messia_Settings {
 	 *
 	 * @param string $preset One of predefined presets name.
 	 *
-	 * @return void
 	 * @throws Exception If preset name unrecognized.
+	 *
+	 * @return void
 	 */
 	public function reset_blog_setting( string $preset ): void {
 
@@ -520,10 +521,11 @@ class Messia_Settings {
 	 *
 	 * @param string $preset One of predefined presets name.
 	 *
-	 * @return void
 	 * @throws Exception If preset name unrecognized.
+	 *
+	 * @return void
 	 */
-	public function reset_site_setting( $preset ): void {
+	public function reset_site_setting( string $preset ): void {
 
 		switch ( $preset ) {
 

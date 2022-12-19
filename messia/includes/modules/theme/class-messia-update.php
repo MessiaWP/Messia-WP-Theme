@@ -115,7 +115,7 @@ final class Messia_Update {
 			<td colspan="<?php echo $table->get_column_count(); ?>" class="plugin-update colspanchange">
 				<div class="update-message notice inline notice-warning notice-alt">
 					<p>
-						<?php _e( 'A valid license is required to receive automatic updates and access to support.', 'messia' ); ?>
+						<?php esc_html_e( 'A valid license is required to receive automatic updates and access to support.', 'messia' ); ?>
 						<?php printf( '<a href="' . MESSIA_SHOP_URL . '">%s</a>', __( 'Buy licence', 'messia' ) ); ?> |
 						<?php printf( '<a href="' . admin_url( add_query_arg( 'page', MESSIA_THEME_MENU_PAGE_SLUG, null ) ) . '">%s</a>', __( 'Activate licence', 'messia' ) ); ?>
 					</p>
@@ -136,7 +136,7 @@ final class Messia_Update {
 	 *
 	 * @return mixed
 	 */
-	public function check_for_update( $value, string $transient ) {
+	public function check_for_update( mixed $value, string $transient ) {
 
 		if ( 'active' !== $this->credentials->theme_licence['licence_status'] ) {
 			return $value;
@@ -184,8 +184,10 @@ final class Messia_Update {
 	 * @param string             $action   Requested action. Likely values are 'theme_information',
 	 *                                    'feature_list', or 'query_themes'.
 	 * @param object             $args     Arguments used to query for installer pages from the Themes API.
+	 *
+	 * @return mixed
 	 */
-	public function theme_api_call( $override, string $action, object $args ) {
+	public function theme_api_call( $override, string $action, object $args ): mixed {
 		return $override;
 	}
 
@@ -383,7 +385,7 @@ final class Messia_Update {
 	 *
 	 * @return array
 	 */
-	private function prepare_request( $action ): array {
+	private function prepare_request( string $action ): array {
 
 		global $wp_version;
 
@@ -404,8 +406,10 @@ final class Messia_Update {
 	 * @param array $query URL query part.
 	 *
 	 * @throws Exception On fail.
+	 * 
+	 * @return array
 	 */
-	private function execute_request( array $query ) {
+	private function execute_request( array $query ): array {
 
 		$request_uri = $this->credentials->shop_api_url . '?' . http_build_query( $query, '', '&' );
 		$response    = wp_remote_get( $request_uri );
@@ -570,7 +574,7 @@ final class Messia_Update {
 	/**
 	 * Define action title by status value.
 	 *
-	 * @param string $status licence status.
+	 * @param string $status Licence status.
 	 *
 	 * @return string
 	 */

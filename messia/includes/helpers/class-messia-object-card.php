@@ -36,7 +36,7 @@ class Messia_Object_Card {
 	 *
 	 * @var array
 	 */
-	private static $areas = [];
+	private static array $areas = [];
 
 	/**
 	 * Get namespaced class name.
@@ -448,11 +448,11 @@ class Messia_Object_Card {
 	/**
 	 * Get title for custom field.
 	 *
-	 * @param string $constructor Term constructor meta.
+	 * @param array $constructor Term constructor meta.
 	 *
-	 * @return mixed string|null
+	 * @return array
 	 */
-	private static function get_object_title( $constructor ) {
+	private static function get_object_title( array $constructor ): array {
 
 		return [
 			'title' => ( empty( $constructor['title'] ) ) ? null : "{$constructor['title']}",
@@ -465,9 +465,9 @@ class Messia_Object_Card {
 	 *
 	 * @param string $constructor_icon Term constructor meta data with icon.
 	 *
-	 * @return mixed string|null
+	 * @return string|null
 	 */
-	private static function get_object_icon( $constructor_icon ) {
+	private static function get_object_icon( string $constructor_icon ): ?string {
 		self::set_helpers();
 		return self::$helpers::get_media_icon_front( json_decode( $constructor_icon, false ) );
 	}

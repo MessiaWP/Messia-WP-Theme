@@ -557,7 +557,7 @@ class Messia_Objects {
 	 *
 	 * @return void
 	 */
-	public function save_object( $post_id, WP_Post $post, bool $update ): void {
+	public function save_object( int $post_id, WP_Post $post, bool $update ): void {
 
 		if ( ! $this->if_to_save_post( $post_id, $post ) || 'messia_object' !== $post->post_type ) {
 			return;
@@ -810,7 +810,7 @@ class Messia_Objects {
 	 * Adds dropdown to filter objects by segment in admin
 	 *
 	 * @param string $post_type Registered post type name.
-	 * @param string $which     top | bottom The location of the extra table nav markup.
+	 * @param string $which     Top | bottom The location of the extra table nav markup.
 	 *
 	 * @return void
 	 */
@@ -993,7 +993,7 @@ class Messia_Objects {
 	 *
 	 * @return string
 	 */
-	public function set_objects_column_orderby( $orderby, WP_Query $query ): string {
+	public function set_objects_column_orderby( string $orderby, WP_Query $query ): string {
 
 		global $pagenow;
 
@@ -2222,7 +2222,7 @@ class Messia_Objects {
 	 *
 	 * @return string
 	 */
-	public function segment_alias_success( $location ): string {
+	public function segment_alias_success( string $location ): string {
 
 		MIA()->set_messia_admin_notice_transient( 5 );
 		remove_filter( 'wp_redirect', [ $this, 'segment_alias_warning' ] );

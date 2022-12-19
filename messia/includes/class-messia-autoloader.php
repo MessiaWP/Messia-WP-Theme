@@ -70,6 +70,8 @@ class Messia_Autoloader {
 	 * Auto-load Messia classes on demand to reduce memory consumption.
 	 *
 	 * @param string $class Fully cvalified class name to search and include.
+	 *
+	 * @return void
 	 */
 	public function autoload( string $class ): void {
 

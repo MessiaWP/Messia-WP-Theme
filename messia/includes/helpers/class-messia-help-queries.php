@@ -96,7 +96,7 @@ class Messia_Help_Queries extends Messia_Help_Database {
 	/**
 	 * Invokes showing Error page with 404 header.
 	 *
-	 * @param array $templates — An optional list of template candidates.
+	 * @param array $templates An optional list of template candidates.
 	 *
 	 * @return void
 	 */
@@ -117,7 +117,7 @@ class Messia_Help_Queries extends Messia_Help_Database {
 	 *
 	 * @return mixed
 	 */
-	public static function get_alias_query( $if_none ) {
+	public static function get_alias_query( mixed $if_none ) {
 
 		return get_query_var( 'messia_alias', $if_none );
 	}
@@ -954,7 +954,6 @@ class Messia_Help_Queries extends Messia_Help_Database {
 		} elseif ( -1 === $term_target_id ) {
 			return;
 		} else {
-
 			/*
 			 * FIND MAX(terms.term_order) for a terms level where moved term lie and
 			 * where term_order <> 0 and is not null and term_id is not one of: moved term and target term.

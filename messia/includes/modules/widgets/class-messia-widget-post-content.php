@@ -77,7 +77,7 @@ class Messia_Widget_Post_Content extends WP_Widget {
 	 *
 	 * @return void
 	 */
-	public function widget( $args, $instance, $block_mode = false ): void {
+	public function widget( $args, $instance, $block_mode = false ): void { // phpcs:ignore Squiz.Commenting.FunctionComment.TypeHintMissing, Squiz.Commenting.FunctionComment.ScalarTypeHintMissing
 
 		echo $args['before_widget'];
 		echo $this->helpers::parse_placeholders( apply_filters( 'the_content', get_the_content() ) );
@@ -91,7 +91,7 @@ class Messia_Widget_Post_Content extends WP_Widget {
 	 *
 	 * @return void
 	 */
-	public function form( $instance ): void {
+	public function form( mixed $instance ): void {
 		?>
 		<p><?php esc_html_e( 'Widget do not support any settings.', 'messia' ); ?></p>
 		<?php

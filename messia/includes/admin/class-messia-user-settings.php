@@ -93,10 +93,10 @@ class Messia_User_Settings {
 		$xpath = new DOMXPath( $doc );
 
 		foreach ( $xpath->query( '/div/text()' ) as $node ) {
-			if ( empty( $node->nodeValue ) || is_null( $node->nodeValue ) ) {
+			if ( empty( $node->nodeValue ) || is_null( $node->nodeValue ) ) { // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 				continue;
 			}
-			$to_save['add_in_header'] = str_replace( $node->nodeValue, '', $to_save['add_in_header'] );
+			$to_save['add_in_header'] = str_replace( $node->nodeValue, '', $to_save['add_in_header'] ); // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 		}
 
 		// PWA option.

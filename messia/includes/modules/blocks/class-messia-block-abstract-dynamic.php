@@ -290,7 +290,7 @@ abstract class Messia_Block_Abstract_Dynamic {
 	 *
 	 * @return string
 	 */
-	protected function render_widget( $widget_id, $attributes ): string {
+	protected function render_widget( string $widget_id, array $attributes ): string {
 
 		global $wp_widget_factory;
 

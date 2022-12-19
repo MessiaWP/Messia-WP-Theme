@@ -100,7 +100,7 @@ class Messia_Widget_Tabs_Panel extends WP_Widget {
 	 *
 	 * @return void
 	 */
-	public function widget( $args, $instance, $block_mode = false ): void {
+	public function widget( $args, $instance, $block_mode = false ): void { // phpcs:ignore Squiz.Commenting.FunctionComment.TypeHintMissing, Squiz.Commenting.FunctionComment.ScalarTypeHintMissing
 
 		if ( false === $block_mode ) {
 
@@ -208,7 +208,7 @@ class Messia_Widget_Tabs_Panel extends WP_Widget {
 	 *
 	 * @return void
 	 */
-	public function form( $instance ): void {
+	public function form( mixed $instance ): void {
 
 		global $wpdb;
 
@@ -306,7 +306,7 @@ class Messia_Widget_Tabs_Panel extends WP_Widget {
 	 *
 	 * @return array
 	 */
-	public function update( $new_instance, $old_instance ): array {
+	public function update( mixed $new_instance, mixed $old_instance ): array {
 
 		foreach ( $new_instance['tabs'] as $segment_term_id => $tabs ) {
 			$new_instance['tabs'][ $segment_term_id ] = json_decode( $tabs, true );

@@ -146,7 +146,7 @@ class Messia_Comments {
 	 * Adds comment meta data (rating).
 	 *
 	 * @param int        $id               The comment ID.
-	 * @param int|string $comment_approved 1 if the comment is approved, 0 if not, 'spam' if spam.
+	 * @param int|string $comment_approved One (1) if the comment is approved, zero (0) if not, 'spam' if spam.
 	 * @param array      $comment          Comment data.
 	 *
 	 * @return void

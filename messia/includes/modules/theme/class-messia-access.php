@@ -478,7 +478,7 @@ final class Messia_Access {
 	 *
 	 * @return string
 	 */
-	private static function get_action_title( $access_valid_until ): string {
+	private static function get_action_title( mixed $access_valid_until ): string {
 
 		if ( false === $access_valid_until ) {
 			$title = __( 'Grant access', 'messia' );
@@ -496,7 +496,7 @@ final class Messia_Access {
 	 *
 	 * @return string
 	 */
-	private static function get_status_title( $access_valid_until ): string {
+	private static function get_status_title( mixed $access_valid_until ): string {
 
 		if ( false === $access_valid_until ) {
 			$title = __( 'No access', 'messia' );
@@ -586,9 +586,10 @@ final class Messia_Access {
 	 *         string $subject The subject of the email.
 	 *         string $message The body of the email.
 	 *         string $headers The headers of the email.
-	 *
 	 * @param WP_User $user               User object for new user.
 	 * @param string  $blogname           The site title.
+	 *
+	 * @return array
 	 */
 	public static function user_notification( array $notification_email, WP_User $user, string $blogname ): array {
 

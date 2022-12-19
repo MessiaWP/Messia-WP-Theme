@@ -217,7 +217,7 @@ class Messia_Shortcodes {
 	 * @return string
 	 * @throws Exception If shortcode callback is invalid.
 	 */
-	public static function constructor_shortcode( $atts ): ?string {
+	public static function constructor_shortcode( mixed $atts ): ?string {
 
 		$html                  = null;
 		$errors                = [];
@@ -420,12 +420,12 @@ class Messia_Shortcodes {
 	 * @param string $field_type             Inner type of custom field.
 	 * @param array  $constructor_field_meta Metadata of segment term constructor field.
 	 * @param int    $segment_id             Segment taxonomy term id.
-	 * @param mixid  $post_field_meta        Metadata of object constructed field.
+	 * @param mixed  $post_field_meta        Metadata of object constructed field.
 	 * @param array  $args                   Extra data.
 	 *
 	 * @return string
 	 */
-	public static function custom_field( string $field_type, array $constructor_field_meta, int $segment_id, $post_field_meta, array $args ): ?string {
+	public static function custom_field( string $field_type, array $constructor_field_meta, int $segment_id, mixed $post_field_meta, array $args ): ?string {
 		return self::get_custom_field( $field_type, $constructor_field_meta, $segment_id, $post_field_meta, $args );
 	}
 
@@ -537,7 +537,6 @@ class Messia_Shortcodes {
 							</div>',
 				'email'  => false,
 			],
-			'comment_notes_before' => '',
 			'comment_notes_before' => '<p class="comment-notes"><span id="email-notes">' . __( 'Your email will not be published.', 'messia' ) . '</span>' . $required_text . '</p>',
 			'comment_notes_after'  => '',
 			'comment_field'        => '<div class="eval d-flex mb-2"><div class="title me-3">' . __( 'Your rating (optional)', 'messia' ) . '</div>' . $rating_snippet . '</div><div class="textarea mb-3"><div class="w-100 messia-textfield">
@@ -592,11 +591,11 @@ class Messia_Shortcodes {
 	/**
 	 * Render comments list.
 	 *
-	 * @param array $atts Shortcode args.
+	 * @param array|string $atts Shortcode args.
 	 *
 	 * @return string
 	 */
-	public static function review_list( $atts ): ?string {
+	public static function review_list( array|string $atts ): ?string {
 
 		$errors = [];
 		$valid  = self::validate_comments_target();

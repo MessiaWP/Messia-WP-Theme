@@ -108,7 +108,7 @@ class Messia_Help extends Messia_Help_Queries {
 	 *
 	 * @return string
 	 */
-	public static function get_media_icon_front( array $icons, $size = 'full', bool $flush_cache = false ): string {
+	public static function get_media_icon_front( array $icons, mixed $size = 'full', bool $flush_cache = false ): string {
 
 		$icons_html = null;
 
@@ -619,6 +619,8 @@ class Messia_Help extends Messia_Help_Queries {
 	 * and return URL to it.
 	 *
 	 * @param array $asset Asset unit data.
+	 *
+	 * @return void
 	 */
 	public static function resolve_assets_path( array &$asset ): void {
 
@@ -1058,13 +1060,13 @@ class Messia_Help extends Messia_Help_Queries {
 	 * Comment snippet in comment list. Wrapper for self::get_rating_snippet().
 	 *
 	 * @param int|object $comment Comment data.
-	 * @param array      $args    wp_list_comments() args.
+	 * @param array      $args    Function wp_list_comments() args.
 	 * @param bool       $new     For new comment or existing one.
-	 * @param mixed      $echo    Return or output result.
+	 * @param bool       $echo    Return or output result.
 	 *
 	 * @return string HTML code.
 	 */
-	public static function get_comment_rating_snippet( $comment, array $args, bool $new, $echo = false ): ?string {
+	public static function get_comment_rating_snippet( $comment, array $args, bool $new, bool $echo = false ): ?string {
 
 		if ( is_int( $comment ) ) {
 			$comment = get_comment( $comment );
@@ -1178,7 +1180,7 @@ class Messia_Help extends Messia_Help_Queries {
 	 *
 	 * @return string
 	 */
-	private static function get_rating_snippet( int $object_id, $rating, array $modules, $new = false ): string {
+	private static function get_rating_snippet( int $object_id, $rating, array $modules, bool $new = false ): string {
 
 		if ( ! in_array( true, $modules, true ) ) {
 			return __( 'Reviews snippet cannot be displayed indicating to disable all its modules.', 'messia' );
@@ -1272,7 +1274,7 @@ class Messia_Help extends Messia_Help_Queries {
 	 * Callback for WP wp_list_comments().
 	 *
 	 * @param WP_Comment|stdClass $comment Comment itself.
-	 * @param array               $args    wp_list_comments() args.
+	 * @param array               $args    Function wp_list_comments() args.
 	 * @param int                 $depth   Comment depth.
 	 *
 	 * @return void
@@ -1418,7 +1420,7 @@ class Messia_Help extends Messia_Help_Queries {
 	 *
 	 * @return string
 	 */
-	public static function print_errors( string $title, array $errors, ?string $comments = null, bool $echo = false, $css_classes = [] ): ?string {
+	public static function print_errors( string $title, array $errors, ?string $comments = null, bool $echo = false, array $css_classes = [] ): ?string {
 
 		if ( empty( $errors ) ) {
 			return null;

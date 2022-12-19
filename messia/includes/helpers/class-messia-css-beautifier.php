@@ -33,7 +33,7 @@ class Messia_Css_Beautifier {
 	 *
 	 * @return string
 	 */
-	public static function run( $string, $repair = true ): string {
+	public static function run( string $string, bool $repair = true ): string {
 		self::$repair = $repair;
 
 		$taps = 0;

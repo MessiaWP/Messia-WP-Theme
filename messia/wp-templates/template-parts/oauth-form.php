@@ -64,7 +64,7 @@ $facebook = MIA()->get_module( 'rest' )->get_method( 'facebook' )->button();
 								?>
 									<label class="checkbox">
 										<input type="checkbox">
-										<?php // translators: %%1$s - page url, %2$s - page title ?>
+										<?php // translators: %%1$s - page url, %2$s - page title. ?>
 										<span class="checkbox__text"><?php echo sprintf( __( 'I have read and understood the user %1$s agreement %2$s', 'messia' ), '<a target="_blank" href="' . get_the_permalink( $ppp ) . '">', '</a>' ); ?></span>
 									</label>
 							<?php } ?>

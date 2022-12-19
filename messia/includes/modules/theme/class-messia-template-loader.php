@@ -48,7 +48,7 @@ class Messia_Template_Loader {
 	 * templates and will overwrite them if names match. Only class files
 	 * with the template name in the headers annotation are considered as templates.
 	 *
-	 * @param string $template listing|object|home.
+	 * @param string $template One of listing|object|home.
 	 *
 	 * @return array fullyqualified_class_name => Human readable name.
 	 */

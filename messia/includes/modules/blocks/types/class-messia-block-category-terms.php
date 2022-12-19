@@ -289,7 +289,7 @@ class Messia_Block_Category_Terms extends Messia_Block_Abstract_Dynamic {
 		}
 
 		$wrapper_classes = [ 'categories-terms-items' ];
-		// translators: %s - block name
+		// translators: %s - block name.
 		$trick = sprintf( __( 'To fix errors you may try to resave the %s.', 'messia' ), $this->block_name );
 
 		if ( true === $attributes['slider']['active'] && count( $category_segmented ) > 0 ) {
@@ -564,7 +564,7 @@ class Messia_Block_Category_Terms extends Messia_Block_Abstract_Dynamic {
 	 *
 	 * @return array
 	 */
-	private function build_category_flat( array $terms, $flat = [], $level = 0 ) {
+	private function build_category_flat( array $terms, array $flat = [], int $level = 0 ): array {
 
 		foreach ( $terms as $term ) {
 

@@ -27,6 +27,8 @@ class Messia_OAuth_Methods {
 	 * User authorization.
 	 *
 	 * @param WP_REST_Request $request Incoming request.
+	 *
+	 * @return void
 	 */
 	public function auth( WP_REST_Request $request ): void {
 		$user = wp_signon(
@@ -48,6 +50,8 @@ class Messia_OAuth_Methods {
 	 * User registration.
 	 *
 	 * @param WP_REST_Request $request Incoming request.
+	 *
+	 * @return void
 	 */
 	public function register( WP_REST_Request $request ): void {
 		$new_user = register_new_user( $request['login'], $request['login'] );
@@ -71,6 +75,8 @@ class Messia_OAuth_Methods {
 	 * Password reset.
 	 *
 	 * @param WP_REST_Request $request Incoming request.
+	 *
+	 * @return void
 	 */
 	public function reset( WP_REST_Request $request ): void {
 		if ( ! get_user_by( 'email', $request['login'] ) ) {

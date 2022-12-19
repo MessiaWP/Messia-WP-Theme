@@ -723,7 +723,7 @@ class Messia_Block_Search_Snippet extends Messia_Block_Abstract_Dynamic {
 	 *
 	 * @return array
 	 */
-	private function build_category_flat( array $terms, $flat = [], $level = 0 ): array {
+	private function build_category_flat( array $terms, array $flat = [], int $level = 0 ): array {
 
 		foreach ( $terms as $term ) {
 
