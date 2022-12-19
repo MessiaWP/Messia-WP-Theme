@@ -278,32 +278,30 @@ function getConfig(env) {
 			const
 				localWebPackConfig = require(localWebPackPath),
 				BrowserSync = new BrowserSyncPlugin(
-					new BrowserSyncPlugin(
-						{
-							notify: true,
-							host: localWebPackConfig.browserSync.localSiteDomain,
-							open: 'external',
-							port: 4000,
-							logLevel: 'silent',
-							files: [
-								`${themePath}/**/*.*`,
-							],
-							proxy: {
-								target: localWebPackConfig.browserSync.localSiteHost,
-								ws: true
-							},
-							https: {
-								key: localWebPackConfig.browserSync.localSiteCertPathKey,
-								cert: localWebPackConfig.browserSync.localSiteCertPathCrt,
-							},
+					{
+						notify: true,
+						host: localWebPackConfig.browserSync.localSiteDomain,
+						open: 'external',
+						port: 4000,
+						logLevel: 'silent',
+						files: [
+							`${themePath}/**/*.*`,
+						],
+						proxy: {
+							target: localWebPackConfig.browserSync.localSiteHost,
+							ws: true
 						},
-						{
-							reload: false
-						}
-					)
+						https: {
+							key: localWebPackConfig.browserSync.localSiteCertPathKey,
+							cert: localWebPackConfig.browserSync.localSiteCertPathCrt,
+						},
+					},
+					{
+						reload: false
+					}
 				);
 
-				config.plugins.push(BrowserSync);
+			config.plugins.push(BrowserSync);
 
 		} catch (err) {
 			console.log("\x1b[36m%s\x1b[0m", `\n${err}\n`);
