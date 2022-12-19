@@ -1,0 +1,1 @@
+[![buddy pipeline](https://app.buddy.works/773021792e/messia-wp-theme/pipelines/pipeline/429241/badge.svg?token=852c46eb0d6f35ce3b858d5cecda6b30fbabb58a67752ea9c9a2d3e0fe07954e "buddy pipeline")](https://app.buddy.works/773021792e/messia-wp-theme/pipelines/pipeline/429241)
