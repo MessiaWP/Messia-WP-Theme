@@ -15,32 +15,32 @@ This is WordPress theme code and it should work inside a site under CMS WordPres
    - Open [Releases](https://github.com/MessiaWP/Messia-WP-Theme/releases), download `messia.zip` & `messia-child.zip` from latest release. Then install them according WordPress theme installation workflow;
 
 ## Key features of the theme
-🔸 **Universal Architecture** - structure and catalog any kinds of objects, regardless of their physical properties;
+🔸 **Universal Architecture**;
 
-🔸 **Visual Data Structuring** - object categories, properties and custom fields are defined using our visual editor. No coding required;
+🔸 **Visual Data Structuring**;
 
-🔸 **No external plugins** - all program code is written by us to provide maximum performance, reliability and scalability;
+🔸 **No external plugins**;
 
-🔸 **Dynamic filtering** - filters are displayed as needed, based on data structure, without overloading user with redundant options;
+🔸 **Dynamic filtering**;
 
-🔸 **Unlimited Hierarchy Levels** - create a hierarchy of categories of any complexity. The filtering system will be adapted automatically;
+🔸 **Unlimited Hierarchy Levels**;
 
-🔸 **Human Readable URLs** - the search results use human readable URLs. Get higher Google rankings without any marketing costs;
+🔸 **Human Readable URLs**;
 
-🔸 **Optimized DB Queries** - unrivaled performance for better SEO, even on the DB level. It allows to reduce your SEO costs dramatically;
+🔸 **Optimized DB Queries**;
 
-🔸 **Advanced Testimonials** - one click switch between native WP testimonials and advanced Messia multiple criteria testimonials;
+🔸 **Advanced Testimonials**;
 
-🔸 **Monetisation Tools** - search results can be adjusted for paid customers. Show their objects on the top of search resulte and earn money;
+🔸 **Monetisation Tools**;
 
-🔸 **Google Maps** - show your objects on Google Maps. Automatic placement on the map by object addresses;
+🔸 **Google Maps**;
 
-🔸 **Google Fonts** - one click switch between native WP testimonials and advanced Messia multiple criteria testimonials;
+🔸 **Google Fonts**;
 
-🔸 **Google Captcha** - get rid of spam and bot attcaks using Google Captcha – the most advanced website spam protection;
+🔸 **Google Captcha**;
 
-🔸 **SEO data generator** - define your SEO once using SEO variables and don't waste time doing it for every object;
+🔸 **SEO data generator**;
 
-🔸 **Developer Friendly** - well documented pure code allows deep theme customization. Child theme included;
+🔸 **Developer Friendly**;
 
-🔸 **Standards Compliance** - all program code is fully compliant with HTML5. Schema.org and WordPress standards;
+🔸 **Standards Compliance**;
