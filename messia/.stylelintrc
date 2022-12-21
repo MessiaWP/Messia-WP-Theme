@@ -50,6 +50,7 @@
 		"no-invalid-position-at-import-rule": null,
 		"no-empty-source": null,
 		"no-descending-specificity": null,
+		"declaration-block-no-redundant-longhand-properties": null,
 		"order/order": [
 			"declarations",
 			{ "type": "at-rule" },

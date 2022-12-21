@@ -288,7 +288,7 @@ class Messia_Merging {
 
 		$wp_styles->all_deps( $wp_styles->queue );
 
-		$merged_style = "/// HEADER /// \n";
+		$merged_style = "/* HEADER */ \n";
 
 		foreach ( $wp_styles->to_do as $handle ) {
 
@@ -334,7 +334,7 @@ class Messia_Merging {
 
 		$wp_styles->all_deps( $wp_styles->queue );
 
-		$merged_style = "/// HEADER /// \n";
+		$merged_style = "/* FOOTER */ \n";
 
 		foreach ( $wp_styles->to_do as $handle ) {
 

@@ -200,8 +200,8 @@ jQuery.fn.messiaMediaSelector = function (onSelect) {
 					if (activeVariant[currentSetId] === target.data('variantid')) return;
 
 					// Only one variant can be active in a moment.
-					target.parents('.icons-variants').find('.variant').removeClass(['button-primary', 'active', 'loading']);
-					target.toggleClass(['button-primary', 'active', 'loading']);
+					target.parents('.icons-variants').find('.variant').removeClass(['button-primary', 'active', 'fetching']);
+					target.toggleClass(['button-primary', 'active', 'fetching']);
 
 					appIcons.helpers[currentSet.variantCallback].call(this, target, currentSet)
 					appIcons.helpers.setSelection.call(this);
@@ -272,7 +272,7 @@ jQuery.fn.messiaMediaSelector = function (onSelect) {
 				ready: function () {
 					document.fonts.ready.then(() => {
 						this.$el.removeClass('applying-fonts');
-						this.$el.parents('#icon-set').find('.icons-variants .variant').removeClass('loading');
+						this.$el.parents('#icon-set').find('.icons-variants .variant').removeClass('fetching');
 						appIcons.helpers.observeIconContainers();
 					});
 				},

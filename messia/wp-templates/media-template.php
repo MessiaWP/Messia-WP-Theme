@@ -18,7 +18,7 @@
 			<div class="icons-variants">
 				<# _.each( activeSetData.variants, function ( variant, index ) { #>
 					<# let variantClass = [ 'variant button chip-text' ]; #>
-					<# if( variant.id === activeVariant[activeSet] ) variantClass.push( 'button-primary active loading' ); #>
+					<# if( variant.id === activeVariant[activeSet] ) variantClass.push( 'button-primary active fetching' ); #>
 					<label data-variantId="{{ variant.id }}" class="{{ variantClass.join(' ') }}">
 						<span>{{ variant.title }}</span>
 						<div class="ld"></div>
