@@ -1,9 +1,9 @@
 [![buddy pipeline](https://app.buddy.works/773021792e/messia-wp-theme/pipelines/pipeline/429241/badge.svg?token=852c46eb0d6f35ce3b858d5cecda6b30fbabb58a67752ea9c9a2d3e0fe07954e "buddy pipeline")](https://app.buddy.works/773021792e/messia-wp-theme/pipelines/pipeline/429241)
 
-## What is this repository about
-The repository contains the theme code for WordPress, which allows you to create a site in the Listings & Directories category. [Demo](https://demo.messiawp.com/estate/) site running the theme available [here](https://demo.messiawp.com/estate/).
+## 😎 What is this repository about
+The repository contains the theme code for WordPress, which allows you to create a site in the Listings & Directories category. Want to see the result? - [**open demo**](https://demo.messiawp.com/estate/) site.
 
-## Important
+## ☝️ Important
 This is WordPress theme code and it should work inside a site under CMS WordPress !!!
 
 ## Installation
