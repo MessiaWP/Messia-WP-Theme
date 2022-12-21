@@ -449,7 +449,7 @@ abstract class Messia_Menu_Engine {
 					$value    = $this->get_value( 'text', $options, $control['name'] );
 
 					$element = "<div class='label'>
-									<input {$id} {$data_html} {$class} name='{$control['name']} {$disabled} min='{$control['min']} max='{$control['max']} step='{$control['step']} type='number' placeholder='{$control['placeholder']}' {$value}/>
+									<input {$id} {$data_html} {$class} name='{$control['name']}' {$disabled} min='{$control['min']}' max='{$control['max']}' step='{$control['step']}' type='number' placeholder='{$control['placeholder']}' {$value}/>
 									<p class='tip'>{$tip}</p>
 								</div>";
 

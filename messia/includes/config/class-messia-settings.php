@@ -15,10 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 use Smartbits\Messia\Includes\Config\Messia_Config_Settings;
 use Smartbits\Messia\Includes\Config\Messia_Config_Styles;
-use Smartbits\Messia\Includes\Admin\{
-	Messia_User_Settings,
-	Messia_Menu
-};
+use Smartbits\Messia\Includes\Admin\Messia_Menu;
 use Throwable;
 use Exception;
 
