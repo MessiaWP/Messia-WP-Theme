@@ -104,30 +104,35 @@ class Messia_Requirements {
 		$db_version  = $wpdb->db_version();
 		$server_info = $wpdb->get_var( 'SELECT VERSION();' );
 
+		$min_md_version     = '10.2.0';
+		$min_my_sql_version = '8.0.0';
+		$min_php_version    = '8.0.0';
+		$min_wp_version     = '6.0.0';
+
 		if ( strpos( $server_info, 'MariaDB' ) ) { // MariaDB.
 
 			$version = preg_match( '/\s*((?:[0-9]+\.?)+)/i', $server_info, $matches );
 
-			if ( version_compare( $matches[1], '10.2.0', '<' ) ) {
-				// translators: %s - MySQL version.
-				$this->errors['fatal'][] = sprintf( __( 'Messia requires at least MariaDB 5.5.5 and above or MySQL 8.0.0 and above, you have MariaDB %s', 'messia' ), $db_version );
+			if ( version_compare( $matches[1], $min_md_version, '<' ) ) {
+				// translators: %1$s - minimum MariaDB version, %2$s - minimum MySQL version, %3$s - current DB version.
+				$this->errors['fatal'][] = sprintf( __( 'Messia requires at least MariaDB %1$s and above or MySQL %2$s and above, you have MariaDB %3$s', 'messia' ), $min_md_version, $min_my_sql_version, $db_version );
 			}
 		} else { // MySQL.
 
-			if ( version_compare( $db_version, '8.0.0', '<' ) ) {
-				// translators: %s - MySQL version.
-				$this->errors['fatal'][] = sprintf( __( 'Messia requires at least MariaDB 5.5.5 and above or MySQL 8.0.0 and above, you have MySQL %s', 'messia' ), $db_version );
+			if ( version_compare( $db_version, $min_my_sql_version, '<' ) ) {
+				// translators: %1$s - minimum MariaDB version, %2$s - minimum MySQL version, %3$s - current DB version.
+				$this->errors['fatal'][] = sprintf( __( 'Messia requires at least MariaDB %1$s and above or MySQL %2$s and above, you have MySQL %3$s', 'messia' ), $min_md_version, $min_my_sql_version, $db_version );
 			}
 		}
 
-		if ( version_compare( $php_version, '8.0.0', '<' ) ) {
-			// translators: %s - php version.
-			$this->errors['fatal'][] = sprintf( __( 'Messia requires at least PHP 8.0.0 version or higher, you have PHP %s', 'messia' ), $php_version );
+		if ( version_compare( $php_version, $min_php_version, '<' ) ) {
+			// translators: %1$s - minimum PHP version, %2$s - current PHP version.
+			$this->errors['fatal'][] = sprintf( __( 'Messia requires at least PHP %1$s version or higher, you have PHP %2$s', 'messia' ), $min_php_version, $php_version );
 		}
 
-		if ( version_compare( $wp_version, '6.0.0', '<' ) ) {
-			// translators: %s - php version.
-			$this->errors['fatal'][] = sprintf( __( 'Messia requires at least WordPress 5.5.0 version or higher, you have WordPress %s', 'messia' ), $wp_version );
+		if ( version_compare( $wp_version, $min_wp_version, '<' ) ) {
+			// translators: %1$s - minimum WP version, %2$s - current WP version.
+			$this->errors['fatal'][] = sprintf( __( 'Messia requires at least WordPress %1$s version or higher, you have WordPress %2$s', 'messia' ), $min_wp_version, $wp_version );
 		}
 	}
 
