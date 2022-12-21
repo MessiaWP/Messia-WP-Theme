@@ -3,8 +3,10 @@
 ## 😎 What is this repository about
 The repository contains the theme code for WordPress, which allows you to create a site in the Listings & Directories category. Want to see the result? - [**open demo**](https://demo.messiawp.com/estate/) site.
 
+
 ## ☝️ Important
 This is WordPress theme code and it should work inside a site under CMS WordPress !!!
+
 
 ## Installation
 1. Development
@@ -13,6 +15,7 @@ This is WordPress theme code and it should work inside a site under CMS WordPres
    - `npm install` from `messia` folder;
 2. Just usage
    - Open [Releases](https://github.com/MessiaWP/Messia-WP-Theme/releases), download `messia.zip` & `messia-child.zip` from latest release. Then install them according WordPress theme installation workflow;
+
 
 ## Key features of the theme
 🔸 **Universal Architecture**;
@@ -49,3 +52,8 @@ This is WordPress theme code and it should work inside a site under CMS WordPres
 ## What about perfomance?
 ![lighthouse-report](https://user-images.githubusercontent.com/40342952/208897190-c9a1534b-8e58-4ed3-85ad-a694d84c05f7.png)
 
+
+## Requirements
+- PHP > 8.0
+- MySQL > 8.0 | MariaDB > 10.2
+- WordPress > 6.0 
