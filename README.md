@@ -14,7 +14,7 @@ This is WordPress theme code and it should work inside a site under CMS WordPres
    - `composer install` from `messia` folder;
    - `npm install` from `messia` folder;
 2. Just usage
-   - Open [Releases](https://github.com/MessiaWP/Messia-WP-Theme/releases), download `messia.zip` & `messia-child.zip` from latest release. Then install them according WordPress theme installation workflow;
+   - Open [Releases](https://github.com/MessiaWP/Messia-WP-Theme/releases), download `Messia-Listing-WP-Theme.zip` & `Messia-Listing-WP-Theme-Child.zip` from latest release. Then install them according WordPress theme installation workflow;
 
 
 ## Key features of the theme
