@@ -161,6 +161,11 @@ class Messia_Merging {
 			}
 
 			$src = $wp_scripts->registered[ $handle ]->src;
+
+			if ( false === $src ) {
+				continue;
+			}
+
 			if ( strpos( $src, 'http' ) !== false ) {
 
 				$site_url = site_url();
@@ -223,6 +228,11 @@ class Messia_Merging {
 			}
 
 			$src = $wp_scripts->registered[ $handle ]->src;
+
+			if ( false === $src ) {
+				continue;
+			}
+
 			if ( false !== strpos( $src, 'http' ) ) {
 
 				$site_url = site_url();
@@ -283,6 +293,11 @@ class Messia_Merging {
 		foreach ( $wp_styles->to_do as $handle ) {
 
 			$src = $wp_styles->registered[ $handle ]->src;
+
+			if ( false === $src ) {
+				continue;
+			}
+
 			if ( false !== strpos( $src, 'http' ) ) {
 
 				$site_url = site_url();
@@ -328,6 +343,11 @@ class Messia_Merging {
 			}
 
 			$src = $wp_styles->registered[ $handle ]->src;
+
+			if ( false === $src ) {
+				continue;
+			}
+
 			if ( false !== strpos( $src, 'http' ) ) {
 
 				$site_url = site_url();

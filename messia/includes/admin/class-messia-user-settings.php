@@ -463,7 +463,7 @@ class Messia_User_Settings {
 					self::$google_fonts = $response['items'];
 				} else {
 
-					$err = $response['error']['errors'][0]['reason'];
+					$err = $response['error']['errors'][0]['message'];
 
 					add_action(
 						'admin_notices',
@@ -844,12 +844,13 @@ class Messia_User_Settings {
 				'user-agent'  => 'Messia/; ' . get_bloginfo( 'url' ),
 				'blocking'    => true,
 				'headers'     => [
-					'Accept: */*',
-					'Accept-Encoding: gzip, deflate',
-					'Cache-Control: no-cache',
-					'Connection: keep-alive',
-					'Content-Type: application/json,text/plain',
-					'cache-control: no-cache',
+					'Accept'          => '*/*',
+					'Accept-Encoding' => 'gzip, deflate',
+					'Cache-Control'   => 'no-cache',
+					'Connection'      => 'keep-alive',
+					'Content-Type'    => 'application/json,text/plain',
+					'cache-control'   => 'no-cache',
+					'referer'         => get_bloginfo( 'url' ),
 				],
 			]
 		);
