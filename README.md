@@ -44,3 +44,8 @@ This is WordPress theme code and it should work inside a site under CMS WordPres
 🔸 **Developer Friendly**;
 
 🔸 **Standards Compliance**;
+
+
+## What about perfomance?
+![lighthouse-report](https://user-images.githubusercontent.com/40342952/208897190-c9a1534b-8e58-4ed3-85ad-a694d84c05f7.png)
+
