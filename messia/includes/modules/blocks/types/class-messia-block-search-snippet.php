@@ -321,7 +321,7 @@ class Messia_Block_Search_Snippet extends Messia_Block_Abstract_Dynamic {
 
 						$category_terms = $setted_terms['valid'];
 
-						$options = "<option value='-1'>{$selet_all_cat}</option>";
+						$options = "<option value='-1'4>{$selet_all_cat}</option>";
 
 						foreach ( $category_terms as $category_term ) {
 
@@ -780,9 +780,9 @@ class Messia_Block_Search_Snippet extends Messia_Block_Abstract_Dynamic {
 
 		if ( isset( $_GET['category'] ) ) {
 
-			$unique_category = array_unique( $_GET['category'] );
+			$unique_category = array_diff( array_unique( $_GET['category'] ), ['-1'] );
 
-			if ( '-1' !== implode( '', $unique_category ) ) {
+			if ( ! empty( $unique_category ) ) {
 
 				$global_terms_order['messia_object_category'] = [];
 
@@ -797,9 +797,9 @@ class Messia_Block_Search_Snippet extends Messia_Block_Abstract_Dynamic {
 
 		if ( isset( $_GET['property'] ) ) {
 
-			$unique_property = array_unique( $_GET['property'] );
+			$unique_property = array_diff( array_unique( $_GET['property'] ), ['-1'] );
 
-			if ( '-1' !== implode( '', $unique_property ) ) {
+			if ( ! empty( $unique_property ) ) {
 
 				$global_terms_order['messia_object_property'] = [];
 
