@@ -643,7 +643,7 @@ import './_components/_loader.js';
 			},
 			onFiltersAnmated: function (e) {
 				let target = $(e.target);
-				if (e.originalEvent.animationName.indexOf('Hide') > 0) {
+				if (e.originalEvent.animationName === 'filter-hide') {
 					target.addClass('off');
 				}
 				target.removeClass('hidden shown to-show to-hide');
