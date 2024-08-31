@@ -201,7 +201,7 @@ class Messia_Object_Card {
 
 							$maxlength = (int) $constructor_field['maxlength'];
 
-							if ( strlen( $field_value ) > $maxlength ) {
+							if ( strlen( (string) $field_value ) > $maxlength ) {
 								$field_value = substr( $field_value, 0, (int) $constructor_field['maxlength'] ) . '[…]';
 							}
 						}
