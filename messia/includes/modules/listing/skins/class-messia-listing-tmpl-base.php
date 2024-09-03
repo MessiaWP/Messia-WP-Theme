@@ -409,6 +409,14 @@ abstract class Messia_Listing_Tmpl_Base extends Messia_Module_Base {
 
 		global $wpdb;
 
+		/**
+		 * Filters admin menu options array.
+		 *
+		 * @param string $param Menu config
+		 * @hook before_messia_menu_render
+		 */
+		$pre = apply_filters( 'messia_pre_get_objects_for_listing', $taxonomies_terms, $constructor_query );
+
 		$like                = null;
 		$object_custom_order = json_decode( $this->blog_settings['objects_search_order'], true );
 		$taxonomies_terms    = $this->maybe_add_root_category_terms( $taxonomies_terms );

@@ -186,7 +186,7 @@
 					if (isMounted) {
 
 						setAttributes({
-							tabsConstructed: response.validAttrs.tabsConstructed
+							forSegments: response.validAttrs.forSegments
 						});
 						setTerms(response.terms);
 						setTermsFetched(true);

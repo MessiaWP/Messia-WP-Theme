@@ -125,7 +125,7 @@ class Messia_Help_Queries extends Messia_Help_Database {
 	/**
 	 * Parse listing search URL.
 	 *
-	 * @return array
+	 * @return object
 	 */
 	public static function parse_listing_query(): stdClass {
 

@@ -75,7 +75,7 @@ class Messia_Autoloader {
 	 */
 	public function autoload( string $class ): void {
 
-		if ( 0 !== strpos( $class, MESSIA_THEME_NAMESPACE_BASE ) ) {
+		if ( 0 !== strpos( $class, MESSIA_THEME_NAMESPACE_BASE . '\\' ) ) {
 			return;
 		}
 

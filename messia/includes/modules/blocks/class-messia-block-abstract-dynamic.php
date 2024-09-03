@@ -37,6 +37,43 @@ abstract class Messia_Block_Abstract_Dynamic {
 	protected array $blog_settings = [];
 
 	/**
+	 * Scripts and styles data of block.
+	 *
+	 * @var array
+	 */
+	protected array $sidebar_args;
+
+	/**
+	 * Where block can be used: pages block editor, widgets editor.
+	 * If "widget editor" then $refer_widget should point to a
+	 * valid widget id.
+	 *
+	 * @var array
+	 */
+	protected array $scope;
+
+	/**
+	 * Internal block name.
+	 *
+	 * @var string
+	 */
+	protected string $block_name;
+
+	/**
+	 * HTML for sidebar.
+	 *
+	 * @var array
+	 */
+	protected array $block_assets;
+
+	/**
+	 * Render block from widget or self.
+	 *
+	 * @var string|bool
+	 */
+	protected mixed $refer_widget;
+
+	/**
 	 * Full class name.
 	 *
 	 * @var Messia_Help

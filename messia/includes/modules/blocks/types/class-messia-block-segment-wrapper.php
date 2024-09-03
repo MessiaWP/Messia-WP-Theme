@@ -27,36 +27,6 @@ use Exception;
 class Messia_Block_Segment_Wrapper extends Messia_Block_Abstract_Dynamic {
 
 	/**
-	 * Block name.
-	 *
-	 * @var string
-	 */
-	protected string $block_name;
-
-	/**
-	 * Block scripts and styles.
-	 *
-	 * @var array
-	 */
-	protected array $block_assets = [];
-
-	/**
-	 * Render block from widget or self.
-	 *
-	 * @var bool
-	 */
-	protected bool $refer_widget = false;
-
-	/**
-	 * Where block can be used: pages block editor, widgets editor.
-	 * If "widget editor" then $refer_widget should point to a
-	 * valid widget id.
-	 *
-	 * @var array
-	 */
-	protected array $scope = [ 'widgets', 'page' ];
-
-	/**
 	 * Comment length.
 	 *
 	 * @var int
@@ -72,6 +42,8 @@ class Messia_Block_Segment_Wrapper extends Messia_Block_Abstract_Dynamic {
 
 		add_action( 'rest_api_init', [ $this, 'rest' ] );
 
+		$this->scope        = [ 'page', 'widgets' ];
+		$this->refer_widget = false;
 		$this->block_assets = [
 			'editor_script' => [
 				'enqueue' => true,
@@ -266,31 +238,15 @@ class Messia_Block_Segment_Wrapper extends Messia_Block_Abstract_Dynamic {
 	 */
 	private function validate_current_attributes( array $db_terms, array $attributes ): array {
 
-		$tabs = $attributes['tabsConstructed'];
+		$tabs = $attributes['forSegments'];
 
 		if ( empty( $tabs ) ) {
 			return $attributes;
 		}
 
-		$valid_filters = [];
-
 		$segments = array_column( $db_terms['segment'], 'value' );
 
-		foreach ( $tabs as $tab ) {
-
-			$filter_valid   = false;
-			$filter_segment = $tab['segmentSlug'];
-
-			if ( in_array( $filter_segment, $segments, true ) ) {
-				$filter_valid = true;
-			}
-
-			if ( true === $filter_valid ) {
-				$valid_filters[] = $tab;
-			}
-		}
-
-		$attributes['tabsConstructed'] = $valid_filters;
+		$attributes['forSegments'] = array_values( array_intersect( $tabs, $segments ) );
 
 		return $attributes;
 	}

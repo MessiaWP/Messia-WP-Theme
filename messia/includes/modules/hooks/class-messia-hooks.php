@@ -505,7 +505,7 @@ class Messia_Hooks {
 		);
 
 		$blocks_messia     = [];
-		$blocks_enqueued   = parse_blocks( $content );
+		$blocks_enqueued   = parse_blocks( (string) $content );
 		$blocks_registered = MIA()->get_module( 'blocks' )->get_registry();
 
 		foreach ( $blocks_registered as $type => $block_registered ) {

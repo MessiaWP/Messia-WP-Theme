@@ -25,42 +25,14 @@ use Exception;
 class Messia_Block_Listing_Data extends Messia_Block_Abstract_Dynamic {
 
 	/**
-	 * Block name.
-	 *
-	 * @var string
-	 */
-	protected string $block_name;
-
-	/**
-	 * Block scripts and styles.
-	 *
-	 * @var array
-	 */
-	protected array $block_assets = [];
-
-	/**
-	 * Render block from widget or self.
-	 *
-	 * @var string
-	 */
-	protected string $refer_widget = 'messia_widget_listing_data';
-
-	/**
-	 * Where block can be used: pages block editor, widgets editor.
-	 * If "widget editor" then $refer_widget should point to a
-	 * valid widget id.
-	 *
-	 * @var array
-	 */
-	protected array $scope = [ 'page', 'widgets' ];
-
-	/**
 	 * Messia_Block_Listing_Data Constructor
 	 *
 	 * @return void
 	 */
 	public function __construct() {
 
+		$this->scope        = [ 'page', 'widgets' ];
+		$this->refer_widget = 'messia_widget_listing_data';
 		$this->block_assets = [
 			'editor_script' => [
 				'enqueue' => true,

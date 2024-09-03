@@ -27,36 +27,6 @@ use Exception;
 class Messia_Block_Search_Snippet extends Messia_Block_Abstract_Dynamic {
 
 	/**
-	 * Block name.
-	 *
-	 * @var string
-	 */
-	protected string $block_name;
-
-	/**
-	 * Block scripts and styles.
-	 *
-	 * @var array
-	 */
-	protected array $block_assets = [];
-
-	/**
-	 * Render block from widget or self.
-	 *
-	 * @var bool
-	 */
-	protected bool $refer_widget = false;
-
-	/**
-	 * Where block can be used: pages block editor, widgets editor.
-	 * If "widget editor" then $refer_widget should point to a
-	 * valid widget id.
-	 *
-	 * @var array
-	 */
-	protected array $scope = [ 'page' ];
-
-	/**
 	 * Select all title.
 	 *
 	 * @var string
@@ -86,6 +56,8 @@ class Messia_Block_Search_Snippet extends Messia_Block_Abstract_Dynamic {
 
 		add_action( 'rest_api_init', [ $this, 'rest' ] );
 
+		$this->scope        = [ 'page' ];
+		$this->refer_widget = false;
 		$this->block_assets = [
 			'editor_script' => [
 				'enqueue' => true,
@@ -780,7 +752,7 @@ class Messia_Block_Search_Snippet extends Messia_Block_Abstract_Dynamic {
 
 		if ( isset( $_GET['category'] ) ) {
 
-			$unique_category = array_diff( array_unique( $_GET['category'] ), ['-1'] );
+			$unique_category = array_diff( array_unique( $_GET['category'] ), [ '-1' ] );
 
 			if ( ! empty( $unique_category ) ) {
 
@@ -797,7 +769,7 @@ class Messia_Block_Search_Snippet extends Messia_Block_Abstract_Dynamic {
 
 		if ( isset( $_GET['property'] ) ) {
 
-			$unique_property = array_diff( array_unique( $_GET['property'] ), ['-1'] );
+			$unique_property = array_diff( array_unique( $_GET['property'] ), [ '-1' ] );
 
 			if ( ! empty( $unique_property ) ) {
 

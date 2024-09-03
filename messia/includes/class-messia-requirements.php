@@ -12,6 +12,7 @@ declare(strict_types = 1);
 
 namespace Smartbits\Messia\Includes;
 
+use Smartbits\Messia\Includes\Config\Messia_Settings;
 use WP_Screen;
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -33,6 +34,13 @@ class Messia_Requirements {
 	 * @var Messia_Requirements
 	 */
 	private static $instance = null;
+
+	/**
+	 * The single instance of the class.
+	 *
+	 * @var Messia_Settings
+	 */
+	private $settings;
 
 	/**
 	 * The list of errors considered violated requirements.
