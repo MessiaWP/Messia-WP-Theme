@@ -411,6 +411,12 @@ class Messia_Listing_Tmpl_Default extends Messia_Listing_Tmpl_Base {
 						<?php
 						break;
 					case 'messia_object_category':
+						/**
+						 * Give it chance to inject some HTML before category filters.
+						 *
+						 * @hook messia_listing_before_category_filters
+						 */
+						do_action( 'messia_listing_before_category_filters' );
 						?>
 						<aside class="mb-4 categories"><?php echo $category_filters['html']; ?></aside>
 						<?php

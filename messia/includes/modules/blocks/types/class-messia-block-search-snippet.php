@@ -236,7 +236,6 @@ class Messia_Block_Search_Snippet extends Messia_Block_Abstract_Dynamic {
 						<div class="messia-textfield me-2 mb-1 mt-1 flex-grow-1">
 							<input type="text" class="messia-filter-text" autocomplete="off" name="string" data-url="query">
 							<div class="messia-label-container">
-								<span class="messia-outline"></span>
 								<label>
 									<span><?php esc_html_e( 'Search by object name', 'messia' ); ?></span>
 								</label>

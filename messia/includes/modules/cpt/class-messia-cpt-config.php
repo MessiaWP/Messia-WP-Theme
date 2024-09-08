@@ -759,6 +759,14 @@ class Messia_Cpt_Config {
 						'for_saved'     => false,
 					],
 					[
+						'id'            => 'partner_id',
+						'type'          => 'text',
+						'default_value' => null,
+						'label'         => '<span>' . __( 'Partner ID', 'messia' ) . '</span>',
+						'description'   => __( 'Something unique for this item identification on partner side.', 'messia' ),
+						'for_saved'     => false,
+					],
+					[
 						'id'            => 'branch_as_filter',
 						'type'          => 'checkbox',
 						'default_value' => '0',
@@ -846,6 +854,14 @@ class Messia_Cpt_Config {
 				],
 				'post_custom_fields' => [],
 				'meta_fields'        => [
+					[
+						'id'            => 'partner_id',
+						'type'          => 'text',
+						'default_value' => null,
+						'label'         => '<span>' . __( 'Partner ID', 'messia' ) . '</span>',
+						'description'   => __( 'Something unique for this item identification on partner side.', 'messia' ),
+						'for_saved'     => false,
+					],
 					[
 						'id'            => 'property_group',
 						'type'          => 'select',

@@ -38,7 +38,7 @@ class Messia_Module_Base {
 	 * Expected that path to source files will be
 	 * relative to MESSIA_CORE_ABSPATH path.
 	 *
-	 * @var Messia_Help
+	 * @var array
 	 */
 	protected array $assets = [
 		'styles'  => [],

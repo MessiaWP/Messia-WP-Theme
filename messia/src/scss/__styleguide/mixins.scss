@@ -150,16 +150,6 @@
 	min-height: $m-min-height-control;
 	box-shadow: $m-controls_initial_box_shadow;
 
-	.messia-outline {
-		content: "";
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		border: 2px solid transparent;
-	}
-
 	textarea {
 		padding: .7rem 1rem;
 
@@ -207,11 +197,6 @@
 				label {
 					color: $focus-color;
 				}
-
-				.messia-outline {
-					border-width: 2px;
-					z-index: 4;
-				}
 			}
 		}
 	}
@@ -245,6 +230,7 @@
 			overflow: hidden;
 			display: inline-block;
 			font-weight: 400;
+			width: inherit;
 		}
 	}
 
@@ -254,15 +240,14 @@
 			z-index: 1;
 		}
 
-		.messia-outline {
-			border-width: 1px;
-			border-radius: $m-border-radius;
-		}
-
 		.messia-label-container label {
 			top: 0;
 			z-index: 5;
 			transform: scale(.82) translateY(-50%);
+
+			span {
+				width: initial;
+			}
 		}
 
 		textarea + .messia-label-container {

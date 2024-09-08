@@ -317,6 +317,20 @@ abstract class Messia_Listing_Tmpl_Base extends Messia_Module_Base {
 		$this->listing_terms['property_term_id'] = array_keys( $property_terms_found );
 		$this->listing_terms['constructor_term'] = $this->properties['cf'];
 
+		/**
+		 * Filters admin menu options array.
+		 *
+		 * @param string $param Menu config
+		 * @hook before_messia_menu_render
+		 */
+		do_action(
+			'messia_listing_request',
+			$this->listing_terms['segment_term_id'],
+			$this->listing_terms['category_term_id'],
+			$this->listing_terms['property_term_id'],
+			$this->listing_terms['constructor_term'],
+		);
+
 		return true;
 	}
 
@@ -408,14 +422,6 @@ abstract class Messia_Listing_Tmpl_Base extends Messia_Module_Base {
 	protected function get_objects( array $taxonomies_terms, array $constructor_query, string $sort, ?string $search = null ): array {
 
 		global $wpdb;
-
-		/**
-		 * Filters admin menu options array.
-		 *
-		 * @param string $param Menu config
-		 * @hook before_messia_menu_render
-		 */
-		$pre = apply_filters( 'messia_pre_get_objects_for_listing', $taxonomies_terms, $constructor_query );
 
 		$like                = null;
 		$object_custom_order = json_decode( $this->blog_settings['objects_search_order'], true );

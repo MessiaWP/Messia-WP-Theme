@@ -7,6 +7,8 @@
 	<!-- <config name="installed_paths" value="../../../vendor/wp-coding-standards/wpcs" /> -->
 	<description>Coding standards from WP Enforcer.</description>
 
+	<file>./</file>
+
 	<!-- FILES -->
 	<exclude-pattern>phpcs.xml</exclude-pattern>
 	<exclude-pattern>*\.js$</exclude-pattern> <!-- WP Inspector does not handle ES6 very well -->
