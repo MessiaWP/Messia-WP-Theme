@@ -117,7 +117,7 @@ final class Messia_Update {
 					<p>
 						<?php esc_html_e( 'A valid license is required to receive automatic updates and access to support.', 'messia' ); ?>
 						<?php printf( '<a href="' . MESSIA_SHOP_URL . '">%s</a>', __( 'Buy licence', 'messia' ) ); ?> |
-						<?php printf( '<a href="' . admin_url( add_query_arg( 'page', MESSIA_THEME_MENU_PAGE_SLUG, null ) ) . '">%s</a>', __( 'Activate licence', 'messia' ) ); ?>
+						<?php printf( '<a href="' . admin_url( add_query_arg( 'page', MESSIA_THEME_MENU_PAGE_SLUG ) ) . '">%s</a>', __( 'Activate licence', 'messia' ) ); ?>
 					</p>
 				</div>
 			</td>

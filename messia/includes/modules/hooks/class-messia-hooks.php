@@ -932,11 +932,22 @@ class Messia_Hooks {
 
 	/**
 	 * Return propper translation filename
-	 * The problem that "wp i18n make-json [source path] --no-purge" create file with name
-	 * as md5 of source key in resulting JSON. Ex: "search-snippet/search-snippet-editor.js"
-	 * but wp_set_script_translations search file by $handle.
+	 * The problem that "wp i18n make-json [source path]" create file with name that contains
+	 * md5 of reference to original js file taken from PO file
 	 *
-	 * @param string $file   Path .../wp-content/themes/messia/includes/assets/langs/blocks/messia-ru_RU-search-snippet.json.
+	 * #: assets/blocks/asistour-search-editor.js:162
+	 * msgid "Split cards to columns in grid view mode by:"
+	 * msgstr ""
+	 *
+	 * In given example: hash will me md5( 'assets/blocks/asistour-search-editor.js' )
+	 *
+	 * But while loading translations WP will search file that has hash made from relative to theme
+	 * path given in wp_set_script_translations() as argument $path.
+	 *
+	 * For wp_set_script_translations( 'block-asistour-search-editor', 'messia-travel', MESSIA_THEME_DIR . '/languages/blocks' )
+	 * hash will be md5( 'includes/assets/blocks/asistour-search-editor.js' )
+	 *
+	 * @param string $file   Path .../wp-content/plugins/messia-travel/includes/assets/langs/blocks/messia-ru_RU-search-snippet.json.
 	 * @param string $handle Block registration name, ex: search-snippet.
 	 * @param string $domain Messia.
 	 *
@@ -944,16 +955,16 @@ class Messia_Hooks {
 	 */
 	public function on_load_script_translation_file( string $file, string $handle, string $domain ): string {
 
-		if ( 'messia' === $domain ) {
-
-			$wp_scripts = wp_scripts();
-
-			$src    = $wp_scripts->registered[ $handle ]->src;
-			$name   = basename( str_replace( [ '.min' ], [ null ], $src ) );
-			$folder = basename( dirname( $src ) );
-			$file   = str_replace( $handle, md5( "{$folder}/{$name}" ), $file );
-
+		if ( 'messia' !== $domain ) {
+			return $file;
 		}
+
+		$wp_scripts = wp_scripts();
+
+		$src  = $wp_scripts->registered[ $handle ]->src;
+		$name = basename( str_replace( [ '.min' ], [ null ], $src ) );
+		$file = str_replace( $handle, md5( $name ), $file );
+
 		return $file;
 	}
 

@@ -182,18 +182,18 @@ class Messia_Requirements {
 		}
 
 		if ( is_network_admin() ) {
-			$menu_page_url = network_admin_url( add_query_arg( 'page', MESSIA_THEME_MENU_PAGE_SLUG, null ) );
+			$menu_page_url = network_admin_url( add_query_arg( 'page', MESSIA_THEME_MENU_PAGE_SLUG ) );
 
 		} else {
 			if ( is_multisite() ) {
-				$menu_page_url = network_admin_url( add_query_arg( 'page', MESSIA_THEME_MENU_PAGE_SLUG, null ) );
+				$menu_page_url = network_admin_url( add_query_arg( 'page', MESSIA_THEME_MENU_PAGE_SLUG ) );
 				$main_site_id  = get_main_site_id();
 
 				switch_to_blog( $main_site_id );
 				$template = wp_get_theme()->template;
 				restore_current_blog();
 			} else {
-				$menu_page_url = admin_url( add_query_arg( 'page', MESSIA_THEME_MENU_PAGE_SLUG, null ) );
+				$menu_page_url = admin_url( add_query_arg( 'page', MESSIA_THEME_MENU_PAGE_SLUG ) );
 				$template      = wp_get_theme()->template;
 			}
 

@@ -273,10 +273,22 @@ class Messia_Widget {
 			array_merge(
 				$this->shared_args,
 				[
+					'id'          => 'widget-area-hero-listing',
+					'name'        => __( 'Search page Hero', 'messia' ),
+					'class'       => 'widget-area widget-area-hero-listing',
+					'description' => __( 'Place here the widgets that you want to be right after header at listing page.', 'messia' ),
+				]
+			)
+		);
+
+		register_sidebar(
+			array_merge(
+				$this->shared_args,
+				[
 					'id'          => 'widget-area-general-listing',
 					'name'        => __( 'Search page content', 'messia' ),
 					'class'       => 'widget-area widget-area-general-listing',
-					'description' => __( 'Place here the widgets that you want to be at the main part of object page, after the header.', 'messia' ),
+					'description' => __( 'Place here the widgets that you want to be at the main part of search page, after the header.', 'messia' ),
 				]
 			)
 		);

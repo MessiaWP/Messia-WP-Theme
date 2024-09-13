@@ -701,7 +701,7 @@ class Messia_Settings {
 
 		$list          = null;
 		$site_url      = site_url();
-		$menu_page_url = admin_url( add_query_arg( 'page', MESSIA_THEME_MENU_PAGE_SLUG, null ) );
+		$menu_page_url = admin_url( add_query_arg( 'page', MESSIA_THEME_MENU_PAGE_SLUG ) );
 
 		foreach ( $deactivated_modules as $title ) {
 			$list .= "- *{$title}*\n";

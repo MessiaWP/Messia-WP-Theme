@@ -141,11 +141,12 @@ class Messia_Listing_Tmpl_Default extends Messia_Listing_Tmpl_Base {
 		 * Finally $prefix should contain multisite subpath if any + $pagename except segemtn term.
 		 * Example 'estate/about-us/contact'.
 		 */
-		$prefix  = ( ! empty( $page_prefix ) ) ? array_merge( $prefix, $page_prefix ) : $prefix;
-		$sidebar = $this->get_sidebar();
-		$content = $this->get_content_general();
-		$bottom  = $this->get_content_bottom();
-		$edit    = $this->get_post_edit_link();
+		$prefix       = ( ! empty( $page_prefix ) ) ? array_merge( $prefix, $page_prefix ) : $prefix;
+		$sidebar      = $this->get_sidebar();
+		$content_hero = $this->get_content_hero();
+		$content      = $this->get_content_general();
+		$bottom       = $this->get_content_bottom();
+		$edit         = $this->get_post_edit_link();
 
 		$container_classes = [
 			'row',
@@ -156,6 +157,11 @@ class Messia_Listing_Tmpl_Default extends Messia_Listing_Tmpl_Base {
 			?>
 			<section id="post-<?php the_ID(); ?>" <?php post_class( 'messia-section mt-4' ); ?>>
 				<div class="container">
+					<?php
+					if ( ! empty( $content_hero ) ) {
+						echo $content_hero;
+					}
+					?>
 					<div
 						class="<?php echo implode( ' ', $container_classes ); ?>"
 						data-path-prefix="<?php echo ( empty( $prefix ) ) ? null : implode( '/', $prefix ); ?>"
@@ -200,6 +206,24 @@ class Messia_Listing_Tmpl_Default extends Messia_Listing_Tmpl_Base {
 			</section>
 			<?php
 		}
+	}
+	
+	/**
+	 * Component for $this->generate_page(),
+	 * output very top content HTML.
+	 *
+	 * @return string
+	 */
+	private function get_content_hero(): ?string {
+
+		if ( is_active_sidebar( 'widget-area-hero-listing' ) ) {
+
+			ob_start();
+			dynamic_sidebar( 'widget-area-hero-listing' );
+			return ob_get_clean();
+		}
+
+		return null;
 	}
 
 	/**
@@ -411,12 +435,6 @@ class Messia_Listing_Tmpl_Default extends Messia_Listing_Tmpl_Base {
 						<?php
 						break;
 					case 'messia_object_category':
-						/**
-						 * Give it chance to inject some HTML before category filters.
-						 *
-						 * @hook messia_listing_before_category_filters
-						 */
-						do_action( 'messia_listing_before_category_filters' );
 						?>
 						<aside class="mb-4 categories"><?php echo $category_filters['html']; ?></aside>
 						<?php
