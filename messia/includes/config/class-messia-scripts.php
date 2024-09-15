@@ -52,9 +52,9 @@ class Messia_Scripts {
 	 */
 	public static function init(): string {
 
-		self::$helpers       = MIA()->get_module( 'help' );
+		self::$helpers       = MIA()->get_module_helpers();
 		self::$site_host     = wp_parse_url( get_site_url(), PHP_URL_HOST );
-		self::$blog_settings = MIA()->get_module( 'settings' )->get_blog_setting( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME );
+		self::$blog_settings = MIA()->get_module_settings()->get_blog_setting( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME );
 
 		add_action( 'messia_block_preview_requested', [ __CLASS__, 'scripts_front' ], 10 );
 		add_action( 'wp_enqueue_scripts', [ __CLASS__, 'scripts_front' ], 9 );
@@ -280,9 +280,9 @@ class Messia_Scripts {
 		}
 
 		$modules = [
-			MIA()->get_module( 'page' ),
-			MIA()->get_module( 'listing' ),
-			MIA()->get_module( 'object' ),
+			MIA()->get_module_page(),
+			MIA()->get_module_listing(),
+			MIA()->get_module_object(),
 		];
 
 		foreach ( $modules as $module ) {

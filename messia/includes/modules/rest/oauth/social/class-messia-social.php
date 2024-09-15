@@ -70,7 +70,7 @@ abstract class Messia_Social {
 	 * @return void
 	 */
 	protected function __construct() {
-		$this->blog_settings = MIA()->get_module( 'settings' )->get_blog_setting( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME );
+		$this->blog_settings = MIA()->get_module_settings()->get_blog_setting( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME );
 	}
 
 	/**
@@ -90,7 +90,7 @@ abstract class Messia_Social {
 				wp_update_user(
 					[
 						'ID'         => $new_user,
-						'role'       => MIA()->get_module( 'user_roles' )->get_role_name(),
+						'role'       => MIA()->get_module_user_roles()->get_role_name(),
 						'first_name' => $user_data['first_name'],
 						'last_name'  => $user_data['last_name'],
 					]

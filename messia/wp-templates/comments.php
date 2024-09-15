@@ -11,7 +11,7 @@
 if ( post_password_required() ) {
 	return;
 }
-$atts = MIA()->get_module( 'shortcodes' )::get_review_shortcode_atts();
+$atts = MIA()->get_module_shortcodes()::get_review_shortcode_atts();
 wp_enqueue_style( 'messia-comment-list' );
 ?>
 

@@ -10,3 +10,5 @@ msgid "Split cards to columns in grid view mode by:"
 msgstr ""
 
 hash will be md5( 'assets/blocks/asistour-search-editor.js' )
+
+Known issue with poedit- https://github.com/vslavik/poedit/issues/864

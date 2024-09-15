@@ -65,7 +65,7 @@ class Messia_Merging {
 	 */
 	private function __construct() {
 
-		$this->blog_settings = MIA()->get_module( 'settings' )->get_blog_setting( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME );
+		$this->blog_settings = MIA()->get_module_settings()->get_blog_setting( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME );
 
 		$filename = hash( 'crc32', $_SERVER['REQUEST_URI'], false );
 

@@ -41,6 +41,13 @@ class Messia_Widget_Listing_Data extends WP_Widget {
 	/**
 	 * Widget scripts and styles.
 	 *
+	 * @var string
+	 */
+	private readonly string $widget_id;
+
+	/**
+	 * Widget scripts and styles.
+	 *
 	 * @var array
 	 */
 	protected array $widget_assets = [];
@@ -52,11 +59,12 @@ class Messia_Widget_Listing_Data extends WP_Widget {
 	 */
 	public function __construct() {
 
-		$this->helpers = MIA()->get_module( 'help' );
+		$this->widget_id = 'messia_widget_listing_data';
+		$this->helpers   = MIA()->get_module_helpers();
 
 		parent::__construct(
 			// Base ID.
-			'Messia_Widget_Listing_Data',
+			$this->widget_id,
 			// Name.
 			'&#10070; ' . esc_html__( 'Messia', 'messia' ) . ' &raquo; ' . esc_html__( 'Listing results', 'messia' ),
 			// Args.
@@ -79,6 +87,12 @@ class Messia_Widget_Listing_Data extends WP_Widget {
 	 */
 	public function widget( $args, $instance, $block_mode = false ): void { // phpcs:ignore Squiz.Commenting.FunctionComment.TypeHintMissing, Squiz.Commenting.FunctionComment.ScalarTypeHintMissing
 
+		$active = apply_filters( "{$this->widget_id}_active", true );
+
+		if ( ! $active ) {
+			return;
+		}
+
 		if ( false === $block_mode ) { // phpcs:ignore: Generic.CodeAnalysis.EmptyStatement.DetectedIf
 			// STYLES.
 			// Nothing here. Listing is a page served as a module with own assests.
@@ -88,7 +102,7 @@ class Messia_Widget_Listing_Data extends WP_Widget {
 		}
 
 		$errors  = [];
-		$listing = MIA()->get_module( 'listing' );
+		$listing = MIA()->get_module_listing();
 
 		if ( is_null( $listing ) ) {
 
@@ -100,7 +114,7 @@ class Messia_Widget_Listing_Data extends WP_Widget {
 			echo $errors;
 			echo $args['after_widget'];
 		} else {
-			echo MIA()->get_module( 'listing' )->get_listing( $args, $instance );
+			echo MIA()->get_module_listing()->get_listing( $args, $instance );
 		}
 	}
 

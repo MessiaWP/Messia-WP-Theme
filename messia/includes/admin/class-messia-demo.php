@@ -752,7 +752,7 @@ class Messia_Demo {
 	 */
 	private function update_blog_settings(): void {
 
-		$settings = MIA()->get_module( 'settings' );
+		$settings = MIA()->get_module_settings();
 		$settings->set_shared_settings( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME, MESSIA_THEME_SITE_SETTINGS_PRESET_NAME, [ 'pwa_enable' => 0 ] );
 	}
 

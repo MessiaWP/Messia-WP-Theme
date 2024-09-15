@@ -79,10 +79,10 @@ class Messia_Objects {
 	 */
 	private function __construct() {
 
-		$this->cpt_config       = MIA()->get_module( 'cpt_config' );
+		$this->cpt_config       = MIA()->get_module_cpt_config();
 		$this->cpt_config_taxes = $this->cpt_config->get_custom_taxonomies_config();
-		$this->helpers          = MIA()->get_module( 'help' );
-		$this->blog_settings    = MIA()->get_module( 'settings' )->get_blog_setting( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME );
+		$this->helpers          = MIA()->get_module_helpers();
+		$this->blog_settings    = MIA()->get_module_settings()->get_blog_setting( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME );
 		$this->init_hooks();
 	}
 
@@ -1634,7 +1634,7 @@ class Messia_Objects {
 		 */
 		$blocks_messia     = [];
 		$widget_blocks     = get_option( 'widget_block', [] );
-		$blocks_registered = MIA()->get_module( 'blocks' )->get_registry();
+		$blocks_registered = MIA()->get_module_blocks()->get_registry();
 
 		foreach ( $blocks_registered as $type => $block_type ) {
 			$block_full_name = $block_type->get_full_name();
@@ -2042,7 +2042,7 @@ class Messia_Objects {
 			unset( $objects_order[ $target_index ] );
 			$objects_order = array_values( $objects_order );
 
-			MIA()->get_module( 'settings' )->set_blog_setting(
+			MIA()->get_module_settings()->set_blog_setting(
 				MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME,
 				[
 					'objects_search_order' => wp_json_encode( $objects_order ),

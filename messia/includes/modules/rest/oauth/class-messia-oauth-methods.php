@@ -60,7 +60,7 @@ class Messia_OAuth_Methods {
 			wp_update_user(
 				[
 					'ID'        => $new_user,
-					'role'      => MIA()->get_module( 'user_roles' )->get_role_name(),
+					'role'      => MIA()->get_module_user_roles()->get_role_name(),
 					'user_pass' => $request['password'],
 				]
 			);

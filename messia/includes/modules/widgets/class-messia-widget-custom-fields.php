@@ -58,6 +58,13 @@ class Messia_Widget_Custom_Fields extends WP_Widget {
 	/**
 	 * Widget scripts and styles.
 	 *
+	 * @var string
+	 */
+	private readonly string $widget_id;
+
+	/**
+	 * Widget scripts and styles.
+	 *
 	 * @var array
 	 */
 	protected array $widget_assets = [];
@@ -69,13 +76,14 @@ class Messia_Widget_Custom_Fields extends WP_Widget {
 	 */
 	public function __construct() {
 
-		$this->helpers                  = MIA()->get_module( 'help' );
-		$this->blog_settings            = MIA()->get_module( 'settings' )->get_blog_setting( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME );
-		$this->custom_taxonomies_config = MIA()->get_module( 'cpt_config' )->get_custom_taxonomies_config();
+		$this->widget_id                = 'messia_widget_custom_fields';
+		$this->helpers                  = MIA()->get_module_helpers();
+		$this->blog_settings            = MIA()->get_module_settings()->get_blog_setting( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME );
+		$this->custom_taxonomies_config = MIA()->get_module_cpt_config()->get_custom_taxonomies_config();
 
 		parent::__construct(
 			// Base ID.
-			'messia_widget_custom_fields',
+			$this->widget_id,
 			// Name.
 			'&#10070; ' . esc_html__( 'Messia', 'messia' ) . ' &raquo; ' . esc_html__( 'Object custom fields', 'messia' ),
 			// Args.
@@ -97,6 +105,12 @@ class Messia_Widget_Custom_Fields extends WP_Widget {
 	 * @return void
 	 */
 	public function widget( $args, $instance, $block_mode = false ): void { // phpcs:ignore Squiz.Commenting.FunctionComment.TypeHintMissing, Squiz.Commenting.FunctionComment.ScalarTypeHintMissing
+
+		$active = apply_filters( "{$this->widget_id}_active", true );
+
+		if ( ! $active ) {
+			return;
+		}
 
 		$errors       = [];
 		$widget_title = null;

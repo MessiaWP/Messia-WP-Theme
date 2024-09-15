@@ -12,8 +12,8 @@ $main_menu     = null;
 $data_postid   = null;
 $data_gmap_key = null;
 
-$helpers  = MIA()->get_module( 'help' );
-$settings = MIA()->get_module( 'settings' );
+$helpers  = MIA()->get_module_helpers();
+$settings = MIA()->get_module_settings();
 
 $current_post  = get_queried_object();
 $blog_settings = $settings->get_blog_setting( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME );

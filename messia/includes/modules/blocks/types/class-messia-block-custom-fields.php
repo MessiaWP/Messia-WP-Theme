@@ -180,7 +180,7 @@ class Messia_Block_Custom_Fields extends Messia_Block_Abstract_Dynamic {
 						$custom_fields    = [];
 						$segment->term_id = (int) $segment->term_id;
 
-						$custom_taxonomies_config = MIA()->get_module( 'cpt_config' )->get_custom_taxonomies_config();
+						$custom_taxonomies_config = MIA()->get_module_cpt_config()->get_custom_taxonomies_config();
 						$term_custom_fields       = $this->helpers::messia_get_term_meta( $segment->term_id, 'constructor_cf' );
 
 						/*

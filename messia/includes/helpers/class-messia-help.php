@@ -70,7 +70,7 @@ class Messia_Help extends Messia_Help_Queries {
 	 * @return Messia_Help
 	 */
 	public static function init(): string {
-		self::$blog_settings = MIA()->get_module( 'settings' )->get_blog_setting( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME );
+		self::$blog_settings = MIA()->get_module_settings()->get_blog_setting( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME );
 		return __CLASS__;
 	}
 
@@ -307,7 +307,7 @@ class Messia_Help extends Messia_Help_Queries {
 
 		global $wpdb;
 
-		$custom_taxonomies_config = MIA()->get_module( 'cpt_config' )->get_custom_taxonomies_config();
+		$custom_taxonomies_config = MIA()->get_module_cpt_config()->get_custom_taxonomies_config();
 
 		$args = [
 			'hierarchical' => $custom_taxonomies_config[ $taxonomy ]['args']['hierarchical'],

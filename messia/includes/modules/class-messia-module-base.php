@@ -49,7 +49,7 @@ class Messia_Module_Base {
 	 * Messia_Listing_Tmpl_Base Constructor.
 	 */
 	protected function __construct() {
-		$this->helpers = MIA()->get_module( 'help' );
+		$this->helpers = MIA()->get_module_helpers();
 	}
 
 	/**

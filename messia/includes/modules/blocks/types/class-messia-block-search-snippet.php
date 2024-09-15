@@ -173,7 +173,7 @@ class Messia_Block_Search_Snippet extends Messia_Block_Abstract_Dynamic {
 	 *
 	 * @return string
 	 */
-	public function render_block( array $attributes ): string {
+	public function render_block( array $attributes ): ?string {
 
 		global $wpdb;
 		$errors     = [];

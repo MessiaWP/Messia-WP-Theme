@@ -37,7 +37,7 @@ class Messia_Template_Loader {
 	 * @return Messia_Help
 	 */
 	public static function init(): string {
-		self::$helpers = MIA()->get_module( 'help' );
+		self::$helpers = MIA()->get_module_helpers();
 		return __CLASS__;
 	}
 

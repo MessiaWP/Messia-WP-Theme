@@ -68,9 +68,9 @@ class Messia_Hooks {
 	 */
 	private function __construct() {
 
-		$this->helpers         = MIA()->get_module( 'help' );
-		$this->template_loader = MIA()->get_module( 'template_loader' );
-		$this->blog_settings   = MIA()->get_module( 'settings' )->get_blog_setting( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME );
+		$this->helpers         = MIA()->get_module_helpers();
+		$this->template_loader = MIA()->get_module_template_loader();
+		$this->blog_settings   = MIA()->get_module_settings()->get_blog_setting( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME );
 
 		$this->init_hooks();
 	}
@@ -506,7 +506,7 @@ class Messia_Hooks {
 
 		$blocks_messia     = [];
 		$blocks_enqueued   = parse_blocks( (string) $content );
-		$blocks_registered = MIA()->get_module( 'blocks' )->get_registry();
+		$blocks_registered = MIA()->get_module_blocks()->get_registry();
 
 		foreach ( $blocks_registered as $type => $block_registered ) {
 			$block_full_name                   = $block_registered->get_full_name();
@@ -907,7 +907,7 @@ class Messia_Hooks {
 	public function on_deactivation( string $new_name, WP_Theme $new_theme, WP_Theme $old_theme ): void {
 
 		@unlink( WPMU_PLUGIN_DIR . '/class-messia-wp-ajax-dispatcher.php' ); // phpcs:ignore WordPress.PHP.NoSilencedErrors.Discouraged
-		MIA()->get_module( 'settings' )->set_blog_setting(
+		MIA()->get_module_settings()->set_blog_setting(
 			MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME,
 			[
 				'widgets_state' => get_option( 'sidebars_widgets', false ),

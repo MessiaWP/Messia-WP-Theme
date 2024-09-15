@@ -45,7 +45,7 @@ class Messia_Comments {
 	 */
 	private function __construct() {
 
-		$this->blog_settings = MIA()->get_module( 'settings' )->get_blog_setting( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME );
+		$this->blog_settings = MIA()->get_module_settings()->get_blog_setting( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME );
 
 		add_filter( 'preprocess_comment', [ $this, 'on_preprocess_comment' ] );
 		add_action( 'comment_post', [ $this, 'on_inserted_comment' ], 10, 3 );

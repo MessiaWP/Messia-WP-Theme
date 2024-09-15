@@ -147,7 +147,7 @@ abstract class Messia_Listing_Tmpl_Base extends Messia_Module_Base {
 	protected function __construct() {
 		parent::__construct();
 
-		$this->blog_settings = MIA()->get_module( 'settings' )->get_blog_setting( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME );
+		$this->blog_settings = MIA()->get_module_settings()->get_blog_setting( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME );
 		$this->cookie        = MIA()->get_cookie();
 		$this->svgs          = $this->helpers::get_theme_svg_icons();
 
@@ -318,10 +318,14 @@ abstract class Messia_Listing_Tmpl_Base extends Messia_Module_Base {
 		$this->listing_terms['constructor_term'] = $this->properties['cf'];
 
 		/**
-		 * Filters admin menu options array.
+		 * Hook on listing terms.
 		 *
-		 * @param string $param Menu config
-		 * @hook before_messia_menu_render
+		 * @param array $segment_term_id  Parsed URL terms of segment taxonomy.
+		 * @param array $category_term_id Parsed URL terms of category taxonomy.
+		 * @param array $property_term_id Parsed URL terms of property taxonomy.
+		 * @param array $constructor_term Parsed URL terms of object constructed meta data.
+		 *
+		 * @hook messia_listing_request
 		 */
 		do_action(
 			'messia_listing_request',
@@ -420,6 +424,19 @@ abstract class Messia_Listing_Tmpl_Base extends Messia_Module_Base {
 	 * @return array
 	 */
 	protected function get_objects( array $taxonomies_terms, array $constructor_query, string $sort, ?string $search = null ): array {
+
+		/**
+		 * Filters array of objects for listing.
+		 *
+		 * @param array $objects Array of objects ID.
+		 *
+		 * @hook messia_listing_pre_get_objects
+		 */
+		$objects = apply_filters( 'messia_listing_pre_get_objects', [] );
+
+		if ( is_array( $objects ) ) {
+			return $objects;
+		}
 
 		global $wpdb;
 
@@ -558,7 +575,7 @@ abstract class Messia_Listing_Tmpl_Base extends Messia_Module_Base {
 						break;
 
 					case 'rating':
-						$blog_settings = MIA()->get_module( 'settings' )->get_blog_setting( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME );
+						$blog_settings = MIA()->get_module_settings()->get_blog_setting( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME );
 
 						if ( 1 === $blog_settings['substitute_rating_by_site_rating'] ) {
 

@@ -41,6 +41,13 @@ class Messia_Widget_Post_Content extends WP_Widget {
 	/**
 	 * Widget scripts and styles.
 	 *
+	 * @var string
+	 */
+	private readonly string $widget_id;
+
+	/**
+	 * Widget scripts and styles.
+	 *
 	 * @var array
 	 */
 	protected array $widget_assets = [];
@@ -52,11 +59,12 @@ class Messia_Widget_Post_Content extends WP_Widget {
 	 */
 	public function __construct() {
 
-		$this->helpers = MIA()->get_module( 'help' );
+		$this->widget_id = 'messia_widget_post_content';
+		$this->helpers   = MIA()->get_module_helpers();
 
 		parent::__construct(
 			// Base ID.
-			'messia_widget_post_content',
+			$this->widget_id,
 			// Name.
 			'&#10070; ' . esc_html__( 'Messia', 'messia' ) . ' &raquo; ' . esc_html__( 'WP Post content ', 'messia' ),
 			// Args.
@@ -78,6 +86,12 @@ class Messia_Widget_Post_Content extends WP_Widget {
 	 * @return void
 	 */
 	public function widget( $args, $instance, $block_mode = false ): void { // phpcs:ignore Squiz.Commenting.FunctionComment.TypeHintMissing, Squiz.Commenting.FunctionComment.ScalarTypeHintMissing
+
+		$active = apply_filters( "{$this->widget_id}_active", true );
+
+		if ( ! $active ) {
+			return;
+		}
 
 		echo $args['before_widget'];
 		echo $this->helpers::parse_placeholders( apply_filters( 'the_content', get_the_content() ) );

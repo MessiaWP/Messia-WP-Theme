@@ -135,7 +135,7 @@ class Messia_Oauth_Fb extends Messia_Social {
 	 * @return void
 	 */
 	public function request( WP_REST_Request $request ): void {
-		if ( MIA()->get_module( 'rest' )->get_method( 'oauth' )->is_logged_in( true ) ) {
+		if ( MIA()->get_module_rest()->get_method( 'oauth' )->is_logged_in( true ) ) {
 			exit( esc_html__( 'You are already logged in.', 'messia' ) );
 		}
 		if ( isset( $request['code'] ) ) {

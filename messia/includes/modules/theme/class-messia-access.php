@@ -72,7 +72,7 @@ final class Messia_Access {
 			return __CLASS__;
 		}
 
-		self::$settings = MIA()->get_module( 'settings' );
+		self::$settings = MIA()->get_module_settings();
 		$settings       = self::$settings->get_shared_settings( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME, MESSIA_THEME_SITE_SETTINGS_PRESET_NAME );
 
 		if ( ! array_key_exists( 'theme_support_access', $settings ) ) {

@@ -121,9 +121,9 @@ class Messia_Shortcodes {
 			return __CLASS__;
 		}
 
-		self::$helpers                  = MIA()->get_module( 'help' );
-		self::$blog_settings            = MIA()->get_module( 'settings' )->get_blog_setting( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME );
-		self::$custom_taxonomies_config = MIA()->get_module( 'cpt_config' )->get_custom_taxonomies_config();
+		self::$helpers                  = MIA()->get_module_helpers();
+		self::$blog_settings            = MIA()->get_module_settings()->get_blog_setting( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME );
+		self::$custom_taxonomies_config = MIA()->get_module_cpt_config()->get_custom_taxonomies_config();
 
 		// translators: %s - custom field name.
 		self::$empty_field_warning     = __( 'Custom field %s is empty.', 'messia' );
@@ -627,7 +627,7 @@ class Messia_Shortcodes {
 	 */
 	public static function object_categories( array $atts ): string {
 
-		$factory = MIA()->get_module( 'widgets' );
+		$factory = MIA()->get_module_widgets();
 		$widget  = new Messia_Widget_Object_Categories();
 		$args    = $factory->get_shared_args();
 
@@ -652,7 +652,7 @@ class Messia_Shortcodes {
 	 */
 	public static function object_properties( array $atts ): string {
 
-		$factory = MIA()->get_module( 'widgets' );
+		$factory = MIA()->get_module_widgets();
 		$widget  = new Messia_Widget_Object_Properties();
 		$args    = $factory->get_shared_args();
 

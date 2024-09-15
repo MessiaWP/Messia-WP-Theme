@@ -59,7 +59,7 @@ class Messia_Block_Blocks {
 	 */
 	private function __construct() {
 
-		$this->helpers = MIA()->get_module( 'help' );
+		$this->helpers = MIA()->get_module_helpers();
 
 		$class_shortname  = ( new ReflectionClass( $this ) )->getShortName();
 		$this->block_name = strtolower( str_replace( [ 'Messia_', '_' ], [ '', '-' ], $class_shortname ) );

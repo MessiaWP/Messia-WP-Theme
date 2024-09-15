@@ -34,6 +34,13 @@ class Messia_Widget_Sitewide_Search extends WP_Widget {
 	/**
 	 * Widget scripts and styles.
 	 *
+	 * @var string
+	 */
+	private readonly string $widget_id;
+
+	/**
+	 * Widget scripts and styles.
+	 *
 	 * @var array
 	 */
 	protected array $widget_assets = [];
@@ -45,6 +52,7 @@ class Messia_Widget_Sitewide_Search extends WP_Widget {
 	 */
 	public function __construct() {
 
+		$this->widget_id     = 'messia_widget_sitewide_search';
 		$this->widget_assets = [
 			'style'  => [
 				'handle' => 'widget-sitewide-search',
@@ -62,7 +70,7 @@ class Messia_Widget_Sitewide_Search extends WP_Widget {
 
 		parent::__construct(
 			// Base ID.
-			'messia_widget_sitewide_search',
+			$this->widget_id,
 			// Name.
 			'&#10070; ' . esc_html__( 'Messia', 'messia' ) . ' &raquo; ' . esc_html__( 'Sitewide search', 'messia' ),
 			// Args.
@@ -85,9 +93,15 @@ class Messia_Widget_Sitewide_Search extends WP_Widget {
 	 */
 	public function widget( $args, $instance, $block_mode = false ): void { // phpcs:ignore Squiz.Commenting.FunctionComment.TypeHintMissing, Squiz.Commenting.FunctionComment.ScalarTypeHintMissing
 
+		$active = apply_filters( "{$this->widget_id}_active", true );
+
+		if ( ! $active ) {
+			return;
+		}
+
 		if ( false === $block_mode ) {
 
-			$scripts = MIA()->get_module( 'scripts' );
+			$scripts = MIA()->get_module_scripts();
 			$scripts::register_widget_frontend_assets( $this->widget_assets );
 
 			// STYLES.
@@ -97,7 +111,7 @@ class Messia_Widget_Sitewide_Search extends WP_Widget {
 			wp_enqueue_script( 'messia-widget-sitewide-search' );
 		}
 
-		$helpers = MIA()->get_module( 'help' );
+		$helpers = MIA()->get_module_helpers();
 		$svgs    = $helpers::get_theme_svg_icons();
 
 		echo $args['before_widget'];

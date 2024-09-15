@@ -293,7 +293,7 @@ class Messia_Help_Queries extends Messia_Help_Database {
 			return $query;
 		}
 
-		$blog_settings = MIA()->get_module( 'settings' )->get_blog_setting( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME );
+		$blog_settings = MIA()->get_module_settings()->get_blog_setting( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME );
 
 		$list   = MESSIA_LIST_SORT_SEARCH['list'];
 		$sort   = MESSIA_LIST_SORT_SEARCH['sort'];
@@ -702,9 +702,9 @@ class Messia_Help_Queries extends Messia_Help_Database {
 				} elseif ( $show_last_sep ) {
 					echo $sep;
 				}
-			} elseif ( self::is_listing_page() && MIA()->get_module( 'listing' ) instanceof Messia_Listing_Tmpl_Base ) {
+			} elseif ( self::is_listing_page() && MIA()->get_module_listing() instanceof Messia_Listing_Tmpl_Base ) {
 
-				$listing = MIA()->get_module( 'listing' );
+				$listing = MIA()->get_module_listing();
 
 				$current_segment    = $listing->get_current_segment_term();
 				$current_categories = $listing->get_current_category_terms();

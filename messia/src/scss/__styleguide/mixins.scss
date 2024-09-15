@@ -144,6 +144,7 @@
 	$font-size: $m-font-size-control, // Font Size label
 	$control-color: $m-controls_color_initial_inner, // Color label
 	$focus-color: $m-active-color, // Focus color label
+	$white: $m-white, // white color
 	$hover-color: $m-controls_on_interaction_border_color) { // Border color hover
 	position: relative;
 	display: inline-block;
@@ -181,7 +182,7 @@
 		padding: $padding;
 		border-radius: $m-border-radius;
 		position: relative;
-		background: none;
+		background: $m-white;
 		width: 100%;
 		height: auto;
 		outline: none;
@@ -246,6 +247,9 @@
 			transform: scale(.82) translateY(-50%);
 
 			span {
+				border: 1px solid $border-color;
+				border-radius: $m-border-radius / 2;
+				background: #fafafa;
 				width: initial;
 			}
 		}

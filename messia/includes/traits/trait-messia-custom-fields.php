@@ -72,7 +72,7 @@ trait Messia_Custom_Fields {
 
 		if ( false === $block_mode ) {
 
-			$scripts = MIA()->get_module( 'scripts' );
+			$scripts = MIA()->get_module_scripts();
 			$scripts::register_widget_frontend_assets( self::$trait_assets );
 
 			/* STYLES */
@@ -82,8 +82,8 @@ trait Messia_Custom_Fields {
 			wp_enqueue_script( 'messia-block-custom-fields' );
 		}
 
-		self::$custom_fields_trait_helpers       = MIA()->get_module( 'help' );
-		self::$custom_fields_trait_blog_settings = MIA()->get_module( 'settings' )->get_blog_setting( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME );
+		self::$custom_fields_trait_helpers       = MIA()->get_module_helpers();
+		self::$custom_fields_trait_blog_settings = MIA()->get_module_settings()->get_blog_setting( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME );
 
 		if ( ! is_callable( [ __CLASS__, "get_field_{$field_type}" ] ) ) {
 			return "- Custom field callback 'get_field_{$field_type}'() for field type '{$field_type}' is not callable. Expected in trait Messia_Custom_Fields<br>";
@@ -473,7 +473,7 @@ trait Messia_Custom_Fields {
 
 		if ( true === $args['card_mode'] ) {
 
-			$helper = MIA()->get_module( 'object_card' );
+			$helper = MIA()->get_module_object_card();
 
 			foreach ( $field_value as $id ) {
 				$html .= $helper::get_object_card( $segment_id, $id, $card_args );
@@ -546,7 +546,7 @@ trait Messia_Custom_Fields {
 			return null;
 		}
 
-		$helpers = MIA()->get_module( 'help' );
+		$helpers = MIA()->get_module_helpers();
 		return $helpers::get_media_icon_front( json_decode( $constructor_icon, false ) );
 	}
 }

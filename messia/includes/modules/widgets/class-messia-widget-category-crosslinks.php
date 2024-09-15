@@ -48,6 +48,13 @@ class Messia_Widget_Category_Crosslinks extends WP_Widget {
 	/**
 	 * Widget scripts and styles.
 	 *
+	 * @var string
+	 */
+	private readonly string $widget_id;
+
+	/**
+	 * Widget scripts and styles.
+	 *
 	 * @var array
 	 */
 	protected array $widget_assets = [];
@@ -59,8 +66,9 @@ class Messia_Widget_Category_Crosslinks extends WP_Widget {
 	 */
 	public function __construct() {
 
-		$this->helpers       = MIA()->get_module( 'help' );
-		$this->blog_settings = MIA()->get_module( 'settings' )->get_blog_setting( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME );
+		$this->widget_id     = 'messia_widget_category_crosslinks';
+		$this->helpers       = MIA()->get_module_helpers();
+		$this->blog_settings = MIA()->get_module_settings()->get_blog_setting( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME );
 
 		$this->widget_assets = [
 			'style'  => [
@@ -79,7 +87,7 @@ class Messia_Widget_Category_Crosslinks extends WP_Widget {
 
 		parent::__construct(
 			// Base ID.
-			'messia_widget_category_crosslinks',
+			$this->widget_id,
 			// Name.
 			'&#10070; ' . esc_html__( 'Messia', 'messia' ) . ' &raquo; ' . esc_html__( 'Category crosslinks', 'messia' ),
 			// Args.
@@ -102,6 +110,12 @@ class Messia_Widget_Category_Crosslinks extends WP_Widget {
 	 */
 	public function widget( $args, $instance, $block_mode = false ): void { // phpcs:ignore Squiz.Commenting.FunctionComment.TypeHintMissing, Squiz.Commenting.FunctionComment.ScalarTypeHintMissing
 
+		$active = apply_filters( "{$this->widget_id}_active", true );
+
+		if ( ! $active ) {
+			return;
+		}
+
 		global $wpdb;
 		$errors               = [];
 		$home                 = home_url();
@@ -112,11 +126,11 @@ class Messia_Widget_Category_Crosslinks extends WP_Widget {
 		$hide_empty           = $this->blog_settings['messia_object_category_empty_terms_to_filter'];
 		$segment_terms        = $instance['segmentTerms'];
 
-		$listing = MIA()->get_module( 'listing' );
+		$listing = MIA()->get_module_listing();
 
 		if ( false === $block_mode ) {
 
-			$scripts = MIA()->get_module( 'scripts' );
+			$scripts = MIA()->get_module_scripts();
 			$scripts::register_widget_frontend_assets( $this->widget_assets );
 
 			// STYLES.

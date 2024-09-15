@@ -142,8 +142,8 @@ class Messia_Listing_Tmpl_Default extends Messia_Listing_Tmpl_Base {
 		 * Example 'estate/about-us/contact'.
 		 */
 		$prefix       = ( ! empty( $page_prefix ) ) ? array_merge( $prefix, $page_prefix ) : $prefix;
-		$sidebar      = $this->get_sidebar();
 		$content_hero = $this->get_content_hero();
+		$sidebar      = $this->get_sidebar();
 		$content      = $this->get_content_general();
 		$bottom       = $this->get_content_bottom();
 		$edit         = $this->get_post_edit_link();
@@ -207,7 +207,7 @@ class Messia_Listing_Tmpl_Default extends Messia_Listing_Tmpl_Base {
 			<?php
 		}
 	}
-	
+
 	/**
 	 * Component for $this->generate_page(),
 	 * output very top content HTML.
@@ -220,6 +220,7 @@ class Messia_Listing_Tmpl_Default extends Messia_Listing_Tmpl_Base {
 
 			ob_start();
 			dynamic_sidebar( 'widget-area-hero-listing' );
+
 			return ob_get_clean();
 		}
 
@@ -1297,7 +1298,7 @@ class Messia_Listing_Tmpl_Default extends Messia_Listing_Tmpl_Base {
 		}
 
 		$html   = null;
-		$helper = MIA()->get_module( 'object_card' );
+		$helper = MIA()->get_module_object_card();
 
 		$args = [
 			'animated_appearance' => ( 1 === $this->blog_settings['animated_cards_appearance'] ) ? true : false,

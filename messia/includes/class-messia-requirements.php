@@ -171,7 +171,7 @@ class Messia_Requirements {
 	 */
 	public function validate_theme_licence( WP_Screen $current_screen ): void {
 
-		$this->settings = MIA()->get_module( 'settings' );
+		$this->settings = MIA()->get_module_settings();
 		$settings       = $this->settings->get_shared_settings( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME, MESSIA_THEME_SITE_SETTINGS_PRESET_NAME );
 
 		$theme_licence  = json_decode( $settings['theme_licence_data'], true );
@@ -204,7 +204,7 @@ class Messia_Requirements {
 
 		// translators: %s - html tag a.
 		$get_key = sprintf( '<a href="' . MESSIA_SHOP_MY_ACCOUNT_URL . '">%s</a>', __( 'My Account', 'messia' ) );
-		$set_key = sprintf( '<a href="' . $menu_page_url . '">%s</a>', __( 'Messia settings', 'messia' ) );
+		$set_key = sprintf( '<a href="' . urldecode( $menu_page_url ) . '">%s</a>', __( 'Messia settings', 'messia' ) );
 
 		// translators: %1$s & %2$s - html tags a.
 		$this->errors['theme_licence'][] = sprintf( __( 'Please enter your Messia theme license key to unlock full functionality, access support and automatic updates. To get key visit %1$s, to set - open %2$s. %3$s', 'messia' ), $get_key, $set_key, $activate_theme );

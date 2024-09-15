@@ -5,7 +5,7 @@
  * @package Messia
  */
 
-$helpers = MIA()->get_module( 'help' );
+$helpers = MIA()->get_module_helpers();
 $svgs    = $helpers::get_theme_svg_icons();
 ?>
 <form role="search" method="get" class="searchform d-flex" action="<?php echo esc_html( home_url( '/' ) ); ?>" >

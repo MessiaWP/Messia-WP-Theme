@@ -100,7 +100,7 @@ class Messia_User_Settings {
 		}
 
 		// PWA option.
-		$settings_module = MIA()->get_module( 'settings' );
+		$settings_module = MIA()->get_module_settings();
 		$settings        = $settings_module->get_shared_settings( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME, MESSIA_THEME_SITE_SETTINGS_PRESET_NAME );
 
 		$theme_licence = json_decode( $settings['theme_licence_data'], true );
@@ -435,7 +435,7 @@ class Messia_User_Settings {
 			return;
 		}
 
-		$blog_settings = MIA()->get_module( 'settings' )->get_blog_setting( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME );
+		$blog_settings = MIA()->get_module_settings()->get_blog_setting( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME );
 
 		if ( ! is_null( $blog_settings['google_fonts_api_key'] ) && empty( self::$google_fonts ) ) {
 

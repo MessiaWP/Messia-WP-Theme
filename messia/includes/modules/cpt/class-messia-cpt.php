@@ -91,12 +91,12 @@ class Messia_Cpt {
 	 */
 	private function __construct() {
 
-		$this->cpt_config          = MIA()->get_module( 'cpt_config' );
+		$this->cpt_config          = MIA()->get_module_cpt_config();
 		$this->cpt_config_taxes    = $this->cpt_config->get_custom_taxonomies_config();
 		$this->cpt_config_posttype = $this->cpt_config->get_custom_posttype_config();
 		$this->caps_scopes         = $this->cpt_config->get_caps_scopes();
 		$this->post_fields_caps    = $this->cpt_config->get_post_custom_fields_caps();
-		$this->helpers             = MIA()->get_module( 'help' );
+		$this->helpers             = MIA()->get_module_helpers();
 		$this->svgs                = $this->helpers::get_theme_svg_icons();
 		$this->init_hooks();
 	}
@@ -1490,7 +1490,7 @@ class Messia_Cpt {
 		// Before saving, you need to remove from all instances of widget block "Custom fields" the fields removed in the constructor and add the added ones to the end.
 		$blocks_messia     = [];
 		$widget_blocks     = get_option( 'widget_block', [] );
-		$blocks_registered = MIA()->get_module( 'blocks' )->get_registry();
+		$blocks_registered = MIA()->get_module_blocks()->get_registry();
 
 		foreach ( $blocks_registered as $type => $block_type ) {
 			$block_full_name = $block_type->get_full_name();

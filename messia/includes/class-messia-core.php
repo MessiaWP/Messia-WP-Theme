@@ -75,7 +75,7 @@ final class Messia_Core {
 	private Messia_Merging $merging;
 
 	/**
-	 * The class itself.
+	 * Full class name.
 	 *
 	 * @var Messia_Object_Card
 	 */
@@ -190,7 +190,7 @@ final class Messia_Core {
 	 * The single instance of the class
 	 * of current template
 	 *
-	 * @var Messia_Listing_Tmpl_XXX
+	 * @var null|Messia_Listing_Tmpl_Base
 	 */
 	private ?Messia_Listing_Tmpl_Base $listing = null; // phpcs:ignore Squiz.PHP.DisallowMultipleAssignments.Found
 
@@ -198,7 +198,7 @@ final class Messia_Core {
 	 * The single instance of the class
 	 * of current template
 	 *
-	 * @var Messia_Object_Tmpl_XXX
+	 * @var null|Messia_Object_Tmpl_Base
 	 */
 	private ?Messia_Object_Tmpl_Base $object = null; // phpcs:ignore Squiz.PHP.DisallowMultipleAssignments.Found
 
@@ -206,7 +206,7 @@ final class Messia_Core {
 	 * The single instance of the class
 	 * of regular page template
 	 *
-	 * @var mixed Depends on current post type.
+	 * @var null|Messia_Module_Base
 	 */
 	private ?Messia_Module_Base $page = null; // phpcs:ignore Squiz.PHP.DisallowMultipleAssignments.Found
 
@@ -485,7 +485,7 @@ final class Messia_Core {
 				]
 			);
 
-			MIA()->get_module( 'settings' )->set_blog_setting( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME, [ 'default_segment' => $id['term_id'] ] );
+			MIA()->get_module_settings()->set_blog_setting( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME, [ 'default_segment' => $id['term_id'] ] );
 		}
 	}
 
@@ -817,20 +817,210 @@ final class Messia_Core {
 	}
 
 	/**
-	 * Getter for class module.
+	 * Getter.
 	 *
-	 * @param string $module_name Valid theme module.
-	 *
-	 * @throws Exception On getting unexisting module.
-	 *
-	 * @return mixed
+	 * @return Messia_Help Full class name.
 	 */
-	public function get_module( string $module_name ) {
-		try {
-			return $this->{$module_name};
-		} catch ( Exception $e ) {
-			throw new Exception( "Retrievied unexisting module {$module_name}" );
-		}
+	public function get_module_helpers() {
+		return $this->help;
+	}
+
+	/**
+	 * Getter.
+	 *
+	 * @return Messia_Settings Class instance.
+	 */
+	public function get_module_settings(): Messia_Settings {
+		return $this->settings;
+	}
+
+	/**
+	 * Getter.
+	 *
+	 * @return Messia_Cpt_Config Class instance.
+	 */
+	public function get_module_cpt_config(): Messia_Cpt_Config {
+		return $this->cpt_config;
+	}
+
+	/**
+	 * Getter.
+	 *
+	 * @return Messia_Widget Class instance.
+	 */
+	public function get_module_widgets(): Messia_Widget {
+		return $this->widgets;
+	}
+
+	/**
+	 * Getter.
+	 *
+	 * @return Messia_Hooks Class instance.
+	 */
+	public function get_module_core_hooks(): Messia_Hooks {
+		return $this->core_hooks;
+	}
+
+	/**
+	 * Getter.
+	 *
+	 * @return Messia_Listing_Tmpl_Base Class instance.
+	 */
+	public function get_module_listing(): ?Messia_Listing_Tmpl_Base {
+		return $this->listing;
+	}
+
+	/**
+	 * Getter.
+	 *
+	 * @return Messia_Module_Base Class instance.
+	 */
+	public function get_module_page(): ?Messia_Module_Base {
+		return $this->page;
+	}
+
+	/**
+	 * Getter.
+	 *
+	 * @return Messia_Object_Tmpl_Base Class instance.
+	 */
+	public function get_module_object(): ?Messia_Object_Tmpl_Base {
+		return $this->object;
+	}
+
+	/**
+	 * Getter.
+	 *
+	 * @return Messia_Template_Loader Full class name.
+	 */
+	public function get_module_template_loader() {
+		return $this->template_loader;
+	}
+
+	/**
+	 * Getter.
+	 *
+	 * @return Messia_Object_Card Full class name.
+	 */
+	public function get_module_object_card() {
+		return $this->object_card;
+	}
+
+	/**
+	 * Getter.
+	 *
+	 * @return Messia_Block_Blocks Class instance.
+	 */
+	public function get_module_blocks(): Messia_Block_Blocks {
+		return $this->blocks;
+	}
+
+	/**
+	 * Getter.
+	 *
+	 * @return Messia_User_Roles Class instance.
+	 */
+	public function get_module_user_roles(): Messia_User_Roles {
+		return $this->user_roles;
+	}
+
+	/**
+	 * Getter.
+	 *
+	 * @return Messia_Rest_API Class instance.
+	 */
+	public function get_module_rest(): Messia_Rest_API {
+		return $this->rest;
+	}
+
+	/**
+	 * Getter.
+	 *
+	 * @return Messia_Shortcodes Full class name.
+	 */
+	public function get_module_shortcodes() {
+		return $this->shortcodes;
+	}
+
+	/**
+	 * Getter.
+	 *
+	 * @return Messia_Object_Card Full class name.
+	 */
+	public function get_module_scripts() {
+		return $this->scripts;
+	}
+
+	/**
+	 * Getter.
+	 *
+	 * @return Messia_Cpt Class instance.
+	 */
+	public function get_module_cpt(): Messia_Cpt {
+		return $this->cpt;
+	}
+
+	/**
+	 * Getter.
+	 *
+	 * @return Messia_Objects Class instance.
+	 */
+	public function get_module_messia_objects(): Messia_Objects {
+		return $this->messia_objects;
+	}
+
+	/**
+	 * Getter.
+	 *
+	 * @return Messia_Autoloader Class instance.
+	 */
+	public function get_module_autoloader(): Messia_Autoloader {
+		return $this->autoloader;
+	}
+
+	/**
+	 * Getter.
+	 *
+	 * @return Messia_Comments Class instance.
+	 */
+	public function get_module_comments(): Messia_Comments {
+		return $this->comments;
+	}
+
+	/**
+	 * Getter.
+	 *
+	 * @return Messia_Update Class instance.
+	 */
+	public function get_module_messia_update(): Messia_Update {
+		return $this->messia_update;
+	}
+
+	/**
+	 * Getter.
+	 *
+	 * @return Messia_Access Class instance.
+	 */
+	public function get_module_messia_access(): Messia_Access {
+		return $this->messia_access;
+	}
+
+	/**
+	 * Getter.
+	 *
+	 * @return Messia_Requirements Class instance.
+	 */
+	public function get_module_requirements(): Messia_Requirements {
+		return $this->requirements;
+	}
+
+	/**
+	 * Getter.
+	 *
+	 * @return Messia_Merging Class instance.
+	 */
+	public function get_module_merging(): Messia_Merging {
+		return $this->merging;
 	}
 
 	/**

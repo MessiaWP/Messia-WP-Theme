@@ -222,7 +222,7 @@ abstract class Messia_Menu_Engine {
 			return;
 		}
 
-		$settings = MIA()->get_module( 'settings' );
+		$settings = MIA()->get_module_settings();
 
 		/**
 		 * Filters admin menu options array.
@@ -604,7 +604,7 @@ abstract class Messia_Menu_Engine {
 
 		$current_screen = get_current_screen();
 
-		$blog_settings = MIA()->get_module( 'settings' )->get_blog_setting( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME );
+		$blog_settings = MIA()->get_module_settings()->get_blog_setting( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME );
 
 		$object_data = [
 			'namespaceFront'       => MESSIA_NAMESPACE_FRONT,
@@ -705,7 +705,7 @@ abstract class Messia_Menu_Engine {
 	private function resolve_media_icon_fonts_mode( string $page_hook, WP_Screen $current_screen ): bool {
 
 		$icon_fonts      = false;
-		$settings_module = MIA()->get_module( 'settings' );
+		$settings_module = MIA()->get_module_settings();
 		$blog_settings   = $settings_module->get_blog_setting( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME );
 
 		if ( 0 === $blog_settings['use_google_meterial_icons'] ) {
@@ -976,7 +976,7 @@ abstract class Messia_Menu_Engine {
 				$_POST['data']['settings']                  = apply_filters( "messia_before_{$_POST['data']['menu_type']}_save_settings", $_POST['data']['settings'] );
 				$_POST['data']['settings']['last_modified'] = time();
 
-				$settings_module = MIA()->get_module( 'settings' );
+				$settings_module = MIA()->get_module_settings();
 
 				foreach ( $_POST['data']['settings'] as &$setting ) {
 					$setting = $this->normalize_types( $setting );
@@ -1086,10 +1086,10 @@ abstract class Messia_Menu_Engine {
 			}
 
 			if ( 'network' === $_POST['data']['menu_type'] ) {
-				MIA()->get_module( 'settings' )->reset_site_setting( $this->menu_config['setting_preset'] );
+				MIA()->get_module_settings()->reset_site_setting( $this->menu_config['setting_preset'] );
 
 			} elseif ( 'standalone' === $_POST['data']['menu_type'] ) {
-				MIA()->get_module( 'settings' )->reset_blog_setting( $this->menu_config['setting_preset'] );
+				MIA()->get_module_settings()->reset_blog_setting( $this->menu_config['setting_preset'] );
 			}
 
 			wp_send_json_success(
@@ -1201,7 +1201,7 @@ abstract class Messia_Menu_Engine {
 				$blog_settings = get_option( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME, [] );
 				$site_settings = get_site_option( MESSIA_THEME_SITE_SETTINGS_PRESET_NAME, [] );
 
-				MIA()->get_module( 'core_hooks' )->setup_ajax_dispatcher( $blog_settings );
+				MIA()->get_module_core_hooks()->setup_ajax_dispatcher( $blog_settings );
 
 				Messia_Config_Styles::save_styles( $blog_settings );
 				Messia_User_Settings::root_htaccess_content( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME, $blog_settings, [], [] );
@@ -1247,7 +1247,7 @@ abstract class Messia_Menu_Engine {
 
 		if ( check_ajax_referer( 'messiaCoreSettingsNonce', 'messiaNonce', false ) ) {
 
-			$settings_module = MIA()->get_module( 'settings' );
+			$settings_module = MIA()->get_module_settings();
 
 			if ( is_multisite() ) {
 				$settings = $settings_module->get_site_setting( MESSIA_THEME_SITE_SETTINGS_PRESET_NAME );

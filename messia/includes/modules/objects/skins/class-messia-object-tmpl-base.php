@@ -60,7 +60,7 @@ abstract class Messia_Object_Tmpl_Base extends Messia_Module_Base {
 	protected function __construct() {
 		parent::__construct();
 
-		$this->blog_settings = MIA()->get_module( 'settings' )->get_blog_setting( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME );
+		$this->blog_settings = MIA()->get_module_settings()->get_blog_setting( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME );
 		$this->object        = get_post();
 
 		$this->object_segment_terms = $this->validate_object_request();

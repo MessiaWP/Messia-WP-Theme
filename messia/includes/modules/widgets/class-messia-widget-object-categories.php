@@ -41,6 +41,13 @@ class Messia_Widget_Object_Categories extends WP_Widget {
 	/**
 	 * Widget scripts and styles.
 	 *
+	 * @var string
+	 */
+	private readonly string $widget_id;
+
+	/**
+	 * Widget scripts and styles.
+	 *
 	 * @var array
 	 */
 	protected array $widget_assets = [];
@@ -52,7 +59,8 @@ class Messia_Widget_Object_Categories extends WP_Widget {
 	 */
 	public function __construct() {
 
-		$this->helpers = MIA()->get_module( 'help' );
+		$this->widget_id = 'messia_widget_object_categories';
+		$this->helpers   = MIA()->get_module_helpers();
 
 		$this->widget_assets = [
 			'style'  => [
@@ -66,7 +74,7 @@ class Messia_Widget_Object_Categories extends WP_Widget {
 
 		parent::__construct(
 			// Base ID.
-			'messia_widget_object_categories',
+			$this->widget_id,
 			// Name.
 			'&#10070; ' . esc_html__( 'Messia', 'messia' ) . ' &raquo; ' . esc_html__( 'Object categories', 'messia' ),
 			// Args.
@@ -89,9 +97,15 @@ class Messia_Widget_Object_Categories extends WP_Widget {
 	 */
 	public function widget( $args, $instance, $block_mode = false ): void { // phpcs:ignore Squiz.Commenting.FunctionComment.TypeHintMissing, Squiz.Commenting.FunctionComment.ScalarTypeHintMissing
 
+		$active = apply_filters( "{$this->widget_id}_active", true );
+
+		if ( ! $active ) {
+			return;
+		}
+
 		if ( false === $block_mode ) {
 
-			$scripts = MIA()->get_module( 'scripts' );
+			$scripts = MIA()->get_module_scripts();
 			$scripts::register_widget_frontend_assets( $this->widget_assets );
 
 			// STYLES.

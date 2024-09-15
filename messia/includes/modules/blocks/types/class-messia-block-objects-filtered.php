@@ -423,7 +423,7 @@ class Messia_Block_Objects_Filtered extends Messia_Block_Abstract_Dynamic {
 		// SQL.
 		$more     = __( 'More...', 'messia' );
 		$more_url = home_url() . "/{$attributes['segment']}/";
-		$helper   = MIA()->get_module( 'object_card' );
+		$helper   = MIA()->get_module_object_card();
 
 		foreach ( $objects as $object_id ) {
 			$render .= $helper::get_object_card( (int) $segment_term, $object_id, $card_args );

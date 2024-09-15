@@ -55,7 +55,7 @@ final class Messia_Update {
 	 */
 	public function __construct( array $credentials = [] ) {
 
-		$this->settings = MIA()->get_module( 'settings' );
+		$this->settings = MIA()->get_module_settings();
 		$settings       = $this->settings->get_shared_settings( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME, MESSIA_THEME_SITE_SETTINGS_PRESET_NAME );
 
 		if ( ! array_key_exists( 'theme_licence_data', $settings ) ) {

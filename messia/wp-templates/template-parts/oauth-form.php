@@ -10,12 +10,12 @@ if ( is_user_logged_in() ) {
 	return;
 }
 
-$svg = MIA()->get_module( 'help' )::get_theme_svg_icons();
+$svg = MIA()->get_module_helpers()::get_theme_svg_icons();
 
-$vk       = MIA()->get_module( 'rest' )->get_method( 'vk' )->button();
-$ya       = MIA()->get_module( 'rest' )->get_method( 'ya' )->button();
-$google   = MIA()->get_module( 'rest' )->get_method( 'google' )->button();
-$facebook = MIA()->get_module( 'rest' )->get_method( 'facebook' )->button();
+$vk       = MIA()->get_module_rest()->get_method( 'vk' )->button();
+$ya       = MIA()->get_module_rest()->get_method( 'ya' )->button();
+$google   = MIA()->get_module_rest()->get_method( 'google' )->button();
+$facebook = MIA()->get_module_rest()->get_method( 'facebook' )->button();
 ?>
 
 <div class="modal fade" id="login_form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -32,7 +32,7 @@ $facebook = MIA()->get_module( 'rest' )->get_method( 'facebook' )->button();
 								<a href="#" class="btn_reg_form_show"><?php esc_html_e( 'Register', 'messia' ); ?></a>
 							</div>
 							<?php
-								$nonce = MIA()->get_module( 'rest' )->get_method( 'oauth' )->get_nonce_data();
+								$nonce = MIA()->get_module_rest()->get_method( 'oauth' )->get_nonce_data();
 								wp_nonce_field( $nonce['action'], $nonce['field'], false );
 							?>
 							<input type="hidden" name="oauth_type" value="auth">
@@ -51,7 +51,7 @@ $facebook = MIA()->get_module( 'rest' )->get_method( 'facebook' )->button();
 								<a href="#" class="btn_login_form_show"><?php esc_html_e( 'Login', 'messia' ); ?></a>
 							</div>
 							<?php
-								$nonce = MIA()->get_module( 'rest' )->get_method( 'oauth' )->get_nonce_data();
+								$nonce = MIA()->get_module_rest()->get_method( 'oauth' )->get_nonce_data();
 								wp_nonce_field( $nonce['action'], $nonce['field'], false );
 
 								$ppp = get_option( 'wp_page_for_privacy_policy' );
@@ -77,7 +77,7 @@ $facebook = MIA()->get_module( 'rest' )->get_method( 'facebook' )->button();
 								<a href="#" class="btn_login_form_show"><?php esc_html_e( 'Login', 'messia' ); ?></a>
 							</div>
 							<?php
-								$nonce = MIA()->get_module( 'rest' )->get_method( 'oauth' )->get_nonce_data();
+								$nonce = MIA()->get_module_rest()->get_method( 'oauth' )->get_nonce_data();
 								wp_nonce_field( $nonce['action'], $nonce['field'], false );
 							?>
 							<input type="hidden" name="oauth_type" value="reset">

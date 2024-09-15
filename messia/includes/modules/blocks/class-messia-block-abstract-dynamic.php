@@ -10,6 +10,8 @@ declare(strict_types = 1);
 // phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
 namespace Smartbits\Messia\Includes\Modules\Blocks;
 
+use Smartbits\Messia\Includes\Helpers\Messia_Help;
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
@@ -139,9 +141,9 @@ abstract class Messia_Block_Abstract_Dynamic {
 
 		$assets = [];
 
-		$widgets             = MIA()->get_module( 'widgets' );
-		$this->helpers       = MIA()->get_module( 'help' );
-		$this->blog_settings = MIA()->get_module( 'settings' )->get_blog_setting( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME );
+		$widgets             = MIA()->get_module_widgets();
+		$this->helpers       = MIA()->get_module_helpers();
+		$this->blog_settings = MIA()->get_module_settings()->get_blog_setting( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME );
 		$this->sidebar_args  = $widgets->get_shared_args();
 
 		( true === $this->block_assets['editor_script']['enqueue'] ) ? $assets['editor_script'] = "messia-{$this->block_name}-editor" : '';
@@ -368,7 +370,7 @@ abstract class Messia_Block_Abstract_Dynamic {
 	 *
 	 * @return string
 	 */
-	protected function output( array $attributes, string $render ): ?string {
+	protected function output( array $attributes, ?string $render ): ?string {
 
 		global $wp_styles, $wp_scripts;
 
@@ -404,7 +406,7 @@ abstract class Messia_Block_Abstract_Dynamic {
 
 		$critical_css = null;
 
-		$hooks = MIA()->get_module( 'core_hooks' );
+		$hooks = MIA()->get_module_core_hooks();
 
 		wp_enqueue_style( "messia-{$this->block_name}" );
 		wp_enqueue_script( "messia-{$this->block_name}" );

@@ -5,7 +5,7 @@
  * @package Messia
  */
 
-$settings = MIA()->get_module( 'settings' );
+$settings = MIA()->get_module_settings();
 
 $blog_settings = $settings->get_blog_setting( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME );
 

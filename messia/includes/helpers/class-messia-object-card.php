@@ -407,7 +407,7 @@ class Messia_Object_Card {
 	 */
 	private static function setup_areas(): void {
 
-		$caps = MIA()->get_module( 'cpt_config' )->get_post_custom_fields_caps();
+		$caps = MIA()->get_module_cpt_config()->get_post_custom_fields_caps();
 
 		foreach ( $caps as $zone => $cap ) {
 			if ( 'listing' === $cap['area'] ) {
@@ -480,7 +480,7 @@ class Messia_Object_Card {
 	private static function set_helpers(): void {
 
 		if ( is_null( self::$helpers ) ) {
-			self::$helpers = MIA()->get_module( 'help' );
+			self::$helpers = MIA()->get_module_helpers();
 		}
 	}
 }

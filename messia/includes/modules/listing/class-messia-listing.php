@@ -39,8 +39,8 @@ final class Messia_Listing {
 	 */
 	private static function get_template(): Messia_Listing_Tmpl_Base {
 
-		$blog_settings   = MIA()->get_module( 'settings' )->get_blog_setting( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME );
-		$template_loader = MIA()->get_module( 'template_loader' );
+		$blog_settings   = MIA()->get_module_settings()->get_blog_setting( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME );
+		$template_loader = MIA()->get_module_template_loader();
 		$tmpl_class      = $blog_settings['listing_template_file'];
 
 		return $template_loader::load_messia_themplate( $tmpl_class, 'listing' );
