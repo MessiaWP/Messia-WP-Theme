@@ -697,25 +697,26 @@ class Messia_Block_Search_Snippet extends Messia_Block_Abstract_Dynamic {
 	private function build_category_flat( array $terms, array $flat = [], int $level = 0 ): array {
 
 		foreach ( $terms as $term ) {
-
+	
+			// Reset level for top-level terms.
 			if ( 0 === (int) $term->parent ) {
-				$level = 0;
+				$currentLevel = 0;
+			} else {
+				$currentLevel = $level;
 			}
-
-			// Reject deepest term without child/children.
-			if ( isset( $term->children ) ) {
-
-				$flat[] = [
-					'label' => str_repeat( '— ', $level ) . " {$term->name} [{$term->count}]",
-					'value' => $term->slug,
-				];
-
-				++$level;
-				$flat = $this->build_category_flat( $term->children, $flat, $level );
+	
+			// Add term to flat array
+			$flat[] = [
+				'label' => str_repeat( '— ', $currentLevel ) . "{$term->name} [{$term->count}]",
+				'value' => $term->slug,
+			];
+	
+			// If the term has children, recursively process them.
+			if ( isset( $term->children ) && is_array( $term->children ) ) {
+				$flat = $this->build_category_flat( $term->children, $flat, $currentLevel + 1 );
 			}
-			--$level;
 		}
-
+	
 		return $flat;
 	}
 
