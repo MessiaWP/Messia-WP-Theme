@@ -1417,20 +1417,21 @@ class Messia_Help extends Messia_Help_Queries {
 	 * @param string $comments    Text to show below messages.
 	 * @param bool   $echo        Return or output result.
 	 * @param array  $css_classes List of values.
+	 * @param bool   $force       Force print.
 	 *
 	 * @return string
 	 */
-	public static function print_errors( string $title, array $errors, ?string $comments = null, bool $echo = false, array $css_classes = [] ): ?string {
+	public static function print_errors( string $title, array $errors, ?string $comments = null, bool $echo = false, array $css_classes = [], bool $force = false ): ?string {
 
 		if ( empty( $errors ) ) {
 			return null;
 		}
 
-		if ( 0 === self::$blog_settings['debugger'] ) {
+		if ( false === $force && 0 === self::$blog_settings['debugger'] ) {
 			return null;
 		}
 
-		if ( ! current_user_can( 'manage_options' ) ) {
+		if ( false === $force && ! current_user_can( 'manage_options' ) ) {
 			return null;
 		}
 
