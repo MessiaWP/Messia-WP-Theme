@@ -267,6 +267,13 @@ class Messia_Help_Queries extends Messia_Help_Database {
 			'search' => $search,
 		];
 
+		/**
+		 * Filter actual $_GET listing content.
+		 *
+		 * @hook messia_listing_props
+		 */
+		$property = apply_filters( 'messia_listing_props', $property );
+
 		return $property;
 	}
 
@@ -387,6 +394,13 @@ class Messia_Help_Queries extends Messia_Help_Database {
 				'search' => $search,
 			],
 		];
+
+		/**
+		 * Filter actual $_GET listing content.
+		 *
+		 * @hook messia_listing_props_ajax
+		 */
+		$query['properties'] = apply_filters( 'messia_listing_props_ajax', $query['properties'] );
 
 		return $query;
 	}

@@ -276,7 +276,7 @@ class Messia_Settings {
 		switch ( $preset ) {
 
 			case MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME:
-				return $this->setting_blog;
+				return apply_filters( 'messia_blog_setting', $this->setting_blog );
 
 			default:
 				throw new Exception( 'Undefined preset name' );
@@ -300,7 +300,7 @@ class Messia_Settings {
 		switch ( $preset ) {
 
 			case MESSIA_THEME_SITE_SETTINGS_PRESET_NAME:
-				return $this->setting_site;
+				return apply_filters( 'messia_site_setting', $this->setting_site );
 
 			default:
 				throw new Exception( 'Undefined preset name' );

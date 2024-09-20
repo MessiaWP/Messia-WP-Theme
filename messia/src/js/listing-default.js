@@ -337,6 +337,8 @@ import './_components/_loader.js';
 				if (Messia.xhr != null) {
 					Messia.xhr.abort();
 					Messia.xhr = null;
+
+					Messia.searchFinish();
 				}
 
 				Messia.xhr = $.ajax({
@@ -988,6 +990,8 @@ import './_components/_loader.js';
 
 				values.path = values.path.filter(function (val) { return val });
 
+				Messia.listing.triggerHandler('messia_listing_query', [values]);
+
 				for (var term in values.query) {
 					values.query[term] = values.query[term].filter(function (val) { return val });
 				}
@@ -1015,6 +1019,7 @@ import './_components/_loader.js';
 				}
 
 				if (false === $.isEmptyObject(values.hash)) {
+
 					const hashArr = Object.entries(values.hash);
 					hashArr.sort((a, b) => queryOrder.indexOf(a[0]) - queryOrder.indexOf(b[0]));
 
