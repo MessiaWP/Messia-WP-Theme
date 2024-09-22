@@ -1435,7 +1435,7 @@ class Messia_Help extends Messia_Help_Queries {
 			return null;
 		}
 
-		$errors = '<ul class="errors"><li>' . implode( '</li><li>', array_map( 'urldecode', $errors ) ) . '</li></ul>';
+		$errors = '<ul class="errors"><li><pre>' . implode( '</pre></li><li><pre>', array_map( 'urldecode', $errors ) ) . '</pre></li></ul>';
 
 		if ( false === is_null( $comments ) ) {
 			$note     = __( 'Note', 'messia' );

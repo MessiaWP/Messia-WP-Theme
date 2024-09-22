@@ -432,7 +432,7 @@ abstract class Messia_Listing_Tmpl_Base extends Messia_Module_Base {
 		 *
 		 * @hook messia_listing_pre_get_objects
 		 */
-		$objects = apply_filters( 'messia_listing_pre_get_objects', [] );
+		$objects = apply_filters( 'messia_listing_pre_get_objects', false );
 
 		if ( is_array( $objects ) ) {
 			return $objects;
@@ -654,6 +654,8 @@ abstract class Messia_Listing_Tmpl_Base extends Messia_Module_Base {
 				break;
 
 			case 'constructor':
+				$meta_key = str_replace( '%Id%', (string) $this->segment_term_id, MESSIA_POSTMETA_CONSTRUCTED_NAME );
+
 				$sql =
 					"SELECT
 							posts.ID,
@@ -661,12 +663,12 @@ abstract class Messia_Listing_Tmpl_Base extends Messia_Module_Base {
 						FROM
 							$wpdb->posts AS posts
 							INNER JOIN $wpdb->term_relationships as tr ON posts.ID = tr.object_id
-							INNER JOIN $wpdb->postmeta as post_meta ON posts.ID = post_meta.post_id AND post_meta.meta_key = '_segment_constructor_term_id_2'
+							INNER JOIN $wpdb->postmeta as post_meta ON posts.ID = post_meta.post_id AND post_meta.meta_key = '$meta_key'
 						WHERE
 							posts.post_type = 'messia_object'
 							AND posts.post_status = 'publish'
 							AND tr.term_taxonomy_id IN ($single_terms_in)
-							AND (post_meta.meta_key = '_segment_constructor_term_id_2')
+							AND (post_meta.meta_key = '$meta_key')
 							%multiple_filters_subqueries%
 							$like
 						GROUP BY
@@ -680,7 +682,7 @@ abstract class Messia_Listing_Tmpl_Base extends Messia_Module_Base {
 						FROM
 							$wpdb->posts AS posts
 							INNER JOIN $wpdb->term_relationships as tr ON posts.ID = tr.object_id
-							LEFT JOIN $wpdb->postmeta as post_meta ON posts.ID = post_meta.post_id AND post_meta.meta_key = '_segment_constructor_term_id_2'
+							LEFT JOIN $wpdb->postmeta as post_meta ON posts.ID = post_meta.post_id AND post_meta.meta_key = '$meta_key'
 						WHERE
 							posts.post_type = 'messia_object'
 							AND posts.post_status = 'publish'

@@ -158,7 +158,7 @@ final class Messia_Wp_Ajax_Dispatcher {
 			'strpos($_SERVER["HTTP_REFERER"], "wp-admin")' => ':DO_NOT_FILTER:',
 
 			// Any request from frontend.
-			'isset($_REQUEST["data"]["AJAX_Marker"]) && $_REQUEST["data"]["AJAX_Marker"] == "MessiaAjax"' => [],
+			'isset($_REQUEST["data"]["AJAX_Marker"]) && $_REQUEST["data"]["AJAX_Marker"] == "MessiaAjax"' => [ 'messia-travel/messia-travel.php' ],
 		];
 
 		$this->pattern = apply_filters( 'messia_ajax_dispatcher_rules', $p );
@@ -263,10 +263,7 @@ final class Messia_Wp_Ajax_Dispatcher {
 
 		if ( $this->matched ) {
 
-			foreach ( $this->let as $let_this_plugin ) {
-
-				$this->filtered = array_merge( $this->filtered, preg_grep( '/\\/' . $let_this_plugin . '/', $plugins ) );
-			}
+			$this->filtered = array_merge( $this->filtered, $plugins );
 
 			$return = $this->filtered;
 		}
