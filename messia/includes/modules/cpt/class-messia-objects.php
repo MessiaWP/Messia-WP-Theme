@@ -16,6 +16,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 use Exception;
+use Smartbits\Messia\Includes\Helpers\Messia_Help;
+use Smartbits\Messia\Includes\Helpers\Messia_Help_Database;
 use WP_Query;
 use WP_Post;
 use WP_Term;
@@ -61,6 +63,13 @@ class Messia_Objects {
 	private string $helpers;
 
 	/**
+	 * Full class name.
+	 *
+	 * @var Messia_Help_Database
+	 */
+	private string $helpers_database;
+
+	/**
 	 * The blog settings.
 	 *
 	 * @var array
@@ -82,6 +91,7 @@ class Messia_Objects {
 		$this->cpt_config       = MIA()->get_module_cpt_config();
 		$this->cpt_config_taxes = $this->cpt_config->get_custom_taxonomies_config();
 		$this->helpers          = MIA()->get_module_helpers();
+		$this->helpers_database = MIA()->get_module_helpers();
 		$this->blog_settings    = MIA()->get_module_settings()->get_blog_setting( MESSIA_THEME_BLOG_SETTINGS_PRESET_NAME );
 		$this->init_hooks();
 	}
@@ -166,7 +176,7 @@ class Messia_Objects {
 
 		// Metabox of service fields.
 		$actual_meta        = [];
-		$post_segment_terms = $this->helpers::get_post_terms( [ (int) $post->ID ], [ 'messia_object_segment' ] );
+		$post_segment_terms = $this->helpers_database::get_post_terms( [ (int) $post->ID ], [ 'messia_object_segment' ] );
 
 		foreach ( $post_segment_terms as $post_segment_term ) {
 
@@ -242,7 +252,7 @@ class Messia_Objects {
 			$post_segment_terms[] = (object) get_term_by( 'id', (int) $_GET['fetch-metabox-for-term'], 'messia_object_segment' );
 		} else {
 			add_action( 'admin_enqueue_scripts', [ $this, 'code_mirror' ] );
-			$post_segment_terms = $this->helpers::get_post_terms( [ $post->ID ], [ 'messia_object_segment' ] );
+			$post_segment_terms = $this->helpers_database::get_post_terms( [ $post->ID ], [ 'messia_object_segment' ] );
 		}
 
 		/*

@@ -295,6 +295,7 @@ class Messia_Object_Card {
 				}
 			}
 		}
+
 		foreach ( $object_props as $object_property ) {
 
 			if ( 1 === (int) $object_property->term_on_card ) {
@@ -330,6 +331,7 @@ class Messia_Object_Card {
 						<a class="td-none fs-6 position-relative zi-10 overflow-hidden fw-semibold" title="<?php echo $object_title; ?>" href="<?php echo $object_page_url; ?>"><?php echo $object_title; ?></a>
 					</p>
 
+					<?php do_action( 'messia_listing_card_after_object_title', $object_id, $object_constructed ); ?>
 					<?php
 					if ( ! empty( $meta_raw_output['card_feature_block'] ) ) {
 						?>

@@ -356,7 +356,7 @@ class Messia_Help_Database {
 	}
 
 	/**
-	 * Get term children.
+	 * Get term parents.
 	 *
 	 * @param stdClass $term Term.
 	 *
@@ -373,8 +373,10 @@ class Messia_Help_Database {
 		while ( ! empty( $term->parent ) && ! array_key_exists( $term->parent, $ancestors ) ) {
 
 			$sql =
-				"SELECT t.term_id, t.name, t.slug, tt.term_taxonomy_id, tt.taxonomy, tt.parent, tt.count
-				FROM $wpdb->terms AS t
+				"SELECT
+					t.term_id, t.name, t.slug, tt.term_taxonomy_id, tt.taxonomy, tt.parent, tt.count
+				FROM
+					$wpdb->terms AS t
 				INNER JOIN $wpdb->term_taxonomy AS tt ON t.term_id = tt.term_id
 				WHERE
 					tt.taxonomy IN ('messia_object_category')

@@ -15,7 +15,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-use Exception;
 use stdClass;
 use Smartbits\Messia\Includes\{
 	Messia_Autoloader,
@@ -27,6 +26,7 @@ use Smartbits\Messia\Includes\{
 
 use Smartbits\Messia\Includes\Helpers\{
 	Messia_Help,
+	Messia_Help_Database,
 	Messia_Object_Card,
 };
 
@@ -87,6 +87,13 @@ final class Messia_Core {
 	 * @var Messia_Help
 	 */
 	private string $help;
+
+	/**
+	 * Full class name.
+	 *
+	 * @var Messia_Help_Database
+	 */
+	private string $help_database;
 
 	/**
 	 * Full class name.
@@ -601,6 +608,7 @@ final class Messia_Core {
 		$this->requirements    = Messia_Requirements::instance();
 		$this->settings        = Messia_Settings::instance();
 		$this->help            = Messia_Help::init();
+		$this->help_database   = Messia_Help_Database::class;
 		$this->template_loader = Messia_Template_Loader::init();
 		$this->scripts         = Messia_Scripts::init();
 		$this->cpt_config      = Messia_Cpt_Config::instance();
@@ -823,6 +831,15 @@ final class Messia_Core {
 	 */
 	public function get_module_helpers() {
 		return $this->help;
+	}
+
+	/**
+	 * Getter.
+	 *
+	 * @return Messia_Help_Database Full class name.
+	 */
+	public function get_module_helpers_database() {
+		return $this->help_database;
 	}
 
 	/**
