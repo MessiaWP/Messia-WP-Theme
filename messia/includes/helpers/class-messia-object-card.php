@@ -317,7 +317,13 @@ class Messia_Object_Card {
 			<div <?php echo $card_classes; ?>data-geo-data='<?php echo wp_json_encode( $geo_data ); ?>' data-id="<?php echo $object_id; ?>">
 				<a class="link-all-card position-absolute h-100 w-100 start-0 top-0 zi-10" href="<?php echo $object_page_url; ?>"></a>
 				<?php
-				if ( 1 === $featured_val ) {
+				$feature_content = apply_filters( 'messia_listing_card_featured_area', null, $object_id, $object_constructed );
+
+				if ( ! is_null( $feature_content ) ) {
+					?>
+					<div class="item-featured"><?php echo $feature_content; ?></div>
+					<?php
+				} elseif ( 1 === $featured_val ) {
 					?>
 					<div class="item-featured"><?php esc_html_e( 'Featured', 'messia' ); ?></div>
 					<?php
@@ -330,8 +336,6 @@ class Messia_Object_Card {
 					<p class="card-title mb-1 mt-1" >
 						<a class="td-none fs-6 position-relative zi-10 overflow-hidden fw-semibold" title="<?php echo $object_title; ?>" href="<?php echo $object_page_url; ?>"><?php echo $object_title; ?></a>
 					</p>
-
-					<?php do_action( 'messia_listing_card_after_object_title', $object_id, $object_constructed ); ?>
 					<?php
 					if ( ! empty( $meta_raw_output['card_feature_block'] ) ) {
 						?>

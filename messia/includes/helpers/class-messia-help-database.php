@@ -62,6 +62,35 @@ class Messia_Help_Database {
 	private static array $get_top_terms_children_cache = [];
 
 	/**
+	 * Analog for WP get_term.
+	 *
+	 * @param int    $term_id  Term ID.
+	 * @param string $taxonomy Taxonomy name.
+	 *
+	 * @return object
+	 */
+	public static function get_term( int $term_id, string $taxonomy ): object {
+		global $wpdb;
+
+		$term = $wpdb->get_row(
+			$wpdb->prepare(
+				"SELECT
+					t.*, tt.*
+				FROM
+					$wpdb->terms AS t
+				INNER JOIN $wpdb->term_taxonomy AS tt ON t.term_id = tt.term_id
+				WHERE
+					t.term_id = %d
+					AND tt.taxonomy = %s",
+				$term_id,
+				$taxonomy
+			)
+		);
+
+		return $term;
+	}
+
+	/**
 	 * Get all terms of segment taxonomy.
 	 *
 	 * @return array
