@@ -962,7 +962,7 @@ final class Messia_Core {
 	/**
 	 * Getter.
 	 *
-	 * @return Messia_Object_Card Full class name.
+	 * @return Messia_Scripts Full class name.
 	 */
 	public function get_module_scripts() {
 		return $this->scripts;
