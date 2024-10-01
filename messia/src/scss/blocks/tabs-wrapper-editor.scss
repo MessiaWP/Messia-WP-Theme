@@ -1,0 +1,11 @@
+/* BLOCK */
+@import "../init";
+
+.#{$m-namespace-admin} {
+	.block-editor,
+	.blocks-widgets-container {
+		.wp-block-messia-block-tabs-wrapper {
+
+		}
+	}
+}
