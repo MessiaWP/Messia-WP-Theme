@@ -97,10 +97,6 @@ function getConfig(env) {
 			'blocks/block-custom-fields': './src/entries/blocks/custom-fields.js',
 			'blocks/block-segment-wrapper-editor': './src/entries/blocks/segment-wrapper-editor.js',
 			'blocks/block-segment-wrapper': './src/entries/blocks/segment-wrapper.js',
-			'blocks/block-tabs-wrapper-editor': './src/entries/blocks/tabs-wrapper-editor.js',
-			'blocks/block-tabs-wrapper': './src/entries/blocks/tabs-wrapper.js',
-			'blocks/block-tabs-tab-editor': './src/entries/blocks/tabs-tab-editor.js',
-			'blocks/block-tabs-tab': './src/entries/blocks/tabs-tab.js',
 		},
 		output: {
 			filename: function () {

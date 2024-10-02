@@ -180,7 +180,7 @@ class Messia_Home_Tmpl_Default extends Messia_Home_Tmpl_Base {
 			<div class="home-header py-5 min-vh-75 text-center d-flex align-items-center justify-content-center position-relative" <?php echo $banner_html; ?>>
 				<div class="home-header-overlay position-absolute w-100 h-100 top-0 start-0"></div>
 				<div class="zi-10 position-relative w-100">
-					<?php echo do_blocks( $content_html ); ?>
+					<?php echo do_blocks( (string) $content_html ); ?>
 				</div>
 			</div>
 			<?php
