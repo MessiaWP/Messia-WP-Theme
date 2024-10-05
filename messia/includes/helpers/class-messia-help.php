@@ -1423,6 +1423,10 @@ class Messia_Help extends Messia_Help_Queries {
 	 */
 	public static function print_errors( string $title, array $errors, ?string $comments = null, bool $echo = false, array $css_classes = [], bool $force = false ): ?string {
 
+		if ( self::messia_doing_ajax( 'get_listing' ) ) {
+			return null;
+		}
+
 		if ( empty( $errors ) ) {
 			return null;
 		}

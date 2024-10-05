@@ -80,7 +80,7 @@ class Messia_Object_Card {
 		$errors          = [];
 		$object          = get_post( $object_id );
 		$object_title    = get_the_title( $object_id );
-		$object_page_url = get_the_permalink( $object_id );
+		$object_page_url = apply_filters( 'messia_listing_card_url', get_the_permalink( $object_id ) );
 		$featured_key    = str_replace( [ '%name%', '%Id%' ], [ 'is_featured', $segment_term_id ], MESSIA_POSTMETA_STUFF_NAME );
 		$featured_val    = (int) get_post_meta( $object_id, $featured_key, true );
 		$object_props    = self::$helpers::get_object_terms( [ $object_id ], [ 'messia_object_property' ], [ 'term_icon', 'term_on_card' ] );
