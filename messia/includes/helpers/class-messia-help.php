@@ -112,8 +112,6 @@ class Messia_Help extends Messia_Help_Queries {
 
 		$icons_html = null;
 
-		static $material_css_enqueued = false;
-
 		foreach ( $icons as $icon_data_front ) {
 
 			$hash = md5( wp_json_encode( $icon_data_front ) );
@@ -133,10 +131,7 @@ class Messia_Help extends Messia_Help_Queries {
 								$font_classes                       = implode( ' ', array_merge( [ 'image' ], $icon_data_front->variant->cssClass ) );
 								self::$icon_cache['icons'][ $hash ] = "<span class='{$font_classes}'>{$icon_data_front->icon}</span>";
 
-								if ( false === $material_css_enqueued ) {
-									wp_enqueue_style( $icon_data_front->variant->fontId );
-									$material_css_enqueued = true;
-								}
+								wp_enqueue_style( $icon_data_front->variant->fontId );
 							}
 							$icons_html .= self::$icon_cache['icons'][ $hash ];
 							break;
