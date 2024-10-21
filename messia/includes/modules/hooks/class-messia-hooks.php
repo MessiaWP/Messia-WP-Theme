@@ -738,12 +738,12 @@ class Messia_Hooks {
 	 * @param array         $file_info Full path to the file.
 	 * @param string        $file      Full path to the file.
 	 * @param string        $filename  The name of the file (may differ from $file due to $file being in a tmp directory).
-	 * @param string[]|null $mimes     Array of mime types keyed by their file extension regex.
+	 * @param mixed         $mimes     Array of mime types keyed by their file extension regex.
 	 * @param string|false  $real_mime The actual mime type or false if the type cannot be determined.
 	 *
 	 * @return array
 	 */
-	public function cc_filetype_and_ext( array $file_info, string $file, string $filename, ?array $mimes, $real_mime ): array {
+	public function cc_filetype_and_ext( array $file_info, string $file, string $filename, mixed $mimes, $real_mime ): array {
 		$wp_filetype = wp_check_filetype( $filename, $mimes );
 		if ( 'svg' === $wp_filetype['ext'] ) {
 			$file_info['ext']  = 'svg';

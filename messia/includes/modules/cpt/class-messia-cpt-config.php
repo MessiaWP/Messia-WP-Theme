@@ -345,7 +345,7 @@ class Messia_Cpt_Config {
 							],
 						],
 						'shortcode' => [ 'Smartbits\Messia\Includes\Messia_Shortcodes', 'custom_field' ],
-						'tooltip'   => __( 'This type of field is used to calculate the geo-coordinates at the entered address. It uses Google geocoding service. This service requires a paid account and imposes other restrictions. Without geocoordinates, it is not possible to display the label of an object on the map. If you don\'t want to use geocoding, but you need to display objects on the map, delete the address completely and enter the coordinates manually.', 'messia' ),
+						'tooltip'   => __( 'This type of field is used to calculate the geo-coordinates at the entered address. It uses Google geocoding service. This service requires a paid account and imposes other restrictions. Without geocoordinates, it is not possible to display the label of an object on the map. If you do not want to use geocoding, but you need to display objects on the map, delete the address completely and enter the coordinates manually.', 'messia' ),
 						'caps'      => [ 'card_cta' ],
 					],
 					'input_checkbox'       => [

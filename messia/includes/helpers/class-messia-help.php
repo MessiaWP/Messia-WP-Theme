@@ -164,8 +164,6 @@ class Messia_Help extends Messia_Help_Queries {
 		$images_html  = null;
 		$icon_classes = ( $multiple ) ? [ 'icon', 'multiple' ] : [ 'icon' ];
 
-		static $material_css_enqueued = false;
-
 		$handlers = wp_parse_args(
 			$handlers,
 			[
@@ -213,10 +211,7 @@ class Messia_Help extends Messia_Help_Queries {
 							<?php
 							$images_html .= ob_get_clean();
 
-							if ( false === $material_css_enqueued ) {
-								wp_enqueue_style( $icon_data_admin->variant->fontId );
-								$material_css_enqueued = true;
-							}
+							wp_enqueue_style( $icon_data_admin->variant->fontId );
 							break;
 
 						default:
